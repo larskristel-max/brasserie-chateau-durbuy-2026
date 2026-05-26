@@ -6,6 +6,7 @@ Last updated: 2026-05-20
 
 - Canonical public domain: `https://brasseriechateaudurbuy.be/`.
 - Temporary preview remains available at `https://larskristel-max.github.io/brasserie-chateau-durbuy-2026/`, but public metadata should point to the permanent domain.
+- Current permanent-domain delivery: Cloudflare Worker serves the built `gh-pages` branch directly.
 - Public contact email: `info@brasseriechateaudurbuy.be`.
 - Instagram: `https://www.instagram.com/brasserieduchateaudedurbuy`.
 - No public opening hours are published until access policy is confirmed.

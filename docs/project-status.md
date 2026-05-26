@@ -7,7 +7,7 @@ Last updated: 2026-05-20
 - Permanent domain is live: `https://brasseriechateaudurbuy.be/`
 - `www.brasseriechateaudurbuy.be` redirects to the apex domain.
 - The public site is served through Cloudflare by the Worker route on `brasserie-under-construction`.
-- That Worker is no longer an under-construction placeholder. It now proxies the published GitHub Pages build.
+- That Worker is no longer an under-construction placeholder. It now serves the built static site from the `gh-pages` branch through GitHub raw content.
 - Source of truth remains the GitHub repo: `larskristel-max/brasserie-chateau-durbuy-2026`.
 - Temporary GitHub Pages preview remains available at `https://larskristel-max.github.io/brasserie-chateau-durbuy-2026/`.
 
@@ -16,12 +16,13 @@ Last updated: 2026-05-20
 - Production site remains static-first.
 - Root `index.html` is the canonical production homepage.
 - `redesign-template.html` must stay byte-identical to `index.html`.
-- GitHub Pages deploy workflow now copies:
+- GitHub Pages deploy workflow still copies:
   - `index.html`
   - `journal/`
   - `admin/`
   - `content/`
   - selected `src/assets` files
+- The live permanent domain currently does not wait on GitHub Pages Actions. After the 2026-05-26 deployment, the Worker fetches the clean built `gh-pages` branch directly because GitHub Actions dispatch / Pages build was not completing reliably.
 - The legacy Vite/React code under `src/` remains reference-only unless the project explicitly migrates back to a build step.
 
 ## Cloudflare
@@ -38,7 +39,7 @@ Last updated: 2026-05-20
     - `www.brasseriechateaudurbuy.be/*`
   - Current behavior:
     - `www` redirects to apex.
-    - Apex proxies the GitHub Pages project path.
+    - Apex fetches files from the `gh-pages` branch published bundle.
     - Placeholder copy and `noindex` behavior have been removed.
 - Admin API Worker:
   - Script: `brasserie-admin-api`
@@ -128,8 +129,8 @@ Last updated: 2026-05-20
 
 ## Current Known Risks
 
-- The permanent domain is a Cloudflare Worker proxy to GitHub Pages, not a native Cloudflare Pages deployment.
-- The custom-domain Worker rewrites requests to the GitHub Pages project path. If the GitHub Pages project path changes, update the Worker.
+- The permanent domain is a Cloudflare Worker proxy to the built `gh-pages` branch, not a native Cloudflare Pages deployment.
+- The custom-domain Worker rewrites requests to GitHub raw content for the `gh-pages` branch. If the publishing branch changes, update the Worker.
 - Admin publishing depends on:
   - the Cloudflare Worker remaining deployed,
   - `GITHUB_TOKEN` staying valid,
