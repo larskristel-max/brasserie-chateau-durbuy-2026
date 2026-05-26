@@ -2,6 +2,88 @@
   "version": 1,
   "articles": [
     {
+      "id": "quand-le-grain-manque-2026-05-26",
+      "title": "Quand le grain manque",
+      "date": "2026-05-26",
+      "language": "fr",
+      "status": "published",
+      "author": "Lars Kristel",
+      "lede": "En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.",
+      "body": [
+        "Je suis en train de commander les grains, les malts, les houblons du prochain brassin. Rien de spectaculaire : des lignes à vérifier, des sacs à prévoir, une variété à retrouver. Et puis, parfois, une chose manque.",
+        "Aujourd'hui, l'absence d'un houblon est une contrariété très relative. On attend, on adapte, on décale. Le brassin ne disparaît pas pour autant. Mais ce petit manque ramène à une époque où le grain n'était pas seulement une matière première pour brasser.",
+        "Les récits anciens de Durbuy parlent déjà de jardins de houblon autour de la ville. La trace demande encore à être reprise avec prudence, mais elle dit quelque chose de juste : ici, la bière n'a jamais été séparée de son sol, de ses jardins, de ses récoltes.",
+        "Au début du XVIIIe siècle, dans les années de mauvaise récolte, certaines autorités interdisaient ou limitaient le brassage afin de réserver les céréales à l'alimentation. Une histoire locale de Durbuy, citant les ordonnances de la prévôté, rapporte qu'en 1709, après une crise sévère du grain, le brassage fut interdit dans la cour de Barvaux.",
+        "Il faut mesurer ce que cela signifiait alors. La bière n'était pas seulement une boisson de plaisir. Elle appartenait au rythme ordinaire des maisons, des tavernes, du travail, des repas. La retirer, même temporairement, touchait à une habitude quotidienne et à une part réelle de l'alimentation.",
+        "Le grain devait d'abord devenir pain, bouillie, semence, réserve. Dans les années dures, la brasserie passait après la subsistance. Le geste de brasser, que l'on imagine parfois libre et joyeux, dépendait en réalité d'un équilibre fragile : la terre, le marché, la récolte, les décisions prises quand tout vient à manquer.",
+        "Alors, lorsque je cherche aujourd'hui un houblon indisponible, je sais bien que la comparaison s'arrête vite. Nos conséquences sont minimes. Mais ce contretemps rappelle une chose simple : une bière commence bien avant la cuve. Elle commence dans ce que la saison a bien voulu laisser."
+      ],
+      "heroImage": null,
+      "tags": [
+        "durbuy",
+        "grains",
+        "houblon"
+      ],
+      "createdAt": "2026-05-26T15:30:00.000+02:00",
+      "updatedAt": "2026-05-26T15:30:00.000+02:00",
+      "translations": {
+        "nl": {
+          "title": "Wanneer het graan ontbreekt",
+          "lede": "Bij het voorbereiden van het volgende brouwsel roept een kleine afwezigheid een hardere herinnering op.",
+          "body": [
+            "Ik ben bezig de granen, mouten en hoppen voor het volgende brouwsel te bestellen. Niets spectaculairs: regels om na te kijken, zakken om te voorzien, een soort om terug te vinden. En soms ontbreekt er iets.",
+            "Vandaag is het ontbreken van een hop een heel betrekkelijke ergernis. We wachten, passen aan, schuiven op. Het brouwsel verdwijnt er niet door. Maar dat kleine gemis voert terug naar een tijd waarin graan niet alleen een grondstof voor bier was.",
+            "Oude verhalen over Durbuy spreken al van hopgaarden rond de stad. Die verwijzing moet nog voorzichtig opnieuw worden nagegaan, maar ze zegt iets wat klopt: bier was hier nooit los te zien van de grond, de tuinen, de oogsten.",
+            "Aan het begin van de achttiende eeuw, in jaren van slechte oogst, verboden of beperkten sommige overheden het brouwen om graan voor voedsel te bewaren. Een lokale geschiedenis van Durbuy, die verwijst naar ordonnanties van de provoostdij, vermeldt dat in 1709, na een zware graancrisis, het brouwen in de rechtbank van Barvaux werd verboden.",
+            "Men moet beseffen wat dat toen betekende. Bier was niet alleen een drank voor plezier. Het hoorde bij het gewone ritme van huizen, herbergen, werk en maaltijden. Het wegnemen ervan, al was het tijdelijk, raakte aan een dagelijkse gewoonte en aan een werkelijk deel van de voeding.",
+            "Graan moest eerst brood worden, pap, zaaigoed, voorraad. In harde jaren kwam de brouwerij na het overleven. De handeling van het brouwen, die men zich soms vrij en vreugdevol voorstelt, hing in werkelijkheid af van een kwetsbaar evenwicht: de grond, de markt, de oogst, de beslissingen die worden genomen wanneer alles schaars wordt.",
+            "Dus wanneer ik vandaag naar een onvindbare hop zoek, weet ik goed dat de vergelijking snel ophoudt. Voor ons zijn de gevolgen minimaal. Maar die kleine tegenslag herinnert aan iets eenvoudigs: een bier begint lang voor de ketel. Het begint bij wat het seizoen heeft willen overlaten."
+          ],
+          "tags": [
+            "durbuy",
+            "graan",
+            "hop"
+          ]
+        },
+        "en": {
+          "title": "When Grain Runs Short",
+          "lede": "While preparing the next brew, one small absence recalls a harsher memory.",
+          "body": [
+            "I am ordering the grains, malts and hops for the next brew. Nothing spectacular: lines to check, sacks to plan, a variety to find again. And then, sometimes, something is missing.",
+            "Today, the absence of a hop is a very relative inconvenience. We wait, adjust, postpone. The brew does not disappear because of it. But that small lack carries the mind back to a time when grain was not only a brewing material.",
+            "Older accounts of Durbuy already speak of hop gardens around the town. The trace still needs to be handled with caution, but it says something true: here, beer was never separate from its soil, its gardens, its harvests.",
+            "At the beginning of the eighteenth century, in years of poor harvest, some authorities forbade or limited brewing in order to reserve grain for food. A local history of Durbuy, citing the ordinances of the provostry, records that in 1709, after a severe grain crisis, brewing was forbidden in the court of Barvaux.",
+            "It is worth measuring what that meant then. Beer was not only a drink of pleasure. It belonged to the ordinary rhythm of houses, taverns, work and meals. To remove it, even temporarily, touched a daily habit and a real part of nourishment.",
+            "Grain first had to become bread, porridge, seed, reserve. In hard years, brewing came after subsistence. The act of brewing, sometimes imagined as free and joyful, in fact depended on a fragile balance: the land, the market, the harvest, the decisions made when everything begins to run short.",
+            "So when I look today for a hop that cannot be found, I know the comparison stops quickly. The consequences for us are minimal. But the delay recalls one simple thing: a beer begins long before the kettle. It begins in what the season has been willing to leave."
+          ],
+          "tags": [
+            "durbuy",
+            "grain",
+            "hops"
+          ]
+        },
+        "de": {
+          "title": "Wenn das Korn fehlt",
+          "lede": "Bei der Vorbereitung des nächsten Suds erinnert eine kleine Abwesenheit an eine härtere Vergangenheit.",
+          "body": [
+            "Ich bestelle gerade die Getreide, Malze und Hopfen für den nächsten Sud. Nichts Spektakuläres: Zeilen prüfen, Säcke einplanen, eine Sorte wiederfinden. Und manchmal fehlt etwas.",
+            "Heute ist ein fehlender Hopfen eine sehr relative Unannehmlichkeit. Man wartet, passt an, verschiebt. Der Sud verschwindet deswegen nicht. Doch dieser kleine Mangel führt zurück in eine Zeit, in der Korn nicht nur ein Rohstoff zum Brauen war.",
+            "Alte Erzählungen über Durbuy sprechen bereits von Hopfengärten rund um die Stadt. Diese Spur muss weiterhin vorsichtig geprüft werden, aber sie sagt etwas Richtiges: Hier war Bier nie vom Boden, von den Gärten, von den Ernten getrennt.",
+            "Zu Beginn des 18. Jahrhunderts verboten oder begrenzten manche Behörden in Jahren schlechter Ernten das Brauen, um Getreide für die Ernährung zu bewahren. Eine lokale Geschichte von Durbuy, die sich auf Ordonnanzen der Propstei bezieht, berichtet, dass 1709, nach einer schweren Getreidekrise, das Brauen im Gericht von Barvaux verboten wurde.",
+            "Man muss ermessen, was das damals bedeutete. Bier war nicht nur ein Getränk des Vergnügens. Es gehörte zum gewöhnlichen Rhythmus der Häuser, Gasthäuser, Arbeit und Mahlzeiten. Es wegzunehmen, selbst vorübergehend, berührte eine tägliche Gewohnheit und einen wirklichen Teil der Ernährung.",
+            "Korn musste zuerst Brot werden, Brei, Saatgut, Vorrat. In harten Jahren kam die Brauerei nach dem Überleben. Der Akt des Brauens, den man sich manchmal frei und freudig vorstellt, hing in Wirklichkeit von einem fragilen Gleichgewicht ab: dem Boden, dem Markt, der Ernte, den Entscheidungen, die getroffen werden, wenn alles knapp wird.",
+            "Wenn ich heute also nach einem Hopfen suche, der nicht zu finden ist, weiß ich genau, dass der Vergleich schnell endet. Für uns sind die Folgen gering. Doch diese Verzögerung erinnert an etwas Einfaches: Ein Bier beginnt lange vor dem Kessel. Es beginnt mit dem, was die Jahreszeit übrigzulassen bereit war."
+          ],
+          "tags": [
+            "durbuy",
+            "korn",
+            "hopfen"
+          ]
+        }
+      }
+    },
+    {
       "id": "avant-letiquette-finale-2026-05-20",
       "title": "Avant l'étiquette finale",
       "date": "2026-05-20",
