@@ -52,6 +52,62 @@
     "priceRange": "Sur demande"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Où se trouve la Brasserie du Château de Durbuy ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La Brasserie du Château de Durbuy se trouve Rue du Comte Théodule d'Ursel, 2, 6940 Durbuy, en Belgique, dans les anciennes écuries du domaine du Château de Durbuy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on visiter la brasserie ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les visites de la brasserie sont en préparation et se font uniquement sur réservation, pour des groupes à partir de 10 personnes. Le château est un espace privé et ne se visite pas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "La brasserie a-t-elle des horaires d'ouverture ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La brasserie ne publie pas d'horaires d'ouverture au public. Les demandes se font directement à l'adresse info@brasseriechateaudurbuy.be."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "La bière est-elle brassée au château ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La brasserie est installée au domaine du Château de Durbuy, dans les anciennes écuries. Le château lui-même demeure un espace privé."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel est le lien avec Philippe Marckloff ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Philippe Marckloff est lié à l'histoire brassicole de Durbuy, documentée vers 1560. Cette référence situe une mémoire brassicole locale; elle ne constitue pas une preuve de brassage continu au château depuis cette date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Où trouver les bières ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une sélection de bières est disponible chez plusieurs partenaires locaux, selon les brassins et les arrivages. Les disponibilités sont confirmées au cas par cas."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -1677,6 +1733,48 @@
 
     body.modal-open { overflow: hidden; }
 
+    /* ------------------------ Quiet FAQ ------------------------ */
+
+    .seo-faq {
+      background: var(--cream);
+      padding: clamp(3.5rem, 7vw, 6rem) var(--gutter);
+      border-top: 1px solid var(--line-soft);
+    }
+    .seo-faq-inner {
+      width: min(100%, 980px);
+      margin: 0 auto;
+    }
+    .seo-faq h2 {
+      margin: 0 0 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.64rem;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--copper);
+    }
+    .seo-faq details {
+      border-top: 1px solid var(--line-soft);
+      color: var(--ink-fade);
+    }
+    .seo-faq details:last-child { border-bottom: 1px solid var(--line-soft); }
+    .seo-faq summary {
+      cursor: pointer;
+      padding: 0.9rem 0;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      line-height: 1.45;
+      list-style: none;
+    }
+    .seo-faq summary::-webkit-details-marker { display: none; }
+    .seo-faq p {
+      margin: 0;
+      padding: 0 0 1rem;
+      max-width: 48rem;
+      font-size: 0.86rem;
+      line-height: 1.65;
+    }
+
     /* ------------------------ Reveal animation ------------------------ */
 
     [data-reveal] {
@@ -2013,6 +2111,36 @@
     </section>
 
   </main>
+
+  <section class="seo-faq" aria-labelledby="faq-title">
+    <div class="seo-faq-inner">
+      <h2 id="faq-title">Questions utiles</h2>
+      <details>
+        <summary>Où se trouve la Brasserie du Château de Durbuy&nbsp;?</summary>
+        <p>La Brasserie du Château de Durbuy se trouve Rue du Comte Théodule d'Ursel, 2, 6940 Durbuy, en Belgique, dans les anciennes écuries du domaine du Château de Durbuy.</p>
+      </details>
+      <details>
+        <summary>Peut-on visiter la brasserie&nbsp;?</summary>
+        <p>Les visites de la brasserie sont en préparation et se font uniquement sur réservation, pour des groupes à partir de 10 personnes. Le château est un espace privé et ne se visite pas.</p>
+      </details>
+      <details>
+        <summary>La brasserie a-t-elle des horaires d'ouverture&nbsp;?</summary>
+        <p>La brasserie ne publie pas d'horaires d'ouverture au public. Les demandes se font directement à l'adresse info@brasseriechateaudurbuy.be.</p>
+      </details>
+      <details>
+        <summary>La bière est-elle brassée au château&nbsp;?</summary>
+        <p>La brasserie est installée au domaine du Château de Durbuy, dans les anciennes écuries. Le château lui-même demeure un espace privé.</p>
+      </details>
+      <details>
+        <summary>Quel est le lien avec Philippe Marckloff&nbsp;?</summary>
+        <p>Philippe Marckloff est lié à l'histoire brassicole de Durbuy, documentée vers 1560. Cette référence situe une mémoire brassicole locale; elle ne constitue pas une preuve de brassage continu au château depuis cette date.</p>
+      </details>
+      <details>
+        <summary>Où trouver les bières&nbsp;?</summary>
+        <p>Une sélection de bières est disponible chez plusieurs partenaires locaux, selon les brassins et les arrivages. Les disponibilités sont confirmées au cas par cas.</p>
+      </details>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="footer-inner">

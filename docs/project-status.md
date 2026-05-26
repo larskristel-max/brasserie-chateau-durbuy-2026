@@ -100,6 +100,7 @@ Last updated: 2026-05-20
 - Added the points-de-vente section to desktop and mobile navigation.
 - Tightened homepage navigation labels after the first points-de-vente nav label wrapped poorly.
 - Kept `index.html` and `redesign-template.html` identical after edits.
+- Added a quiet factual FAQ block on the homepage and matching `FAQPage` structured data for Google and AI retrieval. The FAQ stays conservative: no public hours, no online shop, no continuous-brewing claim.
 
 ## Journal And Admin
 
