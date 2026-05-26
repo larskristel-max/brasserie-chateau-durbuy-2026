@@ -22,10 +22,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Prepare dist (self-hosted static site — no build step)
         run: |
+          node scripts/generate-journal-pages.js
           mkdir -p dist/src/assets
           cp index.html dist/
           cp robots.txt dist/ 2>/dev/null || true
           cp sitemap.xml dist/ 2>/dev/null || true
+          cp llms.txt dist/ 2>/dev/null || true
           cp -R journal dist/ 2>/dev/null || true
           cp -R admin dist/ 2>/dev/null || true
           cp -R content dist/ 2>/dev/null || true

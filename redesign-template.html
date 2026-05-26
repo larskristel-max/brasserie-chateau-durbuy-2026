@@ -1706,9 +1706,9 @@
       <a href="#domaine" data-i18n="nav.domaine">Le Domaine</a>
       <a href="#brasserie" data-i18n="nav.brasserie">La Brasserie</a>
       <a href="#bieres" data-i18n="nav.bieres">Les Bières</a>
-      <a href="#points-de-vente" data-i18n="nav.points">Points de vente</a>
+      <a href="#points-de-vente" data-i18n="nav.points">Disponibilités</a>
       <a href="#visite" data-i18n="nav.visite">La Visite</a>
-      <a href="/journal/" data-i18n="nav.carnet">Carnet</a>
+      <a href="journal/" data-i18n="nav.carnet">Carnet</a>
     </nav>
     <div class="lang-switcher" role="group" aria-label="Choix de langue">
       <button type="button" data-lang="fr" aria-pressed="true">FR</button>
@@ -1730,9 +1730,9 @@
       <a href="#domaine" data-i18n="nav.domaine">Le Domaine</a>
       <a href="#brasserie" data-i18n="nav.brasserie">La Brasserie</a>
       <a href="#bieres" data-i18n="nav.bieres">Les Bières</a>
-      <a href="#points-de-vente" data-i18n="nav.points">Points de vente</a>
+      <a href="#points-de-vente" data-i18n="nav.points">Disponibilités</a>
       <a href="#visite" data-i18n="nav.visite">La Visite</a>
-      <a href="/journal/" data-i18n="nav.carnet">Carnet</a>
+      <a href="journal/" data-i18n="nav.carnet">Carnet</a>
       <a class="mobile-cta" href="#reservationModal" data-open-reservation data-i18n="nav.reservations">Réservations</a>
       <div class="mobile-lang-switcher" role="group" aria-label="Choix de langue">
         <button type="button" data-lang="fr" aria-pressed="true">FR</button>
@@ -1807,7 +1807,7 @@
             sizes="(max-width: 880px) 100vw, 50vw">
           <img src="src/assets/lieu-domaine-1024w.jpg"
                width="1024" height="1279"
-               alt="Pierres anciennes, cobblestone et dépendances du domaine du Château de Durbuy au crépuscule"
+               alt="Pierres anciennes, pavés et dépendances du domaine du Château de Durbuy au crépuscule"
                loading="lazy" decoding="async">
         </picture>
       </figure>
@@ -1822,7 +1822,7 @@
         </div>
         <div class="prose">
           <p data-i18n="brasserie.p1">Installée dans les anciennes écuries du domaine, la brasserie élabore quatre bières de fermentation traditionnelle, en petites séries.</p>
-          <p data-i18n="brasserie.p2">Le geste n'est pas nouveau. Une brassine est attestée à Durbuy depuis le XVI<sup>e</sup> siècle, sous la garde de la famille d'Ursel depuis 1628.</p>
+          <p data-i18n="brasserie.p2">Le brassage est attesté à Durbuy depuis le XVI<sup>e</sup> siècle. Le domaine est sous la garde de la famille d'Ursel depuis 1628.</p>
         </div>
       </div>
       <figure class="brasserie-image">
@@ -1900,12 +1900,12 @@
         <div class="points-vente-copy">
           <p class="chapter" data-i18n="points.chapter">— Chapitre IV —</p>
           <p class="kicker" data-i18n="points.kicker">Selon arrivage</p>
-          <h2 data-i18n="points.heading">Où trouver nos bières</h2>
+          <h2 data-i18n="points.heading">Disponibilités locales</h2>
           <p class="lead" data-i18n="points.lead">Une sélection de nos bières est disponible chez plusieurs partenaires locaux, selon arrivage.</p>
         </div>
 
         <div class="points-vente-list">
-          <div class="sales-points" aria-label="Points de vente">
+          <div class="sales-points" aria-label="Disponibilités locales">
             <article class="sales-point">
               <h3>Établissements Dispas</h3>
               <address>Route de Bomal 42/A<br>6940 Barvaux-sur-Ourthe</address>
@@ -1925,9 +1925,9 @@
           </div>
 
           <div class="order-request">
-            <p class="order-request-copy" data-i18n="points.request.copy">Pour une demande privée ou professionnelle, écrivez-nous. Les disponibilités sont confirmées au cas par cas.</p>
+            <p class="order-request-copy" data-i18n="points.request.copy">Pour une demande privée ou professionnelle, écrivez-nous au domaine. Les disponibilités sont confirmées au cas par cas.</p>
             <button type="button" class="text-cta" data-open-order aria-controls="orderRequestPanel" aria-expanded="false">
-              <span data-i18n="points.request.cta">Demande de commande</span> <span aria-hidden="true">→</span>
+              <span data-i18n="points.request.cta">Écrire au domaine</span> <span aria-hidden="true">→</span>
             </button>
 
             <div class="order-request-panel" id="orderRequestPanel" hidden>
@@ -1964,12 +1964,12 @@
                   </div>
                 </div>
                 <div class="form-row">
-                  <label for="orderMessage" data-i18n="order.message">Quantité souhaitée / message</label>
+                  <label for="orderMessage" data-i18n="order.message">Votre demande / message</label>
                   <textarea id="orderMessage" name="message" required></textarea>
                   <p class="form-hint" data-i18n="order.hint">Aucun prix ni disponibilité ne sont confirmés automatiquement.</p>
                 </div>
                 <div class="form-actions">
-                  <button class="form-submit" type="submit" data-i18n="order.submit">Envoyer la demande</button>
+                  <button class="form-submit" type="submit" data-i18n="order.submit">Envoyer</button>
                   <p class="form-status" id="orderRequestStatus" aria-live="polite"></p>
                 </div>
               </form>
@@ -2066,7 +2066,7 @@
         <header class="reservation-modal-header">
           <p class="kicker" data-i18n="form.kicker">Sur réservation</p>
           <h2 id="reservation-modal-title" data-i18n="form.heading">Visites en préparation</h2>
-          <p class="lead" data-i18n="form.lead">Les visites privées du domaine seront annoncées prochainement. Les demandes se font encore directement, en toute discrétion.</p>
+          <p class="lead" data-i18n="form.lead">Les visites de la brasserie sont en préparation. Les demandes se font encore directement, en toute discrétion.</p>
         </header>
 
         <div class="reservation-teaser">
@@ -2080,7 +2080,7 @@
       <div class="reservation-pane reservation-success" id="reservationPaneSuccess" hidden>
         <p class="kicker" data-i18n="form.success.kicker">Merci</p>
         <h3 data-i18n="form.success.heading">Demande reçue</h3>
-        <p data-i18n="form.success.body">Nous avons bien reçu votre demande. Vous recevrez une réponse de notre part sous 48 heures, à l'adresse courriel que vous nous avez communiquée.</p>
+        <p data-i18n="form.success.body">Nous avons bien reçu votre demande. Nous répondrons à l'adresse e-mail communiquée.</p>
         <button type="button" data-close-modal data-i18n="form.success.close">Fermer</button>
       </div>
     </div>
@@ -2270,7 +2270,7 @@
             phone ? 'Téléphone: ' + phone : '',
             vat ? 'Numéro de TVA: ' + vat : '',
             '',
-            'Quantité souhaitée / message:',
+            'Votre demande / message:',
             message,
             '',
             'Note: demande sans confirmation automatique de prix ou de disponibilité.'
@@ -2312,7 +2312,7 @@
               orderStatus.innerHTML = dict['order.fallback'];
             }
             window.location.href = 'mailto:info@brasseriechateaudurbuy.be'
-              + '?subject=' + encodeURIComponent('Demande de commande - Brasserie du Château de Durbuy')
+              + '?subject=' + encodeURIComponent("Demande d'information - Brasserie du Château de Durbuy")
               + '&body=' + encodeURIComponent(lines.join('\n'));
           } finally {
             if (submitButton) submitButton.disabled = false;
@@ -2328,7 +2328,7 @@
           'nav.domaine': 'Domaine',
           'nav.brasserie': 'La Brasserie',
           'nav.bieres': 'Bières',
-          'nav.points': 'Vente',
+          'nav.points': 'Disponibilités',
           'nav.visite': 'Visite',
           'nav.carnet': 'Carnet',
           'nav.reservations': 'Réservations',
@@ -2345,7 +2345,7 @@
           'brasserie.kicker': 'Fermentation traditionnelle',
           'brasserie.heading': 'La Brasserie',
           'brasserie.p1': 'Installée dans les anciennes écuries du domaine, la brasserie élabore quatre bières de fermentation traditionnelle, en petites séries.',
-          'brasserie.p2': "Le geste n'est pas nouveau. Une brassine est attestée à Durbuy depuis le XVI<sup>e</sup> siècle, sous la garde de la famille d'Ursel depuis 1628.",
+          'brasserie.p2': "Le brassage est attesté à Durbuy depuis le XVI<sup>e</sup> siècle. Le domaine est sous la garde de la famille d'Ursel depuis 1628.",
           'brasserie.line': 'Au cœur du domaine. Au rythme du lieu.',
           'bieres.chapter': '— Chapitre III —',
           'bieres.kicker': 'Quatre. Brassées au château.',
@@ -2355,10 +2355,10 @@
           'bieres.transition': 'Le domaine continue après le brassage.',
           'points.chapter': '— Chapitre IV —',
           'points.kicker': 'Selon arrivage',
-          'points.heading': 'Où trouver nos bières',
-          'points.lead': 'Une sélection de nos bières est disponible chez plusieurs partenaires locaux, selon arrivage.',
-          'points.request.copy': 'Pour une demande privée ou professionnelle, écrivez-nous. Les disponibilités sont confirmées au cas par cas.',
-          'points.request.cta': 'Demande de commande',
+          'points.heading': 'Disponibilités locales',
+          'points.lead': 'Quelques partenaires locaux reçoivent nos bières, selon les brassins et les arrivages.',
+          'points.request.copy': 'Pour une demande privée ou professionnelle, écrivez-nous au domaine. Les disponibilités sont confirmées au cas par cas.',
+          'points.request.cta': 'Écrire au domaine',
           'order.type.label': 'Type de demande',
           'order.type.private': 'Particulier',
           'order.type.professional': 'Professionnel',
@@ -2366,9 +2366,9 @@
           'order.email': 'Adresse e-mail',
           'order.phone': 'Téléphone',
           'order.vat': 'Numéro de TVA',
-          'order.message': 'Quantité souhaitée / message',
+          'order.message': 'Votre demande / message',
           'order.hint': 'Aucun prix ni disponibilité ne sont confirmés automatiquement.',
-          'order.submit': 'Envoyer la demande',
+          'order.submit': 'Envoyer',
           'order.sending': 'Envoi en cours…',
           'order.status': 'Votre demande a bien été envoyée. Nous vous répondrons directement par e-mail.',
           'order.fallback': "L'envoi direct n'est pas disponible pour l'instant. Votre messagerie va s'ouvrir pour terminer la demande.",
@@ -2391,49 +2391,49 @@
           'form.back': "Retour à l'accueil",
           'form.kicker': 'Sur réservation',
           'form.heading': 'Visites en préparation',
-          'form.lead': 'Les visites privées du domaine seront annoncées prochainement. Les demandes se font encore directement, en toute discrétion.',
-          'form.teaser.body': "Le calendrier n'est pas encore ouvert au public. Pour une demande privée ou professionnelle, écrivez-nous à l'adresse du domaine.",
+          'form.lead': 'Les visites de la brasserie sont en préparation. Les demandes se font encore directement, en toute discrétion.',
+          'form.teaser.body': "Le calendrier n'est pas encore ouvert au public. Pour une demande de visite, écrivez-nous à l'adresse du domaine.",
           'form.teaser.contact': 'Écrire au domaine',
           'form.success.kicker': 'Merci',
           'form.success.heading': 'Demande reçue',
-          'form.success.body': "Nous avons bien reçu votre demande. Vous recevrez une réponse de notre part sous 48 heures, à l'adresse courriel que vous nous avez communiquée.",
+          'form.success.body': "Nous avons bien reçu votre demande. Nous répondrons à l'adresse e-mail communiquée.",
           'form.success.close': 'Fermer'
         },
         nl: {
-          'nav.domaine': 'Domein',
+          'nav.domaine': 'Landgoed',
           'nav.brasserie': 'Brouwerij',
           'nav.bieres': 'Bieren',
-          'nav.points': 'Verkoop',
+          'nav.points': 'Adressen',
           'nav.visite': 'Bezoek',
           'nav.carnet': 'Dagboek',
-          'nav.reservations': 'Reservaties',
+          'nav.reservations': 'Reserveringen',
           'hero.location': 'Durbuy · België',
-          'hero.subtitle': 'Op zijn eigen ritme, tussen traditie en precisie. In stilte.',
-          'hero.scroll': 'Het domein betreden',
+          'hero.subtitle': 'Op eigen ritme. Tussen traditie en precisie. In stilte.',
+          'hero.scroll': 'Het landgoed betreden',
           'lieu.chapter': '— Hoofdstuk I —',
-          'lieu.kicker': 'Het domein gaat het gebaar vooraf',
-          'lieu.heading': 'De Plaats',
-          'lieu.p1': 'Voor het brouwsel, de plaats.',
+          'lieu.kicker': 'Eerst het landgoed. Dan het brouwen.',
+          'lieu.heading': 'De plek',
+          'lieu.p1': 'Voor het brouwen: de plek.',
           'lieu.p2': 'De stenen. De rivier. De oude stallen van het kasteel.',
-          'lieu.p3': 'Een domein dat zijn eigen tempo oplegt. De brouwerij volgt het, zonder het te veranderen.',
+          'lieu.p3': 'Een landgoed dat zijn eigen tempo aangeeft. De brouwerij volgt dat ritme, zonder het te verstoren.',
           'brasserie.chapter': '— Hoofdstuk II —',
           'brasserie.kicker': 'Traditionele gisting',
           'brasserie.heading': 'De Brouwerij',
-          'brasserie.p1': 'Gevestigd in de oude stallen van het domein, brouwt de brouwerij vier bieren van traditionele gisting, in kleine reeksen.',
-          'brasserie.p2': "Het gebaar is niet nieuw. Een brouwerij wordt in Durbuy vermeld sinds de 16<sup>e</sup> eeuw, onder de hoede van de familie d'Ursel sinds 1628.",
-          'brasserie.line': 'In het hart van het domein. Op het ritme van de plaats.',
+          'brasserie.p1': 'De brouwerij is gevestigd in de oude stallen van het landgoed. Ze brouwt vier bieren met traditionele gisting, op kleine schaal.',
+          'brasserie.p2': "Brouwen is in Durbuy gedocumenteerd vanaf de 16<sup>e</sup> eeuw. Het landgoed is sinds 1628 onder de hoede van de familie d'Ursel.",
+          'brasserie.line': 'In het hart van het landgoed. Op het ritme van de plek.',
           'bieres.chapter': '— Hoofdstuk III —',
           'bieres.kicker': 'Vier. In het kasteel gebrouwen.',
           'bieres.heading': 'De Bieren',
-          'bieres.lead': 'Elk in zijn eigen tempo. Kleine reeksen, traditionele gisting.',
+          'bieres.lead': 'Elk op eigen ritme. Op kleine schaal, met traditionele gisting.',
           'bieres.teaser': 'De reeks wordt binnenkort onthuld.',
-          'bieres.transition': 'Het domein gaat door, ook na het brouwen.',
+          'bieres.transition': 'Het landgoed blijft. Ook na het brouwen.',
           'points.chapter': '— Hoofdstuk IV —',
-          'points.kicker': 'Volgens beschikbaarheid',
-          'points.heading': 'Waar vindt u onze bieren',
-          'points.lead': 'Een selectie van onze bieren is verkrijgbaar bij enkele lokale partners, volgens beschikbaarheid.',
-          'points.request.copy': 'Voor een private of professionele aanvraag kunt u ons schrijven. Beschikbaarheid wordt per geval bevestigd.',
-          'points.request.cta': 'Aanvraag tot bestelling',
+          'points.kicker': 'Afhankelijk van beschikbaarheid',
+          'points.heading': 'Lokale adressen',
+          'points.lead': 'Een selectie van onze bieren is verkrijgbaar bij enkele lokale partners, afhankelijk van de brouwsels en de beschikbaarheid.',
+          'points.request.copy': 'Voor een particuliere of professionele aanvraag kunt u ons schrijven. De beschikbaarheid wordt per geval bevestigd.',
+          'points.request.cta': 'Schrijf naar het landgoed',
           'order.type.label': 'Type aanvraag',
           'order.type.private': 'Particulier',
           'order.type.professional': 'Professioneel',
@@ -2441,98 +2441,98 @@
           'order.email': 'E-mailadres',
           'order.phone': 'Telefoon',
           'order.vat': 'Btw-nummer',
-          'order.message': 'Gewenste hoeveelheid / bericht',
+          'order.message': 'Uw aanvraag / bericht',
           'order.hint': 'Prijzen en beschikbaarheid worden niet automatisch bevestigd.',
-          'order.submit': 'Aanvraag versturen',
+          'order.submit': 'Versturen',
           'order.sending': 'Bezig met verzenden…',
-          'order.status': 'Uw aanvraag is verzonden. We antwoorden u rechtstreeks per e-mail.',
+          'order.status': 'Uw aanvraag is verzonden. We antwoorden rechtstreeks per e-mail.',
           'order.fallback': 'Rechtstreeks verzenden is momenteel niet beschikbaar. Uw mailprogramma wordt geopend om de aanvraag af te ronden.',
           'order.error': 'Vul de verplichte velden in.',
           'visite.chapter': '— Hoofdstuk V —',
           'visite.kicker': 'Op afspraak',
           'visite.heading1': 'De Brouwerij',
-          'visite.lead': 'De brouwerij kan enkel op afspraak bezocht worden, vanaf 10 personen.',
-          'visite.private': 'Het kasteel is een privédomein en kan niet bezocht worden.',
+          'visite.lead': 'De brouwerij kan enkel op afspraak bezocht worden, voor groepen vanaf 10 personen.',
+          'visite.private': 'Het kasteel is privé en is niet toegankelijk voor bezoek.',
           'visite.item1.name': 'Brouwerijbezoek',
           'visite.item1.desc': 'De plek, de kuipen, de gisting, het ritme van het brouwen.',
           'visite.item2.name': 'Proeverij',
-          'visite.item2.desc': 'Een proeverij ter plaatse, volgens de beschikbare brouwsels.',
-          'visite.cta': 'Informatie &amp; reservaties',
-          'footer.label.domaine': 'Het Domein',
+          'visite.item2.desc': 'Een proeverij ter plaatse, afhankelijk van de beschikbare brouwsels.',
+          'visite.cta': 'Informatie &amp; reserveringen',
+          'footer.label.domaine': 'Het Landgoed',
           'footer.country': 'België',
           'footer.label.reservation': 'Op afspraak',
           'footer.label.follow': 'Volgen',
-          'footer.fine': 'Bier met mate te consumeren.',
-          'form.back': 'Terug naar de homepage',
+          'footer.fine': 'Bier drinkt u met mate.',
+          'form.back': 'Terug naar de startpagina',
           'form.kicker': 'Op afspraak',
           'form.heading': 'Bezoeken in voorbereiding',
-          'form.lead': 'De privébezoeken aan het domein worden binnenkort aangekondigd. Aanvragen gebeuren voorlopig rechtstreeks, in alle discretie.',
-          'form.teaser.body': 'De kalender is nog niet publiek geopend. Voor een private of professionele aanvraag kunt u ons schrijven op het adres van het domein.',
-          'form.teaser.contact': 'Schrijf naar het domein',
+          'form.lead': 'Brouwerijbezoeken zijn in voorbereiding. Aanvragen verlopen voorlopig rechtstreeks, in alle discretie.',
+          'form.teaser.body': 'Er is nog geen openbare kalender. Voor een aanvraag kunt u voorlopig rechtstreeks naar het adres van het landgoed schrijven.',
+          'form.teaser.contact': 'Schrijf naar het landgoed',
           'form.success.kicker': 'Dank u',
           'form.success.heading': 'Aanvraag ontvangen',
-          'form.success.body': 'We hebben uw aanvraag goed ontvangen. U ontvangt binnen 48 uur een antwoord van ons op het door u opgegeven e-mailadres.',
+          'form.success.body': 'Wij hebben uw aanvraag ontvangen. Wij antwoorden op het opgegeven e-mailadres.',
           'form.success.close': 'Sluiten'
         },
         en: {
           'nav.domaine': 'Estate',
           'nav.brasserie': 'Brewery',
           'nav.bieres': 'Beers',
-          'nav.points': 'Stockists',
+          'nav.points': 'Availability',
           'nav.visite': 'Visit',
           'nav.carnet': 'Journal',
           'nav.reservations': 'Reservations',
           'hero.location': 'Durbuy · Belgium',
-          'hero.subtitle': 'At its own rhythm — between tradition and precision. Without noise.',
+          'hero.subtitle': 'In its own rhythm. Between tradition and precision. Quietly.',
           'hero.scroll': 'Enter the estate',
           'lieu.chapter': '— Chapter I —',
-          'lieu.kicker': 'The estate precedes the craft',
+          'lieu.kicker': 'The estate comes first',
           'lieu.heading': 'The Place',
-          'lieu.p1': 'Before the brew, the place.',
+          'lieu.p1': 'Before the brewing, the place.',
           'lieu.p2': 'The stones. The river. The former stables of the château.',
           'lieu.p3': "An estate that sets its own tempo. The brewery follows it, without altering it.",
           'brasserie.chapter': '— Chapter II —',
           'brasserie.kicker': 'Traditional fermentation',
           'brasserie.heading': 'The Brewery',
-          'brasserie.p1': 'Installed in the former stables of the estate, the brewery crafts four beers of traditional fermentation, in small batches.',
-          'brasserie.p2': "The craft is not new. A brewery is documented at Durbuy since the 16<sup>th</sup> century, under the guardianship of the d'Ursel family since 1628.",
-          'brasserie.line': 'At the heart of the estate. At the rhythm of the place.',
+          'brasserie.p1': "Set within the estate's former stables, the brewery produces four traditionally fermented beers in small batches.",
+          'brasserie.p2': "Brewing in Durbuy is documented from the 16<sup>th</sup> century. The estate has been in the care of the d'Ursel family since 1628.",
+          'brasserie.line': 'In the heart of the estate. In the rhythm of the place.',
           'bieres.chapter': '— Chapter III —',
           'bieres.kicker': 'Four. Brewed at the château.',
           'bieres.heading': 'The Beers',
-          'bieres.lead': 'Each in its own tempo. Small batches, traditional fermentation.',
-          'bieres.teaser': 'The range will be revealed soon.',
-          'bieres.transition': 'The estate continues, beyond the brew.',
+          'bieres.lead': 'Each in its own rhythm. Small batches, traditional fermentation.',
+          'bieres.teaser': 'The four beers will be revealed in due course.',
+          'bieres.transition': 'The estate continues after the brewing.',
           'points.chapter': '— Chapter IV —',
-          'points.kicker': 'Subject to arrival',
-          'points.heading': 'Where to find our beers',
-          'points.lead': 'A selection of our beers is available through several local partners, subject to arrival.',
-          'points.request.copy': 'For a private or professional request, write to us. Availability is confirmed case by case.',
-          'points.request.cta': 'Order request',
+          'points.kicker': 'Subject to availability',
+          'points.heading': 'Selected addresses',
+          'points.lead': 'A small selection is placed with local partners, as releases allow.',
+          'points.request.copy': 'For private or trade enquiries, please contact the estate. Availability is confirmed case by case.',
+          'points.request.cta': 'Private or trade enquiry',
           'order.type.label': 'Request type',
           'order.type.private': 'Private',
-          'order.type.professional': 'Professional',
+          'order.type.professional': 'Trade',
           'order.name': 'Name',
           'order.email': 'Email address',
           'order.phone': 'Phone',
           'order.vat': 'VAT number',
-          'order.message': 'Requested quantity / message',
+          'order.message': 'Your enquiry / message',
           'order.hint': 'No price or availability is confirmed automatically.',
           'order.submit': 'Send request',
           'order.sending': 'Sending…',
-          'order.status': 'Your request has been sent. We will reply directly by email.',
+          'order.status': 'Your enquiry has been sent. We will reply directly by email.',
           'order.fallback': 'Direct sending is not available right now. Your mail application will open to complete the request.',
           'order.error': 'Please complete the required fields.',
           'visite.chapter': '— Chapter V —',
           'visite.kicker': 'By appointment',
           'visite.heading1': 'The Brewery',
-          'visite.lead': 'The brewery can be visited by appointment only, from 10 people.',
+          'visite.lead': 'Brewery visits are by appointment only, for groups of 10 or more.',
           'visite.private': 'The château is a private residence and cannot be visited.',
           'visite.item1.name': 'Brewery visit',
-          'visite.item1.desc': 'The place, the tanks, the fermentation, the rhythm of the brew.',
+          'visite.item1.desc': 'The place, the vats, the fermentation, the rhythm of the brewing.',
           'visite.item2.name': 'Tasting',
-          'visite.item2.desc': 'A tasting on site, according to the brews available.',
-          'visite.cta': 'Information &amp; reservations',
+          'visite.item2.desc': 'A tasting on site, depending on the current brews.',
+          'visite.cta': 'Enquiries &amp; reservations',
           'footer.label.domaine': 'The Estate',
           'footer.country': 'Belgium',
           'footer.label.reservation': 'By appointment',
@@ -2541,57 +2541,57 @@
           'form.back': 'Back to home',
           'form.kicker': 'By appointment',
           'form.heading': 'Visits in preparation',
-          'form.lead': 'Private visits to the estate will be announced soon. Requests are still handled directly, with discretion.',
-          'form.teaser.body': 'The calendar is not yet open to the public. For a private or professional request, write to us at the estate address.',
+          'form.lead': 'Brewery visits are in preparation. Enquiries are still handled directly, with discretion.',
+          'form.teaser.body': 'The calendar is not yet open to the public. For a private or trade enquiry, please contact the estate directly.',
           'form.teaser.contact': 'Write to the estate',
           'form.success.kicker': 'Thank you',
           'form.success.heading': 'Request received',
-          'form.success.body': "We've received your request. You'll hear back from us within 48 hours at the email address you provided.",
+          'form.success.body': 'We have received your enquiry. We will reply to the email address provided.',
           'form.success.close': 'Close'
         },
         de: {
-          'nav.domaine': 'Domäne',
+          'nav.domaine': 'Das Anwesen',
           'nav.brasserie': 'Brauerei',
           'nav.bieres': 'Biere',
-          'nav.points': 'Verkauf',
+          'nav.points': 'Adressen',
           'nav.visite': 'Besuch',
           'nav.carnet': 'Tagebuch',
           'nav.reservations': 'Reservierungen',
           'hero.location': 'Durbuy · Belgien',
-          'hero.subtitle': 'In seinem eigenen Rhythmus — zwischen Tradition und Präzision. In aller Stille.',
-          'hero.scroll': 'Die Domäne betreten',
+          'hero.subtitle': 'In eigenem Rhythmus. Zwischen Tradition und Präzision. In aller Stille.',
+          'hero.scroll': 'Das Anwesen betreten',
           'lieu.chapter': '— Kapitel I —',
-          'lieu.kicker': 'Die Domäne geht dem Handwerk voran',
+          'lieu.kicker': 'Das Anwesen vor dem Handwerk',
           'lieu.heading': 'Der Ort',
-          'lieu.p1': 'Vor dem Sud, der Ort.',
+          'lieu.p1': 'Vor dem Sud: der Ort.',
           'lieu.p2': 'Die Steine. Der Fluss. Die alten Stallungen des Schlosses.',
-          'lieu.p3': 'Eine Domäne, die ihren Rhythmus vorgibt. Die Brauerei folgt ihm, ohne ihn zu verändern.',
+          'lieu.p3': 'Ein Anwesen, das seinen Rhythmus vorgibt. Die Brauerei folgt ihm, ohne ihn zu verändern.',
           'brasserie.chapter': '— Kapitel II —',
           'brasserie.kicker': 'Traditionelle Gärung',
           'brasserie.heading': 'Die Brauerei',
-          'brasserie.p1': 'In den alten Stallungen der Domäne untergebracht, braut die Brauerei vier Biere traditioneller Gärung — in kleinen Chargen.',
-          'brasserie.p2': "Das Handwerk ist nicht neu. Eine Brauerei ist in Durbuy seit dem 16. Jahrhundert belegt, in der Obhut der Familie d'Ursel seit 1628.",
-          'brasserie.line': 'Im Herzen der Domäne. Im Rhythmus des Ortes.',
+          'brasserie.p1': 'In den alten Stallungen des Anwesens braut die Brauerei vier traditionell vergorene Biere. In kleinen Chargen.',
+          'brasserie.p2': "In Durbuy ist das Brauen ab dem 16. Jahrhundert belegt. Das Anwesen steht seit 1628 in der Obhut der Familie d'Ursel.",
+          'brasserie.line': 'Im Herzen des Anwesens. Im Rhythmus des Ortes.',
           'bieres.chapter': '— Kapitel III —',
           'bieres.kicker': 'Vier. Im Schloss gebraut.',
           'bieres.heading': 'Die Biere',
           'bieres.lead': 'Jedes in seinem eigenen Rhythmus. Kleine Chargen, traditionelle Gärung.',
-          'bieres.teaser': 'Die Reihe wird bald vorgestellt.',
-          'bieres.transition': 'Die Domäne reicht über den Sud hinaus.',
+          'bieres.teaser': 'Die Auswahl wird zu gegebener Zeit vorgestellt.',
+          'bieres.transition': 'Das Anwesen reicht über den Sud hinaus.',
           'points.chapter': '— Kapitel IV —',
-          'points.kicker': 'Je nach Eingang',
-          'points.heading': 'Wo Sie unsere Biere finden',
-          'points.lead': 'Eine Auswahl unserer Biere ist bei mehreren lokalen Partnern erhältlich, je nach Eingang.',
-          'points.request.copy': 'Für eine private oder berufliche Anfrage schreiben Sie uns. Die Verfügbarkeit wird im Einzelfall bestätigt.',
-          'points.request.cta': 'Bestellanfrage',
+          'points.kicker': 'Je nach Verfügbarkeit',
+          'points.heading': 'Ausgewählte Adressen',
+          'points.lead': 'Eine Auswahl unserer Biere ist bei ausgewählten lokalen Partnern erhältlich.',
+          'points.request.copy': 'Für eine private oder gewerbliche Anfrage schreiben Sie uns. Die Verfügbarkeit wird im Einzelfall bestätigt.',
+          'points.request.cta': 'Anfrage',
           'order.type.label': 'Art der Anfrage',
           'order.type.private': 'Privat',
-          'order.type.professional': 'Beruflich',
+          'order.type.professional': 'Gewerblich',
           'order.name': 'Name',
           'order.email': 'E-Mail-Adresse',
           'order.phone': 'Telefon',
           'order.vat': 'USt-IdNr.',
-          'order.message': 'Gewünschte Menge / Nachricht',
+          'order.message': 'Ihre Anfrage / Nachricht',
           'order.hint': 'Preise und Verfügbarkeit werden nicht automatisch bestätigt.',
           'order.submit': 'Anfrage senden',
           'order.sending': 'Wird gesendet…',
@@ -2601,27 +2601,27 @@
           'visite.chapter': '— Kapitel V —',
           'visite.kicker': 'Nur nach Vereinbarung',
           'visite.heading1': 'Die Brauerei',
-          'visite.lead': 'Die Brauerei kann nur nach Vereinbarung ab 10 Personen besucht werden.',
+          'visite.lead': 'Die Brauerei kann nur nach Vereinbarung für Gruppen ab 10 Personen besucht werden.',
           'visite.private': 'Das Schloss ist ein privater Wohnsitz und kann nicht besichtigt werden.',
           'visite.item1.name': 'Brauereibesuch',
           'visite.item1.desc': 'Der Ort, die Tanks, die Gärung, der Rhythmus des Suds.',
           'visite.item2.name': 'Verkostung',
           'visite.item2.desc': 'Eine Verkostung vor Ort, je nach verfügbaren Suden.',
           'visite.cta': 'Informationen &amp; Reservierungen',
-          'footer.label.domaine': 'Die Domäne',
+          'footer.label.domaine': 'Das Anwesen',
           'footer.country': 'Belgien',
           'footer.label.reservation': 'Nur nach Vereinbarung',
-          'footer.label.follow': 'Folgen',
+          'footer.label.follow': 'Instagram',
           'footer.fine': 'Bier in Maßen genießen.',
           'form.back': 'Zurück zur Startseite',
           'form.kicker': 'Nur nach Vereinbarung',
           'form.heading': 'Besuche in Vorbereitung',
-          'form.lead': 'Private Besuche der Domäne werden bald angekündigt. Anfragen werden vorerst direkt und diskret bearbeitet.',
-          'form.teaser.body': 'Der Kalender ist noch nicht öffentlich geöffnet. Für eine private oder berufliche Anfrage schreiben Sie uns an die Adresse der Domäne.',
-          'form.teaser.contact': 'An die Domäne schreiben',
+          'form.lead': 'Besuche der Brauerei sind in Vorbereitung. Anfragen erfolgen vorerst direkt und diskret.',
+          'form.teaser.body': 'Der Kalender ist noch nicht öffentlich zugänglich. Für eine private oder gewerbliche Anfrage schreiben Sie uns an die Adresse des Anwesens.',
+          'form.teaser.contact': 'An das Anwesen schreiben',
           'form.success.kicker': 'Danke',
           'form.success.heading': 'Anfrage erhalten',
-          'form.success.body': 'Wir haben Ihre Anfrage erhalten. Sie erhalten innerhalb von 48 Stunden eine Antwort von uns an die von Ihnen angegebene E-Mail-Adresse.',
+          'form.success.body': 'Wir haben Ihre Anfrage erhalten. Wir antworten an die angegebene E-Mail-Adresse.',
           'form.success.close': 'Schließen'
         }
       };

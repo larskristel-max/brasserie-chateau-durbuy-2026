@@ -10,9 +10,10 @@ Last updated: 2026-05-20
 - Instagram: `https://www.instagram.com/brasserieduchateaudedurbuy`.
 - No public opening hours are published until access policy is confirmed.
 - No `hreflang` is published yet. Add it only after translation review and only for pages with real translated equivalents.
-- Journal articles currently publish in their original language only.
+- Journal articles now keep French as the canonical source and may include manually curated NL/EN/DE translations in the feed.
 - Cloudflare Managed `robots.txt` is currently active on the zone and prepends its own AI-crawler rules. The repo `robots.txt` explicitly allows AI search / assistant retrieval agents while keeping `ai-train=no`.
 - Daily SEO / Google / outreach continuity for 20/05/2026 is recorded in `docs/daily-ops-seo-google-outreach-2026-05-20.md`.
+- Root `llms.txt` is used as a lightweight AI-readable summary and content map. Treat it as an emerging convention, not as a guaranteed ranking signal.
 
 ## Google / Discovery State - 20/05/2026
 
@@ -32,6 +33,7 @@ Last updated: 2026-05-20
 - Do not add `openingHours`, reservation URLs, telephone numbers, product offers, beer names, ABVs, tasting notes, or event details until approved for public release.
 - Keep `index.html` and `redesign-template.html` byte-identical after metadata edits.
 - Keep `robots.txt` aligned with the visibility goal: allow ordinary search, AI search, and assistant retrieval; avoid training permission unless explicitly approved.
+- Keep `llms.txt` factual and conservative: official identity, contact details, heritage context, important URLs, and unsupported claims to avoid.
 
 ## Search Themes
 
@@ -63,7 +65,7 @@ Last updated: 2026-05-20
 
 ## Future Work
 
-- Review FR/NL/EN/DE homepage translations before multilingual SEO.
-- Decide whether journal translations remain separate entries or grouped language versions.
-- Add sitemap entries for individual article URLs only if the journal gets stable article pages.
+- Review FR/NL/EN/DE homepage and journal translations before multilingual SEO.
+- Keep journal translations grouped under the same article when manually reviewed translations exist.
+- Keep generated sitemap entries current for each published stable journal article URL.
 - Add a future `Le Domaine` page only after approved editorial direction and source review.
