@@ -35,6 +35,7 @@ Last updated: 2026-05-20
 - Keep `index.html` and `redesign-template.html` byte-identical after metadata edits.
 - Keep `robots.txt` aligned with the visibility goal: allow ordinary search, AI search, and assistant retrieval; avoid training permission unless explicitly approved.
 - Keep `llms.txt` factual and conservative: official identity, contact details, heritage context, important URLs, and unsupported claims to avoid.
+- Homepage FAQ questions should be mirrored in `FAQPage` JSON-LD only when the same question and answer are visibly present on the page.
 - Homepage includes a small factual FAQ and `FAQPage` JSON-LD. Keep answers strictly factual and avoid hidden SEO-only copy.
 
 ## Search Themes
