@@ -5,7 +5,8 @@ const root = path.resolve(__dirname, '..');
 const journalDir = path.join(root, 'journal');
 const journalIndexPath = path.join(journalDir, 'index.html');
 const feedPath = path.join(root, 'content', 'journal', 'articles.json');
-const publicFeedPath = path.join(journalDir, 'articles.json');
+const PUBLIC_FEED_FILE = 'published-articles-2026-05-27.json';
+const publicFeedPath = path.join(journalDir, PUBLIC_FEED_FILE);
 const sitemapPath = path.join(root, 'sitemap.xml');
 const llmsPath = path.join(root, 'llms.txt');
 
@@ -82,8 +83,8 @@ ${FEED_END}`;
   }
 
   html = html.replace(
-    /const FEED_URL = ['"].*articles(?:\.public)?\.json['"];/,
-    "const FEED_URL = './articles.json';"
+    /const FEED_URL = ['"].*(?:articles|published-articles)[^'"]*\.json['"];/,
+    `const FEED_URL = './${PUBLIC_FEED_FILE}';`
   );
 
   fs.writeFileSync(journalIndexPath, html, 'utf8');
