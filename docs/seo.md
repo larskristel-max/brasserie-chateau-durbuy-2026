@@ -27,6 +27,14 @@ Last updated: 2026-05-20
 - Google Business Profile was created / updated with cautious brewery positioning: microbrasserie, official website, description, social profiles, and relevant attributes.
 - Business profile guardrails: no invented opening hours, no menu, no restaurant claims, and no unsupported service claims.
 
+## External Citation Audit - 27/05/2026
+
+- Current legal / business-directory signal: Companyweb lists `La Brasserie du Château de Durbuy`, company number `BE 0553.910.976`, address `Rue du Comte Théodule d'Ursel 2, 6940 Durbuy`, and main activity `Vervaardiging van bier`.
+- Main off-site discovery risk: older tourism, beer, restaurant, and map listings still associate Marckloff / La Ferme au Chêne with `36, rue Comte Théodule d'Ursel`, restaurant claims, menus, public visit claims, or legacy brewery naming.
+- Priority cleanup targets: Google Business Profile, Google Maps duplicate/legacy pins, Apple Business Connect, Bing Places, Cirkwi, Ourthe & Aisne, Petit Futé, Untappd, beer directories, tourism boards, and local partner pages.
+- Citation correction rule: align listings around the official site, the current name, address `Rue du Comte Théodule d'Ursel 2`, former stables of the Château de Durbuy, and cautious visit/access wording.
+- Do not correct third-party listings by adding unapproved opening hours, menus, taproom claims, ABVs, tasting notes, online shop claims, or uninterrupted brewing since 1560.
+
 ## Metadata Policy
 
 - Homepage canonical, Open Graph, Twitter card, and JSON-LD should use the permanent domain.
