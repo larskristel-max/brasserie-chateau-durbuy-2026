@@ -41,6 +41,10 @@ Good factual answer themes:
 - whether the brewery publishes public opening hours
 - whether beer is brewed at the château estate
 - where the beers can be found locally
+- site officiel de la Brasserie du Château de Durbuy
+- brasserie à Durbuy
+- microbrasserie à Durbuy
+- anciennes écuries du Château de Durbuy
 - brewery in Durbuy
 - microbrewery in Durbuy
 - Brasserie du Château de Durbuy

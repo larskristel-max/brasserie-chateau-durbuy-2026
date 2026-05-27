@@ -219,8 +219,8 @@ ${body}
 
 function sitemapXml(articles) {
   const urls = [
-    { loc: `${SITE}/`, lastmod: '2026-05-26', changefreq: 'monthly', priority: '1.0' },
-    { loc: `${SITE}/journal/`, lastmod: '2026-05-26', changefreq: 'weekly', priority: '0.6' },
+    { loc: `${SITE}/`, lastmod: '2026-05-27', changefreq: 'monthly', priority: '1.0' },
+    { loc: `${SITE}/journal/`, lastmod: '2026-05-27', changefreq: 'weekly', priority: '0.6' },
     ...articles.map((article) => ({
       loc: `${SITE}/journal/${article.id}/`,
       lastmod: isoDate(article.updatedAt || article.date),
