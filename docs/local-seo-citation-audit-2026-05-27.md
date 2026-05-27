@@ -59,6 +59,37 @@ Shorter variant:
   - Untappd shows `La Brasserie du Château de Durbuy` as a `Brew Pub` with legacy beer/check-in data.
   - Petit Futé and beer directories still describe Marckloff / La Ferme au Chêne in ways that can confuse Google about the current official entity.
 
+## Exact Public Listings To Review
+
+Correct / useful entity references:
+
+- Companyweb: `https://www.companyweb.be/en/0553910976/la-brasserie-du-chateau-de-durbuy`
+- FinCheck: `https://fincheck.be/fr/La-Brasserie-du-Ch%C3%A2teau-de-Durbuy/0553.910.976/Durbuy`
+- Cirkwi current tourism POI: `https://www.cirkwi.com/fr/point-interet/2863862-la-marckloff-micro-brasserie-du-chateau-de-durbuy`
+- Ardenne Belge current producer listing: `https://www.ardennebelge.be/diffusio/nl/p/lokale-producent/la-marckloff-micro-brasserie-du-chateau-de-durbuy-durbuy_TFOTER-A0-00DW-06W9/`
+- Vlaamse Brouwers: `https://vlaamsebrouwers.be/brouwerijlocaties/belgium/luxemburg-1/durbuy/la-brasserie-du-chateau-de-durbuy/`
+
+High-priority conflicting or legacy references:
+
+- Biernet: `https://www.biernet.nl/bier/brouwerijen/belgie/luxemburg/durbuy/marckloff-la`
+- Menuweb: `https://menuweb.menu/restaurants/durbuy/la-ferme-au-chene-2`
+- OpCafeGaan: `https://www.opcafegaan.be/durbuy/la-ferme-au-chne`
+- Polybeer: `https://polybeer.com/breweries/index.php?COMPID=1057&sub=1`
+- BeerPlanet: `https://beerplanet.net/brewery/brasserie-la-ferme-au-chene/`
+- Wikipedia Marckloff: `https://fr.wikipedia.org/wiki/Marckloff`
+- Untappd canonical-looking page: `https://untappd.com/Brasserieduchateaudedurbuy`
+- Untappd duplicate `/w/` page: `https://untappd.com/w/la-brasserie-du-chateau-de-durbuy/36617`
+- Kompass: `https://xk.kompass.com/en/c/la-brasserie-du-chateau-de-durbuy/ben0631179/`
+
+Search competitors / intent confusion:
+
+- `Brasserie Ardennaise`, `Brasserie du Golf de Durbuy`, `Le Grand Café`, `La Bru'sserie`, and `Brasserie de l'Ourthe` dominate generic `brasserie durbuy` because Google interprets `brasserie` as a restaurant query before a brewery query.
+- The official site and owner listings should therefore reinforce brewery / microbrewery / brouwerij / brewery language while staying château-led.
+
+## Execution Artifact
+
+This audit is source context. The owner working queue, platform checklist, and outreach templates live in `docs/off-site-owner-action-pack-2026-05-27.md`.
+
 ## Claims To Avoid
 
 - Public opening hours
@@ -67,4 +98,3 @@ Shorter variant:
 - Public château visits
 - Continuous brewing at the château since 1560
 - “Best brewery in Durbuy” or generic tourism-superlative wording
-

@@ -34,6 +34,7 @@ Last updated: 2026-05-20
 - Priority cleanup targets: Google Business Profile, Google Maps duplicate/legacy pins, Apple Business Connect, Bing Places, Cirkwi, Ourthe & Aisne, Petit Futé, Untappd, beer directories, tourism boards, and local partner pages.
 - Citation correction rule: align listings around the official site, the current name, address `Rue du Comte Théodule d'Ursel 2`, former stables of the Château de Durbuy, and cautious visit/access wording.
 - Do not correct third-party listings by adding unapproved opening hours, menus, taproom claims, ABVs, tasting notes, online shop claims, or uninterrupted brewing since 1560.
+- Owner execution pack: `docs/off-site-owner-action-pack-2026-05-27.md`.
 
 ## Metadata Policy
 
@@ -73,6 +74,7 @@ Last updated: 2026-05-20
 - Claim or update Bing Places and Apple Business Connect.
 - Align tourism, directory, Untappd, Instagram, and Google naming around `Brasserie du Château de Durbuy`.
 - Ask tourism and local partner pages to link to the permanent domain once the listing text is corrected.
+- Use `docs/off-site-owner-action-pack-2026-05-27.md` as the working queue for platform claims, duplicate checks, outreach messages, and evidence tracking.
 
 ## Future Work
 
