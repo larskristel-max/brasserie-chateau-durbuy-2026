@@ -1,5 +1,4 @@
 {
-  "version": 1,
   "articles": [
     {
       "id": "quand-le-grain-manque-2026-05-26",
@@ -158,113 +157,71 @@
       }
     },
     {
-      "id": "le-premier-brassin-de-mai-2026-05-11",
-      "title": "Le premier brassin de mai",
-      "date": "2026-05-11",
-      "language": "fr",
-      "status": "draft",
-      "author": "Lars Kristel",
-      "lede": "Trois jours après la mise en cuve. La fermentation se calme.",
-      "body": [
-        "Trois jours après la mise en cuve. La fermentation se calme; le krausen retombe lentement, formant cette couche brune et stable qui annonce une bière en train de se rassembler.",
-        "Ce matin la lumière entrait par l'oculus à l'est. J'étais venu mesurer la densité — 1.014, comme prévu — et je suis resté un moment dans le silence de la salle, à regarder l'écume s'épaissir au bord de la cuve. La pierre du sol était fraîche. L'odeur, ronde, fruitée, presque chaude.",
-        "Il y a quelque chose de profondément rassurant dans le retour de ce rythme. Le brassin commence à être ce qu'il doit être. Il sera prêt début juin, peut-être un peu plus tôt."
-      ],
-      "heroImage": null,
-      "tags": [
-        "fermentation",
-        "brassin"
-      ],
-      "createdAt": "2026-05-11T10:00:00.000Z",
-      "updatedAt": "2026-05-11T10:00:00.000Z"
-    },
-    {
-      "id": "larrivee-des-houblons-2025-09-22",
-      "title": "L'arrivée des houblons",
-      "date": "2025-09-22",
-      "language": "fr",
-      "status": "draft",
-      "author": "Lars Kristel",
-      "lede": "Une livraison annuelle qui dit quelque chose de la saison.",
-      "body": [
-        "La livraison de cette année est arrivée hier. Les houblons, conditionnés sous vide. J'ai ouvert un sac dans l'arrière-salle — j'attends toujours ce moment.",
-        "L'odeur de citron vert frais, de feuille de noyer, presque iodée. Chaque année, légèrement différente: 2025 me semble plus végétal, moins agrume, comme si la saison de récolte avait été plus humide. Ce n'est pas désagréable; c'est simplement différent.",
-        "Une partie partira dans un prochain brassin. Une tension fraîche, herbacée. Le reste, je garderai pour un brassin spécial à l'automne — peut-être une saison houblonnée, on verra."
-      ],
-      "heroImage": null,
-      "tags": [
-        "houblon",
-        "houblon"
-      ],
-      "createdAt": "2025-09-22T09:00:00.000Z",
-      "updatedAt": "2025-09-22T09:00:00.000Z"
-    },
-    {
-      "id": "une-biere-dici-2026-05-17",
-      "title": "Une bière d'ici",
-      "date": "2026-05-17",
+      "id": "marckloff-et-nous-2026-05-19",
+      "title": "Marckloff, et nous",
+      "date": "2026-05-19",
       "language": "fr",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "À Durbuy, le mot local doit rester simple.",
+      "lede": "Ce qu'un nom ancien peut encore transmettre, sans tout dire.",
       "body": [
-        "Je me méfie un peu des grands mots. Une bière locale n'a pas besoin de raconter toute une région à chaque gorgée. Elle doit d'abord être faite ici, avec attention, dans le rythme réel du lieu.",
-        "À Durbuy, ce rythme est particulier. La ville est dense, minérale, resserrée entre la pierre et l'Ourthe. On y travaille près des murs, près de l'eau, avec une lumière qui change vite selon les saisons.",
-        "Brasser ici, ce n'est pas fabriquer un souvenir. C'est accepter une échelle: de petites séries, des gestes suivis de près, une présence quotidienne dans les anciennes dépendances du domaine.",
-        "Le reste vient ensuite. Le nom du château, la ville, l'histoire. Ils ne remplacent pas le travail; ils l'obligent."
+        "Une question m'a été posée l'autre jour : que garde-t-on d'un homme dont on ne sait presque rien?",
+        "Philippe Marckloff brassait à Durbuy vers 1560. Il vivait à la Ferme au Chêne, à l'entrée de la ville. Les archives sont minces — un nom, une date, un lieu. Pas de portrait, pas de recettes, pas de témoignage. Juste l'attestation qu'il a existé.",
+        "C'est précisément cette discrétion qui m'attache à lui. Il a brassé ici, dans cette même vallée, sous la même lumière. Quatre siècles plus tard, je remplis des cuves dans la même vallée. La bière change de nom, de forme, de siècle. Le geste, lui, garde quelque chose du même fil.",
+        "Il ne s'agit pas de prétendre que nous brassons comme lui — nous n'en savons rien. Mais nous brassons ici. Et c'est, peut-être, suffisant."
       ],
       "heroImage": null,
       "tags": [
-        "Bière locale à Durbuy",
+        "Histoire brassicole de Durbuy",
         "Brasserie à Durbuy",
-        "Brasserie du Château de Durbuy"
+        "Philippe Marckloff"
       ],
-      "createdAt": "2026-05-17T10:00:00.000+02:00",
+      "createdAt": "2025-03-06T16:00:00.000Z",
       "updatedAt": "2026-05-27T10:45:00.000+02:00",
       "translations": {
         "nl": {
-          "title": "Een bier van hier",
-          "lede": "In Durbuy moet het woord lokaal eenvoudig blijven.",
+          "title": "Marckloff en wij",
+          "lede": "Wat een oude naam nog kan doorgeven, zonder alles te hoeven zeggen.",
           "body": [
-            "Ik ben wat wantrouwig tegenover grote woorden. Een lokaal bier hoeft niet bij elke slok een hele streek op te roepen. Het moet in de eerste plaats hier gemaakt zijn, met aandacht, in het werkelijke ritme van het domein.",
-            "In Durbuy heeft dat ritme iets eigens. De stad is compact, mineraal, ingesloten tussen steen en Ourthe. Er wordt gewerkt dicht bij de muren, dicht bij het water, in licht dat met de seizoenen snel verandert.",
-            "Hier brouwen is geen herinnering maken. Het is een schaal aanvaarden: kleine reeksen, handelingen die van nabij worden gevolgd, een dagelijkse aanwezigheid in de oude bijgebouwen van het landgoed.",
-            "De rest komt daarna. De naam van het kasteel, de stad, de geschiedenis. Ze vervangen het werk niet; ze maken het veeleisender."
+            "Onlangs kreeg ik een vraag: wat blijft er over van een man over wie we bijna niets weten?",
+            "Philippe Marckloff brouwde rond 1560 in Durbuy. Hij woonde op de Ferme au Chêne, aan de toegang tot de stad. De archieven zijn dun: een naam, een datum, een locatie. Geen portret, geen recepten, geen getuigenis. Alleen het bewijs dat hij heeft bestaan.",
+            "Juist die soberheid maakt hem nabij. Hij brouwde hier, in dezelfde vallei, onder hetzelfde licht. Vier eeuwen later vul ik kuipen in diezelfde vallei. Het bier verandert van naam, van vorm, van eeuw. In de handeling blijft iets van dezelfde draad bewaard.",
+            "Het gaat er niet om te beweren dat wij brouwen zoals hij. Dat weten we niet. Maar wij brouwen hier. Misschien is dat genoeg."
           ],
           "tags": [
-            "Lokaal bier in Durbuy",
+            "Biergeschiedenis van Durbuy",
             "Brouwerij in Durbuy",
-            "Brasserie du Château de Durbuy"
+            "Philippe Marckloff"
           ]
         },
         "en": {
-          "title": "A Beer from Here",
-          "lede": "In Durbuy, the word local should stay simple.",
+          "title": "Marckloff and Us",
+          "lede": "What an old name can still hand down, without saying everything.",
           "body": [
-            "I am wary of grand words. A local beer does not need to summon an entire region with every sip. It must first be made here, with care, in the real rhythm of the domain.",
-            "In Durbuy, that rhythm has its own character. The town is compact, mineral, held between stone and the Ourthe. Work happens close to the walls, close to the water, in a light that changes quickly with the seasons.",
-            "To brew here is not to manufacture a souvenir. It is to accept a scale: small batches, closely watched gestures, a daily presence in the estate’s old outbuildings.",
-            "The rest comes later. The name of the château, the town, the history. They do not replace the work; they make it answerable."
+            "A question came to me the other day: what remains of a man about whom we know almost nothing?",
+            "Philippe Marckloff was brewing in Durbuy around 1560. He lived at La Ferme au Chêne, at the entrance to the town. The archive is thin: a name, a date, a location. No portrait, no recipes, no testimony. Only the record that he existed.",
+            "It is precisely that spareness that brings him close. He brewed here, in this same valley, under the same light. Four centuries later, I fill tanks in the same valley. Beer changes name, form, century. The gesture keeps something of the same thread.",
+            "This is not to pretend that we brew as he did. We do not know that. But we brew here. Perhaps that is enough."
           ],
           "tags": [
-            "Local beer in Durbuy",
+            "Brewing history in Durbuy",
             "Brewery in Durbuy",
-            "Brasserie du Château de Durbuy"
+            "Philippe Marckloff"
           ]
         },
         "de": {
-          "title": "Ein Bier von hier",
-          "lede": "In Durbuy sollte das Wort „lokal“ einfach bleiben.",
+          "title": "Marckloff und wir",
+          "lede": "Was ein alter Name noch weitergeben kann, ohne alles zu erzählen.",
           "body": [
-            "Großen Worten begegne ich mit einer gewissen Vorsicht. Ein lokales Bier muss nicht mit jedem Schluck eine ganze Region erzählen. Zuerst muss es hier gemacht sein, mit Sorgfalt, im wirklichen Rhythmus des Ortes.",
-            "In Durbuy hat dieser Rhythmus seinen eigenen Charakter. Die Stadt ist dicht, steinern, zwischen Fels und Ourthe zusammengerückt. Man arbeitet nahe an den Mauern, nahe am Wasser, in einem Licht, das sich mit den Jahreszeiten rasch verändert.",
-            "Hier zu brauen heißt nicht, ein Andenken herzustellen. Es heißt, ein Maß anzunehmen: kleine Chargen, genau begleitete Handgriffe, eine tägliche Präsenz in den alten Nebengebäuden des Anwesens.",
-            "Der Rest kommt später. Der Name des Schlosses, die Stadt, die Geschichte. Sie ersetzen die Arbeit nicht; sie nehmen sie in die Pflicht."
+            "Neulich wurde mir eine Frage gestellt: Was bleibt von einem Menschen, über den wir fast nichts wissen?",
+            "Philippe Marckloff braute um 1560 in Durbuy. Er lebte in der Ferme au Chêne, am Eingang der Stadt. Die Überlieferung ist schmal: ein Name, ein Datum, ein Ort. Kein Porträt, keine Rezepte, kein Zeugnis. Nur der Nachweis, dass er existiert hat.",
+            "Gerade diese Knappheit macht ihn mir nah. Er hat hier gebraut, in demselben Tal, unter demselben Licht. Vier Jahrhunderte später fülle ich Tanks in diesem Tal. Das Bier wechselt Namen, Form und Jahrhundert. Die Geste bewahrt etwas von demselben Faden.",
+            "Es geht nicht darum zu behaupten, wir brauten wie er. Das wissen wir nicht. Aber wir brauen hier. Vielleicht genügt das."
           ],
           "tags": [
-            "Lokales Bier in Durbuy",
+            "Braugeschichte in Durbuy",
             "Brauerei in Durbuy",
-            "Brasserie du Château de Durbuy"
+            "Philippe Marckloff"
           ]
         }
       }
@@ -340,71 +297,71 @@
       }
     },
     {
-      "id": "marckloff-et-nous-2026-05-19",
-      "title": "Marckloff, et nous",
-      "date": "2026-05-19",
+      "id": "une-biere-dici-2026-05-17",
+      "title": "Une bière d'ici",
+      "date": "2026-05-17",
       "language": "fr",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "Ce qu'un nom ancien peut encore transmettre, sans tout dire.",
+      "lede": "À Durbuy, le mot local doit rester simple.",
       "body": [
-        "Une question m'a été posée l'autre jour : que garde-t-on d'un homme dont on ne sait presque rien?",
-        "Philippe Marckloff brassait à Durbuy vers 1560. Il vivait à la Ferme au Chêne, à l'entrée de la ville. Les archives sont minces — un nom, une date, un lieu. Pas de portrait, pas de recettes, pas de témoignage. Juste l'attestation qu'il a existé.",
-        "C'est précisément cette discrétion qui m'attache à lui. Il a brassé ici, dans cette même vallée, sous la même lumière. Quatre siècles plus tard, je remplis des cuves dans la même vallée. La bière change de nom, de forme, de siècle. Le geste, lui, garde quelque chose du même fil.",
-        "Il ne s'agit pas de prétendre que nous brassons comme lui — nous n'en savons rien. Mais nous brassons ici. Et c'est, peut-être, suffisant."
+        "Je me méfie un peu des grands mots. Une bière locale n'a pas besoin de raconter toute une région à chaque gorgée. Elle doit d'abord être faite ici, avec attention, dans le rythme réel du lieu.",
+        "À Durbuy, ce rythme est particulier. La ville est dense, minérale, resserrée entre la pierre et l'Ourthe. On y travaille près des murs, près de l'eau, avec une lumière qui change vite selon les saisons.",
+        "Brasser ici, ce n'est pas fabriquer un souvenir. C'est accepter une échelle: de petites séries, des gestes suivis de près, une présence quotidienne dans les anciennes dépendances du domaine.",
+        "Le reste vient ensuite. Le nom du château, la ville, l'histoire. Ils ne remplacent pas le travail; ils l'obligent."
       ],
       "heroImage": null,
       "tags": [
-        "Histoire brassicole de Durbuy",
+        "Bière locale à Durbuy",
         "Brasserie à Durbuy",
-        "Philippe Marckloff"
+        "Brasserie du Château de Durbuy"
       ],
-      "createdAt": "2025-03-06T16:00:00.000Z",
+      "createdAt": "2026-05-17T10:00:00.000+02:00",
       "updatedAt": "2026-05-27T10:45:00.000+02:00",
       "translations": {
         "nl": {
-          "title": "Marckloff en wij",
-          "lede": "Wat een oude naam nog kan doorgeven, zonder alles te hoeven zeggen.",
+          "title": "Een bier van hier",
+          "lede": "In Durbuy moet het woord lokaal eenvoudig blijven.",
           "body": [
-            "Onlangs kreeg ik een vraag: wat blijft er over van een man over wie we bijna niets weten?",
-            "Philippe Marckloff brouwde rond 1560 in Durbuy. Hij woonde op de Ferme au Chêne, aan de toegang tot de stad. De archieven zijn dun: een naam, een datum, een locatie. Geen portret, geen recepten, geen getuigenis. Alleen het bewijs dat hij heeft bestaan.",
-            "Juist die soberheid maakt hem nabij. Hij brouwde hier, in dezelfde vallei, onder hetzelfde licht. Vier eeuwen later vul ik kuipen in diezelfde vallei. Het bier verandert van naam, van vorm, van eeuw. In de handeling blijft iets van dezelfde draad bewaard.",
-            "Het gaat er niet om te beweren dat wij brouwen zoals hij. Dat weten we niet. Maar wij brouwen hier. Misschien is dat genoeg."
+            "Ik ben wat wantrouwig tegenover grote woorden. Een lokaal bier hoeft niet bij elke slok een hele streek op te roepen. Het moet in de eerste plaats hier gemaakt zijn, met aandacht, in het werkelijke ritme van het domein.",
+            "In Durbuy heeft dat ritme iets eigens. De stad is compact, mineraal, ingesloten tussen steen en Ourthe. Er wordt gewerkt dicht bij de muren, dicht bij het water, in licht dat met de seizoenen snel verandert.",
+            "Hier brouwen is geen herinnering maken. Het is een schaal aanvaarden: kleine reeksen, handelingen die van nabij worden gevolgd, een dagelijkse aanwezigheid in de oude bijgebouwen van het landgoed.",
+            "De rest komt daarna. De naam van het kasteel, de stad, de geschiedenis. Ze vervangen het werk niet; ze maken het veeleisender."
           ],
           "tags": [
-            "Biergeschiedenis van Durbuy",
+            "Lokaal bier in Durbuy",
             "Brouwerij in Durbuy",
-            "Philippe Marckloff"
+            "Brasserie du Château de Durbuy"
           ]
         },
         "en": {
-          "title": "Marckloff and Us",
-          "lede": "What an old name can still hand down, without saying everything.",
+          "title": "A Beer from Here",
+          "lede": "In Durbuy, the word local should stay simple.",
           "body": [
-            "A question came to me the other day: what remains of a man about whom we know almost nothing?",
-            "Philippe Marckloff was brewing in Durbuy around 1560. He lived at La Ferme au Chêne, at the entrance to the town. The archive is thin: a name, a date, a location. No portrait, no recipes, no testimony. Only the record that he existed.",
-            "It is precisely that spareness that brings him close. He brewed here, in this same valley, under the same light. Four centuries later, I fill tanks in the same valley. Beer changes name, form, century. The gesture keeps something of the same thread.",
-            "This is not to pretend that we brew as he did. We do not know that. But we brew here. Perhaps that is enough."
+            "I am wary of grand words. A local beer does not need to summon an entire region with every sip. It must first be made here, with care, in the real rhythm of the domain.",
+            "In Durbuy, that rhythm has its own character. The town is compact, mineral, held between stone and the Ourthe. Work happens close to the walls, close to the water, in a light that changes quickly with the seasons.",
+            "To brew here is not to manufacture a souvenir. It is to accept a scale: small batches, closely watched gestures, a daily presence in the estate’s old outbuildings.",
+            "The rest comes later. The name of the château, the town, the history. They do not replace the work; they make it answerable."
           ],
           "tags": [
-            "Brewing history in Durbuy",
+            "Local beer in Durbuy",
             "Brewery in Durbuy",
-            "Philippe Marckloff"
+            "Brasserie du Château de Durbuy"
           ]
         },
         "de": {
-          "title": "Marckloff und wir",
-          "lede": "Was ein alter Name noch weitergeben kann, ohne alles zu erzählen.",
+          "title": "Ein Bier von hier",
+          "lede": "In Durbuy sollte das Wort „lokal“ einfach bleiben.",
           "body": [
-            "Neulich wurde mir eine Frage gestellt: Was bleibt von einem Menschen, über den wir fast nichts wissen?",
-            "Philippe Marckloff braute um 1560 in Durbuy. Er lebte in der Ferme au Chêne, am Eingang der Stadt. Die Überlieferung ist schmal: ein Name, ein Datum, ein Ort. Kein Porträt, keine Rezepte, kein Zeugnis. Nur der Nachweis, dass er existiert hat.",
-            "Gerade diese Knappheit macht ihn mir nah. Er hat hier gebraut, in demselben Tal, unter demselben Licht. Vier Jahrhunderte später fülle ich Tanks in diesem Tal. Das Bier wechselt Namen, Form und Jahrhundert. Die Geste bewahrt etwas von demselben Faden.",
-            "Es geht nicht darum zu behaupten, wir brauten wie er. Das wissen wir nicht. Aber wir brauen hier. Vielleicht genügt das."
+            "Großen Worten begegne ich mit einer gewissen Vorsicht. Ein lokales Bier muss nicht mit jedem Schluck eine ganze Region erzählen. Zuerst muss es hier gemacht sein, mit Sorgfalt, im wirklichen Rhythmus des Ortes.",
+            "In Durbuy hat dieser Rhythmus seinen eigenen Charakter. Die Stadt ist dicht, steinern, zwischen Fels und Ourthe zusammengerückt. Man arbeitet nahe an den Mauern, nahe am Wasser, in einem Licht, das sich mit den Jahreszeiten rasch verändert.",
+            "Hier zu brauen heißt nicht, ein Andenken herzustellen. Es heißt, ein Maß anzunehmen: kleine Chargen, genau begleitete Handgriffe, eine tägliche Präsenz in den alten Nebengebäuden des Anwesens.",
+            "Der Rest kommt später. Der Name des Schlosses, die Stadt, die Geschichte. Sie ersetzen die Arbeit nicht; sie nehmen sie in die Pflicht."
           ],
           "tags": [
-            "Braugeschichte in Durbuy",
+            "Lokales Bier in Durbuy",
             "Brauerei in Durbuy",
-            "Philippe Marckloff"
+            "Brasserie du Château de Durbuy"
           ]
         }
       }

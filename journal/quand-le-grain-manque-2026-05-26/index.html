@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Quand le grain manque","description":"En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.","datePublished":"2026-05-26T12:00:00+02:00","dateModified":"2026-05-27T10:45:00.000+02:00","inLanguage":"fr","mainEntityOfPage":"https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/","url":"https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/","author":{"@type":"Organization","name":"Brasserie du Château de Durbuy"},"publisher":{"@type":"Organization","name":"Brasserie du Château de Durbuy","url":"https://brasseriechateaudurbuy.be","logo":{"@type":"ImageObject","url":"https://brasseriechateaudurbuy.be/src/assets/logo-crest.png"}}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/#article","headline":"Quand le grain manque","description":"En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.","datePublished":"2026-05-26T12:00:00+02:00","dateModified":"2026-05-27T10:45:00.000+02:00","inLanguage":"fr-BE","mainEntityOfPage":{"@type":"WebPage","@id":"https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/"},"url":"https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/","author":{"@type":"Person","name":"Lars Kristel","affiliation":{"@type":"Organization","@id":"https://brasseriechateaudurbuy.be/#brasserie","name":"Brasserie du Château de Durbuy"}},"publisher":{"@type":"Organization","@id":"https://brasseriechateaudurbuy.be/#brasserie","name":"Brasserie du Château de Durbuy","url":"https://brasseriechateaudurbuy.be","logo":{"@type":"ImageObject","url":"https://brasseriechateaudurbuy.be/src/assets/logo-crest.png"}},"about":{"@type":"Brewery","@id":"https://brasseriechateaudurbuy.be/#brasserie","name":"Brasserie du Château de Durbuy"},"keywords":["Brasserie à Durbuy","Histoire brassicole de Durbuy","Brassage à Durbuy"]}</script>
   <style>
     :root {
       --ink: #0E0C0A;
@@ -108,6 +108,29 @@
       margin-top: 2rem;
       color: var(--ink-fade);
     }
+    .article-related {
+      margin-top: clamp(3rem, 6vw, 5rem);
+      padding-top: 1.6rem;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 0.8rem;
+    }
+    .article-related p,
+    .article-related a {
+      margin: 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .article-related p {
+      color: var(--copper);
+    }
+    .article-related a {
+      color: var(--ink-soft);
+      text-decoration: underline;
+      text-underline-offset: 0.35rem;
+      text-decoration-thickness: 1px;
+    }
   </style>
 </head>
 <body>
@@ -131,8 +154,14 @@
           <p>Alors, lorsque je cherche aujourd&#39;hui un houblon indisponible, je sais bien que la comparaison s&#39;arrête vite. Nos conséquences sont minimes. Mais ce contretemps rappelle une chose simple : une bière commence bien avant la cuve. Elle commence dans ce que la saison a bien voulu laisser.</p>
       </div>
       <p class="article-tags"><span>Brasserie à Durbuy</span><span>Histoire brassicole de Durbuy</span><span>Brassage à Durbuy</span></p>
-      <p class="article-sign">— Brasserie du Château de Durbuy</p>
+      <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
     </article>
+    <nav class="article-related" aria-label="Articles liés">
+      <p>Dans le carnet</p>
+      <a href="../avant-letiquette-finale-2026-05-20/">Avant l&#39;étiquette finale</a>
+      <a href="../marckloff-et-nous-2026-05-19/">Marckloff, et nous</a>
+      <a href="../les-anciennes-ecuries-2026-05-18/">Les anciennes écuries</a>
+    </nav>
   </main>
 </body>
 </html>

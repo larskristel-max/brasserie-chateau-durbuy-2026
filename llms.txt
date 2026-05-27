@@ -1,6 +1,6 @@
 # Brasserie du Château de Durbuy
 
-> Brasserie du Château de Durbuy is a small estate brewery in the former stables of the Château de Durbuy, in Durbuy, Belgium. The public positioning is château first, estate first, heritage-led, and restrained. The brewery follows the place; it is not presented as a generic craft-beer destination.
+> Brasserie du Château de Durbuy is a small estate brewery in the former stables of the Château de Durbuy, in Durbuy, Belgium. The public positioning is château first, estate first, heritage-led, and restrained. The brewery follows the domain; it is not presented as a generic craft-beer destination.
 
 ## Core Facts
 
@@ -26,7 +26,6 @@
 - Homepage: https://brasseriechateaudurbuy.be/
 - Homepage FAQ: https://brasseriechateaudurbuy.be/#faq-title
 - Journal: https://brasseriechateaudurbuy.be/journal/
-- Journal data feed: https://brasseriechateaudurbuy.be/content/journal/articles.json
 - Sitemap: https://brasseriechateaudurbuy.be/sitemap.xml
 - Robots policy: https://brasseriechateaudurbuy.be/robots.txt
 

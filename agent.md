@@ -32,7 +32,7 @@ A candid running list — so a future agent reads the doc and understands *the s
 
 - **Dark / cinematic register is underrepresented.** The moodboard called for both light editorial *and* dark cinematic atmosphere. The current build delivers the light editorial cleanly; only the brewery slab carries the dark register. There is room for at least one more atmospheric chapter (twilight grounds, candle-lit interior, copper-closeup) to honour the second half of the brief.
 - **No second page.** Heritage is currently implied through three short paragraphs in Le Lieu plus the homepage's Tier-A heritage line. A real luxury estate site has at minimum a Le Domaine page (heritage essay + 8–12 photographs). Research is already written and committed to `/docs/heritage/` — the missing piece is the *editorial* page that uses it.
-- **Reservation flow is still `mailto:`.** A small four-field form (name, email, dates, party size) posting to `brasseurduchateau@gmail.com` is the minimum upgrade. A scheduling integration (Tock-style) is the ambitious version.
+- **Reservation flow is still simple.** The public form and public contact should use `info@brasseriechateaudurbuy.be`. A scheduling integration (Tock-style) is the ambitious version.
 - **Photography is generated, not photographed.** All five hero/section images on the live page are AI-generated stand-ins. A one-day shoot (golden-hour exterior, twilight courtyard, brewery interior with copper, bottle still life, jardin) is the single highest-leverage upgrade left.
 - **No motion-design pass beyond reveals and hero-settle.** Type doesn't enter on scroll; section transitions are flat. A restrained scroll-tied stagger on chapter headings would push the build from "very good static site" toward "Aman-grade".
 
@@ -258,7 +258,8 @@ When in doubt, the question to ask is **not** "is this beautiful?" but **"is thi
 
 These are the active contact details for the launch. Do not change them without explicit instruction:
 
-- Email: **brasseurduchateau@gmail.com**
+- Public email: **info@brasseriechateaudurbuy.be**
+- Private/admin email, not for public copy: **brasseurduchateau@gmail.com**
 - Address: **Rue du Comte Théodule d'Ursel, 2 — 6940 Durbuy, Belgique**
 - Instagram: **https://www.instagram.com/brasserieduchateaudedurbuy**
 

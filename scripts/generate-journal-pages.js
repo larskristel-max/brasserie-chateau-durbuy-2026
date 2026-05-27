@@ -3,13 +3,18 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const journalDir = path.join(root, 'journal');
+const journalIndexPath = path.join(journalDir, 'index.html');
 const feedPath = path.join(root, 'content', 'journal', 'articles.json');
+const publicFeedPath = path.join(journalDir, 'articles.json');
 const sitemapPath = path.join(root, 'sitemap.xml');
 const llmsPath = path.join(root, 'llms.txt');
 
 const SITE = 'https://brasseriechateaudurbuy.be';
 const BRAND = 'Brasserie du Ch\u00e2teau de Durbuy';
+const SIGNATURE = `Lars \u2014 ${BRAND}`;
 const MARKER = '<!-- generated-journal-article -->';
+const FEED_START = '<!-- generated-journal-feed:start -->';
+const FEED_END = '<!-- generated-journal-feed:end -->';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -35,6 +40,55 @@ function formatDate(value) {
   }).format(d);
 }
 
+function articleCardHtml(article) {
+  const bodyBlock = (article.body || [])
+    .filter((p) => p && p.trim())
+    .map((p) => `            <p>${escapeHtml(p)}</p>`)
+    .join('\n');
+  const tagsBlock = (article.tags || [])
+    .map((tag) => `<span>${escapeHtml(tag)}</span>`)
+    .join('');
+  const imageBlock = article.heroImage
+    ? `          <figure class="article-image">
+            <img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(article.title)}" loading="lazy" decoding="async" />
+            ${article.heroImageCaption ? `<figcaption>${escapeHtml(article.heroImageCaption)}</figcaption>` : ''}
+          </figure>`
+    : '';
+
+  return `        <article class="journal-article" lang="${escapeHtml(article.language || 'fr')}">
+          <p class="article-date">\u2014 ${escapeHtml(formatDate(article.date))} \u2014</p>
+          <h2 class="article-title"><a href="./${encodeURIComponent(article.id)}/">${escapeHtml(article.title)}</a></h2>
+          ${article.lede ? `<p class="article-lede">${escapeHtml(article.lede)}</p>` : ''}
+${imageBlock}
+          <div class="article-body">
+${bodyBlock}
+          </div>
+          ${tagsBlock ? `<p class="article-tags">${tagsBlock}</p>` : ''}
+          <p class="article-sign">${SIGNATURE}</p>
+        </article>`;
+}
+
+function updateJournalIndex(articles) {
+  if (!fs.existsSync(journalIndexPath)) return;
+  let html = fs.readFileSync(journalIndexPath, 'utf8');
+  const staticFeed = `${FEED_START}
+${articles.map(articleCardHtml).join('\n')}
+${FEED_END}`;
+
+  if (html.includes(FEED_START) && html.includes(FEED_END)) {
+    const start = html.indexOf(FEED_START);
+    const end = html.indexOf(FEED_END, start) + FEED_END.length;
+    html = html.slice(0, start) + staticFeed + html.slice(end);
+  }
+
+  html = html.replace(
+    /const FEED_URL = ['"].*articles(?:\.public)?\.json['"];/,
+    "const FEED_URL = './articles.json';"
+  );
+
+  fs.writeFileSync(journalIndexPath, html, 'utf8');
+}
+
 function removeGeneratedArticlePages() {
   for (const entry of fs.readdirSync(journalDir, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;
@@ -47,7 +101,7 @@ function removeGeneratedArticlePages() {
   }
 }
 
-function articleHtml(article) {
+function articleHtml(article, allArticles) {
   const url = `${SITE}/journal/${article.id}/`;
   const title = `${article.title} \u2014 Carnet du brasseur \u2014 ${BRAND}`;
   const description = article.lede || `Carnet du brasseur de la ${BRAND}.`;
@@ -63,16 +117,29 @@ function articleHtml(article) {
   const articleLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${url}#article`,
     headline: article.title,
     description,
     datePublished,
     dateModified,
-    inLanguage: 'fr',
-    mainEntityOfPage: url,
+    inLanguage: 'fr-BE',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
     url,
-    author: { '@type': 'Organization', name: BRAND },
+    author: {
+      '@type': 'Person',
+      name: 'Lars Kristel',
+      affiliation: {
+        '@type': 'Organization',
+        '@id': `${SITE}/#brasserie`,
+        name: BRAND,
+      },
+    },
     publisher: {
       '@type': 'Organization',
+      '@id': `${SITE}/#brasserie`,
       name: BRAND,
       url: SITE,
       logo: {
@@ -80,6 +147,12 @@ function articleHtml(article) {
         url: `${SITE}/src/assets/logo-crest.png`,
       },
     },
+    about: {
+      '@type': 'Brewery',
+      '@id': `${SITE}/#brasserie`,
+      name: BRAND,
+    },
+    keywords: article.tags || [],
   };
 
   return `<!DOCTYPE html>
@@ -192,6 +265,29 @@ function articleHtml(article) {
       margin-top: 2rem;
       color: var(--ink-fade);
     }
+    .article-related {
+      margin-top: clamp(3rem, 6vw, 5rem);
+      padding-top: 1.6rem;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 0.8rem;
+    }
+    .article-related p,
+    .article-related a {
+      margin: 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .article-related p {
+      color: var(--copper);
+    }
+    .article-related a {
+      color: var(--ink-soft);
+      text-decoration: underline;
+      text-underline-offset: 0.35rem;
+      text-decoration-thickness: 1px;
+    }
   </style>
 </head>
 <body>
@@ -209,8 +305,12 @@ function articleHtml(article) {
 ${body}
       </div>
       ${tags ? `<p class="article-tags">${tags}</p>` : ''}
-      <p class="article-sign">\u2014 ${BRAND}</p>
+      <p class="article-sign">${SIGNATURE}</p>
     </article>
+    <nav class="article-related" aria-label="Articles li\u00e9s">
+      <p>Dans le carnet</p>
+      ${relatedArticles(article, allArticles).map((item) => `<a href="../${escapeHtml(item.id)}/">${escapeHtml(item.title)}</a>`).join('\n      ')}
+    </nav>
   </main>
 </body>
 </html>
@@ -259,12 +359,20 @@ function updateLlms(articles) {
     text = `${text.trim()}\n\n${block}`;
   }
 
+  text = text.replace(/- Journal data feed: https:\/\/brasseriechateaudurbuy\.be\/(?:content\/journal|journal)\/articles(?:\.public)?\.json\r?\n/, '');
+
   text = text.replace(
     '2. https://brasseriechateaudurbuy.be/journal/',
     '2. Prefer the relevant individual journal article URL when citing a specific note.\n3. https://brasseriechateaudurbuy.be/journal/'
   );
 
   fs.writeFileSync(llmsPath, text, 'utf8');
+}
+
+function relatedArticles(article, allArticles) {
+  return allArticles
+    .filter((candidate) => candidate.id !== article.id)
+    .slice(0, 3);
 }
 
 const data = JSON.parse(fs.readFileSync(feedPath, 'utf8'));
@@ -277,9 +385,11 @@ removeGeneratedArticlePages();
 for (const article of published) {
   const dir = path.join(journalDir, article.id);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), articleHtml(article), 'utf8');
+  fs.writeFileSync(path.join(dir, 'index.html'), articleHtml(article, published), 'utf8');
 }
 
+fs.writeFileSync(publicFeedPath, `${JSON.stringify({ articles: published }, null, 2)}\n`, 'utf8');
+updateJournalIndex(published);
 fs.writeFileSync(sitemapPath, sitemapXml(published), 'utf8');
 updateLlms(published);
 
