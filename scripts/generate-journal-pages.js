@@ -16,6 +16,8 @@ const SIGNATURE = `Lars \u2014 ${BRAND}`;
 const MARKER = '<!-- generated-journal-article -->';
 const FEED_START = '<!-- generated-journal-feed:start -->';
 const FEED_END = '<!-- generated-journal-feed:end -->';
+const JOURNAL_JSONLD_START = '<!-- generated-journal-jsonld:start -->';
+const JOURNAL_JSONLD_END = '<!-- generated-journal-jsonld:end -->';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -69,6 +71,75 @@ ${bodyBlock}
         </article>`;
 }
 
+function articleUrl(article) {
+  return `${SITE}/journal/${article.id}/`;
+}
+
+function breadcrumbLd(items) {
+  return {
+    '@type': 'BreadcrumbList',
+    '@id': items[items.length - 1].url.replace(/\/$/, '') + '/#breadcrumb',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+function journalStructuredData(articles) {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Blog',
+        '@id': `${SITE}/journal/#blog`,
+        name: `Carnet du brasseur — ${BRAND}`,
+        description: "Notes, observations et fragments d'une saison brassicole au domaine du Château de Durbuy.",
+        url: `${SITE}/journal/`,
+        inLanguage: 'fr-BE',
+        publisher: {
+          '@type': 'Organization',
+          '@id': `${SITE}/#brasserie`,
+          name: BRAND,
+          url: SITE,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${SITE}/src/assets/logo-crest.png`,
+          },
+        },
+        about: {
+          '@type': 'Brewery',
+          '@id': `${SITE}/#brasserie`,
+          name: BRAND,
+        },
+        blogPost: articles.map((article) => ({
+          '@type': 'BlogPosting',
+          '@id': `${articleUrl(article)}#article`,
+          headline: article.title,
+          url: articleUrl(article),
+          datePublished: `${isoDate(article.date)}T12:00:00+02:00`,
+          author: {
+            '@type': 'Person',
+            name: 'Lars Kristel',
+          },
+        })),
+      },
+      breadcrumbLd([
+        { name: 'Accueil', url: `${SITE}/` },
+        { name: 'Carnet du brasseur', url: `${SITE}/journal/` },
+      ]),
+    ],
+  };
+}
+
+function journalJsonLdBlock(articles) {
+  return `${JOURNAL_JSONLD_START}
+  <script type="application/ld+json">${JSON.stringify(journalStructuredData(articles))}</script>
+  ${JOURNAL_JSONLD_END}`;
+}
+
 function updateJournalIndex(articles) {
   if (!fs.existsSync(journalIndexPath)) return;
   let html = fs.readFileSync(journalIndexPath, 'utf8');
@@ -87,6 +158,22 @@ ${FEED_END}`;
     `const FEED_URL = './${PUBLIC_FEED_FILE}';`
   );
 
+  const feedLink = `  <link rel="alternate" type="application/json" title="Articles publiés — ${BRAND}" href="./${PUBLIC_FEED_FILE}" />`;
+  if (!html.includes(`href="./${PUBLIC_FEED_FILE}"`)) {
+    html = html.replace('  <link rel="apple-touch-icon" sizes="180x180" href="../src/assets/apple-touch-icon.png" />', `  <link rel="apple-touch-icon" sizes="180x180" href="../src/assets/apple-touch-icon.png" />
+${feedLink}`);
+  }
+
+  const jsonLdBlock = journalJsonLdBlock(articles);
+  if (html.includes(JOURNAL_JSONLD_START) && html.includes(JOURNAL_JSONLD_END)) {
+    const start = html.indexOf(JOURNAL_JSONLD_START);
+    const end = html.indexOf(JOURNAL_JSONLD_END, start) + JOURNAL_JSONLD_END.length;
+    html = html.slice(0, start) + jsonLdBlock + html.slice(end);
+  } else {
+    html = html.replace('</head>', `${jsonLdBlock}
+</head>`);
+  }
+
   fs.writeFileSync(journalIndexPath, html, 'utf8');
 }
 
@@ -103,7 +190,7 @@ function removeGeneratedArticlePages() {
 }
 
 function articleHtml(article, allArticles) {
-  const url = `${SITE}/journal/${article.id}/`;
+  const url = articleUrl(article);
   const title = `${article.title} \u2014 Carnet du brasseur \u2014 ${BRAND}`;
   const description = article.lede || `Carnet du brasseur de la ${BRAND}.`;
   const body = (article.body || [])
@@ -116,7 +203,6 @@ function articleHtml(article, allArticles) {
   const datePublished = `${isoDate(article.date)}T12:00:00+02:00`;
   const dateModified = article.updatedAt || datePublished;
   const articleLd = {
-    '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     '@id': `${url}#article`,
     headline: article.title,
@@ -127,6 +213,11 @@ function articleHtml(article, allArticles) {
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': url,
+    },
+    isPartOf: {
+      '@type': 'Blog',
+      '@id': `${SITE}/journal/#blog`,
+      name: 'Carnet du brasseur',
     },
     url,
     author: {
@@ -142,7 +233,7 @@ function articleHtml(article, allArticles) {
       '@type': 'Organization',
       '@id': `${SITE}/#brasserie`,
       name: BRAND,
-      url: SITE,
+      url: `${SITE}/`,
       logo: {
         '@type': 'ImageObject',
         url: `${SITE}/src/assets/logo-crest.png`,
@@ -154,6 +245,17 @@ function articleHtml(article, allArticles) {
       name: BRAND,
     },
     keywords: article.tags || [],
+  };
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      articleLd,
+      breadcrumbLd([
+        { name: 'Accueil', url: `${SITE}/` },
+        { name: 'Carnet du brasseur', url: `${SITE}/journal/` },
+        { name: article.title, url },
+      ]),
+    ],
   };
 
   return `<!DOCTYPE html>
@@ -181,7 +283,7 @@ function articleHtml(article, allArticles) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <script type="application/ld+json">${JSON.stringify(articleLd)}</script>
+  <script type="application/ld+json">${JSON.stringify(structuredData)}</script>
   <style>
     :root {
       --ink: #0E0C0A;
@@ -358,6 +460,13 @@ function updateLlms(articles) {
     text = text.slice(0, start) + block + (next === -1 ? '' : text.slice(next + 1));
   } else {
     text = `${text.trim()}\n\n${block}`;
+  }
+
+  if (!text.includes(`${SITE}/journal/${PUBLIC_FEED_FILE}`)) {
+    text = text.replace(
+      '- Journal: https://brasseriechateaudurbuy.be/journal/',
+      `- Journal: https://brasseriechateaudurbuy.be/journal/\n- Public journal JSON feed: ${SITE}/journal/${PUBLIC_FEED_FILE}`
+    );
   }
 
   text = text.replace(/- Journal data feed: https:\/\/brasseriechateaudurbuy\.be\/(?:content\/journal|journal)\/articles(?:\.public)?\.json\r?\n/, '');
