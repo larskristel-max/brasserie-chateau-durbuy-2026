@@ -280,3 +280,20 @@ Blocked or needs manual action:
 | Target | Status |
 |---|---|
 | Tripadvisor | Skipped for now. Direct edit route is `https://www.tripadvisor.com/ImproveListing-d3665299.html`; fields to submit later: official name, `https://brasseriechateaudurbuy.be/`, `info@brasseriechateaudurbuy.be`, `Rue du Comte ThÃ©odule d'Ursel 2`, Durbuy, `6940`, category `Breweries`; leave hours blank. Google auth popup did not work in the in-app browser. |
+
+## Deployment and Search Console Status - 28/05/2026
+
+- Main branch pushed: `c66d817` (`Refine localized SEO wording and citation follow-up`).
+- Production branch pushed: `ddb484f` (`Deploy refined SEO wording`).
+- GitHub Pages deployment completed successfully.
+- Live production check passed for homepage title, meta description, `robots.txt`, `sitemap.xml`, and `llms.txt`.
+- Google Search Console sitemap status: `https://brasseriechateaudurbuy.be/sitemap.xml` submitted and read successfully on 28/05/2026, with 7 discovered URLs.
+- Google Search Console URL inspection: homepage, journal index, and all five journal article URLs were shown as on Google.
+- Re-indexing requested in Search Console for:
+  - `https://brasseriechateaudurbuy.be/`
+  - `https://brasseriechateaudurbuy.be/journal/`
+  - `https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/`
+  - `https://brasseriechateaudurbuy.be/journal/avant-letiquette-finale-2026-05-20/`
+  - `https://brasseriechateaudurbuy.be/journal/marckloff-et-nous-2026-05-19/`
+  - `https://brasseriechateaudurbuy.be/journal/les-anciennes-ecuries-2026-05-18/`
+  - `https://brasseriechateaudurbuy.be/journal/une-biere-dici-2026-05-17/`
