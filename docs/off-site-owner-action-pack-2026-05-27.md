@@ -232,3 +232,51 @@ Texte recommandé: `Brasserie du Château de Durbuy`
 Merci beaucoup,
 
 Brasserie du Château de Durbuy
+
+## Gmail Outreach Status - 28/05/2026
+
+Already sent or answered in Gmail:
+
+- Famenne-Ardenne / Maison du Tourisme: contacted; reply received; photos added to the fiche.
+- Ardenne Belge: update request sent to `info@ardennebelge.be`, with `marine.georges@ardenne.belge.be` in copy.
+- Cirkwi: support request acknowledged; follow-up sent to `support@cirkwi.com`.
+- Durbuy tourism / RSI Durbuy: site-official notice sent to `tourisme@durbuy.be` and `rsidurbuy@gmail.com`.
+- APAQ-W / Trinquons Local: reply received from `f.dargent@apaqw.be`; membership form received.
+- Zythos / Groep Bier: reply received; offline lists updated and website update expected with the next monthly refresh.
+
+Drafts prepared in Gmail, not sent:
+
+| Target | Draft recipient | Language | Listing / issue | Follow-up date |
+|---|---|---|---|---|
+| OpCafeGaan | `Info@opcafegaan.be` | Dutch | `La Ferme au Chene` active listing | 04/06/2026 |
+| Biernet | `info@biernet.nl` | Dutch | Marckloff / brewery naming update | 04/06/2026 |
+| Wanderlog | `support@wanderlog.com` | English | old La Ferme au Chene place page | 04/06/2026 |
+| Sluurpy | `ristoratori@sluurpy.com`, cc `segnalazioni@sluurpy.com` | French | old La Ferme au Chene restaurant page | 04/06/2026 |
+| Polybeer | `info@polybeer.com` | English | former Brasserie La Ferme au Chene brewery record | 04/06/2026 |
+| BeerPlanet | `info@beerplanet.net` | English | former Brasserie La Ferme au Chene brewery record | 04/06/2026 |
+
+Remaining manual follow-up:
+
+| Target | Contact path | Language | Note |
+|---|---|---|---|
+| Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` or `https://www.tripadvisor.com/Owners` | English | skipped for now; direct edit route works, but Google auth popup is blocked in the in-app browser. Use email login or normal browser later. |
+| Cirkwi pro support | `https://pro.cirkwi.com/contact-support/` | French | use only if the existing support thread stalls |
+
+### Browser Form Status - 28/05/2026
+
+Submitted or attempted in browser:
+
+| Target | URL / route | Status |
+|---|---|---|
+| Menuweb | `https://menuweb.menu/contribute/restaurant/la-ferme-au-chene-2` | Submitted 28/05/2026. On-page confirmation: `Your report has been received. Thank you!` |
+| Petit Fute | `https://www.petitfute.com/information/contact.html` | Submitted 28/05/2026. On-page confirmation: `Votre message a Ã©tÃ© bien envoyÃ©, merci de votre retour !` |
+| Resto.be | `https://www.resto.be/contact` | Submitted 28/05/2026 via `Helpdesk pour restaurants`. On-page confirmation: `Aanvraag verzonden.` |
+| Belgique Heures | `https://belgique.heures.info/contact` | Submitted 28/05/2026. On-page confirmation: `Message envoyÃ© ! Nous avons reÃ§u votre message, nous allons le gÃ©rer au plus vite.` |
+| CellarMonk | `https://www.cellarmonk.com/contact-us/` | Submitted/attempted 28/05/2026 via `Listing Addition/Correction`. No clear on-page confirmation was visible after submit; form message disappeared/reset. |
+| LaCarte | `https://lacarte.menu/contribute/restaurant/la-ferme-au-chene-2` | Submitted 28/05/2026. On-page confirmation: `Your report has been received. Thank you.` |
+
+Blocked or needs manual action:
+
+| Target | Status |
+|---|---|
+| Tripadvisor | Skipped for now. Direct edit route is `https://www.tripadvisor.com/ImproveListing-d3665299.html`; fields to submit later: official name, `https://brasseriechateaudurbuy.be/`, `info@brasseriechateaudurbuy.be`, `Rue du Comte ThÃ©odule d'Ursel 2`, Durbuy, `6940`, category `Breweries`; leave hours blank. Google auth popup did not work in the in-app browser. |
