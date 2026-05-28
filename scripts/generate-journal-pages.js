@@ -12,6 +12,8 @@ const llmsPath = path.join(root, 'llms.txt');
 
 const SITE = 'https://brasseriechateaudurbuy.be';
 const BRAND = 'Brasserie du Ch\u00e2teau de Durbuy';
+const JOURNAL_IMAGE = `${SITE}/src/assets/hero-chateau-1280w.jpg`;
+const JOURNAL_IMAGE_ALT = 'Chateau de Durbuy above the Ourthe';
 const SIGNATURE = `Lars \u2014 ${BRAND}`;
 const MARKER = '<!-- generated-journal-article -->';
 const FEED_START = '<!-- generated-journal-feed:start -->';
@@ -98,6 +100,7 @@ function journalStructuredData(articles) {
         name: `Carnet du brasseur — ${BRAND}`,
         description: "Notes, observations et fragments d'une saison brassicole au domaine du Château de Durbuy.",
         url: `${SITE}/journal/`,
+        image: JOURNAL_IMAGE,
         inLanguage: 'fr-BE',
         publisher: {
           '@type': 'Organization',
@@ -119,6 +122,7 @@ function journalStructuredData(articles) {
           '@id': `${articleUrl(article)}#article`,
           headline: article.title,
           url: articleUrl(article),
+          image: JOURNAL_IMAGE,
           datePublished: `${isoDate(article.date)}T12:00:00+02:00`,
           author: {
             '@type': 'Person',
@@ -220,6 +224,7 @@ function articleHtml(article, allArticles) {
       name: 'Carnet du brasseur',
     },
     url,
+    image: JOURNAL_IMAGE,
     author: {
       '@type': 'Person',
       name: 'Lars Kristel',
@@ -272,11 +277,15 @@ function articleHtml(article, allArticles) {
   <meta property="og:title" content="${escapeHtml(title)}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
   <meta property="og:url" content="${escapeHtml(url)}" />
+  <meta property="og:image" content="${escapeHtml(JOURNAL_IMAGE)}" />
+  <meta property="og:image:alt" content="${escapeHtml(JOURNAL_IMAGE_ALT)}" />
   <meta property="article:published_time" content="${escapeHtml(datePublished)}" />
   <meta property="article:modified_time" content="${escapeHtml(dateModified)}" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${escapeHtml(title)}" />
   <meta name="twitter:description" content="${escapeHtml(description)}" />
+  <meta name="twitter:image" content="${escapeHtml(JOURNAL_IMAGE)}" />
+  <meta name="twitter:image:alt" content="${escapeHtml(JOURNAL_IMAGE_ALT)}" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../src/assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../src/assets/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../src/assets/apple-touch-icon.png" />
