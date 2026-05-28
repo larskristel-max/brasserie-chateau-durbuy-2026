@@ -4,6 +4,17 @@
 
 Use this as the working queue for Google, Maps, directories, tourism listings, and partner backlinks. The goal is to make `Brasserie du Château de Durbuy` the clear official brewery entity for Durbuy without adding restaurant, public-hours, menu, taproom, ABV, stock, or unsupported heritage claims.
 
+## Status Update - 28/05/2026
+
+- Google Search Console: property is accessible under `brasseurduchateau@gmail.com`. Overview showed 8 web-search clicks, 285 impressions, 2.8% CTR, average position 6.2.
+- Query evidence: `brasserie durbuy` had 25 impressions and 0 clicks; `brouwerij durbuy` had 10 impressions and 1 click. This confirms the main issue is local/entity relevance and click-through, not only crawlability.
+- Sitemap: `https://brasseriechateaudurbuy.be/sitemap.xml` was resubmitted on 28/05/2026. Previous Search Console sitemap row still showed 6 discovered pages from the 26/05/2026 read, while the current sitemap contains 7 URLs.
+- URL inspection: homepage and journal index are indexed and eligible for Google results. Four older article URLs are indexed. `quand-le-grain-manque-2026-05-26` was detected through the sitemap but not indexed; indexing was requested and accepted into Google's priority crawl queue.
+- Google Business Profile: the listing is validated, named `Brasserie du Château de Durbuy`, uses address `Rue du Comte Théodule d'Ursel 2, 6940 Durbuy`, category `Microbrasserie`, and links to `https://brasseriechateaudurbuy.be/`.
+- Google Business Profile caution: Google still surfaces restaurant-style prompts such as menu, reservations, phone, and opening hours. Do not fill these unless the facts are confirmed; avoid creating a public restaurant/taproom signal.
+- Cloudflare: `https://www.brasseriechateaudurbuy.be/` redirects to the canonical apex, but `http://brasseriechateaudurbuy.be/` currently returns `200 OK` instead of redirecting to HTTPS. Enable Cloudflare `Always Use HTTPS` or an equivalent HTTP-to-HTTPS redirect rule after dashboard login.
+- Repo-side improvement: journal index and article pages now include preview image metadata (`og:image`, `twitter:image`, and schema `image`) using the existing chateau image.
+
 ## Copy/Paste Canonical Facts
 
 - Official name: `Brasserie du Château de Durbuy`
@@ -176,4 +187,3 @@ Texte recommandé: `Brasserie du Château de Durbuy`
 Merci beaucoup,
 
 Brasserie du Château de Durbuy
-
