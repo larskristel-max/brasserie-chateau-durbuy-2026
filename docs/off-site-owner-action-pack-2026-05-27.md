@@ -73,7 +73,7 @@ Use this table as the current tracking view. Older platform rows below are conte
 | OpCafeGaan | `https://www.opcafegaan.be/durbuy/la-ferme-au-chne` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged; high priority because it shows active/open old signals. |
 | Polybeer | `https://polybeer.com/breweries/index.php?COMPID=1057&sub=1` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
 | BeerPlanet | `https://beerplanet.net/brewery/brasserie-la-ferme-au-chene/` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
-| Vlaamse Brouwers | `https://vlaamsebrouwers.be/brouwerijlocaties/belgium/luxemburg-1/durbuy/la-brasserie-du-chateau-de-durbuy/` | Correct name/address found, but public copy includes a phone number and a stronger historical line than desired. Gmail draft prepared 28/05/2026. | Review/send draft. |
+| Vlaamse Brouwers | `https://vlaamsebrouwers.be/brouwerijlocaties/belgium/luxemburg-1/durbuy/la-brasserie-du-chateau-de-durbuy/` | Correct name/address found, but public copy includes a phone number and a stronger historical line than desired. Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
 | CellarMonk | `https://www.cellarmonk.com/europe/brewery-europe/brasserie-la-ferme-au-chene/` | Submitted/attempted 28/05/2026, but no visible confirmation. | Follow up if unchanged. |
 | Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` | Blocked in in-app browser because Google auth popup failed. | Complete in a normal/login-capable browser. |
 | Kompass | `https://xk.kompass.com/en/c/la-brasserie-du-chateau-de-durbuy/ben0631179/` | Not verified in this pass. | Recheck NAP/entity later. |
@@ -262,11 +262,6 @@ Gmail outreach sent on 28/05/2026:
 | Sluurpy | `ristoratori@sluurpy.com`, cc `segnalazioni@sluurpy.com` | French | old La Ferme au Chene restaurant page | 04/06/2026 |
 | Polybeer | `info@polybeer.com` | English | former Brasserie La Ferme au Chene brewery record | 04/06/2026 |
 | BeerPlanet | `info@beerplanet.net` | English | former Brasserie La Ferme au Chene brewery record | 04/06/2026 |
-
-Draft prepared in Gmail, not sent:
-
-| Target | Draft recipient | Language | Listing / issue | Follow-up date |
-|---|---|---|---|---|
 | Vlaamse Brouwers | `info@vlaamsebrouwers.be` | Dutch | current listing has correct name/address but should remove stale phone and soften historical continuity wording | 04/06/2026 |
 
 Remaining manual follow-up:
