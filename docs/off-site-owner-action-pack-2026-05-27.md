@@ -59,11 +59,11 @@ Use this table as the current tracking view. Older platform rows below are conte
 |---|---|---|---|
 | Google Business Profile | `https://business.google.com/locations` | Validated and currently uses the official name, address, category, and website. Description has an active pending-review state; public panel also shows a reservation-link signal to the website. | Recheck after Google review clears; keep restaurant-style prompts blank unless facts change and remove reservation-link signal if a safe control is exposed. |
 | Google Search Console | `https://search.google.com/search-console?resource_id=sc-domain%3Abrasseriechateaudurbuy.be` | Sitemap read successfully on 28/05/2026; homepage, journal, and five articles are indexed; re-indexing requested. | Monitor queries and CTR weekly. |
-| Google Maps duplicates | Search Maps for duplicate names below | Not fully rechecked in this pass. | Recheck for Marckloff / La Ferme au Chene duplicate entities. |
+| Google Maps duplicates | Search Maps for duplicate names below | Rechecked 28/05/2026. `La Ferme au Chêne` still exists as a permanently closed Google Maps place at Rue du Comte Théodule d'Ursel 36 with old reviews. `Marckloff Durbuy` surfaces the official brewery in results, but also mixes restaurant/brasserie entities. | Keep closed predecessor as-is unless it starts competing as active; do not merge into the official brewery profile. |
 | Apple Business Connect | `https://businessconnect.apple.com/` | Opened 28/05/2026; requires Apple sign-in / owner setup. | Manual owner-login check later. |
 | Bing Places | `https://www.bingplaces.com/` | Opened 28/05/2026; requires Microsoft/Bing sign-in / owner setup. | Manual owner-login check later. |
-| Untappd | `https://untappd.com/w/la-brasserie-du-chateau-de-durbuy/36617` | Public page found; name/location are useful, but category appears as `Brew Pub`, which can reinforce restaurant/taproom intent. Gmail draft prepared to `support@untappd.com` on 28/05/2026. | Review/send draft or claim brewery page. |
-| Cirkwi | `https://www.cirkwi.com/fr/point-interet/2863862-la-marckloff-micro-brasserie-du-chateau-de-durbuy` | Support acknowledged; old public route now appears unstable/redirected to search. | Use pro support only if the existing support thread stalls. |
+| Untappd | `https://untappd.com/w/la-brasserie-du-chateau-de-durbuy/36617` | Public page found; name/location are useful, but category appears as `Brew Pub`, which can reinforce restaurant/taproom intent. Gmail draft prepared to `business@untappd.com` on 28/05/2026. | Review/send draft or claim brewery page. |
+| Cirkwi | `https://www.cirkwi.com/fr/point-interet/2863862-la-marckloff-micro-brasserie-du-chateau-de-durbuy` | Support acknowledged, but public indexed FR/NL/EN/DE pages still show `La Marckloff / Micro-brasserie du château de Durbuy`; older snippets also expose a stale personal email/mobile. | Follow up if no correction appears; ask MTFA/Famenne-Ardenne data source to rename the point consistently. |
 | Ardenne Belge | `https://www.ardennebelge.be/diffusio/nl/p/lokale-producent/la-marckloff-micro-brasserie-du-chateau-de-durbuy-durbuy_TFOTER-A0-00DW-06W9/` | Contacted; still needs public title/entity cleanup. | Follow up if no correction appears. |
 | Biernet | `https://www.biernet.nl/bier/brouwerijen/belgie/luxemburg/durbuy/marckloff-la` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
 | Menuweb | `https://menuweb.menu/restaurants/durbuy/la-ferme-au-chene-2` | Submitted 28/05/2026 with on-page receipt. | Wait, then chase if unchanged. |
@@ -77,6 +77,7 @@ Use this table as the current tracking view. Older platform rows below are conte
 | Vlaamse Brouwers | `https://vlaamsebrouwers.be/brouwerijlocaties/belgium/luxemburg-1/durbuy/la-brasserie-du-chateau-de-durbuy/` | Correct name/address found, but public copy includes a phone number and a stronger historical line than desired. Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
 | CellarMonk | `https://www.cellarmonk.com/europe/brewery-europe/brasserie-la-ferme-au-chene/` | Submitted/attempted 28/05/2026, but no visible confirmation. | Follow up if unchanged. |
 | Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` | Blocked in in-app browser because Google auth popup failed. | Complete in a normal/login-capable browser. |
+| BeerXchange | `https://www.beerxchange.com/brewery/la-ferme-au-cha-ne/36617` | Public page appears to mirror Untappd and shows `Brew Pub`; likely lower priority and dependent on Untappd data. | Recheck after Untappd is corrected. |
 | Kompass | `https://xk.kompass.com/en/c/la-brasserie-du-chateau-de-durbuy/ben0631179/` | Public page has correct name/address and beer manufacturing classifications, but also shows broad/legacy categories such as bars/restaurants and unrelated food-processing classifications. | Lower priority; correct only if Kompass exposes an owner-edit path. |
 | Wikipedia Marckloff | `https://fr.wikipedia.org/wiki/Marckloff` | Not edited. | Only update if policy-compliant sourcing is available. |
 
@@ -269,7 +270,7 @@ Gmail drafts prepared for review:
 
 | Target | Draft recipient | Language | Listing / issue | Follow-up date |
 |---|---|---|---|---|
-| Untappd | `support@untappd.com` | English | public brewery page uses `Brew Pub`; request review toward brewery / microbrewery and official site alignment | 04/06/2026 |
+| Untappd | `business@untappd.com` | English | public brewery page uses `Brew Pub`; request review toward brewery / microbrewery and official site alignment | 04/06/2026 |
 
 Remaining manual follow-up:
 
