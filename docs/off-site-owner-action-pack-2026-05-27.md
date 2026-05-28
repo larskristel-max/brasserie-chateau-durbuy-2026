@@ -12,7 +12,8 @@ Use this as the working queue for Google, Maps, directories, tourism listings, a
 - URL inspection: homepage, journal index, and all five article URLs are indexed and eligible for Google results.
 - Google Business Profile: the listing is validated, named `Brasserie du Château de Durbuy`, uses address `Rue du Comte Théodule d'Ursel 2, 6940 Durbuy`, category `Microbrasserie`, and links to `https://brasseriechateaudurbuy.be/`.
 - Google Business Profile caution: Google still surfaces restaurant-style prompts such as menu, reservations, phone, and opening hours. Do not fill these unless the facts are confirmed; avoid creating a public restaurant/taproom signal.
-- Google Business Profile note: profile is verified and shows the correct name/address/category. Its description is broadly aligned, but a future pass should consider replacing wording such as `poursuit ce fil` with a more factual line to avoid any automated inference of uninterrupted brewing continuity.
+- Google Business Profile note: profile is verified and shows the correct name/address/category. Its description currently has an active Google review / pending-change state; Google says publication can take up to 30 days. Revisit once editable and replace wording such as `poursuit ce fil` with a more factual line to avoid any automated inference of uninterrupted brewing continuity.
+- Google Business Profile note: Google Search publicly surfaced a `Réservations: brasseriechateaudurbuy.be` signal even though the profile also says `Ne prend pas de réservations`. This should be cleaned up in the Business Profile if Google exposes a safe removal path, because it can reinforce restaurant/taproom intent.
 - Cloudflare: fixed on 28/05/2026. `http://brasseriechateaudurbuy.be/` and `https://www.brasseriechateaudurbuy.be/` now redirect to the canonical `https://brasseriechateaudurbuy.be/`.
 - Repo-side improvement: journal index and article pages now include preview image metadata (`og:image`, `twitter:image`, and schema `image`) using the existing chateau image.
 - Public Google result check: exact brand search shows the official site and validated profile, but Facebook and TerroirLux can still appear above the owned homepage. `brasserie durbuy` is mostly interpreted as restaurant/brasserie-in-Durbuy intent. `brewery durbuy` shows the target Maps listing, but still mixes in Brasserie de Durbuy, Marckloff, La Ferme au Chêne, and generic tourism/directory results.
@@ -56,7 +57,7 @@ Use this table as the current tracking view. Older platform rows below are conte
 
 | Platform / listing | URL | Current status | Next action |
 |---|---|---|---|
-| Google Business Profile | `https://business.google.com/locations` | Validated and currently uses the official name, address, category, and website. | Keep restaurant-style prompts blank unless facts change. |
+| Google Business Profile | `https://business.google.com/locations` | Validated and currently uses the official name, address, category, and website. Description has an active pending-review state; public panel also shows a reservation-link signal to the website. | Recheck after Google review clears; keep restaurant-style prompts blank unless facts change and remove reservation-link signal if a safe control is exposed. |
 | Google Search Console | `https://search.google.com/search-console?resource_id=sc-domain%3Abrasseriechateaudurbuy.be` | Sitemap read successfully on 28/05/2026; homepage, journal, and five articles are indexed; re-indexing requested. | Monitor queries and CTR weekly. |
 | Google Maps duplicates | Search Maps for duplicate names below | Not fully rechecked in this pass. | Recheck for Marckloff / La Ferme au Chene duplicate entities. |
 | Apple Business Connect | `https://businessconnect.apple.com/` | Opened 28/05/2026; requires Apple sign-in / owner setup. | Manual owner-login check later. |
@@ -286,7 +287,7 @@ Submitted or attempted in browser:
 
 Email confirmations:
 
-- Menu/Menuweb sent contribution confirmation emails on 28/05/2026; both confirmation links were opened in the browser.
+- Menu/Menuweb sent contribution confirmation emails on 28/05/2026; both original confirmation links were opened in the browser. A later Menuweb confirmation email received at 11:13 UTC was also opened and redirected to the Menuweb homepage without a separate success message.
 
 Blocked or needs manual action:
 
