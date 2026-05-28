@@ -14,6 +14,8 @@ Use this as the working queue for Google, Maps, directories, tourism listings, a
 - Google Business Profile caution: Google still surfaces restaurant-style prompts such as menu, reservations, phone, and opening hours. Do not fill these unless the facts are confirmed; avoid creating a public restaurant/taproom signal.
 - Cloudflare: `https://www.brasseriechateaudurbuy.be/` redirects to the canonical apex, but `http://brasseriechateaudurbuy.be/` currently returns `200 OK` instead of redirecting to HTTPS. Enable Cloudflare `Always Use HTTPS` or an equivalent HTTP-to-HTTPS redirect rule after dashboard login.
 - Repo-side improvement: journal index and article pages now include preview image metadata (`og:image`, `twitter:image`, and schema `image`) using the existing chateau image.
+- Public Google result check: exact brand search shows the official site and validated profile, but Facebook and TerroirLux can still appear above the owned homepage. `brasserie durbuy` is mostly interpreted as restaurant/brasserie-in-Durbuy intent. `brewery durbuy` shows the target Maps listing, but still mixes in Brasserie de Durbuy, Marckloff, La Ferme au Chêne, and generic tourism/directory results.
+- Highest-priority external cleanup from current results: tourism/directory pages that still say Marckloff / La Ferme au Chêne, pages pointing to Facebook instead of the official website, and directory results whose snippets imply the old brewery is closed or located at the old identity/address.
 
 ## Copy/Paste Canonical Facts
 
@@ -68,6 +70,49 @@ Use one row per platform or listing.
 | BeerPlanet | `https://beerplanet.net/brewery/brasserie-la-ferme-au-chene/` |  |  |  |  |  |  |  |  |
 | Kompass | `https://xk.kompass.com/en/c/la-brasserie-du-chateau-de-durbuy/ben0631179/` |  |  |  |  |  |  |  |  |
 | Wikipedia Marckloff | `https://fr.wikipedia.org/wiki/Marckloff` |  |  |  |  |  |  |  |  |
+
+## Prioritized External Cleanup - 28/05/2026
+
+1. La Ferme au Chêne active local listings:
+   - `https://www.opcafegaan.be/durbuy/la-ferme-au-chne`
+   - `https://belgique.heures.info/commerce/la-ferme-au-chene/durbuy`
+   - `https://en.resto.be/restaurant/durbuy/6940-durbuy/173931-la-ferme-au-chene/`
+   - Correction: mark as closed / historical predecessor; remove active hours, booking, old phone, and old address signals from any current brewery context.
+
+2. Restaurant aggregators carrying old La Ferme au Chêne / Marckloff signals:
+   - `https://be.sluurpy.com/durbuy/restaurant/2243551/la-ferme-au-chene`
+   - `https://menuweb.menu/restaurants/durbuy/la-ferme-au-chene-2`
+   - `https://lacarte.menu/restaurants/durbuy/la-ferme-au-chene-2`
+   - `https://wanderlog.com/place/details/219345/la-ferme-au-chne`
+   - Correction: closed / historical only; Marckloff should point to Brasserie du Château de Durbuy at Rue du Comte Théodule d'Ursel 2.
+
+3. Tripadvisor old attraction:
+   - `https://www.tripadvisor.fr/Attraction_Review-g580121-d3665299-Reviews-Micro_Brasserie_Marckloff-Durbuy_Luxembourg_Province_The_Ardennes_Wallonia.html`
+   - Correction: old attraction closed for visits; clarify Marckloff is tied to Brasserie du Château de Durbuy, not an active La Ferme au Chêne visit.
+
+4. Petit Futé Marckloff:
+   - `https://www.petitfute.com/v68892-durbuy-6940/c650-produits-gourmands-vins/c1117-vins-alcools/c714-biere-brasserie/c1352-brasserie-artisanale-et-micro-brasserie/1394487-marckloff.html`
+   - Correction: remove old Rue d'Ursel 36, old phone, hours, restaurant/group menu claims; update to current brewery NAP or mark historical.
+
+5. Wikipedia:
+   - `https://fr.wikipedia.org/wiki/Marckloff`
+   - `https://fr.wikipedia.org/wiki/Liste_de_brasseries_belges`
+   - Correction: replace old `lafermeauchene.be` and `Brasserie La Ferme au Chêne` signals with current official site / Brasserie du Château de Durbuy where policy and sourcing allow; keep La Ferme au Chêne as former/historical.
+
+6. Tourism syndication naming:
+   - `https://www.ardennebelge.be/diffusio/fr/p/producteur/la-marckloff-micro-brasserie-du-chateau-de-durbuy-durbuy_TFOTER-A0-00DW-06W9/`
+   - `https://www.cirkwi.com/fr/point-interet/2863862-la-marckloff-micro-brasserie-du-chateau-de-durbuy`
+   - Correction: primary title should be `La Brasserie du Château de Durbuy`; Marckloff should be a product/brand/historical mention, not the main place entity.
+
+7. Old beer-directory records:
+   - `https://beerplanet.net/brewery/brasserie-la-ferme-au-chene/`
+   - `https://polybeer.com/breweries/index.php?COMPID=1057&LETTER=F&sub=1`
+   - `https://www.cellarmonk.com/europe/brewery-europe/brasserie-la-ferme-au-chene/`
+   - Correction: mark as former / renamed and moved; current entity is Brasserie du Château de Durbuy at Rue du Comte Théodule d'Ursel 2.
+
+8. Brasserie de Durbuy disambiguation:
+   - `https://brasseriededurbuy.be/`
+   - Correction: do not merge. It is a separate business at Avenue Louis de Loncin 7. Any third-party listing using `Brasserie de Durbuy` for Marckloff or the château brewery should be corrected to the full château name.
 
 ## Duplicate Search Terms
 
