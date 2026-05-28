@@ -1,0 +1,10 @@
+name = "brasserie-under-construction"
+main = "workers/site-proxy.js"
+compatibility_date = "2026-05-28"
+account_id = "1101e83741ff11d0ad635d83f9822805"
+workers_dev = false
+
+routes = [
+  { pattern = "brasseriechateaudurbuy.be/*", zone_name = "brasseriechateaudurbuy.be" },
+  { pattern = "www.brasseriechateaudurbuy.be/*", zone_name = "brasseriechateaudurbuy.be" }
+]

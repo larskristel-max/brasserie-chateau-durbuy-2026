@@ -34,11 +34,14 @@ Last updated: 2026-05-20
   - `ruben.ns.cloudflare.com`
 - Custom-domain Worker:
   - Script: `brasserie-under-construction`
+  - Source now tracked in this repo:
+    - `workers/site-proxy.js`
+    - `wrangler.site-proxy.toml`
   - Routes:
     - `brasseriechateaudurbuy.be/*`
     - `www.brasseriechateaudurbuy.be/*`
   - Current behavior:
-    - `www` redirects to apex.
+    - plain HTTP and `www` redirect to the canonical HTTPS apex.
     - Apex fetches files from the `gh-pages` branch published bundle.
     - Placeholder copy and `noindex` behavior have been removed.
 - Admin API Worker:
@@ -132,7 +135,7 @@ Last updated: 2026-05-20
 ## Current Known Risks
 
 - The permanent domain is a Cloudflare Worker proxy to the built `gh-pages` branch, not a native Cloudflare Pages deployment.
-- The custom-domain Worker rewrites requests to GitHub raw content for the `gh-pages` branch. If the publishing branch changes, update the Worker.
+- The custom-domain Worker rewrites requests to GitHub raw content for the `gh-pages` branch. If the publishing branch changes, update `workers/site-proxy.js` and redeploy with `wrangler.site-proxy.toml`.
 - Admin publishing depends on:
   - the Cloudflare Worker remaining deployed,
   - `GITHUB_TOKEN` staying valid,
