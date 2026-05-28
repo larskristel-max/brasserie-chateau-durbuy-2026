@@ -78,6 +78,10 @@ Use this table as the current tracking view. Older platform rows below are conte
 | CellarMonk | `https://www.cellarmonk.com/europe/brewery-europe/brasserie-la-ferme-au-chene/` | Submitted/attempted 28/05/2026, but no visible confirmation. | Follow up if unchanged. |
 | Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` | Blocked in in-app browser because Google auth popup failed. | Complete in a normal/login-capable browser. |
 | BeerXchange | `https://www.beerxchange.com/brewery/la-ferme-au-cha-ne/36617` | Public page appears to mirror Untappd and shows `Brew Pub`; likely lower priority and dependent on Untappd data. | Recheck after Untappd is corrected. |
+| Craft Beer Monkey | `https://www.craftbeermonkey.com/Brewery/Brasserie-La-Ferme-Au-Chene/11779` | New stale listing found 28/05/2026: `Brasserie La Ferme Au Chene`, old/wrong address, claimable brewery profile. | Claim/contact if account setup is acceptable. |
+| Belvicci | `https://www.belvicci.com/index.php/discovery/belgium/durbuy/marckloff` | New stale listing found 28/05/2026: `MARCKLOFF`, old phone/email/address, reservation language, restaurant/discovery framing. | Contact/edit route needed; prioritize because it reinforces restaurant/reservation intent. |
+| Bizique / AllBiz | `https://www.bizique.be/la-ferme-au-ch%C3%AAne` | Old `La Ferme au Chêne` is marked closed, but still lists old address and surfaces `Brasserie Marckloff` as another business at the same address. | Use edit/remove route if accessible. |
+| Nonoresto | `https://nonoresto.be/restaurant/la-ferme-au-chene/` | New stale Dutch restaurant page found 28/05/2026; presents La Ferme au Chene as a current brewery cafe/restaurant. Contact form filled in browser, not submitted. | Review visible form and submit if approved. |
 | Kompass | `https://xk.kompass.com/en/c/la-brasserie-du-chateau-de-durbuy/ben0631179/` | Public page has correct name/address and beer manufacturing classifications, but also shows broad/legacy categories such as bars/restaurants and unrelated food-processing classifications. | Lower priority; correct only if Kompass exposes an owner-edit path. |
 | Wikipedia Marckloff | `https://fr.wikipedia.org/wiki/Marckloff` | Not edited. | Only update if policy-compliant sourcing is available. |
 
@@ -291,6 +295,7 @@ Submitted or attempted in browser:
 | Belgique Heures | `https://belgique.heures.info/contact` | Submitted 28/05/2026. On-page confirmation: `Message envoyÃ© ! Nous avons reÃ§u votre message, nous allons le gÃ©rer au plus vite.` |
 | CellarMonk | `https://www.cellarmonk.com/contact-us/` | Submitted/attempted 28/05/2026 via `Listing Addition/Correction`. No clear on-page confirmation was visible after submit; form message disappeared/reset. |
 | LaCarte | `https://lacarte.menu/contribute/restaurant/la-ferme-au-chene-2` | Submitted 28/05/2026. On-page confirmation: `Your report has been received. Thank you.` |
+| Nonoresto | `https://nonoresto.be/contact/` | Filled 28/05/2026 with a Dutch correction message for the stale `La Ferme au Chene` restaurant page. Not submitted; left visible in the browser for owner review. |
 
 Email confirmations:
 
