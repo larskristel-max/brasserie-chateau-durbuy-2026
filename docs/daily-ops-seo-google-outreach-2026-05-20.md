@@ -87,7 +87,7 @@ Today moved the Brasserie du Chateau de Durbuy visibility work forward across th
 2. Google Business Profile still needs owner-side monitoring: wait for the pending description review to clear, then remove the public reservation-link signal if Google exposes a safe control. Do not add hours, menu, restaurant, or taproom signals unless facts change.
 3. Owner-login discovery tasks remain: Apple Business Connect, Bing Places, and Tripadvisor must be completed in a normal/login-capable browser.
 4. Gmail drafts awaiting review: Untappd, Biernet follow-up, Petit Futé thank-you, CellarMonk recheck/copy, Craft Beer Monkey / Brewers Marketing, and Kompass.
-5. Non-login outreach still actionable: BeerPlanet and Nonoresto forms are staged/prefilled for owner review but must not be recorded as submitted until actually sent. Sluurpy remains manual/blocked via the business route or WhatsApp. Exact ready-to-review payloads are recorded in the off-site owner action pack; do not auto-submit without owner approval because these routes transmit owner contact details and can alter public listings.
+5. Non-login outreach still actionable: BeerPlanet is staged/prefilled for owner review. Nonoresto was staged/prefilled, but a 29/05/2026 submission attempt returned `Network error. Please try again.` and no receipt, so it remains not submitted. Sluurpy remains manual/blocked via the business route or WhatsApp. Exact ready-to-review payloads are recorded in the off-site owner action pack; do not auto-submit without owner approval because these routes transmit owner contact details and can alter public listings.
 6. Wait-and-chase queue: Petit Futé after 31/05/2026; Cirkwi/Ardenne Belge, OpCafeGaan, Polybeer, Vlaamse Brouwers, Menuweb, LaCarte, Resto.be, Belgique Heures on their follow-up dates if public pages remain stale.
 7. Longer-term content item remains: separate indexable language URLs / hreflang only after translations are fully reviewed and approved.
 
@@ -102,7 +102,7 @@ Owner review before sending/submitting:
 - Gmail draft: Craft Beer Monkey / Brewers Marketing correction request to `info@brewersmarketing.com`.
 - Gmail draft: Kompass activity-classification correction request to `info@kompass.com`.
 - Browser form staged, not submitted: BeerPlanet contact form.
-- Browser form staged, not submitted: Nonoresto contact form.
+- Browser form attempted, no receipt: Nonoresto contact form returned `Network error. Please try again.` on 29/05/2026.
 
 Owner-login or normal-browser tasks:
 
