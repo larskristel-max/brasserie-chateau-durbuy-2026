@@ -90,3 +90,43 @@ Today moved the Brasserie du Chateau de Durbuy visibility work forward across th
 5. Non-login outreach still actionable: BeerPlanet and Nonoresto forms are staged/prefilled for owner review but must not be recorded as submitted until actually sent. Sluurpy remains manual/blocked via the business route or WhatsApp. Exact ready-to-review payloads are recorded in the off-site owner action pack; do not auto-submit without owner approval because these routes transmit owner contact details and can alter public listings.
 6. Wait-and-chase queue: Petit Futé after 31/05/2026; Cirkwi/Ardenne Belge, OpCafeGaan, Polybeer, Vlaamse Brouwers, Menuweb, LaCarte, Resto.be, Belgique Heures on their follow-up dates if public pages remain stale.
 7. Longer-term content item remains: separate indexable language URLs / hreflang only after translations are fully reviewed and approved.
+
+## Current Daily Ops Checklist - 29/05/2026
+
+Owner review before sending/submitting:
+
+- Gmail draft: Untappd correction request to `business@untappd.com`.
+- Gmail draft: Biernet follow-up to `info@biernet.nl`.
+- Gmail draft: Petit Futé thank-you to `redaction@petitfute.com`, cc `szeremeta@petitfute.com`.
+- Gmail draft: CellarMonk recheck/copy reply to `theabbot@cellarmonk.com`.
+- Browser form staged, not submitted: BeerPlanet contact form.
+- Browser form staged, not submitted: Nonoresto contact form.
+
+Owner-login or normal-browser tasks:
+
+- Google Business Profile: wait for description review to clear; remove reservation-link signal only if Google exposes a safe control. Keep hours, menu, restaurant, and taproom prompts blank unless facts change.
+- Apple Business Connect: complete owner sign-in/setup because Apple Maps currently resolves the brewery name toward Durbuy Castle.
+- Bing Places: complete owner sign-in/setup because Bing Maps currently resolves the official name toward another `Brasserie de Durbuy` entity.
+- Tripadvisor: complete in a normal/login-capable browser; the in-app browser Google auth popup did not work.
+- Untappd claim path: optional owner/manual claim remains separate from the prepared email draft.
+
+Manual or blocked non-login routes:
+
+- Sluurpy: both email addresses bounced; use `https://business.sluurpy.com/` data-change route or WhatsApp `+39 351 786 8470`, then mark sent only after the form/message is actually submitted.
+- Bizique / AllBiz: edit route is behind Cloudflare verification; lower priority because the old record is already marked closed.
+- Craft Beer Monkey: account/claim path likely required; lower priority unless the stale listing starts ranking.
+- Belvicci: contact/edit route still needed; prioritize if restaurant/reservation signals keep surfacing.
+- Kompass: lower priority; correct only if a safe owner-edit path is exposed.
+- Wikipedia Marckloff: update only if policy-compliant sourcing is available.
+
+Wait-and-chase:
+
+- Petit Futé: recheck after 31/05/2026 because they said corrections should appear within 48 hours.
+- OpCafeGaan, Biernet, Polybeer, Vlaamse Brouwers: follow up around 04/06/2026 if unchanged.
+- Menuweb, LaCarte, Resto.be, Belgique Heures: wait after submitted browser forms, then chase if unchanged.
+- Cirkwi / Ardenne Belge: follow up if public title/entity cleanup does not appear.
+- CellarMonk: recheck public listing after the prepared recheck/copy draft gets a response.
+- BeerXchange: recheck after Untappd is corrected because it appears to mirror Untappd.
+- Wanderlog: monitor only; they removed the stale page but said it may reappear from Google Places data.
+- Google Search Console: monitor query/CTR weekly; inspect canonical examples only if Google lists an intended canonical page.
+- Future structural SEO: revisit separate indexable language URLs / hreflang only after translations are fully reviewed and approved.
