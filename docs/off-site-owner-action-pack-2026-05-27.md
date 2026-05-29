@@ -27,7 +27,8 @@ Use this as the working queue for Google, Maps, directories, tourism listings, a
 - CellarMonk replied that the correction was made and invited brewery copy/photos, but the public listing still appears to show the old `Brasserie La Ferme au Chêne` name, old address, old phone/fax, and broad restaurant/taproom-style tags. A reply draft is prepared asking them to recheck publication and giving safe official copy.
 - BeerPlanet email outreach bounced because `info@beerplanet.net` does not exist. Use the public contact form instead.
 - Sluurpy email outreach bounced for both `ristoratori@sluurpy.com` and `segnalazioni@sluurpy.com`. Their business data-change route is the next path, with WhatsApp as backup if the form remains inaccessible.
-- Gmail drafts currently awaiting review: Untappd, Petit Futé thank-you, CellarMonk recheck/copy.
+- Google Search Console canonical notice received 29/05/2026 for `Autre page avec balise canonique correcte`. Live verification found no public noindex/robots issue. Slashless section URLs such as `/journal` now redirect to their canonical trailing-slash URL.
+- Gmail drafts currently awaiting review: Untappd, Petit Futé thank-you, CellarMonk recheck/copy, Biernet follow-up.
 
 ## Copy/Paste Canonical Facts
 
@@ -68,14 +69,14 @@ Use this table as the current tracking view. Older platform rows below are conte
 | Platform / listing | URL | Current status | Next action |
 |---|---|---|---|
 | Google Business Profile | `https://business.google.com/locations` | Validated and currently uses the official name, address, category, and website. Description has an active pending-review state; public panel also shows a reservation-link signal to the website. | Recheck after Google review clears; keep restaurant-style prompts blank unless facts change and remove reservation-link signal if a safe control is exposed. |
-| Google Search Console | `https://search.google.com/search-console?resource_id=sc-domain%3Abrasseriechateaudurbuy.be` | Sitemap read successfully on 28/05/2026; homepage, journal, and five articles are indexed; re-indexing requested. | Monitor queries and CTR weekly. |
+| Google Search Console | `https://search.google.com/search-console?resource_id=sc-domain%3Abrasseriechateaudurbuy.be` | Sitemap read successfully on 28/05/2026; homepage, journal, and five articles are indexed; re-indexing requested. Canonical notice received 29/05/2026 appears informational; live checks show public pages are indexable and canonicals match the sitemap. | Monitor queries and CTR weekly; inspect affected canonical examples only if Google lists an intended canonical page there. |
 | Google Maps duplicates | Search Maps for duplicate names below | Rechecked 28/05/2026. `La Ferme au Chêne` still exists as a permanently closed Google Maps place at Rue du Comte Théodule d'Ursel 36 with old reviews. `Marckloff Durbuy` surfaces the official brewery in results, but also mixes restaurant/brasserie entities. | Keep closed predecessor as-is unless it starts competing as active; do not merge into the official brewery profile. |
 | Apple Business Connect | `https://businessconnect.apple.com/` | Opened 28/05/2026; requires Apple sign-in / owner setup. Public Apple Maps search for `Brasserie du Chateau de Durbuy` resolves to `Durbuy Castle`, not the brewery. Apple Business sign-in/start page opened in the in-app browser. | Owner-login setup is a high-priority discovery fix. |
 | Bing Places | `https://www.bingplaces.com/` | Opened 28/05/2026; requires Microsoft/Bing sign-in / owner setup. Public Bing Maps search for the official name resolves to `Brasserie de Durbuy srl`, not Brasserie du Château de Durbuy. Bing Places sign-in page opened in the in-app browser for owner login. | Owner-login setup is a high-priority discovery fix. |
 | Untappd | `https://untappd.com/w/la-brasserie-du-chateau-de-durbuy/36617` | Public page found; name/location are useful, but category appears as `Brew Pub`, which can reinforce restaurant/taproom intent. Gmail draft prepared to `business@untappd.com` on 28/05/2026. | Review/send draft or claim brewery page. |
 | Cirkwi | `https://www.cirkwi.com/fr/point-interet/2863862-la-marckloff-micro-brasserie-du-chateau-de-durbuy` | Support acknowledged, but public indexed FR/NL/EN/DE pages still show `La Marckloff / Micro-brasserie du château de Durbuy`; older snippets also expose a stale personal email/mobile. | Follow up if no correction appears; ask MTFA/Famenne-Ardenne data source to rename the point consistently. |
 | Ardenne Belge | `https://www.ardennebelge.be/diffusio/nl/p/lokale-producent/la-marckloff-micro-brasserie-du-chateau-de-durbuy-durbuy_TFOTER-A0-00DW-06W9/` | Contacted; still needs public title/entity cleanup. | Follow up if no correction appears. |
-| Biernet | `https://www.biernet.nl/bier/brouwerijen/belgie/luxemburg/durbuy/marckloff-la` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
+| Biernet | `https://www.biernet.nl/bier/brouwerijen/belgie/luxemburg/durbuy/marckloff-la` | Reply received 28/05/2026 with new URL `https://www.biernet.nl/bier/brouwerijen/belgie/luxemburg/durbuy/brasserie-du-chateau-de-durbuy`. Dutch follow-up draft prepared asking them to avoid leaving the old Marckloff / La Ferme au Chêne page as a competing current listing. | Review/send draft; recheck both old and new Biernet URLs after publication settles. |
 | Menuweb | `https://menuweb.menu/restaurants/durbuy/la-ferme-au-chene-2` | Submitted 28/05/2026 with on-page receipt. | Wait, then chase if unchanged. |
 | LaCarte | `https://lacarte.menu/restaurants/durbuy/la-ferme-au-chene-2` | Submitted 28/05/2026 with on-page receipt. | Wait, then chase if unchanged. |
 | Resto.be | `https://en.resto.be/restaurant/durbuy/6940-durbuy/173931-la-ferme-au-chene/` | Submitted 28/05/2026 with on-page receipt. | Wait, then chase if unchanged. |
@@ -153,9 +154,9 @@ Use these in Google Maps, Google Search, Apple Maps, Bing Maps, Untappd, and dir
 - `Rue du Comte Théodule d'Ursel 36`
 - `Rue du Comte Théodule d'Ursel 2`
 
-## Search Console Queue
+## Search Console Monitoring Queue
 
-Submit / inspect:
+Already submitted / inspected on 28/05/2026:
 
 - `https://brasseriechateaudurbuy.be/`
 - `https://brasseriechateaudurbuy.be/journal/`
@@ -165,7 +166,7 @@ Submit / inspect:
 - `https://brasseriechateaudurbuy.be/journal/les-anciennes-ecuries-2026-05-18/`
 - `https://brasseriechateaudurbuy.be/journal/une-biere-dici-2026-05-17/`
 
-Submit sitemap:
+Sitemap submitted and read:
 
 - `https://brasseriechateaudurbuy.be/sitemap.xml`
 
@@ -178,6 +179,12 @@ Track queries:
 - `La Brasserie du Château de Durbuy`
 - `Marckloff Durbuy`
 - `microbrasserie durbuy`
+
+Canonical notice follow-up:
+
+- 29/05/2026 Search Console message: `Autre page avec balise canonique correcte`.
+- Live technical check passed: homepage, journal index, and all five articles have canonical tags matching the sitemap; `http` and `www` redirect to canonical HTTPS; `/journal` redirects to `/journal/`; public robots allow crawling and no public `noindex` was found.
+- No code/content task remains unless Search Console examples show an intended canonical URL in the excluded list.
 
 ## Safe Anchor Text
 
@@ -285,6 +292,7 @@ Gmail drafts prepared for review:
 | Target | Draft recipient | Language | Listing / issue | Follow-up date |
 |---|---|---|---|---|
 | Untappd | `business@untappd.com` | English | public brewery page uses `Brew Pub`; request review toward brewery / microbrewery and official site alignment | 04/06/2026 |
+| Biernet | `info@biernet.nl` | Dutch | thanks them for creating/updating the new Brasserie du Château de Durbuy page and asks that the old Marckloff / La Ferme au Chêne page not remain a competing current listing | Optional; can send after review |
 | Petit Fute | `redaction@petitfute.com`, cc `szeremeta@petitfute.com` | French | short thank-you reply after Petit Futé accepted the correction for processing | Optional; can send after review |
 | CellarMonk | `theabbot@cellarmonk.com` | English | asks them to recheck publication because live page still appears stale; includes safe official brewery copy | Send after review |
 

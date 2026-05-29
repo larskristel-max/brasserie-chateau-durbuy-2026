@@ -83,9 +83,10 @@ Today moved the Brasserie du Chateau de Durbuy visibility work forward across th
 
 ## Next Priorities
 
-1. Wait for Google Search Console and Google Business Profile to settle.
-2. Re-check whether the sitemap is fetched successfully.
-3. Re-check Google visibility for the brand and business profile.
-4. Send or review the RSI Durbuy draft.
-5. Add selected journal articles to the site.
-6. Continue building citations from relevant tourism, brewery, and local directories.
+1. Google Search Console is no longer a setup task: sitemap was read, 7 URLs were discovered, key URLs were indexed, and live technical checks passed. Continue weekly monitoring for `brasserie durbuy`, `brouwerij durbuy`, and `brewery durbuy`.
+2. Google Business Profile still needs owner-side monitoring: wait for the pending description review to clear, then remove the public reservation-link signal if Google exposes a safe control. Do not add hours, menu, restaurant, or taproom signals unless facts change.
+3. Owner-login discovery tasks remain: Apple Business Connect, Bing Places, and Tripadvisor must be completed in a normal/login-capable browser.
+4. Gmail drafts awaiting review: Untappd, Biernet follow-up, Petit Futé thank-you, and CellarMonk recheck/copy.
+5. Non-login outreach still actionable: BeerPlanet contact form, Sluurpy business route or WhatsApp, and Nonoresto form review/submission.
+6. Wait-and-chase queue: Petit Futé after 31/05/2026; Cirkwi/Ardenne Belge, OpCafeGaan, Polybeer, Vlaamse Brouwers, Menuweb, LaCarte, Resto.be, Belgique Heures on their follow-up dates if public pages remain stale.
+7. Longer-term content item remains: separate indexable language URLs / hreflang only after translations are fully reviewed and approved.
