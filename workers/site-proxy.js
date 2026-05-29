@@ -47,6 +47,10 @@ export default {
     headers.set('access-control-allow-origin', '*');
     headers.set('x-content-type-options', 'nosniff');
     headers.set('content-type', contentTypeForPath(assetPath));
+    if (assetPath === 'admin/index.html' || assetPath.startsWith('admin/')) {
+      headers.set('cache-control', 'no-store');
+      headers.set('x-robots-tag', 'noindex, nofollow, noarchive');
+    }
 
     const body = request.method === 'HEAD' ? null : upstream.body;
 

@@ -34,14 +34,38 @@ jobs:
           cp -R en dist/ 2>/dev/null || true
           cp -R de dist/ 2>/dev/null || true
           cp -R admin dist/ 2>/dev/null || true
-          # Copy only assets actually referenced by the site (favicons + WebP + JPG + crest)
+          # Copy only assets actually referenced by the public site.
           cp src/assets/favicon.ico             dist/src/assets/ 2>/dev/null || true
           cp src/assets/favicon-16.png          dist/src/assets/ 2>/dev/null || true
           cp src/assets/favicon-32.png          dist/src/assets/ 2>/dev/null || true
           cp src/assets/apple-touch-icon.png    dist/src/assets/ 2>/dev/null || true
           cp src/assets/logo-crest.png          dist/src/assets/ 2>/dev/null || true
-          cp src/assets/*.webp                   dist/src/assets/ 2>/dev/null || true
-          cp src/assets/*.jpg                    dist/src/assets/ 2>/dev/null || true
+          cp src/assets/hero-chateau-720w.webp   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/hero-chateau-1280w.webp  dist/src/assets/ 2>/dev/null || true
+          cp src/assets/hero-chateau-2560w.webp  dist/src/assets/ 2>/dev/null || true
+          cp src/assets/hero-chateau-720w.jpg    dist/src/assets/ 2>/dev/null || true
+          cp src/assets/hero-chateau-1280w.jpg   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/hero-chateau-2560w.jpg   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/lieu-domaine-720w.webp   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/lieu-domaine-1024w.webp  dist/src/assets/ 2>/dev/null || true
+          cp src/assets/lieu-domaine-720w.jpg    dist/src/assets/ 2>/dev/null || true
+          cp src/assets/lieu-domaine-1024w.jpg   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/brasserie-production-720w.webp   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/brasserie-production-1920w.webp  dist/src/assets/ 2>/dev/null || true
+          cp src/assets/brasserie-production-720w.jpg    dist/src/assets/ 2>/dev/null || true
+          cp src/assets/brasserie-production-1920w.jpg   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/bieres-bouteilles-720w.webp   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/bieres-bouteilles-1280w.webp  dist/src/assets/ 2>/dev/null || true
+          cp src/assets/bieres-bouteilles-720w.jpg    dist/src/assets/ 2>/dev/null || true
+          cp src/assets/bieres-bouteilles-1280w.jpg   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/visite-gate-720w.webp   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/visite-gate-1024w.webp  dist/src/assets/ 2>/dev/null || true
+          cp src/assets/visite-gate-720w.jpg    dist/src/assets/ 2>/dev/null || true
+          cp src/assets/visite-gate-1024w.jpg   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/jardins-visites-720w.webp   dist/src/assets/ 2>/dev/null || true
+          cp src/assets/jardins-visites-1024w.webp  dist/src/assets/ 2>/dev/null || true
+          cp src/assets/jardins-visites-720w.jpg    dist/src/assets/ 2>/dev/null || true
+          cp src/assets/jardins-visites-1024w.jpg   dist/src/assets/ 2>/dev/null || true
           echo "Deployed assets:"
           ls -la dist/src/assets/
       - name: Upload artifact
