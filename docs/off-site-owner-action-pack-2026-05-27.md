@@ -84,7 +84,7 @@ Use this table as the current tracking view. Older platform rows below are conte
 | Petit Fute | `https://www.petitfute.com/v68892-durbuy-6940/c650-produits-gourmands-vins/c1117-vins-alcools/c714-biere-brasserie/c1352-brasserie-artisanale-et-micro-brasserie/1394487-marckloff.html` | Submitted 28/05/2026 with on-page receipt. Reply received 29/05/2026: corrections should be visible within 48 hours. | Recheck public page after 31/05/2026; thank-you draft prepared if desired. |
 | OpCafeGaan | `https://www.opcafegaan.be/durbuy/la-ferme-au-chne` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged; high priority because it shows active/open old signals. |
 | Polybeer | `https://polybeer.com/breweries/index.php?COMPID=1057&sub=1` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
-| BeerPlanet | `https://beerplanet.net/brewery/brasserie-la-ferme-au-chene/` | Gmail outreach to `info@beerplanet.net` bounced on 28/05/2026. Replacement route found: `https://beerplanet.net/contact/`. | Submit correction through contact form; use submit-brewery form only if contact form fails. |
+| BeerPlanet | `https://beerplanet.net/brewery/brasserie-la-ferme-au-chene/` | Gmail outreach to `info@beerplanet.net` bounced on 28/05/2026. Contact form at `https://beerplanet.net/contact/` staged/prefilled for owner review, not submitted. | Review visible form and submit if approved; use submit-brewery form only if contact form fails. |
 | Vlaamse Brouwers | `https://vlaamsebrouwers.be/brouwerijlocaties/belgium/luxemburg-1/durbuy/la-brasserie-du-chateau-de-durbuy/` | Correct name/address found, but public copy includes a phone number and a stronger historical line than desired. Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
 | CellarMonk | `https://www.cellarmonk.com/europe/brewery-europe/brasserie-la-ferme-au-chene/` | Reply received 28/05/2026 saying corrections were made, but public page still appears stale. Gmail draft prepared 29/05/2026 asking them to recheck publication and giving safe official copy. | Review/send draft; recheck public listing after response. |
 | Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` | Blocked in in-app browser because Google auth popup failed. | Complete in a normal/login-capable browser. |
@@ -92,7 +92,7 @@ Use this table as the current tracking view. Older platform rows below are conte
 | Craft Beer Monkey | `https://www.craftbeermonkey.com/Brewery/Brasserie-La-Ferme-Au-Chene/11779` | New stale listing found 28/05/2026: `Brasserie La Ferme Au Chene`, old/wrong address, claimable brewery profile. | Claim/contact if account setup is acceptable. |
 | Belvicci | `https://www.belvicci.com/index.php/discovery/belgium/durbuy/marckloff` | New stale listing found 28/05/2026: `MARCKLOFF`, old phone/email/address, reservation language, restaurant/discovery framing. | Contact/edit route needed; prioritize because it reinforces restaurant/reservation intent. |
 | Bizique / AllBiz | `https://www.bizique.be/la-ferme-au-ch%C3%AAne` | Old `La Ferme au Chêne` is marked closed, but still lists old address and surfaces `Brasserie Marckloff` as another business at the same address. Bizique exposes `Modifier ou supprimer`, a support ticket form, and a removal tool; the edit route `https://user.bizique.be/edit/?i=BE&u=la-ferme-au-ch%C3%AAne&l=fr` is behind Cloudflare verification in the in-app browser. | Manual browser pass if this becomes a priority; lower priority because the old record is already marked closed. |
-| Nonoresto | `https://nonoresto.be/restaurant/la-ferme-au-chene/` | New stale Dutch restaurant page found 28/05/2026; presents La Ferme au Chene as a current brewery cafe/restaurant. Contact form refilled with a short Dutch correction message in browser, not submitted. | Review visible form and submit if approved. |
+| Nonoresto | `https://nonoresto.be/restaurant/la-ferme-au-chene/` | New stale Dutch restaurant page found 28/05/2026; presents La Ferme au Chene as a current brewery cafe/restaurant. Contact form staged/prefilled with a short Dutch correction message, not submitted. | Review visible form and submit if approved. |
 | Kompass | `https://xk.kompass.com/en/c/la-brasserie-du-chateau-de-durbuy/ben0631179/` | Public page has correct name/address and beer manufacturing classifications, but also shows broad/legacy categories such as bars/restaurants and unrelated food-processing classifications. | Lower priority; correct only if Kompass exposes an owner-edit path. |
 | Wikipedia Marckloff | `https://fr.wikipedia.org/wiki/Marckloff` | Not edited. | Only update if policy-compliant sourcing is available. |
 
@@ -302,7 +302,7 @@ Remaining manual follow-up:
 |---|---|---|---|
 | Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` or `https://www.tripadvisor.com/Owners` | English | skipped for now; direct edit route works, but Google auth popup is blocked in the in-app browser. Use email login or normal browser later. |
 | Cirkwi pro support | `https://pro.cirkwi.com/contact-support/` | French | use only if the existing support thread stalls |
-| BeerPlanet | `https://beerplanet.net/contact/` | English | replacement route after email bounce; contact form is better than submit-brewery because this is a stale listing correction/removal. |
+| BeerPlanet | `https://beerplanet.net/contact/` | English | replacement route after email bounce; contact form staged/prefilled, not submitted. Contact form is better than submit-brewery because this is a stale listing correction/removal. |
 | Sluurpy | `https://business.sluurpy.com/` or WhatsApp `+39 351 786 8470` | French or English | replacement route after both Sluurpy emails bounced; business data-change Google Form may require a normal browser/login session. |
 
 Prepared public-form payloads for owner review:
@@ -382,7 +382,8 @@ Submitted or attempted in browser:
 | Belgique Heures | `https://belgique.heures.info/contact` | Submitted 28/05/2026. On-page confirmation: `Message envoyÃ© ! Nous avons reÃ§u votre message, nous allons le gÃ©rer au plus vite.` |
 | CellarMonk | `https://www.cellarmonk.com/contact-us/` | Submitted 28/05/2026 via `Listing Addition/Correction`; reply received from Chris. Public listing still appears stale, so a recheck/copy draft is prepared in Gmail. |
 | LaCarte | `https://lacarte.menu/contribute/restaurant/la-ferme-au-chene-2` | Submitted 28/05/2026. On-page confirmation: `Your report has been received. Thank you.` |
-| Nonoresto | `https://nonoresto.be/contact/` | Refilled 28/05/2026 with a shorter Dutch correction message for the stale `La Ferme au Chene` restaurant page. Not submitted; browser later moved to owner-login pages, so reopen if review/submission is needed. |
+| Nonoresto | `https://nonoresto.be/contact/` | Staged/prefilled with a short Dutch correction message for the stale `La Ferme au Chene` restaurant page. Privacy checkbox is checked because the form requires it. Not submitted; review visible form and submit if approved. |
+| BeerPlanet | `https://beerplanet.net/contact/` | Staged/prefilled with the English brewery listing correction message. Not submitted; review visible form and submit if approved. |
 
 Email confirmations:
 
@@ -393,6 +394,7 @@ Blocked or needs manual action:
 | Target | Status |
 |---|---|
 | Tripadvisor | Skipped for now. Direct edit route is `https://www.tripadvisor.com/ImproveListing-d3665299.html`; fields to submit later: official name, `https://brasseriechateaudurbuy.be/`, `info@brasseriechateaudurbuy.be`, `Rue du Comte ThÃ©odule d'Ursel 2`, Durbuy, `6940`, category `Breweries`; leave hours blank. Google auth popup did not work in the in-app browser. |
+| Sluurpy | Keep manual. Both outreach email addresses bounced; use `https://business.sluurpy.com/` data-change route or WhatsApp `+39 351 786 8470`. The route may require a normal browser/login session, so do not mark submitted unless the form or WhatsApp message is actually sent. |
 
 ## Deployment and Search Console Status - 28/05/2026
 
