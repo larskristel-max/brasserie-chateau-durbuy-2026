@@ -122,7 +122,7 @@
         "name": "Où trouver les bières ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Une sélection de bières est disponible chez plusieurs partenaires locaux. Les disponibilités sont confirmées au cas par cas."
+          "text": "Quelques partenaires locaux reçoivent les bières de la brasserie. Pour une demande privée ou professionnelle, écrivez-nous au domaine."
         }
       }
     ]
@@ -1824,7 +1824,7 @@
       <a href="#domaine" data-i18n="nav.domaine">Le Domaine</a>
       <a href="#brasserie" data-i18n="nav.brasserie">La Brasserie</a>
       <a href="#bieres" data-i18n="nav.bieres">Les Bières</a>
-      <a href="#points-de-vente" data-i18n="nav.points">Disponibilités</a>
+      <a href="#points-de-vente" data-i18n="nav.points">Points de vente</a>
       <a href="#visite" data-i18n="nav.visite">La Visite</a>
       <a href="journal/" data-i18n="nav.carnet">Carnet</a>
     </nav>
@@ -1848,7 +1848,7 @@
       <a href="#domaine" data-i18n="nav.domaine">Le Domaine</a>
       <a href="#brasserie" data-i18n="nav.brasserie">La Brasserie</a>
       <a href="#bieres" data-i18n="nav.bieres">Les Bières</a>
-      <a href="#points-de-vente" data-i18n="nav.points">Disponibilités</a>
+      <a href="#points-de-vente" data-i18n="nav.points">Points de vente</a>
       <a href="#visite" data-i18n="nav.visite">La Visite</a>
       <a href="journal/" data-i18n="nav.carnet">Carnet</a>
       <a class="mobile-cta" href="#contactModal" data-open-contact data-i18n="nav.contact">Contact</a>
@@ -2017,13 +2017,13 @@
       <div class="points-vente-inner">
         <div class="points-vente-copy">
           <p class="chapter" data-i18n="points.chapter">— Chapitre IV —</p>
-          <p class="kicker" data-i18n="points.kicker">Selon disponibilité</p>
-          <h2 data-i18n="points.heading">Disponibilités locales</h2>
-          <p class="lead" data-i18n="points.lead">Une sélection de nos bières est disponible chez plusieurs partenaires locaux.</p>
+          <p class="kicker" data-i18n="points.kicker">Partenaires locaux</p>
+          <h2 data-i18n="points.heading">Où trouver les bières</h2>
+          <p class="lead" data-i18n="points.lead">Quelques partenaires locaux reçoivent nos bières.</p>
         </div>
 
         <div class="points-vente-list">
-          <div class="sales-points" aria-label="Disponibilités locales">
+          <div class="sales-points" aria-label="Points de vente locaux">
             <article class="sales-point">
               <h3>Établissements Dispas</h3>
               <address>Route de Bomal 42/A<br>6940 Barvaux-sur-Ourthe</address>
@@ -2043,7 +2043,7 @@
           </div>
 
           <div class="order-request">
-            <p class="order-request-copy" data-i18n="points.request.copy">Pour une demande privée ou professionnelle, écrivez-nous au domaine. Les disponibilités sont confirmées au cas par cas.</p>
+            <p class="order-request-copy" data-i18n="points.request.copy">Pour une demande privée ou professionnelle, écrivez-nous au domaine. Chaque demande est traitée au cas par cas.</p>
             <button type="button" class="text-cta" data-open-order aria-controls="orderRequestPanel" aria-expanded="false">
               <span data-i18n="points.request.cta">Écrire au domaine</span> <span aria-hidden="true">→</span>
             </button>
@@ -2084,7 +2084,7 @@
                 <div class="form-row">
                   <label for="orderMessage" data-i18n="order.message">Votre demande / message</label>
                   <textarea id="orderMessage" name="message" required></textarea>
-                  <p class="form-hint" data-i18n="order.hint">Aucun prix ni disponibilité ne sont confirmés automatiquement.</p>
+                  <p class="form-hint" data-i18n="order.hint">Aucun prix ni volume ne sont confirmés automatiquement.</p>
                 </div>
                 <div class="form-actions">
                   <button class="form-submit" type="submit" data-i18n="order.submit">Envoyer</button>
@@ -2124,7 +2124,7 @@
         <p class="private-note" data-i18n="visite.private">Le château est un espace privé et ne se visite pas.</p>
         <ul class="visit-grid">
           <li><h3 data-i18n="visite.item1.name">Visite de la brasserie</h3><p data-i18n="visite.item1.desc">La brasserie, les cuves et le déroulé d'une journée de brassage sont expliqués.</p></li>
-          <li><h3 data-i18n="visite.item2.name">Dégustation</h3><p data-i18n="visite.item2.desc">Une dégustation sur place, selon les brassins disponibles.</p></li>
+          <li><h3 data-i18n="visite.item2.name">Dégustation</h3><p data-i18n="visite.item2.desc">Une dégustation sur place, selon les bières du moment.</p></li>
         </ul>
         <a class="text-cta" href="#contactModal" data-open-contact><span data-i18n="visite.cta">Informations &amp; demandes</span> <span aria-hidden="true">→</span></a>
       </div>
@@ -2157,7 +2157,7 @@
       </details>
       <details>
         <summary data-i18n="faq.q6">Où trouver les bières&nbsp;?</summary>
-        <p data-i18n="faq.a6">Une sélection de bières est disponible chez plusieurs partenaires locaux. Les disponibilités sont confirmées au cas par cas.</p>
+        <p data-i18n="faq.a6">Quelques partenaires locaux reçoivent les bières de la brasserie. Pour une demande privée ou professionnelle, écrivez-nous au domaine.</p>
       </details>
     </div>
   </section>
@@ -2422,7 +2422,7 @@
             'Votre demande / message:',
             message,
             '',
-            'Note: demande sans confirmation automatique de prix ou de disponibilité.'
+            'Note: demande sans confirmation automatique de prix ou de volume.'
           ].filter(Boolean);
 
           const submitButton = orderForm.querySelector('[type="submit"]');
@@ -2477,7 +2477,7 @@
           'nav.domaine': 'Domaine',
           'nav.brasserie': 'La Brasserie',
           'nav.bieres': 'Bières',
-          'nav.points': 'Disponibilités',
+          'nav.points': 'Points de vente',
           'nav.visite': 'Visite',
           'nav.carnet': 'Carnet',
           'nav.contact': 'Contact',
@@ -2503,10 +2503,10 @@
           'bieres.teaser': 'La gamme sera révélée prochainement.',
           'bieres.transition': 'Après le brassage, les bières rejoignent quelques adresses locales.',
           'points.chapter': '— Chapitre IV —',
-          'points.kicker': 'Selon disponibilité',
-          'points.heading': 'Disponibilités locales',
+          'points.kicker': 'Partenaires locaux',
+          'points.heading': 'Où trouver les bières',
           'points.lead': 'Quelques partenaires locaux reçoivent nos bières.',
-          'points.request.copy': 'Pour une demande privée ou professionnelle, écrivez-nous au domaine. Les disponibilités sont confirmées au cas par cas.',
+          'points.request.copy': 'Pour une demande privée ou professionnelle, écrivez-nous au domaine. Chaque demande est traitée au cas par cas.',
           'points.request.cta': 'Écrire au domaine',
           'order.type.label': 'Type de demande',
           'order.type.private': 'Particulier',
@@ -2516,7 +2516,7 @@
           'order.phone': 'Téléphone',
           'order.vat': 'Numéro de TVA',
           'order.message': 'Votre demande / message',
-          'order.hint': 'Aucun prix ni disponibilité ne sont confirmés automatiquement.',
+          'order.hint': 'Aucun prix ni volume ne sont confirmés automatiquement.',
           'order.submit': 'Envoyer',
           'order.sending': 'Envoi en cours…',
           'order.status': 'Votre demande a bien été envoyée. Nous vous répondrons directement par e-mail.',
@@ -2530,7 +2530,7 @@
           'visite.item1.name': 'Visite de la brasserie',
           'visite.item1.desc': "La brasserie, les cuves et le déroulé d'une journée de brassage sont expliqués.",
           'visite.item2.name': 'Dégustation',
-          'visite.item2.desc': 'Une dégustation sur place, selon les brassins disponibles.',
+          'visite.item2.desc': 'Une dégustation sur place, selon les bières du moment.',
           'visite.cta': 'Informations &amp; demandes',
           'faq.heading': 'Questions utiles',
           'faq.q1': 'Où se trouve la Brasserie du Château de Durbuy&nbsp;?',
@@ -2544,7 +2544,7 @@
           'faq.q5': 'Quel est le lien avec Philippe Marckloff&nbsp;?',
           'faq.a5': "Philippe Marckloff est lié à l'histoire brassicole de Durbuy, documentée vers 1560. Cette référence situe une mémoire brassicole locale; elle ne constitue pas une preuve de brassage continu au château depuis cette date.",
           'faq.q6': 'Où trouver les bières&nbsp;?',
-          'faq.a6': 'Une sélection de bières est disponible chez plusieurs partenaires locaux. Les disponibilités sont confirmées au cas par cas.',
+          'faq.a6': 'Quelques partenaires locaux reçoivent les bières de la brasserie. Pour une demande privée ou professionnelle, écrivez-nous au domaine.',
           'footer.label.domaine': 'Le Domaine',
           'footer.country': 'Belgique',
           'footer.label.enquiry': 'Visites sur demande',
@@ -2591,10 +2591,10 @@
           'bieres.teaser': 'De reeks wordt op haar tijd voorgesteld.',
           'bieres.transition': 'Na het brouwen gaan de bieren naar enkele lokale partners.',
           'points.chapter': '— Hoofdstuk IV —',
-          'points.kicker': 'Afhankelijk van beschikbaarheid',
+          'points.kicker': 'Lokale partners',
           'points.heading': 'Waar te vinden',
           'points.lead': 'Onze bieren zijn verkrijgbaar bij enkele lokale partners.',
-          'points.request.copy': 'Voor een particuliere of professionele vraag kunt u ons rechtstreeks schrijven. Beschikbaarheid wordt telkens afzonderlijk bevestigd.',
+          'points.request.copy': 'Voor een particuliere of professionele vraag kunt u ons rechtstreeks schrijven. Elke aanvraag wordt afzonderlijk bekeken.',
           'points.request.cta': 'Schrijf naar het landgoed',
           'order.type.label': 'Soort vraag',
           'order.type.private': 'Particulier',
@@ -2604,7 +2604,7 @@
           'order.phone': 'Telefoon',
           'order.vat': 'Btw-nummer',
           'order.message': 'Uw vraag / bericht',
-          'order.hint': 'Prijzen en beschikbaarheid worden niet automatisch bevestigd.',
+          'order.hint': 'Prijzen en aantallen worden niet automatisch bevestigd.',
           'order.submit': 'Versturen',
           'order.sending': 'Bezig met verzenden…',
           'order.status': 'Uw bericht is verzonden. We antwoorden rechtstreeks per e-mail.',
@@ -2618,7 +2618,7 @@
           'visite.item1.name': 'Bezoek aan de brouwerij',
           'visite.item1.desc': 'De brouwerij, de kuipen en het verloop van een brouwdag worden toegelicht.',
           'visite.item2.name': 'Proeverij',
-          'visite.item2.desc': 'Een proeverij ter plaatse, afhankelijk van de beschikbare bieren.',
+          'visite.item2.desc': 'Een proeverij ter plaatse, volgens de bieren van dat moment.',
           'visite.cta': 'Informatie &amp; aanvragen',
           'faq.heading': 'Praktische vragen',
           'faq.q1': 'Waar ligt Brasserie du Château de Durbuy?',
@@ -2632,7 +2632,7 @@
           'faq.q5': 'Wat is de band met Philippe Marckloff?',
           'faq.a5': 'Philippe Marckloff maakt deel uit van de brouwgeschiedenis van Durbuy, die rond 1560 is gedocumenteerd. Die verwijzing plaatst een lokale brouwherinnering; ze is geen bewijs van onafgebroken brouwen aan het kasteel sinds die datum.',
           'faq.q6': 'Waar vind je de bieren?',
-          'faq.a6': 'Een selectie bieren is verkrijgbaar bij enkele lokale partners. Beschikbaarheid wordt telkens afzonderlijk bevestigd.',
+          'faq.a6': 'Enkele lokale partners ontvangen de bieren van de brouwerij. Voor een particuliere of professionele vraag kunt u ons rechtstreeks schrijven.',
           'footer.label.domaine': 'Het Landgoed',
           'footer.country': 'België',
           'footer.label.enquiry': 'Op afspraak',
@@ -2653,7 +2653,7 @@
           'nav.domaine': 'Estate',
           'nav.brasserie': 'Brewery',
           'nav.bieres': 'Beers',
-          'nav.points': 'Availability',
+          'nav.points': 'Where to find',
           'nav.visite': 'Visit',
           'nav.carnet': 'Journal',
           'nav.contact': 'Contact',
@@ -2679,10 +2679,10 @@
           'bieres.teaser': 'The range will be introduced in due course.',
           'bieres.transition': 'After brewing, the beers reach a few local partners.',
           'points.chapter': '— Chapter IV —',
-          'points.kicker': 'Subject to availability',
-          'points.heading': 'Local Availability',
-          'points.lead': 'Our beers are available through a few local partners.',
-          'points.request.copy': 'For private or trade enquiries, write to the estate directly. Availability is confirmed case by case.',
+          'points.kicker': 'Local partners',
+          'points.heading': 'Where to find the beers',
+          'points.lead': 'A few local partners receive our beers.',
+          'points.request.copy': 'For private or trade enquiries, write to the estate directly. Each enquiry is handled individually.',
           'points.request.cta': 'Write to the estate',
           'order.type.label': 'Request type',
           'order.type.private': 'Private',
@@ -2692,7 +2692,7 @@
           'order.phone': 'Phone',
           'order.vat': 'VAT number',
           'order.message': 'Your message',
-          'order.hint': 'No price or availability is confirmed automatically.',
+          'order.hint': 'No price or quantity is confirmed automatically.',
           'order.submit': 'Send',
           'order.sending': 'Sending…',
           'order.status': 'Your message has been sent. We will reply directly by email.',
@@ -2706,7 +2706,7 @@
           'visite.item1.name': 'Brewery visit',
           'visite.item1.desc': 'The brewery, the tanks, and the process of a brew day will all be explained.',
           'visite.item2.name': 'Tasting',
-          'visite.item2.desc': 'A tasting on site, depending on the beers available at the time.',
+          'visite.item2.desc': 'A tasting on site, according to the beers on hand.',
           'visite.cta': 'Visit enquiries',
           'faq.heading': 'Practical Questions',
           'faq.q1': 'Where is Brasserie du Château de Durbuy?',
@@ -2720,7 +2720,7 @@
           'faq.q5': 'What is the connection with Philippe Marckloff?',
           'faq.a5': 'Philippe Marckloff belongs to the brewing history of Durbuy, documented around 1560. The reference places a local brewing memory; it is not evidence of continuous brewing at the château since that date.',
           'faq.q6': 'Where can you find the beers?',
-          'faq.a6': 'A selection of beers is available through several local partners. Availability is confirmed case by case.',
+          'faq.a6': 'A few local partners receive the brewery’s beers. For private or trade enquiries, write to the estate directly.',
           'footer.label.domaine': 'The Estate',
           'footer.country': 'Belgium',
           'footer.label.enquiry': 'By appointment',
@@ -2767,10 +2767,10 @@
           'bieres.teaser': 'Die Reihe wird zu ihrer Zeit vorgestellt.',
           'bieres.transition': 'Nach dem Brauen finden die Biere ihren Weg zu einigen lokalen Partnern.',
           'points.chapter': '— Kapitel IV —',
-          'points.kicker': 'Nach Verfügbarkeit',
+          'points.kicker': 'Lokale Partner',
           'points.heading': 'Wo erhältlich',
           'points.lead': 'Einige lokale Partner erhalten unsere Biere.',
-          'points.request.copy': 'Für private oder gewerbliche Anfragen schreiben Sie uns direkt. Die Verfügbarkeit wird im Einzelfall bestätigt.',
+          'points.request.copy': 'Für private oder gewerbliche Anfragen schreiben Sie uns direkt. Jede Anfrage wird einzeln geprüft.',
           'points.request.cta': 'An das Anwesen schreiben',
           'order.type.label': 'Art der Anfrage',
           'order.type.private': 'Privat',
@@ -2780,11 +2780,11 @@
           'order.phone': 'Telefon',
           'order.vat': 'USt-IdNr.',
           'order.message': 'Ihre Nachricht',
-          'order.hint': 'Preise und Verfügbarkeit werden nicht automatisch bestätigt.',
+          'order.hint': 'Preise und Mengen werden nicht automatisch bestätigt.',
           'order.submit': 'Senden',
           'order.sending': 'Wird gesendet…',
           'order.status': 'Ihre Nachricht wurde gesendet. Wir antworten Ihnen direkt per E-Mail.',
-          'order.fallback': 'Direktes Senden ist momentan nicht verfügbar. Ihr Mailprogramm wird geöffnet, um die Nachricht abzuschließen.',
+          'order.fallback': 'Direktes Senden funktioniert momentan nicht. Ihr Mailprogramm wird geöffnet, um die Nachricht abzuschließen.',
           'order.error': 'Bitte füllen Sie die Pflichtfelder aus.',
           'visite.chapter': '— Kapitel V —',
           'visite.kicker': 'Nur nach Vereinbarung',
@@ -2794,7 +2794,7 @@
           'visite.item1.name': 'Brauereibesuch',
           'visite.item1.desc': 'Die Brauerei, die Tanks und der Ablauf eines Brautags werden erläutert.',
           'visite.item2.name': 'Verkostung',
-          'visite.item2.desc': 'Eine Verkostung vor Ort, je nach den dann verfügbaren Bieren.',
+          'visite.item2.desc': 'Eine Verkostung vor Ort, je nachdem, welche Biere dann im Haus sind.',
           'visite.cta': 'Informationen &amp; Anfragen',
           'faq.heading': 'Praktische Fragen',
           'faq.q1': 'Wo befindet sich die Brasserie du Château de Durbuy?',
@@ -2808,7 +2808,7 @@
           'faq.q5': 'Welche Verbindung gibt es zu Philippe Marckloff?',
           'faq.a5': 'Philippe Marckloff gehört zur Braugeschichte von Durbuy, die um 1560 belegt ist. Diese Referenz verortet die lokale Braugeschichte; sie ist kein Beleg für ein ununterbrochenes Brauen am Schloss seit diesem Datum.',
           'faq.q6': 'Wo sind die Biere erhältlich?',
-          'faq.a6': 'Eine Auswahl an Bieren ist bei einigen lokalen Partnern erhältlich. Die Verfügbarkeit wird im Einzelfall bestätigt.',
+          'faq.a6': 'Einige lokale Partner erhalten die Biere der Brauerei. Für private oder gewerbliche Anfragen schreiben Sie uns direkt.',
           'footer.label.domaine': 'Das Anwesen',
           'footer.country': 'Belgien',
           'footer.label.enquiry': 'Nur nach Vereinbarung',
