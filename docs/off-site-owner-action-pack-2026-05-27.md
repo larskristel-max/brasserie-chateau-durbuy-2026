@@ -19,6 +19,16 @@ Use this as the working queue for Google, Maps, directories, tourism listings, a
 - Public Google result check: exact brand search shows the official site and validated profile, but Facebook and TerroirLux can still appear above the owned homepage. `brasserie durbuy` is mostly interpreted as restaurant/brasserie-in-Durbuy intent. `brewery durbuy` shows the target Maps listing, but still mixes in Brasserie de Durbuy, Marckloff, La Ferme au Chêne, and generic tourism/directory results.
 - Highest-priority external cleanup from current results: tourism/directory pages that still say Marckloff / La Ferme au Chêne, pages pointing to Facebook instead of the official website, and directory results whose snippets imply the old brewery is closed or located at the old identity/address.
 
+## Status Update - 29/05/2026
+
+- Gmail follow-up check completed for SEO/AEO/GEO outreach.
+- Petit Futé replied that the submitted corrections were accepted for processing and should be visible within 48 hours. A short French thank-you draft is prepared for review, not sent.
+- Wanderlog replied that the stale page was removed as a good-faith measure, but warned it is generated from Google Places data and can reappear if Google's source data is not corrected.
+- CellarMonk replied that the correction was made and invited brewery copy/photos, but the public listing still appears to show the old `Brasserie La Ferme au Chêne` name, old address, old phone/fax, and broad restaurant/taproom-style tags. A reply draft is prepared asking them to recheck publication and giving safe official copy.
+- BeerPlanet email outreach bounced because `info@beerplanet.net` does not exist. Use the public contact form instead.
+- Sluurpy email outreach bounced for both `ristoratori@sluurpy.com` and `segnalazioni@sluurpy.com`. Their business data-change route is the next path, with WhatsApp as backup if the form remains inaccessible.
+- Gmail drafts currently awaiting review: Untappd, Petit Futé thank-you, CellarMonk recheck/copy.
+
 ## Copy/Paste Canonical Facts
 
 - Official name: `Brasserie du Château de Durbuy`
@@ -70,12 +80,12 @@ Use this table as the current tracking view. Older platform rows below are conte
 | LaCarte | `https://lacarte.menu/restaurants/durbuy/la-ferme-au-chene-2` | Submitted 28/05/2026 with on-page receipt. | Wait, then chase if unchanged. |
 | Resto.be | `https://en.resto.be/restaurant/durbuy/6940-durbuy/173931-la-ferme-au-chene/` | Submitted 28/05/2026 with on-page receipt. | Wait, then chase if unchanged. |
 | Belgique Heures | `https://belgique.heures.info/commerce/la-ferme-au-chene/durbuy` | Submitted 28/05/2026 with on-page receipt. | Wait, then chase if unchanged. |
-| Petit Fute | `https://www.petitfute.com/v68892-durbuy-6940/c650-produits-gourmands-vins/c1117-vins-alcools/c714-biere-brasserie/c1352-brasserie-artisanale-et-micro-brasserie/1394487-marckloff.html` | Submitted 28/05/2026 with on-page receipt. | Wait, then chase if unchanged. |
+| Petit Fute | `https://www.petitfute.com/v68892-durbuy-6940/c650-produits-gourmands-vins/c1117-vins-alcools/c714-biere-brasserie/c1352-brasserie-artisanale-et-micro-brasserie/1394487-marckloff.html` | Submitted 28/05/2026 with on-page receipt. Reply received 29/05/2026: corrections should be visible within 48 hours. | Recheck public page after 31/05/2026; thank-you draft prepared if desired. |
 | OpCafeGaan | `https://www.opcafegaan.be/durbuy/la-ferme-au-chne` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged; high priority because it shows active/open old signals. |
 | Polybeer | `https://polybeer.com/breweries/index.php?COMPID=1057&sub=1` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
-| BeerPlanet | `https://beerplanet.net/brewery/brasserie-la-ferme-au-chene/` | Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
+| BeerPlanet | `https://beerplanet.net/brewery/brasserie-la-ferme-au-chene/` | Gmail outreach to `info@beerplanet.net` bounced on 28/05/2026. Replacement route found: `https://beerplanet.net/contact/`. | Submit correction through contact form; use submit-brewery form only if contact form fails. |
 | Vlaamse Brouwers | `https://vlaamsebrouwers.be/brouwerijlocaties/belgium/luxemburg-1/durbuy/la-brasserie-du-chateau-de-durbuy/` | Correct name/address found, but public copy includes a phone number and a stronger historical line than desired. Gmail outreach sent 28/05/2026. | Wait, then chase if unchanged. |
-| CellarMonk | `https://www.cellarmonk.com/europe/brewery-europe/brasserie-la-ferme-au-chene/` | Submitted/attempted 28/05/2026, but no visible confirmation. | Follow up if unchanged. |
+| CellarMonk | `https://www.cellarmonk.com/europe/brewery-europe/brasserie-la-ferme-au-chene/` | Reply received 28/05/2026 saying corrections were made, but public page still appears stale. Gmail draft prepared 29/05/2026 asking them to recheck publication and giving safe official copy. | Review/send draft; recheck public listing after response. |
 | Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` | Blocked in in-app browser because Google auth popup failed. | Complete in a normal/login-capable browser. |
 | BeerXchange | `https://www.beerxchange.com/brewery/la-ferme-au-cha-ne/36617` | Public page appears to mirror Untappd and shows `Brew Pub`; likely lower priority and dependent on Untappd data. | Recheck after Untappd is corrected. |
 | Craft Beer Monkey | `https://www.craftbeermonkey.com/Brewery/Brasserie-La-Ferme-Au-Chene/11779` | New stale listing found 28/05/2026: `Brasserie La Ferme Au Chene`, old/wrong address, claimable brewery profile. | Claim/contact if account setup is acceptable. |
@@ -247,7 +257,7 @@ Merci beaucoup,
 
 Brasserie du Château de Durbuy
 
-## Gmail Outreach Status - 28/05/2026
+## Gmail Outreach Status - 28-29/05/2026
 
 Already sent or answered in Gmail:
 
@@ -264,10 +274,10 @@ Gmail outreach sent on 28/05/2026:
 |---|---|---|---|---|
 | OpCafeGaan | `Info@opcafegaan.be` | Dutch | `La Ferme au Chene` active listing | 04/06/2026 |
 | Biernet | `info@biernet.nl` | Dutch | Marckloff / brewery naming update | 04/06/2026 |
-| Wanderlog | `support@wanderlog.com` | English | old La Ferme au Chene place page | 04/06/2026 |
-| Sluurpy | `ristoratori@sluurpy.com`, cc `segnalazioni@sluurpy.com` | French | old La Ferme au Chene restaurant page | 04/06/2026 |
+| Wanderlog | `support@wanderlog.com` | English | old La Ferme au Chene place page; reply received 28/05/2026 saying the page was removed as a good-faith measure but may reappear from Google Places data | Monitor only; focus permanent fix on Google source data |
+| Sluurpy | `ristoratori@sluurpy.com`, cc `segnalazioni@sluurpy.com` | French | old La Ferme au Chene restaurant page; both addresses bounced on 28/05/2026 | Use `https://business.sluurpy.com/` data-change route or WhatsApp backup `+39 351 786 8470` |
 | Polybeer | `info@polybeer.com` | English | former Brasserie La Ferme au Chene brewery record | 04/06/2026 |
-| BeerPlanet | `info@beerplanet.net` | English | former Brasserie La Ferme au Chene brewery record | 04/06/2026 |
+| BeerPlanet | `info@beerplanet.net` | English | former Brasserie La Ferme au Chene brewery record; email bounced on 28/05/2026 | Use `https://beerplanet.net/contact/` |
 | Vlaamse Brouwers | `info@vlaamsebrouwers.be` | Dutch | current listing has correct name/address but should remove stale phone and soften historical continuity wording | 04/06/2026 |
 
 Gmail drafts prepared for review:
@@ -275,6 +285,8 @@ Gmail drafts prepared for review:
 | Target | Draft recipient | Language | Listing / issue | Follow-up date |
 |---|---|---|---|---|
 | Untappd | `business@untappd.com` | English | public brewery page uses `Brew Pub`; request review toward brewery / microbrewery and official site alignment | 04/06/2026 |
+| Petit Fute | `redaction@petitfute.com`, cc `szeremeta@petitfute.com` | French | short thank-you reply after Petit Futé accepted the correction for processing | Optional; can send after review |
+| CellarMonk | `theabbot@cellarmonk.com` | English | asks them to recheck publication because live page still appears stale; includes safe official brewery copy | Send after review |
 
 Remaining manual follow-up:
 
@@ -282,6 +294,8 @@ Remaining manual follow-up:
 |---|---|---|---|
 | Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` or `https://www.tripadvisor.com/Owners` | English | skipped for now; direct edit route works, but Google auth popup is blocked in the in-app browser. Use email login or normal browser later. |
 | Cirkwi pro support | `https://pro.cirkwi.com/contact-support/` | French | use only if the existing support thread stalls |
+| BeerPlanet | `https://beerplanet.net/contact/` | English | replacement route after email bounce; contact form is better than submit-brewery because this is a stale listing correction/removal. |
+| Sluurpy | `https://business.sluurpy.com/` or WhatsApp `+39 351 786 8470` | French or English | replacement route after both Sluurpy emails bounced; business data-change Google Form may require a normal browser/login session. |
 
 ### Browser Form Status - 28/05/2026
 
@@ -293,7 +307,7 @@ Submitted or attempted in browser:
 | Petit Fute | `https://www.petitfute.com/information/contact.html` | Submitted 28/05/2026. On-page confirmation: `Votre message a Ã©tÃ© bien envoyÃ©, merci de votre retour !` |
 | Resto.be | `https://www.resto.be/contact` | Submitted 28/05/2026 via `Helpdesk pour restaurants`. On-page confirmation: `Aanvraag verzonden.` |
 | Belgique Heures | `https://belgique.heures.info/contact` | Submitted 28/05/2026. On-page confirmation: `Message envoyÃ© ! Nous avons reÃ§u votre message, nous allons le gÃ©rer au plus vite.` |
-| CellarMonk | `https://www.cellarmonk.com/contact-us/` | Submitted/attempted 28/05/2026 via `Listing Addition/Correction`. No clear on-page confirmation was visible after submit; form message disappeared/reset. |
+| CellarMonk | `https://www.cellarmonk.com/contact-us/` | Submitted 28/05/2026 via `Listing Addition/Correction`; reply received from Chris. Public listing still appears stale, so a recheck/copy draft is prepared in Gmail. |
 | LaCarte | `https://lacarte.menu/contribute/restaurant/la-ferme-au-chene-2` | Submitted 28/05/2026. On-page confirmation: `Your report has been received. Thank you.` |
 | Nonoresto | `https://nonoresto.be/contact/` | Refilled 28/05/2026 with a shorter Dutch correction message for the stale `La Ferme au Chene` restaurant page. Not submitted; browser later moved to owner-login pages, so reopen if review/submission is needed. |
 
