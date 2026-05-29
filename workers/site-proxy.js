@@ -22,6 +22,11 @@ export default {
       });
     }
 
+    if (shouldRedirectToDirectory(url.pathname)) {
+      url.pathname = `${url.pathname}/`;
+      return Response.redirect(url.toString(), 301);
+    }
+
     const assetPath = assetPathFromUrl(url);
     if (!assetPath) return new Response('Not found', { status: 404 });
 
@@ -52,6 +57,12 @@ export default {
     });
   },
 };
+
+function shouldRedirectToDirectory(pathname) {
+  if (pathname === '/' || pathname.endsWith('/')) return false;
+  const lastSegment = pathname.split('/').pop() || '';
+  return !lastSegment.includes('.');
+}
 
 function assetPathFromUrl(url) {
   let pathname;
