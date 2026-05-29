@@ -28,7 +28,7 @@ Use this as the working queue for Google, Maps, directories, tourism listings, a
 - BeerPlanet email outreach bounced because `info@beerplanet.net` does not exist. Use the public contact form instead.
 - Sluurpy email outreach bounced for both `ristoratori@sluurpy.com` and `segnalazioni@sluurpy.com`. Their business data-change route is the next path, with WhatsApp as backup if the form remains inaccessible.
 - Google Search Console canonical notice received 29/05/2026 for `Autre page avec balise canonique correcte`. Live verification found no public noindex/robots issue. Slashless section URLs such as `/journal` now redirect to their canonical trailing-slash URL.
-- Gmail drafts currently awaiting review: Untappd, Petit Futé thank-you, CellarMonk recheck/copy, Biernet follow-up.
+- Gmail drafts currently awaiting review: Untappd, Petit Futé thank-you, CellarMonk recheck/copy, Biernet follow-up, Craft Beer Monkey / Brewers Marketing, and Kompass.
 
 ## Copy/Paste Canonical Facts
 
@@ -305,6 +305,7 @@ Remaining manual follow-up:
 | Tripadvisor | `https://www.tripadvisor.com/ImproveListing-d3665299.html` or `https://www.tripadvisor.com/Owners` | English | skipped for now; direct edit route works, but Google auth popup is blocked in the in-app browser. Use email login or normal browser later. |
 | Cirkwi pro support | `https://pro.cirkwi.com/contact-support/` | French | use only if the existing support thread stalls |
 | BeerPlanet | `https://beerplanet.net/contact/` | English | replacement route after email bounce; contact form staged/prefilled, not submitted. Contact form is better than submit-brewery because this is a stale listing correction/removal. |
+| Nonoresto | `https://nonoresto.be/contact/` | Dutch | contact form staged/prefilled with a short Dutch correction message for the stale `La Ferme au Chene` restaurant page; not submitted. Review visible form and submit if approved. |
 | Sluurpy | `https://business.sluurpy.com/` or WhatsApp `+39 351 786 8470` | French or English | replacement route after both Sluurpy emails bounced; business data-change Google Form may require a normal browser/login session. |
 
 Prepared public-form payloads for owner review:
