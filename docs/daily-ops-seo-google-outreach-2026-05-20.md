@@ -56,12 +56,10 @@ Today moved the Brasserie du Chateau de Durbuy visibility work forward across th
 - Drafted and sent an information email about the website to relevant brewery / tourism / listing contacts.
 - Added a Dutch version under the French version before sending.
 - Confirmed the email was sent.
-- Created a separate Gmail draft for RSI Durbuy:
-  - To: `rsidurbuy@gmail.com`;
-  - CC: `tourisme@durbuy.be`;
-  - Subject: `Site officiel de la Brasserie du Chateau de Durbuy`;
-  - French version first, Dutch version underneath;
-  - draft only, not sent.
+- RSI Durbuy / Durbuy tourism was later sent and is no longer a draft-only item:
+  - Sent to: `tourisme@durbuy.be` and `rsidurbuy@gmail.com`;
+  - Subject: `Site officiel de la Brasserie du Château de Durbuy`;
+  - French version first, Dutch version underneath.
 
 ## Content / AI Visibility
 
@@ -83,7 +81,7 @@ Today moved the Brasserie du Chateau de Durbuy visibility work forward across th
 
 ## Next Priorities
 
-1. Google Search Console is no longer a setup task: sitemap was read, 7 URLs were discovered, key URLs were indexed, and live technical checks passed. Continue weekly monitoring for `brasserie durbuy`, `brouwerij durbuy`, and `brewery durbuy`.
+1. Google Search Console is no longer a setup task: sitemap was read, 7 URLs were discovered, key URLs were indexed, and live technical checks passed. Continue weekly monitoring for `brasserie durbuy`, `brouwerij durbuy`, `brewery durbuy`, `Brasserie du Château de Durbuy`, `La Brasserie du Château de Durbuy`, `Marckloff Durbuy`, and `microbrasserie durbuy`.
 2. Google Business Profile still needs owner-side monitoring: wait for the pending description review to clear, then remove the public reservation-link signal if Google exposes a safe control. Do not add hours, menu, restaurant, or taproom signals unless facts change.
 3. Owner-login discovery tasks remain: Apple Business Connect, Bing Places, and Tripadvisor must be completed in a normal/login-capable browser.
 4. Gmail drafts awaiting review: Untappd, Biernet follow-up, Petit Futé thank-you, CellarMonk recheck/copy, Craft Beer Monkey / Brewers Marketing, and Kompass.
@@ -98,7 +96,7 @@ Owner review before sending/submitting:
 - Gmail draft: Untappd correction request to `business@untappd.com`.
 - Gmail draft: Biernet follow-up to `info@biernet.nl`.
 - Gmail draft: Petit Futé thank-you to `redaction@petitfute.com`, cc `szeremeta@petitfute.com`.
-- Gmail draft: CellarMonk recheck/copy reply to `theabbot@cellarmonk.com`.
+- Gmail draft: CellarMonk reply to `theabbot@cellarmonk.com` now optional only; public spot-check on 29/05/2026 found the core listing correction published.
 - Gmail draft: Craft Beer Monkey / Brewers Marketing correction request to `info@brewersmarketing.com`.
 - Gmail draft: Kompass activity-classification correction request to `info@kompass.com`.
 - Browser form staged, not submitted: BeerPlanet contact form.
@@ -125,9 +123,9 @@ Wait-and-chase:
 
 - Petit Futé: recheck after 31/05/2026 because they said corrections should appear within 48 hours.
 - OpCafeGaan, Biernet, Polybeer, Vlaamse Brouwers: follow up around 04/06/2026 if unchanged.
-- Menuweb, LaCarte, Resto.be, Belgique Heures: wait after submitted browser forms, then chase if unchanged.
-- Cirkwi / Ardenne Belge: follow up if public title/entity cleanup does not appear.
-- CellarMonk: recheck public listing after the prepared recheck/copy draft gets a response.
+- Menuweb, LaCarte, Resto.be, Belgique Heures: recheck on 02/06/2026; public spot-check on 29/05/2026 still found stale old-address / restaurant-hours signals.
+- Cirkwi / Ardenne Belge: follow up around 04/06/2026 if public title/entity cleanup does not appear.
+- CellarMonk: recheck around 04/06/2026 only; no stale-listing follow-up needed unless the public correction regresses.
 - BeerXchange: recheck after Untappd is corrected because it appears to mirror Untappd.
 - Wanderlog: monitor only; they removed the stale page but said it may reappear from Google Places data.
 - Google Search Console: monitor query/CTR weekly; inspect canonical examples only if Google lists an intended canonical page.

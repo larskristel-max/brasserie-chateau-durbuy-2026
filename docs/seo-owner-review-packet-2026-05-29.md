@@ -30,15 +30,15 @@ Review and send if approved:
 | Target | Recipient | Purpose | Notes |
 |---|---|---|---|
 | Untappd | `business@untappd.com` | Correct public brewery category away from `Brew Pub` toward brewery / microbrewery. | Email route is separate from any owner claim flow. |
-| Biernet | `info@biernet.nl` | Thank them for the new Brasserie du Château de Durbuy page and ask that the old Marckloff / La Ferme au Chêne page not remain a competing current listing. | Recheck old and new URLs after publication settles. |
+| Biernet | `info@biernet.nl` | Ask them to remove remaining old phone/email and visitor-style signals from the new Brasserie du Château de Durbuy page. | Public check on 29/05/2026 found the old URL redirecting correctly, but stale contact/visit details remain. Draft updated accordingly. |
 | Petit Futé | `redaction@petitfute.com`, cc `szeremeta@petitfute.com` | Short thank-you after they accepted corrections for processing. | Optional; correction already accepted. |
-| CellarMonk | `theabbot@cellarmonk.com` | Ask them to recheck publication because the public listing still appears stale; includes safe official copy. | Draft was tightened to avoid implying uninterrupted brewing continuity. |
+| CellarMonk | `theabbot@cellarmonk.com` | Optional reply with safe official copy/photos if desired. | Public spot-check on 29/05/2026 found the old URL redirecting to a corrected Brasserie du Château de Durbuy page with the right address and microbrewery type. Draft updated so it thanks them and offers safe copy rather than asking for stale-page correction. |
 | Craft Beer Monkey / Brewers Marketing | `info@brewersmarketing.com` | Ask Brewers Marketing to correct the stale Craft Beer Monkey listing or mark it former / legacy. | Safer first route than the claim portal, which appeared account-based and returned `403 Site Disabled`. |
 | Kompass | `info@kompass.com` | Ask Kompass to remove misleading restaurant/bar and unrelated activity classifications. | Alternative route is Belgian Kompass contact form under company-profile management. |
 
-Older draft to verify:
+Resolved older draft:
 
-- RSI Durbuy draft mentioned in the 20/05 daily-ops note. Confirm in Gmail whether it still exists or was superseded by later outreach to `tourisme@durbuy.be` and `rsidurbuy@gmail.com`.
+- RSI Durbuy is no longer a draft-only item. The later working record shows the site-official notice was sent to `tourisme@durbuy.be` and `rsidurbuy@gmail.com`.
 
 ## Browser Forms
 
@@ -77,9 +77,9 @@ Older draft to verify:
 | Biernet | Around 04/06/2026 | Recheck old and new URLs; follow up if old listing still competes as current. |
 | Polybeer | Around 04/06/2026 | Follow up if unchanged. |
 | Vlaamse Brouwers | Around 04/06/2026 | Follow up if stale phone/history wording remains. |
-| Menuweb, LaCarte, Resto.be, Belgique Heures | After submitted forms settle | Chase if unchanged. |
-| Cirkwi / Ardenne Belge | If public title/entity cleanup does not appear | Follow up with support / data source. |
-| CellarMonk | After draft response | Recheck public listing. |
+| Menuweb, LaCarte, Resto.be, Belgique Heures | 02/06/2026 | Public spot-check on 29/05/2026 still found stale La Ferme au Chêne / old-address / restaurant-hours signals; chase if unchanged. |
+| Cirkwi / Ardenne Belge | 04/06/2026 | Follow up with support / data source if public title/entity cleanup does not appear. |
+| CellarMonk | 04/06/2026 | Recheck only; current public spot-check shows core correction published. Optional copy/photos can wait for owner preference. |
 | BeerXchange | After Untappd correction | Recheck because it appears to mirror Untappd. |
 | Wanderlog | Ongoing | Monitor only; stale page was removed but may reappear from Google Places data. |
 | Google Search Console | Weekly | Monitor query/CTR; inspect canonical examples only if Google lists an intended canonical page. |
