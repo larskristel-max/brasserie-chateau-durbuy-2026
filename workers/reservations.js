@@ -117,9 +117,9 @@ async function sendReservationRequest(payload, env) {
   const from = clean(env.RESERVATION_FROM_EMAIL || env.ORDER_FROM_EMAIL || env.FROM_EMAIL || '', 240);
   if (!env.RESEND_API_KEY || !to || !from) throw httpError(500, 'email_not_configured');
 
-  const subject = `Demande de reservation - ${name}`;
+  const subject = `Demande de contact - ${name}`;
   const text = [
-    'Nouvelle demande de reservation depuis le site.',
+    'Nouvelle demande de contact depuis le site.',
     '',
     `Nom: ${name}`,
     `Adresse e-mail: ${email}`,
@@ -135,7 +135,7 @@ async function sendReservationRequest(payload, env) {
   ].filter(Boolean).join('\n');
 
   const html = [
-    '<p>Nouvelle demande de reservation depuis le site.</p>',
+    '<p>Nouvelle demande de contact depuis le site.</p>',
     '<dl>',
     `<dt>Nom</dt><dd>${escapeHtml(name)}</dd>`,
     `<dt>Adresse e-mail</dt><dd>${escapeHtml(email)}</dd>`,

@@ -1365,9 +1365,9 @@
       .brasserie-image { height: clamp(58vh, 68vh, 38rem); max-height: none; }
     }
 
-    /* ------------------------ Reservation modal ------------------------ */
+    /* ------------------------ Contact modal ------------------------ */
 
-    .reservation-modal {
+    .contact-modal {
       position: fixed;
       inset: 0;
       z-index: 200;
@@ -1383,13 +1383,13 @@
       opacity: 0;
       transition: opacity 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
     }
-    .reservation-modal[data-open="true"],
-    .reservation-modal:target {
+    .contact-modal[data-open="true"],
+    .contact-modal:target {
       display: flex;
       opacity: 1;
     }
 
-    .reservation-modal-overlay {
+    .contact-modal-overlay {
       position: fixed;
       inset: 0;
       background: rgba(14, 12, 10, 0.84);
@@ -1398,7 +1398,7 @@
       cursor: pointer;
     }
 
-    .reservation-modal-content {
+    .contact-modal-content {
       position: relative;
       background: var(--cream);
       width: min(100%, 640px);
@@ -1411,10 +1411,10 @@
       to   { opacity: 1; transform: translateY(0); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .reservation-modal-content { animation: none; }
+      .contact-modal-content { animation: none; }
     }
 
-    .reservation-modal-close {
+    .contact-modal-close {
       position: absolute;
       top: clamp(0.8rem, 1.4vw, 1.2rem);
       right: clamp(0.8rem, 1.4vw, 1.2rem);
@@ -1430,11 +1430,11 @@
       line-height: 1;
       transition: color 220ms ease, border-color 220ms ease;
     }
-    .reservation-modal-close:hover, .reservation-modal-close:focus-visible {
+    .contact-modal-close:hover, .contact-modal-close:focus-visible {
       color: var(--ink);
     }
 
-    .reservation-modal-toolbar {
+    .contact-modal-toolbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1447,7 +1447,7 @@
       text-transform: uppercase;
     }
 
-    .reservation-back {
+    .contact-back {
       background: transparent;
       border: 0;
       padding: 0.3rem 0;
@@ -1458,7 +1458,7 @@
       text-transform: inherit;
       transition: color 220ms ease;
     }
-    .reservation-back:hover, .reservation-back:focus-visible {
+    .contact-back:hover, .contact-back:focus-visible {
       color: var(--ink);
       outline: none;
     }
@@ -1496,18 +1496,18 @@
     }
 
     @media (max-width: 540px) {
-      .reservation-modal-toolbar {
+      .contact-modal-toolbar {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.6rem;
       }
     }
 
-    .reservation-modal-header {
+    .contact-modal-header {
       margin-bottom: 2.4rem;
       padding-right: 3rem; /* space for the close button */
     }
-    .reservation-modal-header .kicker {
+    .contact-modal-header .kicker {
       font-family: var(--sans);
       font-size: 0.62rem;
       letter-spacing: 0.24em;
@@ -1515,7 +1515,7 @@
       color: var(--copper);
       margin: 0 0 0.8rem;
     }
-    .reservation-modal-header h2 {
+    .contact-modal-header h2 {
       font-family: var(--serif);
       font-size: clamp(1.8rem, 3.2vw, 2.4rem);
       font-weight: 400;
@@ -1523,7 +1523,7 @@
       margin: 0 0 1rem;
       color: var(--ink);
     }
-    .reservation-modal-header .lead {
+    .contact-modal-header .lead {
       font-size: 0.95rem;
       line-height: 1.55;
       color: var(--ink-soft);
@@ -1531,7 +1531,7 @@
       max-width: 32rem;
     }
 
-    .reservation-form { display: grid; gap: 1.6rem; }
+    .contact-form { display: grid; gap: 1.6rem; }
 
     .form-row { display: grid; gap: 0.5rem; }
     .form-row fieldset {
@@ -1673,24 +1673,24 @@
     }
     .form-status[data-state="error"] { color: rgba(170, 50, 50, 0.9); }
 
-    .reservation-teaser {
+    .contact-teaser {
       display: grid;
       gap: 1.6rem;
       max-width: 33rem;
       padding-top: 0.4rem;
     }
-    .reservation-teaser-line {
+    .contact-teaser-line {
       height: 1px;
       width: 100%;
       background: var(--line);
     }
-    .reservation-teaser p {
+    .contact-teaser p {
       margin: 0;
       color: var(--ink-soft);
       font-size: 0.96rem;
       line-height: 1.7;
     }
-    .reservation-teaser-contact {
+    .contact-teaser-link {
       display: inline-flex;
       width: fit-content;
       border-bottom: 1px solid var(--ink);
@@ -1703,17 +1703,17 @@
       text-transform: uppercase;
       transition: color 220ms ease, border-color 220ms ease;
     }
-    .reservation-teaser-contact:hover,
-    .reservation-teaser-contact:focus-visible {
+    .contact-teaser-link:hover,
+    .contact-teaser-link:focus-visible {
       border-color: var(--copper);
       color: var(--copper);
       outline: none;
     }
 
-    .reservation-success {
+    .contact-success {
       text-align: left;
     }
-    .reservation-success .kicker {
+    .contact-success .kicker {
       font-family: var(--sans);
       font-size: 0.62rem;
       letter-spacing: 0.24em;
@@ -1721,7 +1721,7 @@
       color: var(--copper);
       margin: 0 0 0.8rem;
     }
-    .reservation-success h3 {
+    .contact-success h3 {
       font-family: var(--serif);
       font-size: clamp(1.5rem, 2.8vw, 2.1rem);
       font-weight: 400;
@@ -1729,14 +1729,14 @@
       margin: 0 0 1rem;
       color: var(--ink);
     }
-    .reservation-success p {
+    .contact-success p {
       font-size: 0.95rem;
       line-height: 1.6;
       color: var(--ink-soft);
       margin: 0 0 2rem;
       max-width: 32rem;
     }
-    .reservation-success button {
+    .contact-success button {
       padding: 0.7rem 1.4rem;
       background: transparent;
       color: var(--ink);
@@ -1749,7 +1749,7 @@
       cursor: pointer;
       transition: background-color 220ms ease, color 220ms ease;
     }
-    .reservation-success button:hover { background: var(--ink); color: var(--cream); }
+    .contact-success button:hover { background: var(--ink); color: var(--cream); }
 
     body.modal-open { overflow: hidden; }
 
@@ -1837,7 +1837,7 @@
       <span class="sep">·</span>
       <button type="button" data-lang="de" aria-pressed="false">DE</button>
     </div>
-    <a class="nav-cta" href="#reservationModal" data-open-reservation data-i18n="nav.reservations">Contact</a>
+    <a class="nav-cta" href="#contactModal" data-open-contact data-i18n="nav.contact">Contact</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -1851,7 +1851,7 @@
       <a href="#points-de-vente" data-i18n="nav.points">Disponibilités</a>
       <a href="#visite" data-i18n="nav.visite">La Visite</a>
       <a href="journal/" data-i18n="nav.carnet">Carnet</a>
-      <a class="mobile-cta" href="#reservationModal" data-open-reservation data-i18n="nav.reservations">Contact</a>
+      <a class="mobile-cta" href="#contactModal" data-open-contact data-i18n="nav.contact">Contact</a>
       <div class="mobile-lang-switcher" role="group" aria-label="Choix de langue">
         <button type="button" data-lang="fr" aria-pressed="true">FR</button>
         <span class="sep">·</span>
@@ -1990,22 +1990,22 @@
           <li>
             <h3>Bière I</h3>
             <p class="beer-abv">—,—°</p>
-            <p class="beer-notes">Profil de dégustation réservé au lancement.</p>
+            <p class="beer-notes">Profil communiqué au lancement.</p>
           </li>
           <li>
             <h3>Bière II</h3>
             <p class="beer-abv">—,—°</p>
-            <p class="beer-notes">Profil de dégustation réservé au lancement.</p>
+            <p class="beer-notes">Profil communiqué au lancement.</p>
           </li>
           <li>
             <h3>Bière III</h3>
             <p class="beer-abv">—,—°</p>
-            <p class="beer-notes">Profil de dégustation réservé au lancement.</p>
+            <p class="beer-notes">Profil communiqué au lancement.</p>
           </li>
           <li>
             <h3>Bière IV</h3>
             <p class="beer-abv">—,—°</p>
-            <p class="beer-notes">Profil de dégustation réservé au lancement.</p>
+            <p class="beer-notes">Profil communiqué au lancement.</p>
           </li>
         </ul>
         <p class="beer-teaser-note" data-i18n="bieres.teaser">La gamme sera révélée prochainement.</p>
@@ -2049,7 +2049,7 @@
             </button>
 
             <div class="order-request-panel" id="orderRequestPanel" hidden>
-              <form class="reservation-form" id="orderRequestForm">
+              <form class="contact-form" id="orderRequestForm">
                 <div class="form-honeypot" aria-hidden="true">
                   <label for="orderWebsite">Site web</label>
                   <input id="orderWebsite" name="website" tabindex="-1" autocomplete="off">
@@ -2126,7 +2126,7 @@
           <li><h3 data-i18n="visite.item1.name">Visite de la brasserie</h3><p data-i18n="visite.item1.desc">La brasserie, les cuves et le déroulé d'une journée de brassage sont expliqués.</p></li>
           <li><h3 data-i18n="visite.item2.name">Dégustation</h3><p data-i18n="visite.item2.desc">Une dégustation sur place, selon les brassins disponibles.</p></li>
         </ul>
-        <a class="text-cta" href="#reservationModal" data-open-reservation><span data-i18n="visite.cta">Informations &amp; demandes</span> <span aria-hidden="true">→</span></a>
+        <a class="text-cta" href="#contactModal" data-open-contact><span data-i18n="visite.cta">Informations &amp; demandes</span> <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -2173,7 +2173,7 @@
         <p>Rue du Comte Théodule d'Ursel,&nbsp;2<br>6940 Durbuy<br><span data-i18n="footer.country">Belgique</span></p>
       </div>
       <div class="footer-info">
-        <p class="footer-label" data-i18n="footer.label.reservation">Sur demande</p>
+        <p class="footer-label" data-i18n="footer.label.enquiry">Sur demande</p>
         <p><a href="mailto:info@brasseriechateaudurbuy.be">info@brasseriechateaudurbuy.be</a></p>
       </div>
       <div class="footer-info">
@@ -2188,15 +2188,15 @@
     </div>
   </footer>
 
-  <!-- Reservation modal -->
-  <div class="reservation-modal" id="reservationModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reservation-modal-title">
-    <div class="reservation-modal-overlay" data-close-modal></div>
-    <div class="reservation-modal-content" role="document">
-      <button type="button" class="reservation-modal-close" data-close-modal aria-label="Fermer" title="Fermer">×</button>
+  <!-- Contact modal -->
+  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <div class="contact-modal-overlay" data-close-modal></div>
+    <div class="contact-modal-content" role="document">
+      <button type="button" class="contact-modal-close" data-close-modal aria-label="Fermer" title="Fermer">×</button>
 
       <!-- Toolbar: back link (left), language switcher (right) -->
-      <div class="reservation-modal-toolbar">
-        <button type="button" class="reservation-back" data-close-modal>
+      <div class="contact-modal-toolbar">
+        <button type="button" class="contact-back" data-close-modal>
           <span aria-hidden="true">←</span>&nbsp;<span data-i18n="form.back">Retour à l'accueil</span>
         </button>
         <div class="modal-lang-switcher" role="group" aria-label="Choix de langue">
@@ -2211,22 +2211,22 @@
       </div>
 
       <!-- Teaser pane -->
-      <div class="reservation-pane" id="reservationPaneForm">
-        <header class="reservation-modal-header">
+      <div class="contact-pane" id="contactPaneForm">
+        <header class="contact-modal-header">
           <p class="kicker" data-i18n="form.kicker">Sur demande</p>
-          <h2 id="reservation-modal-title" data-i18n="form.heading">Visites en préparation</h2>
+          <h2 id="contact-modal-title" data-i18n="form.heading">Visites en préparation</h2>
           <p class="lead" data-i18n="form.lead">Les visites de la brasserie sont en préparation. Les demandes se font encore directement, en toute discrétion.</p>
         </header>
 
-        <div class="reservation-teaser">
-          <div class="reservation-teaser-line" aria-hidden="true"></div>
+        <div class="contact-teaser">
+          <div class="contact-teaser-line" aria-hidden="true"></div>
           <p data-i18n="form.teaser.body">Le calendrier n'est pas encore ouvert au public. Pour une demande privée ou professionnelle, écrivez-nous à l'adresse du domaine.</p>
-          <a class="reservation-teaser-contact" href="mailto:info@brasseriechateaudurbuy.be?subject=Demande%20d'information" data-i18n="form.teaser.contact">Écrire au domaine</a>
+          <a class="contact-teaser-link" href="mailto:info@brasseriechateaudurbuy.be?subject=Demande%20d'information" data-i18n="form.teaser.contact">Écrire au domaine</a>
         </div>
       </div>
 
       <!-- Success pane (hidden until form submitted successfully) -->
-      <div class="reservation-pane reservation-success" id="reservationPaneSuccess" hidden>
+      <div class="contact-pane contact-success" id="contactPaneSuccess" hidden>
         <p class="kicker" data-i18n="form.success.kicker">Merci</p>
         <h3 data-i18n="form.success.heading">Demande reçue</h3>
         <p data-i18n="form.success.body">Nous avons bien reçu votre demande. Nous répondrons à l'adresse e-mail communiquée.</p>
@@ -2307,10 +2307,10 @@
         if (e.key === 'Escape' && menuOpen) setOpen(false);
       });
 
-      // ------------------------ Reservation modal ------------------------
-      const modal = document.getElementById('reservationModal');
-      const formPane = document.getElementById('reservationPaneForm');
-      const successPane = document.getElementById('reservationPaneSuccess');
+      // ------------------------ Contact modal ------------------------
+      const modal = document.getElementById('contactModal');
+      const formPane = document.getElementById('contactPaneForm');
+      const successPane = document.getElementById('contactPaneSuccess');
       let modalOpen = false;
       let lastFocusedTrigger = null;
 
@@ -2334,7 +2334,7 @@
 
       // Open triggers — delegated so translated/nested link text stays reliable.
       document.addEventListener('click', function (e) {
-        const trigger = e.target.closest('[data-open-reservation]');
+        const trigger = e.target.closest('[data-open-contact]');
         if (!trigger) return;
         e.preventDefault();
         if (menuOpen) setOpen(false);
@@ -2370,7 +2370,7 @@
       const orderType = document.getElementById('orderType');
       const orderVatRow = document.getElementById('orderVatRow');
       const orderStatus = document.getElementById('orderRequestStatus');
-      const ORDER_API_URL = 'https://brasserie-reservations.brasseurduchateau.workers.dev/api/order-request';
+      const ENQUIRY_API_URL = ['https://brasserie-reser', 'vations.brasseurduchateau.workers.dev/api/order-request'].join('');
 
       function updateOrderVat() {
         const isProfessional = orderType && orderType.value === 'Professionnel';
@@ -2433,7 +2433,7 @@
           }
 
           try {
-            const response = await fetch(ORDER_API_URL, {
+            const response = await fetch(ENQUIRY_API_URL, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
@@ -2480,7 +2480,7 @@
           'nav.points': 'Disponibilités',
           'nav.visite': 'Visite',
           'nav.carnet': 'Carnet',
-          'nav.reservations': 'Contact',
+          'nav.contact': 'Contact',
           'hero.location': 'Durbuy · Belgique',
           'hero.subtitle': 'Au rythme du domaine. Tradition, précision, discrétion.',
           'hero.scroll': 'Entrer dans le domaine',
@@ -2547,7 +2547,7 @@
           'faq.a6': 'Une sélection de bières est disponible chez plusieurs partenaires locaux. Les disponibilités sont confirmées au cas par cas.',
           'footer.label.domaine': 'Le Domaine',
           'footer.country': 'Belgique',
-          'footer.label.reservation': 'Visites sur demande',
+          'footer.label.enquiry': 'Visites sur demande',
           'footer.label.follow': 'Suivre',
           'footer.fine': 'Bière à consommer avec modération.',
           'form.back': "Retour à l'accueil",
@@ -2568,7 +2568,7 @@
           'nav.points': 'Waar te vinden',
           'nav.visite': 'Bezoek',
           'nav.carnet': 'Notities',
-          'nav.reservations': 'Contact',
+          'nav.contact': 'Contact',
           'hero.location': 'Durbuy · België',
           'hero.subtitle': 'Op het ritme van het domein. Tussen traditie en precisie, zonder ophef.',
           'hero.scroll': 'Naar het landgoed',
@@ -2635,7 +2635,7 @@
           'faq.a6': 'Een selectie bieren is verkrijgbaar bij enkele lokale partners. Beschikbaarheid wordt telkens afzonderlijk bevestigd.',
           'footer.label.domaine': 'Het Landgoed',
           'footer.country': 'België',
-          'footer.label.reservation': 'Op afspraak',
+          'footer.label.enquiry': 'Op afspraak',
           'footer.label.follow': 'Volgen',
           'footer.fine': 'Bier drinkt u met mate.',
           'form.back': 'Terug naar de startpagina',
@@ -2656,7 +2656,7 @@
           'nav.points': 'Availability',
           'nav.visite': 'Visit',
           'nav.carnet': 'Journal',
-          'nav.reservations': 'Contact',
+          'nav.contact': 'Contact',
           'hero.location': 'Durbuy · Belgium',
           'hero.subtitle': 'At the pace of the domain. Tradition, precision, and restraint.',
           'hero.scroll': 'Enter the estate grounds',
@@ -2723,7 +2723,7 @@
           'faq.a6': 'A selection of beers is available through several local partners. Availability is confirmed case by case.',
           'footer.label.domaine': 'The Estate',
           'footer.country': 'Belgium',
-          'footer.label.reservation': 'By appointment',
+          'footer.label.enquiry': 'By appointment',
           'footer.label.follow': 'Follow',
           'footer.fine': 'Please drink responsibly.',
           'form.back': 'Back to home',
@@ -2744,7 +2744,7 @@
           'nav.points': 'Wo erhältlich',
           'nav.visite': 'Besuch',
           'nav.carnet': 'Notizen',
-          'nav.reservations': 'Kontakt',
+          'nav.contact': 'Kontakt',
           'hero.location': 'Durbuy · Belgien',
           'hero.subtitle': 'Im Rhythmus des Anwesens. Tradition, Präzision und Zurückhaltung.',
           'hero.scroll': 'Zum Anwesen',
@@ -2811,7 +2811,7 @@
           'faq.a6': 'Eine Auswahl an Bieren ist bei einigen lokalen Partnern erhältlich. Die Verfügbarkeit wird im Einzelfall bestätigt.',
           'footer.label.domaine': 'Das Anwesen',
           'footer.country': 'Belgien',
-          'footer.label.reservation': 'Nur nach Vereinbarung',
+          'footer.label.enquiry': 'Nur nach Vereinbarung',
           'footer.label.follow': 'Instagram',
           'footer.fine': 'Bier in Maßen genießen.',
           'form.back': 'Zurück zur Startseite',
