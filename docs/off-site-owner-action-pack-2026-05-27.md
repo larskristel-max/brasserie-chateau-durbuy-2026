@@ -305,6 +305,71 @@ Remaining manual follow-up:
 | BeerPlanet | `https://beerplanet.net/contact/` | English | replacement route after email bounce; contact form is better than submit-brewery because this is a stale listing correction/removal. |
 | Sluurpy | `https://business.sluurpy.com/` or WhatsApp `+39 351 786 8470` | French or English | replacement route after both Sluurpy emails bounced; business data-change Google Form may require a normal browser/login session. |
 
+Prepared public-form payloads for owner review:
+
+BeerPlanet contact form (`https://beerplanet.net/contact/`):
+
+- Name: `Lars Kristel`
+- Email: `info@brasseriechateaudurbuy.be`
+- Subject: `Brewery listing correction - Brasserie du Château de Durbuy`
+- Message:
+
+```text
+Hello,
+
+The listing for Brasserie La Ferme au Chene should be corrected as a former/legacy brewery record.
+
+Current official details:
+Name: Brasserie du Château de Durbuy
+Address: Rue du Comte Théodule d'Ursel 2, 6940 Durbuy, Belgium
+Website: https://brasseriechateaudurbuy.be/
+Email: info@brasseriechateaudurbuy.be
+Category: brewery / microbrewery
+
+Please do not carry over old public hours, phone numbers, restaurant, taproom, menu, or shop information from La Ferme au Chêne unless confirmed by the brewery.
+```
+
+Sluurpy data-change route (`https://business.sluurpy.com/`) or WhatsApp backup:
+
+```text
+Bonjour,
+
+Merci de corriger ou retirer la page La Ferme au Chene à Durbuy si elle présente l'établissement comme un restaurant actuel.
+
+Les informations officielles actuelles sont:
+Nom: Brasserie du Château de Durbuy
+Adresse: Rue du Comte Théodule d'Ursel 2, 6940 Durbuy, Belgium
+Site officiel: https://brasseriechateaudurbuy.be/
+Email: info@brasseriechateaudurbuy.be
+Catégorie: brasserie / microbrasserie
+
+Merci de ne pas reprendre d'anciens horaires, menus, réservations, numéros de téléphone ou informations de restaurant sans confirmation.
+```
+
+Nonoresto contact form (`https://nonoresto.be/contact/`):
+
+- Name: `Lars Kristel`
+- Email: `info@brasseriechateaudurbuy.be`
+- Subject: `Correctie vermelding La Ferme au Chene`
+- Message:
+
+```text
+Beste,
+
+Kunt u de pagina La Ferme au Chene corrigeren of verwijderen als actuele restaurantpagina?
+
+De huidige officiële gegevens zijn:
+Naam: Brasserie du Château de Durbuy
+Adres: Rue du Comte Théodule d'Ursel 2, 6940 Durbuy, België
+Website: https://brasseriechateaudurbuy.be/
+E-mail: info@brasseriechateaudurbuy.be
+Categorie: brouwerij / microbrouwerij
+
+Gelieve geen oude openingsuren, menu's, reservaties, telefoonnummers of restaurantinformatie over te nemen zonder bevestiging.
+```
+
+Do not auto-submit these without owner review because they transmit owner contact details to third-party platforms and may change or remove public business listings.
+
 ### Browser Form Status - 28/05/2026
 
 Submitted or attempted in browser:
