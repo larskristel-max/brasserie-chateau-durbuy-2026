@@ -99,6 +99,8 @@ Owner review before sending/submitting:
 - Gmail draft: Biernet follow-up to `info@biernet.nl`.
 - Gmail draft: Petit Futé thank-you to `redaction@petitfute.com`, cc `szeremeta@petitfute.com`.
 - Gmail draft: CellarMonk recheck/copy reply to `theabbot@cellarmonk.com`.
+- Gmail draft: Craft Beer Monkey / Brewers Marketing correction request to `info@brewersmarketing.com`.
+- Gmail draft: Kompass activity-classification correction request to `info@kompass.com`.
 - Browser form staged, not submitted: BeerPlanet contact form.
 - Browser form staged, not submitted: Nonoresto contact form.
 
@@ -114,9 +116,9 @@ Manual or blocked non-login routes:
 
 - Sluurpy: both email addresses bounced; use `https://business.sluurpy.com/` data-change route or WhatsApp `+39 351 786 8470`, then mark sent only after the form/message is actually submitted.
 - Bizique / AllBiz: edit route is behind Cloudflare verification; lower priority because the old record is already marked closed.
-- Craft Beer Monkey: account/claim path likely required; lower priority unless the stale listing starts ranking.
-- Belvicci: contact/edit route still needed; prioritize if restaurant/reservation signals keep surfacing.
-- Kompass: lower priority; correct only if a safe owner-edit path is exposed.
+- Craft Beer Monkey: claim path appears account/portal-based and returned `403 Site Disabled`; Brewers Marketing draft is prepared as the safer first route.
+- Belvicci: contact/register links exist, but no usable public correction form/email was found; prioritize if restaurant/reservation signals keep surfacing.
+- Kompass: owner update route requires registration; draft prepared to `info@kompass.com`, or use Belgian Kompass contact form under company-profile management.
 - Wikipedia Marckloff: update only if policy-compliant sourcing is available.
 
 Wait-and-chase:
