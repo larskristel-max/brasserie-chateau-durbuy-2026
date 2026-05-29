@@ -8,6 +8,11 @@
   <meta name="theme-color" content="#0E0C0A" />
   <meta name="format-detection" content="telephone=no, address=no, email=no" />
   <link rel="canonical" href="https://brasseriechateaudurbuy.be/" />
+  <link rel="alternate" hreflang="fr-BE" href="https://brasseriechateaudurbuy.be/" />
+  <link rel="alternate" hreflang="nl-BE" href="https://brasseriechateaudurbuy.be/nl/" />
+  <link rel="alternate" hreflang="en" href="https://brasseriechateaudurbuy.be/en/" />
+  <link rel="alternate" hreflang="de" href="https://brasseriechateaudurbuy.be/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://brasseriechateaudurbuy.be/" />
   <link rel="icon" type="image/x-icon" href="src/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon-16.png" />
@@ -57,7 +62,7 @@
       {
         "@type": "PropertyValue",
         "name": "Public access",
-        "value": "Visites de la brasserie en préparation, uniquement sur réservation pour groupes à partir de 10 personnes; aucun horaire public permanent n'est publié."
+        "value": "Visites de groupe en préparation, uniquement sur demande pour groupes à partir de 10 personnes; aucun horaire public permanent n'est publié."
       },
       {
         "@type": "PropertyValue",
@@ -85,7 +90,7 @@
         "name": "Peut-on visiter la brasserie ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Les visites de la brasserie sont en préparation et se font uniquement sur réservation, pour des groupes à partir de 10 personnes. Le château est un espace privé et ne se visite pas."
+          "text": "Les visites de groupe à la brasserie sont en préparation et se font uniquement sur demande, à partir de 10 personnes. Le château est un espace privé et ne se visite pas."
         }
       },
       {
@@ -1832,7 +1837,7 @@
       <span class="sep">·</span>
       <button type="button" data-lang="de" aria-pressed="false">DE</button>
     </div>
-    <a class="nav-cta" href="#reservationModal" data-open-reservation data-i18n="nav.reservations">Réservations</a>
+    <a class="nav-cta" href="#reservationModal" data-open-reservation data-i18n="nav.reservations">Contact</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -1846,7 +1851,7 @@
       <a href="#points-de-vente" data-i18n="nav.points">Disponibilités</a>
       <a href="#visite" data-i18n="nav.visite">La Visite</a>
       <a href="journal/" data-i18n="nav.carnet">Carnet</a>
-      <a class="mobile-cta" href="#reservationModal" data-open-reservation data-i18n="nav.reservations">Réservations</a>
+      <a class="mobile-cta" href="#reservationModal" data-open-reservation data-i18n="nav.reservations">Contact</a>
       <div class="mobile-lang-switcher" role="group" aria-label="Choix de langue">
         <button type="button" data-lang="fr" aria-pressed="true">FR</button>
         <span class="sep">·</span>
@@ -2111,17 +2116,17 @@
       </figure>
       <div class="visite-copy">
         <p class="chapter" data-i18n="visite.chapter">— Chapitre V —</p>
-        <p class="kicker" data-i18n="visite.kicker">Sur réservation</p>
+        <p class="kicker" data-i18n="visite.kicker">Sur demande</p>
         <h2>
           <span data-i18n="visite.heading1">La Brasserie</span>
         </h2>
-        <p class="lead" data-i18n="visite.lead">La brasserie se visite uniquement sur réservation, à partir de 10 personnes.</p>
+        <p class="lead" data-i18n="visite.lead">Les visites de groupe à la brasserie se font sur demande, à partir de 10 personnes.</p>
         <p class="private-note" data-i18n="visite.private">Le château est un espace privé et ne se visite pas.</p>
         <ul class="visit-grid">
           <li><h3 data-i18n="visite.item1.name">Visite de la brasserie</h3><p data-i18n="visite.item1.desc">La brasserie, les cuves et le déroulé d'une journée de brassage sont expliqués.</p></li>
           <li><h3 data-i18n="visite.item2.name">Dégustation</h3><p data-i18n="visite.item2.desc">Une dégustation sur place, selon les brassins disponibles.</p></li>
         </ul>
-        <a class="text-cta" href="#reservationModal" data-open-reservation><span data-i18n="visite.cta">Informations &amp; réservations</span> <span aria-hidden="true">→</span></a>
+        <a class="text-cta" href="#reservationModal" data-open-reservation><span data-i18n="visite.cta">Informations &amp; demandes</span> <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -2136,7 +2141,7 @@
       </details>
       <details>
         <summary data-i18n="faq.q2">Peut-on visiter la brasserie&nbsp;?</summary>
-        <p data-i18n="faq.a2">Les visites de la brasserie sont en préparation et se font uniquement sur réservation, pour des groupes à partir de 10 personnes. Le château est un espace privé et ne se visite pas.</p>
+        <p data-i18n="faq.a2">Les visites de groupe à la brasserie sont en préparation et se font uniquement sur demande, à partir de 10 personnes. Le château est un espace privé et ne se visite pas.</p>
       </details>
       <details>
         <summary data-i18n="faq.q3">La brasserie a-t-elle des horaires d'ouverture&nbsp;?</summary>
@@ -2168,7 +2173,7 @@
         <p>Rue du Comte Théodule d'Ursel,&nbsp;2<br>6940 Durbuy<br><span data-i18n="footer.country">Belgique</span></p>
       </div>
       <div class="footer-info">
-        <p class="footer-label" data-i18n="footer.label.reservation">Sur réservation</p>
+        <p class="footer-label" data-i18n="footer.label.reservation">Sur demande</p>
         <p><a href="mailto:info@brasseriechateaudurbuy.be">info@brasseriechateaudurbuy.be</a></p>
       </div>
       <div class="footer-info">
@@ -2208,7 +2213,7 @@
       <!-- Teaser pane -->
       <div class="reservation-pane" id="reservationPaneForm">
         <header class="reservation-modal-header">
-          <p class="kicker" data-i18n="form.kicker">Sur réservation</p>
+          <p class="kicker" data-i18n="form.kicker">Sur demande</p>
           <h2 id="reservation-modal-title" data-i18n="form.heading">Visites en préparation</h2>
           <p class="lead" data-i18n="form.lead">Les visites de la brasserie sont en préparation. Les demandes se font encore directement, en toute discrétion.</p>
         </header>
@@ -2475,7 +2480,7 @@
           'nav.points': 'Disponibilités',
           'nav.visite': 'Visite',
           'nav.carnet': 'Carnet',
-          'nav.reservations': 'Réservations',
+          'nav.reservations': 'Contact',
           'hero.location': 'Durbuy · Belgique',
           'hero.subtitle': 'Au rythme du domaine. Tradition, précision, discrétion.',
           'hero.scroll': 'Entrer dans le domaine',
@@ -2518,20 +2523,20 @@
           'order.fallback': "L'envoi direct n'est pas disponible pour l'instant. Votre messagerie va s'ouvrir pour terminer la demande.",
           'order.error': 'Veuillez compléter les champs requis.',
           'visite.chapter': '— Chapitre V —',
-          'visite.kicker': 'Sur réservation',
+          'visite.kicker': 'Sur demande',
           'visite.heading1': 'La Brasserie',
-          'visite.lead': 'La brasserie se visite uniquement sur réservation, à partir de 10 personnes.',
+          'visite.lead': 'Les visites de groupe à la brasserie se font sur demande, à partir de 10 personnes.',
           'visite.private': "Le château est un espace privé et ne se visite pas.",
           'visite.item1.name': 'Visite de la brasserie',
           'visite.item1.desc': "La brasserie, les cuves et le déroulé d'une journée de brassage sont expliqués.",
           'visite.item2.name': 'Dégustation',
           'visite.item2.desc': 'Une dégustation sur place, selon les brassins disponibles.',
-          'visite.cta': 'Informations &amp; réservations',
+          'visite.cta': 'Informations &amp; demandes',
           'faq.heading': 'Questions utiles',
           'faq.q1': 'Où se trouve la Brasserie du Château de Durbuy&nbsp;?',
           'faq.a1': "La Brasserie du Château de Durbuy se trouve Rue du Comte Théodule d'Ursel, 2, 6940 Durbuy, en Belgique, dans les anciennes écuries du domaine du Château de Durbuy.",
           'faq.q2': 'Peut-on visiter la brasserie&nbsp;?',
-          'faq.a2': "Les visites de la brasserie sont en préparation et se font uniquement sur réservation, pour des groupes à partir de 10 personnes. Le château est un espace privé et ne se visite pas.",
+          'faq.a2': "Les visites de groupe à la brasserie sont en préparation et se font uniquement sur demande, à partir de 10 personnes. Le château est un espace privé et ne se visite pas.",
           'faq.q3': "La brasserie a-t-elle des horaires d'ouverture&nbsp;?",
           'faq.a3': "La brasserie ne publie pas d'horaires d'ouverture au public. Les demandes se font directement à l'adresse info@brasseriechateaudurbuy.be.",
           'faq.q4': 'La bière est-elle brassée au château&nbsp;?',
@@ -2542,11 +2547,11 @@
           'faq.a6': 'Une sélection de bières est disponible chez plusieurs partenaires locaux. Les disponibilités sont confirmées au cas par cas.',
           'footer.label.domaine': 'Le Domaine',
           'footer.country': 'Belgique',
-          'footer.label.reservation': 'Sur réservation',
+          'footer.label.reservation': 'Visites sur demande',
           'footer.label.follow': 'Suivre',
           'footer.fine': 'Bière à consommer avec modération.',
           'form.back': "Retour à l'accueil",
-          'form.kicker': 'Sur réservation',
+          'form.kicker': 'Sur demande',
           'form.heading': 'Visites en préparation',
           'form.lead': 'Les visites de la brasserie sont en préparation. Les demandes se font encore directement, en toute discrétion.',
           'form.teaser.body': "Le calendrier n'est pas encore ouvert au public. Pour une demande de visite, écrivez-nous à l'adresse du domaine.",
@@ -2563,7 +2568,7 @@
           'nav.points': 'Waar te vinden',
           'nav.visite': 'Bezoek',
           'nav.carnet': 'Notities',
-          'nav.reservations': 'Reserveringen',
+          'nav.reservations': 'Contact',
           'hero.location': 'Durbuy · België',
           'hero.subtitle': 'Op het ritme van het domein. Tussen traditie en precisie, zonder ophef.',
           'hero.scroll': 'Naar het landgoed',
@@ -2614,7 +2619,7 @@
           'visite.item1.desc': 'De brouwerij, de kuipen en het verloop van een brouwdag worden toegelicht.',
           'visite.item2.name': 'Proeverij',
           'visite.item2.desc': 'Een proeverij ter plaatse, afhankelijk van de beschikbare bieren.',
-          'visite.cta': 'Informatie &amp; reserveringen',
+          'visite.cta': 'Informatie &amp; aanvragen',
           'faq.heading': 'Praktische vragen',
           'faq.q1': 'Waar ligt Brasserie du Château de Durbuy?',
           'faq.a1': "Brasserie du Château de Durbuy bevindt zich aan Rue du Comte Théodule d'Ursel 2, 6940 Durbuy, België, in de voormalige stallen van het domein van Château de Durbuy.",
@@ -2651,7 +2656,7 @@
           'nav.points': 'Availability',
           'nav.visite': 'Visit',
           'nav.carnet': 'Journal',
-          'nav.reservations': 'Reservations',
+          'nav.reservations': 'Contact',
           'hero.location': 'Durbuy · Belgium',
           'hero.subtitle': 'At the pace of the domain. Tradition, precision, and restraint.',
           'hero.scroll': 'Enter the estate grounds',
@@ -2702,7 +2707,7 @@
           'visite.item1.desc': 'The brewery, the tanks, and the process of a brew day will all be explained.',
           'visite.item2.name': 'Tasting',
           'visite.item2.desc': 'A tasting on site, depending on the beers available at the time.',
-          'visite.cta': 'Enquiries &amp; reservations',
+          'visite.cta': 'Visit enquiries',
           'faq.heading': 'Practical Questions',
           'faq.q1': 'Where is Brasserie du Château de Durbuy?',
           'faq.a1': "Brasserie du Château de Durbuy is located at Rue du Comte Théodule d'Ursel 2, 6940 Durbuy, Belgium, in the former stables of the Château de Durbuy estate.",
@@ -2739,7 +2744,7 @@
           'nav.points': 'Wo erhältlich',
           'nav.visite': 'Besuch',
           'nav.carnet': 'Notizen',
-          'nav.reservations': 'Reservierungen',
+          'nav.reservations': 'Kontakt',
           'hero.location': 'Durbuy · Belgien',
           'hero.subtitle': 'Im Rhythmus des Anwesens. Tradition, Präzision und Zurückhaltung.',
           'hero.scroll': 'Zum Anwesen',
@@ -2790,7 +2795,7 @@
           'visite.item1.desc': 'Die Brauerei, die Tanks und der Ablauf eines Brautags werden erläutert.',
           'visite.item2.name': 'Verkostung',
           'visite.item2.desc': 'Eine Verkostung vor Ort, je nach den dann verfügbaren Bieren.',
-          'visite.cta': 'Informationen &amp; Reservierungen',
+          'visite.cta': 'Informationen &amp; Anfragen',
           'faq.heading': 'Praktische Fragen',
           'faq.q1': 'Wo befindet sich die Brasserie du Château de Durbuy?',
           'faq.a1': "Die Brasserie du Château de Durbuy befindet sich in der Rue du Comte Théodule d'Ursel 2, 6940 Durbuy, Belgien, in den früheren Stallungen des Anwesens Château de Durbuy.",
@@ -2826,6 +2831,8 @@
       const STORAGE_KEY = 'brasserie-lang';
 
       function getInitialLang() {
+        const pathLang = window.location.pathname.split('/').filter(Boolean)[0];
+        if (supportedLangs.indexOf(pathLang) !== -1) return pathLang;
         try {
           const stored = localStorage.getItem(STORAGE_KEY);
           if (stored && supportedLangs.indexOf(stored) !== -1) return stored;

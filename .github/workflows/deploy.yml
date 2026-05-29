@@ -23,12 +23,16 @@ jobs:
       - name: Prepare dist (self-hosted static site — no build step)
         run: |
           node scripts/generate-journal-pages.js
+          node scripts/generate-language-pages.js
           mkdir -p dist/src/assets
           cp index.html dist/
           cp robots.txt dist/ 2>/dev/null || true
           cp sitemap.xml dist/ 2>/dev/null || true
           cp llms.txt dist/ 2>/dev/null || true
           cp -R journal dist/ 2>/dev/null || true
+          cp -R nl dist/ 2>/dev/null || true
+          cp -R en dist/ 2>/dev/null || true
+          cp -R de dist/ 2>/dev/null || true
           cp -R admin dist/ 2>/dev/null || true
           # Copy only assets actually referenced by the site (favicons + WebP + JPG + crest)
           cp src/assets/favicon.ico             dist/src/assets/ 2>/dev/null || true
