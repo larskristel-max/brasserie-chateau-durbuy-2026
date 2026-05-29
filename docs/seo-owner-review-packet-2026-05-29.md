@@ -40,12 +40,12 @@ Resolved older draft:
 
 - RSI Durbuy is no longer a draft-only item. The later working record shows the site-official notice was sent to `tourisme@durbuy.be` and `rsidurbuy@gmail.com`.
 
-## Browser Forms
+## Owner Review Browser Forms
 
 | Target | Route | Status | Next action |
 |---|---|---|---|
 | BeerPlanet | `https://beerplanet.net/contact/` | Staged/prefilled, not submitted. | Review visible form and submit if approved. |
-| Nonoresto | `https://nonoresto.be/contact/` | Staged/prefilled; submission attempt on 29/05/2026 returned `Network error. Please try again.` No receipt. | Retry later; if the error persists, find another contact route. |
+| Nonoresto | `https://nonoresto.be/contact/` | Manual/blocked: staged/prefilled; submission attempt on 29/05/2026 returned `Network error. Please try again.` No receipt. | Retry on 02/06/2026; if the error persists, find another contact route. |
 
 ## Owner Login / Normal Browser
 
@@ -77,13 +77,13 @@ Resolved older draft:
 | Biernet | Around 04/06/2026 | Recheck old and new URLs; follow up if old listing still competes as current. |
 | Polybeer | Around 04/06/2026 | Follow up if unchanged. |
 | Vlaamse Brouwers | Around 04/06/2026 | Follow up if stale phone/history wording remains. |
-| Menuweb, LaCarte, Resto.be, Belgique Heures | 02/06/2026 | Public spot-check on 29/05/2026 still found stale La Ferme au Chêne / old-address / restaurant-hours signals; chase if unchanged. |
+| Menuweb, LaCarte, Resto.be, Belgique Heures | 02/06/2026 | Public spot-check on 29/05/2026 still found stale La Ferme au Chêne / old-address / restaurant-hours signals; chase if unchanged. Menuweb confirmation links from Gmail were opened on 29/05/2026 and both resolved successfully to Menuweb. |
 | Cirkwi / Ardenne Belge | 04/06/2026 | Follow up with support / data source if public title/entity cleanup does not appear. |
 | CellarMonk | 04/06/2026 | Recheck only; current public spot-check shows core correction published. Optional copy/photos can wait for owner preference. |
-| BeerXchange | After Untappd correction | Recheck because it appears to mirror Untappd. |
-| Wanderlog | Ongoing | Monitor only; stale page was removed but may reappear from Google Places data. |
+| BeerXchange | Triggered wait-and-chase: after Untappd correction | Recheck because it appears to mirror Untappd. |
+| Wanderlog | Monthly manual monitoring; next check 30/06/2026 | Monitor only; stale page was removed but may reappear from Google Places data. |
 | Google Search Console | Weekly | Monitor query/CTR; inspect canonical examples only if Google lists an intended canonical page. |
 
-## Future Structural Item
+## Owner Review / Future Structural Item
 
 - Separate indexable language URLs / hreflang should wait until translations are fully reviewed and approved.
