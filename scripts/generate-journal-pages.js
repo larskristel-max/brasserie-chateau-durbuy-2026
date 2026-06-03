@@ -12,6 +12,7 @@ const llmsPath = path.join(root, 'llms.txt');
 
 const SITE = 'https://brasseriechateaudurbuy.be';
 const BRAND = 'Brasserie du Ch\u00e2teau de Durbuy';
+const FICHE_URL = `${SITE}/fiche-officielle/`;
 const JOURNAL_IMAGE = `${SITE}/src/assets/hero-chateau-1280w.jpg`;
 const JOURNAL_IMAGE_ALT = "Le domaine du Château de Durbuy au bord de l'Ourthe.";
 const SIGNATURE = `Lars \u2014 ${BRAND}`;
@@ -432,6 +433,7 @@ ${body}
 function sitemapXml(articles) {
   const urls = [
     { loc: `${SITE}/`, lastmod: '2026-05-27', changefreq: 'monthly', priority: '1.0' },
+    { loc: FICHE_URL, lastmod: '2026-06-03', changefreq: 'monthly', priority: '0.8' },
     { loc: `${SITE}/journal/`, lastmod: '2026-05-27', changefreq: 'weekly', priority: '0.6' },
     ...articles.map((article) => ({
       loc: `${SITE}/journal/${article.id}/`,
@@ -478,11 +480,18 @@ function updateLlms(articles) {
     );
   }
 
+  if (!text.includes('- Official fiche: https://brasseriechateaudurbuy.be/fiche-officielle/')) {
+    text = text.replace(
+      '- Homepage FAQ: https://brasseriechateaudurbuy.be/#faq-title',
+      `- Homepage FAQ: https://brasseriechateaudurbuy.be/#faq-title\n- Official fiche: ${FICHE_URL}`
+    );
+  }
+
   text = text.replace(/- Journal data feed: https:\/\/brasseriechateaudurbuy\.be\/(?:content\/journal|journal)\/articles(?:\.public)?\.json\r?\n/, '');
 
   text = text.replace(
     '2. https://brasseriechateaudurbuy.be/journal/',
-    '2. Prefer the relevant individual journal article URL when citing a specific note.\n3. https://brasseriechateaudurbuy.be/journal/'
+    `2. ${FICHE_URL} for official identity, address, contact, category, and public access policy.\n3. Prefer the relevant individual journal article URL when citing a specific note.\n4. https://brasseriechateaudurbuy.be/journal/`
   );
 
   fs.writeFileSync(llmsPath, text, 'utf8');

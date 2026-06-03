@@ -4,6 +4,7 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const SITE = 'https://brasseriechateaudurbuy.be';
 const BRAND = 'Brasserie du Château de Durbuy';
+const FICHE_URL = `${SITE}/fiche-officielle/`;
 const PUBLIC_FEED_FILE = 'published-articles-2026-05-27.json';
 const FEED_START = '<!-- generated-journal-feed:start -->';
 const FEED_END = '<!-- generated-journal-feed:end -->';
@@ -378,6 +379,7 @@ function updateFrenchArticleHreflang(articles) {
 function updateSitemap(articles) {
   const urls = [
     ...LANGUAGE_KEYS.map((lang) => ({ loc: homeUrl(lang), priority: lang === 'fr' ? '1.0' : '0.8', changefreq: 'monthly' })),
+    { loc: FICHE_URL, priority: '0.8', changefreq: 'monthly', lastmod: '2026-06-03' },
     ...LANGUAGE_KEYS.map((lang) => ({ loc: journalUrl(lang), priority: lang === 'fr' ? '0.6' : '0.5', changefreq: 'weekly' })),
     ...LANGUAGE_KEYS.flatMap((lang) => articles.map((article) => ({
       loc: articleUrl(article, lang),

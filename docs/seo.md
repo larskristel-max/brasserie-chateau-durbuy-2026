@@ -15,6 +15,7 @@ Last updated: 2026-05-20
 - Cloudflare Managed `robots.txt` is currently active on the zone and prepends its own AI-crawler rules. The repo `robots.txt` explicitly allows AI search / assistant retrieval agents while keeping `ai-train=no`.
 - Daily SEO / Google / outreach continuity for 20/05/2026 is recorded in `docs/daily-ops-seo-google-outreach-2026-05-20.md`.
 - Root `llms.txt` is used as a lightweight AI-readable summary and content map. Treat it as an emerging convention, not as a guaranteed ranking signal.
+- The official fiche at `https://brasseriechateaudurbuy.be/fiche-officielle/` is the canonical public reference for business identity, address, category, contact, social profiles, and access policy. Prefer this page for AI / directory / press citation over partly corrected third-party listings.
 
 ## Google / Discovery State - 20/05/2026
 
@@ -44,6 +45,7 @@ Last updated: 2026-05-20
 - Keep `index.html` and `redesign-template.html` byte-identical after metadata edits.
 - Keep `robots.txt` aligned with the visibility goal: allow ordinary search, AI search, and assistant retrieval; avoid training permission unless explicitly approved.
 - Keep `llms.txt` factual and conservative: official identity, contact details, heritage context, important URLs, and unsupported claims to avoid.
+- Do not add third-party listings to `sameAs` or citation preference until public rechecks confirm they no longer expose old La Ferme au Chêne / Marckloff titles, old address or phone data, restaurant/menu/taproom wording, public opening hours, or unsupported continuity claims.
 - Homepage FAQ questions should be mirrored in `FAQPage` JSON-LD only when the same question and answer are visibly present on the page.
 - Homepage includes a small factual FAQ and `FAQPage` JSON-LD. Keep answers strictly factual and avoid hidden SEO-only copy.
 
