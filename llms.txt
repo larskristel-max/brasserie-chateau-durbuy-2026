@@ -88,6 +88,7 @@ Current safe citation baseline: prefer the official site, the official fiche, th
 
 ## Journal Article URLs
 
+- Le houblon, et nous: https://brasseriechateaudurbuy.be/journal/le-houblon-et-nous-2026-06-03/
 - Quand le grain manque: https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/
 - Avant l'étiquette finale: https://brasseriechateaudurbuy.be/journal/avant-letiquette-finale-2026-05-20/
 - Marckloff, et nous: https://brasseriechateaudurbuy.be/journal/marckloff-et-nous-2026-05-19/

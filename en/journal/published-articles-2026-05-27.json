@@ -1,6 +1,80 @@
 {
   "articles": [
     {
+      "id": "le-houblon-et-nous-2026-06-03",
+      "title": "Le houblon, et nous",
+      "date": "2026-06-03",
+      "language": "fr",
+      "status": "published",
+      "author": "Lars Kristel",
+      "lede": "Ce qu'une plante ancienne change encore dans une bière.",
+      "body": [
+        "Quand j'ouvre un sac de houblon, il y a toujours un moment de silence.",
+        "Aujourd'hui, il arrive en pellets. Nous le choisissons pour son amertume, ses huiles, son parfum. Au début de l'ébullition, il donne l'amertume; plus tard, parfois à froid, il garde l'arôme. C'est un ingrédient technique, mais fragile. Bien placé, il donne de la longueur au verre.",
+        "À Durbuy, le houblon n'est pas seulement une matière première. Les anciennes notes parlent de la Haie Himbe, qui aurait servi de houblonnière jusqu'à la fin du XIXe siècle. En 1659, un fonds au-delà du moulin fut donné aux Récollets pour devenir lupularia, une houblonnière. Les Récollectines, elles, apparaissent par leurs murs, leur couvent, leurs jardins.",
+        "De Philippe Marckloff, vers 1560, nous ne connaissons ni la recette ni le houblon. Mais une bière brassée ici connaissait sans doute déjà cette amertume, cette manière de tenir le grain.",
+        "Ce lien reste modeste. Nous ne brassons pas comme lui. Nous brassons dans les anciennes écuries du Château de Durbuy, avec des fiches techniques, des lots numérotés, des gestes d'aujourd'hui. Mais le houblon revient dans la main, dans la cuve, dans l'odeur chaude du moût. Il ne prouve pas une continuité parfaite. Il donne mieux: une piste."
+      ],
+      "heroImage": null,
+      "tags": [
+        "Houblon à Durbuy",
+        "Histoire brassicole de Durbuy",
+        "Philippe Marckloff"
+      ],
+      "createdAt": "2026-06-03T15:00:00.000+02:00",
+      "updatedAt": "2026-06-03T16:00:00.000+02:00",
+      "translations": {
+        "nl": {
+          "title": "Hop en wij",
+          "lede": "Wat een oude plant nog in een bier verandert.",
+          "body": [
+            "Wanneer ik een zak hop open, valt er altijd even stilte.",
+            "Vandaag komt hij in pellets. We kiezen hem voor zijn bitterheid, zijn oliën, zijn geur. Aan het begin van het koken geeft hij bitterheid; later, soms koud, bewaart hij het aroma. Het is een technisch ingrediënt, maar kwetsbaar. Goed geplaatst geeft hij lengte aan het glas.",
+            "In Durbuy is hop niet alleen een grondstof. Oude notities spreken over de Haie Himbe, die tot het einde van de negentiende eeuw als hopgaard zou hebben gediend. In 1659 werd een stuk grond voorbij de molen aan de Récollets geschonken om lupularia te worden, een hopgaard. De Récollectines verschijnen via hun muren, hun klooster, hun tuinen.",
+            "Van Philippe Marckloff, rond 1560, kennen we het recept niet en de hop niet. Maar een bier dat hier werd gebrouwen, kende wellicht al die bitterheid, die manier om het graan te dragen.",
+            "Die band blijft bescheiden. Wij brouwen niet zoals hij. Wij brouwen in de oude stallen van het Château de Durbuy, met technische fiches, genummerde loten, gebaren van vandaag. Maar de hop keert terug in de hand, in de kuip, in de warme geur van het wort. Hij bewijst geen volmaakte continuïteit. Hij geeft iets beters: een spoor."
+          ],
+          "tags": [
+            "Hop in Durbuy",
+            "Biergeschiedenis van Durbuy",
+            "Philippe Marckloff"
+          ]
+        },
+        "en": {
+          "title": "Hops and Us",
+          "lede": "What an old plant still changes in a beer.",
+          "body": [
+            "When I open a bag of hops, there is always a moment of silence.",
+            "Today, hops arrive as pellets. We choose them for bitterness, for oils, for perfume. At the start of the boil, they give bitterness; later, sometimes cold, they keep the aroma. It is a technical ingredient, but fragile. Well placed, it gives length to the glass.",
+            "In Durbuy, hops are not only a raw material. Old notes speak of the Haie Himbe, said to have served as a hop yard until the end of the nineteenth century. In 1659, a plot beyond the mill was given to the Récollets to become lupularia, a hop yard. The Récollectines appear through their walls, their convent, their gardens.",
+            "Of Philippe Marckloff, around 1560, we know neither the recipe nor the hops. But a beer brewed here likely already knew that bitterness, that way of holding the grain.",
+            "The link remains modest. We do not brew as he did. We brew in the old stables of the Château de Durbuy, with technical sheets, numbered lots, and present-day gestures. But hops return in the hand, in the tank, in the warm scent of the wort. They do not prove a perfect continuity. They offer something better: a trace."
+          ],
+          "tags": [
+            "Hops in Durbuy",
+            "Brewing history in Durbuy",
+            "Philippe Marckloff"
+          ]
+        },
+        "de": {
+          "title": "Der Hopfen und wir",
+          "lede": "Was eine alte Pflanze in einem Bier noch verändert.",
+          "body": [
+            "Wenn ich einen Sack Hopfen öffne, gibt es immer einen Augenblick der Stille.",
+            "Heute kommt er als Pellets. Wir wählen ihn wegen seiner Bitterkeit, seiner Öle, seines Duftes. Zu Beginn des Kochens gibt er Bitterkeit; später, manchmal kalt, bewahrt er das Aroma. Er ist ein technischer Bestandteil, aber empfindlich. Richtig gesetzt, gibt er dem Glas Länge.",
+            "In Durbuy ist Hopfen nicht nur ein Rohstoff. Alte Notizen sprechen von der Haie Himbe, die bis zum Ende des 19. Jahrhunderts als Hopfengarten gedient haben soll. 1659 wurde ein Grundstück jenseits der Mühle den Récollets geschenkt, um lupularia zu werden, ein Hopfengarten. Die Récollectines erscheinen durch ihre Mauern, ihr Kloster, ihre Gärten.",
+            "Von Philippe Marckloff, um 1560, kennen wir weder das Rezept noch den Hopfen. Doch ein hier gebrautes Bier kannte wohl schon diese Bitterkeit, diese Art, das Getreide zu halten.",
+            "Die Verbindung bleibt bescheiden. Wir brauen nicht wie er. Wir brauen in den alten Stallungen des Château de Durbuy, mit technischen Datenblättern, nummerierten Chargen und heutigen Gesten. Doch der Hopfen kehrt zurück in der Hand, im Tank, im warmen Geruch der Würze. Er beweist keine vollkommene Kontinuität. Er gibt etwas Besseres: eine Spur."
+          ],
+          "tags": [
+            "Hopfen in Durbuy",
+            "Braugeschichte in Durbuy",
+            "Philippe Marckloff"
+          ]
+        }
+      }
+    },
+    {
       "id": "quand-le-grain-manque-2026-05-26",
       "title": "Quand le grain manque",
       "date": "2026-05-26",
