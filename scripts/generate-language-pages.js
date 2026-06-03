@@ -334,7 +334,10 @@ function generateArticlePages(articles) {
         .replace(/<html lang="[^"]+">/, `<html lang="${locale.html}">`)
         .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
         .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(item.lede || locale.journalDescription)}" />`)
-        .replace(/<link rel="canonical" href="[^"]+" \/>/, `<link rel="canonical" href="${articleUrl(article, lang)}" />\n${alternateLinks((code) => articleUrl(article, code))}`)
+        .replace(
+          /<link rel="canonical" href="[^"]+" \/>[\s\S]*?(?=  <meta name="theme-color")/,
+          `<link rel="canonical" href="${articleUrl(article, lang)}" />\n${alternateLinks((code) => articleUrl(article, code))}\n`
+        )
         .replace(/<meta property="og:locale" content="[^"]+" \/>/, `<meta property="og:locale" content="${locale.ogLocale}" />`)
         .replace(/<meta property="og:title" content="[^"]+" \/>/, `<meta property="og:title" content="${escapeHtml(title)}" />`)
         .replace(/<meta property="og:description" content="[^"]+" \/>/, `<meta property="og:description" content="${escapeHtml(item.lede || locale.journalDescription)}" />`)
