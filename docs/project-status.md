@@ -146,7 +146,7 @@ Last updated: 2026-05-20
   - `ORDER_FROM_EMAIL` remaining verified for sending.
 - The admin password currently exists as a Cloudflare secret. Rotate it if it has been shared too broadly.
 - The admin API uses a simple email/password login. For stronger protection, consider Cloudflare Access.
-- Web analytics/RUM status still needs to be reviewed in Cloudflare.
+- Cloudflare Web Analytics is configured for `brasseriechateaudurbuy.be` and is automatically injected by Cloudflare.
 
 ## To Do
 
@@ -163,7 +163,7 @@ Last updated: 2026-05-20
   - verify public journal page.
 - Consider adding a small admin status panel showing whether the GitHub write API is connected.
 - Rotate the temporary/simple admin password to a stronger password before broader use.
-- Confirm Cloudflare Web Analytics is enabled and document where visitor stats are read.
+- Read visitor stats in Cloudflare Web Analytics for `brasseriechateaudurbuy.be`.
 - Do a local SEO pass:
   - create or claim Google Business Profile,
   - keep appointment-only status accurate,
