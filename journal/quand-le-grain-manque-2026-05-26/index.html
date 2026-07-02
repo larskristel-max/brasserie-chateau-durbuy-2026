@@ -7,9 +7,9 @@
   <meta name="description" content="En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude." />
   <link rel="canonical" href="https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/" />
   <link rel="alternate" hreflang="fr-BE" href="https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/" />
-  <link rel="alternate" hreflang="nl-BE" href="https://brasseriechateaudurbuy.be/nl/journal/quand-le-grain-manque-2026-05-26/" />
-  <link rel="alternate" hreflang="en" href="https://brasseriechateaudurbuy.be/en/journal/quand-le-grain-manque-2026-05-26/" />
-  <link rel="alternate" hreflang="de" href="https://brasseriechateaudurbuy.be/de/journal/quand-le-grain-manque-2026-05-26/" />
+  <link rel="alternate" hreflang="nl-BE" href="https://brasseriechateaudurbuy.be/nl/journal/wanneer-graan-schaars-wordt-2026-05-26/" />
+  <link rel="alternate" hreflang="en" href="https://brasseriechateaudurbuy.be/en/journal/when-grain-is-scarce-2026-05-26/" />
+  <link rel="alternate" hreflang="de" href="https://brasseriechateaudurbuy.be/de/journal/wenn-das-getreide-knapp-wird-2026-05-26/" />
   <link rel="alternate" hreflang="x-default" href="https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/" />
   <meta name="theme-color" content="#F2EBDD" />
   <meta property="og:type" content="article" />
@@ -117,6 +117,38 @@
       margin-top: 2rem;
       color: var(--ink-fade);
     }
+    .article-pager {
+      margin-top: clamp(3rem, 6vw, 5rem);
+      padding-top: 1.6rem;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .article-pager a,
+    .article-pager span {
+      display: grid;
+      gap: 0.45rem;
+      min-height: 4.6rem;
+      padding: 1rem 0;
+      color: var(--ink-soft);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-pager small {
+      color: var(--copper);
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .article-pager strong {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      line-height: 1.08;
+      font-weight: 300;
+    }
+    .article-pager .is-empty {
+      opacity: 0.28;
+    }
     .article-related {
       margin-top: clamp(3rem, 6vw, 5rem);
       padding-top: 1.6rem;
@@ -139,6 +171,11 @@
       text-decoration: underline;
       text-underline-offset: 0.35rem;
       text-decoration-thickness: 1px;
+    }
+    @media (max-width: 640px) {
+      .article-pager {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -165,11 +202,15 @@
       <p class="article-tags"><span>Brasserie à Durbuy</span><span>Histoire brassicole de Durbuy</span><span>Brassage à Durbuy</span></p>
       <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
     </article>
+    <nav class="article-pager" aria-label="Navigation entre les articles">
+      <a href="../le-houblon-et-nous-2026-06-03/"><small>Note précédente</small><strong>Le houblon, et nous</strong></a>
+      <a href="../avant-letiquette-finale-2026-05-20/"><small>Note suivante</small><strong>Avant l&#39;étiquette finale</strong></a>
+    </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
+      <a href="../tout-ne-tient-pas-dans-un-avertissement-2026-07-02/">Tout ne tient pas dans un avertissement</a>
       <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>
       <a href="../avant-letiquette-finale-2026-05-20/">Avant l&#39;étiquette finale</a>
-      <a href="../marckloff-et-nous-2026-05-19/">Marckloff, et nous</a>
     </nav>
   </main>
 </body>

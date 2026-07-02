@@ -339,6 +339,10 @@
       text-transform: uppercase;
       font-weight: 400;
     }
+    .lang-switcher a {
+      text-decoration: none;
+    }
+    .lang-switcher a,
     .lang-switcher button {
       background: none;
       border: 0;
@@ -351,7 +355,11 @@
       opacity: 0.42;
       transition: opacity 220ms ease;
     }
-    .lang-switcher button:hover, .lang-switcher button:focus-visible { opacity: 0.78; }
+    .lang-switcher a:hover,
+    .lang-switcher a:focus-visible,
+    .lang-switcher button:hover,
+    .lang-switcher button:focus-visible { opacity: 0.78; }
+    .lang-switcher a[aria-pressed="true"],
     .lang-switcher button[aria-pressed="true"] { opacity: 1; }
     .lang-switcher .sep {
       opacity: 0.36;
@@ -374,6 +382,10 @@
       letter-spacing: 0.24em;
       text-transform: uppercase;
     }
+    .mobile-lang-switcher a {
+      text-decoration: none;
+    }
+    .mobile-lang-switcher a,
     .mobile-lang-switcher button {
       background: none;
       border: 0;
@@ -386,7 +398,10 @@
       opacity: 0.48;
       transition: opacity 220ms ease;
     }
+    .mobile-lang-switcher a:hover,
+    .mobile-lang-switcher a:focus-visible,
     .mobile-lang-switcher button:hover { opacity: 0.86; }
+    .mobile-lang-switcher a[aria-pressed="true"],
     .mobile-lang-switcher button[aria-pressed="true"] { opacity: 1; }
     .mobile-lang-switcher .sep {
       opacity: 0.36;
@@ -955,6 +970,92 @@
       line-height: 1.36;
       color: var(--copper);
       padding-inline: var(--gutter);
+    }
+
+    .inline-link {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: rgba(140, 94, 51, 0.46);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.22em;
+    }
+
+    .carnet-preview {
+      background: var(--cream);
+      padding: clamp(5rem, 9vw, 9rem) 0;
+      border-top: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .carnet-preview-inner {
+      width: min(100% - 3rem, 980px);
+      margin: 0 auto;
+      display: grid;
+      gap: clamp(2.4rem, 5vw, 4rem);
+    }
+    .carnet-preview-head {
+      display: grid;
+      gap: 1rem;
+      max-width: 34rem;
+    }
+    .carnet-preview h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6.4vw, 5.6rem);
+      line-height: 0.96;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+    .carnet-preview .lead {
+      margin: 0;
+      max-width: 34rem;
+      color: rgba(14, 12, 10, 0.68);
+      font-size: clamp(1.04rem, 0.5vw + 0.98rem, 1.24rem);
+      line-height: 1.7;
+    }
+    .carnet-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--line-soft);
+    }
+    .carnet-item {
+      display: grid;
+      grid-template-columns: minmax(8rem, 0.32fr) 1fr;
+      gap: clamp(1rem, 4vw, 3rem);
+      padding: 1.6rem 0;
+      border-bottom: 1px solid var(--line-soft);
+      color: inherit;
+    }
+    .carnet-date {
+      color: var(--copper);
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+    .carnet-item h3 {
+      margin: 0 0 0.45rem;
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.03;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+    .carnet-item p {
+      margin: 0;
+      max-width: 42rem;
+      color: rgba(14, 12, 10, 0.64);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .carnet-cta {
+      justify-self: start;
+    }
+
+    @media (max-width: 680px) {
+      .carnet-item {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+      }
     }
 
     @media (max-width: 880px) {
@@ -1826,16 +1927,16 @@
       <a href="#bieres" data-i18n="nav.bieres">Les Bières</a>
       <a href="#points-de-vente" data-i18n="nav.points">Points de vente</a>
       <a href="#visite" data-i18n="nav.visite">La Visite</a>
-      <a href="journal/" data-i18n="nav.carnet">Carnet</a>
+      <a href="journal/" data-i18n="nav.carnet" data-i18n-href="journal.href">Carnet</a>
     </nav>
     <div class="lang-switcher" role="group" aria-label="Choix de langue">
-      <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <a href="/" data-lang="fr" aria-pressed="true">FR</a>
       <span class="sep">·</span>
-      <button type="button" data-lang="nl" aria-pressed="false">NL</button>
+      <a href="/nl/" data-lang="nl" aria-pressed="false">NL</a>
       <span class="sep">·</span>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <a href="/en/" data-lang="en" aria-pressed="false">EN</a>
       <span class="sep">·</span>
-      <button type="button" data-lang="de" aria-pressed="false">DE</button>
+      <a href="/de/" data-lang="de" aria-pressed="false">DE</a>
     </div>
     <a class="nav-cta" href="#contactModal" data-open-contact data-i18n="nav.contact">Contact</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-controls="mobileMenu" aria-expanded="false">
@@ -1850,16 +1951,16 @@
       <a href="#bieres" data-i18n="nav.bieres">Les Bières</a>
       <a href="#points-de-vente" data-i18n="nav.points">Points de vente</a>
       <a href="#visite" data-i18n="nav.visite">La Visite</a>
-      <a href="journal/" data-i18n="nav.carnet">Carnet</a>
+      <a href="journal/" data-i18n="nav.carnet" data-i18n-href="journal.href">Carnet</a>
       <a class="mobile-cta" href="#contactModal" data-open-contact data-i18n="nav.contact">Contact</a>
       <div class="mobile-lang-switcher" role="group" aria-label="Choix de langue">
-        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <a href="/" data-lang="fr" aria-pressed="true">FR</a>
         <span class="sep">·</span>
-        <button type="button" data-lang="nl" aria-pressed="false">NL</button>
+        <a href="/nl/" data-lang="nl" aria-pressed="false">NL</a>
         <span class="sep">·</span>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <a href="/en/" data-lang="en" aria-pressed="false">EN</a>
         <span class="sep">·</span>
-        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        <a href="/de/" data-lang="de" aria-pressed="false">DE</a>
       </div>
     </nav>
   </div>
@@ -1909,7 +2010,7 @@
         <h2 data-i18n="lieu.heading">Le Domaine</h2>
         <div class="prose">
           <p data-i18n="lieu.p1">Avant la bière, il y a le domaine.</p>
-          <p data-i18n="lieu.p2">Les pierres. La rivière. Les anciennes écuries du château.</p>
+          <p data-i18n="lieu.p2">Les pierres. La rivière. <a class="inline-link" href="journal/les-anciennes-ecuries-2026-05-18/">Les anciennes écuries du château</a>.</p>
           <p data-i18n="lieu.p3">Un domaine qui impose son tempo. La brasserie le suit, sans l'altérer.</p>
         </div>
       </div>
@@ -1940,7 +2041,7 @@
         </div>
         <div class="prose">
           <p data-i18n="brasserie.p1">Installée dans les anciennes écuries du domaine, la brasserie élabore quatre bières de fermentation traditionnelle, en petites séries.</p>
-          <p data-i18n="brasserie.p2">Le brassage est attesté à Durbuy depuis le XVI<sup>e</sup> siècle. Le domaine est sous la garde de la famille d'Ursel depuis 1628.</p>
+          <p data-i18n="brasserie.p2">Le brassage est attesté à Durbuy depuis le XVI<sup>e</sup> siècle. <a class="inline-link" href="journal/marckloff-et-nous-2026-05-19/">Le nom de Philippe Marckloff</a> en garde une trace discrète; le domaine est sous la garde de la famille d'Ursel depuis 1628.</p>
         </div>
       </div>
       <figure class="brasserie-image">
@@ -2013,13 +2114,47 @@
       <p class="transition" data-i18n="bieres.transition">Après le brassage, les bières rejoignent quelques adresses locales.</p>
     </section>
 
+    <section id="carnet" class="carnet-preview" data-reveal>
+      <div class="carnet-preview-inner">
+        <header class="carnet-preview-head">
+          <p class="chapter" data-i18n="carnet.chapter">— Carnet —</p>
+          <h2 data-i18n="carnet.heading">Notes du domaine</h2>
+          <p class="lead" data-i18n="carnet.lead">Quelques fragments sur le lieu, le brassage et la mémoire locale.</p>
+        </header>
+        <div class="carnet-list" aria-label="Dernières notes du carnet">
+          <a class="carnet-item" href="journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/" data-carnet-link="niet-alles-past-op-een-waarschuwing-2026-07-02">
+            <span class="carnet-date" data-i18n="carnet.item1.date">2 juillet 2026</span>
+            <span>
+              <h3 data-i18n="carnet.item1.title">Tout ne tient pas dans un avertissement</h3>
+              <p data-i18n="carnet.item1.lede">Entre plaisir et excès, avertir ne suffit pas toujours à dire ce qu’un métier doit porter.</p>
+            </span>
+          </a>
+          <a class="carnet-item" href="journal/le-houblon-et-nous-2026-06-03/" data-carnet-link="le-houblon-et-nous-2026-06-03">
+            <span class="carnet-date" data-i18n="carnet.item2.date">3 juin 2026</span>
+            <span>
+              <h3 data-i18n="carnet.item2.title">Le houblon, et nous</h3>
+              <p data-i18n="carnet.item2.lede">Ce qu'une plante ancienne change encore dans une bière.</p>
+            </span>
+          </a>
+          <a class="carnet-item" href="journal/quand-le-grain-manque-2026-05-26/" data-carnet-link="quand-le-grain-manque-2026-05-26">
+            <span class="carnet-date" data-i18n="carnet.item3.date">26 mai 2026</span>
+            <span>
+              <h3 data-i18n="carnet.item3.title">Quand le grain manque</h3>
+              <p data-i18n="carnet.item3.lede">En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.</p>
+            </span>
+          </a>
+        </div>
+        <a class="text-cta carnet-cta" href="journal/" data-i18n-href="journal.href"><span data-i18n="carnet.cta">Lire le carnet</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
     <section id="points-de-vente" class="points-vente" data-reveal>
       <div class="points-vente-inner">
         <div class="points-vente-copy">
           <p class="chapter" data-i18n="points.chapter">— Chapitre IV —</p>
           <p class="kicker" data-i18n="points.kicker">Partenaires locaux</p>
           <h2 data-i18n="points.heading">Où trouver les bières</h2>
-          <p class="lead" data-i18n="points.lead">Quelques partenaires locaux reçoivent nos bières.</p>
+          <p class="lead" data-i18n="points.lead">Quelques partenaires locaux reçoivent nos bières. <a class="inline-link" href="journal/une-biere-dici-2026-05-17/">Le mot local reste simple</a>.</p>
         </div>
 
         <div class="points-vente-list">
@@ -2201,13 +2336,13 @@
           <span aria-hidden="true">←</span>&nbsp;<span data-i18n="form.back">Retour à l'accueil</span>
         </button>
         <div class="modal-lang-switcher" role="group" aria-label="Choix de langue">
-          <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+          <a href="/" data-lang="fr" aria-pressed="true">FR</a>
           <span class="sep">·</span>
-          <button type="button" data-lang="nl" aria-pressed="false">NL</button>
+          <a href="/nl/" data-lang="nl" aria-pressed="false">NL</a>
           <span class="sep">·</span>
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <a href="/en/" data-lang="en" aria-pressed="false">EN</a>
           <span class="sep">·</span>
-          <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          <a href="/de/" data-lang="de" aria-pressed="false">DE</a>
         </div>
       </div>
 
@@ -2482,6 +2617,7 @@
           'nav.visite': 'Visite',
           'nav.carnet': 'Carnet',
           'nav.contact': 'Contact',
+          'journal.href': 'journal/',
           'hero.location': 'Durbuy · Belgique',
           'hero.subtitle': 'Au rythme du domaine. Tradition, précision, discrétion.',
           'hero.scroll': 'Entrer dans le domaine',
@@ -2489,13 +2625,13 @@
           'lieu.kicker': 'Le domaine précède la bière',
           'lieu.heading': 'Le Domaine',
           'lieu.p1': 'Avant la bière, il y a le domaine.',
-          'lieu.p2': "Les pierres. La rivière. Les anciennes écuries du château.",
+          'lieu.p2': 'Les pierres. La rivière. <a class="inline-link" href="journal/les-anciennes-ecuries-2026-05-18/">Les anciennes écuries du château</a>.',
           'lieu.p3': "Un domaine qui impose son tempo. La brasserie le suit, sans l'altérer.",
           'brasserie.chapter': '— Chapitre II —',
           'brasserie.kicker': 'Fermentation traditionnelle',
           'brasserie.heading': 'La Brasserie',
           'brasserie.p1': 'Installée dans les anciennes écuries du domaine, la brasserie élabore quatre bières de fermentation traditionnelle, en petites séries.',
-          'brasserie.p2': "Le brassage est attesté à Durbuy depuis le XVI<sup>e</sup> siècle. Le domaine est sous la garde de la famille d'Ursel depuis 1628.",
+          'brasserie.p2': 'Le brassage est attesté à Durbuy depuis le XVI<sup>e</sup> siècle. <a class="inline-link" href="journal/marckloff-et-nous-2026-05-19/">Le nom de Philippe Marckloff</a> en garde une trace discrète; le domaine est sous la garde de la famille d\'Ursel depuis 1628.',
           'brasserie.line': 'Au cœur du domaine. Au rythme du domaine.',
           'bieres.chapter': '— Chapitre III —',
           'bieres.kicker': 'Quatre. Brassées dans les anciennes écuries du domaine.',
@@ -2503,10 +2639,23 @@
           'bieres.lead': 'Chacune dans son propre tempo. Petites séries, fermentation traditionnelle.',
           'bieres.teaser': 'La gamme sera révélée prochainement.',
           'bieres.transition': 'Après le brassage, les bières rejoignent quelques adresses locales.',
+          'carnet.chapter': '— Carnet —',
+          'carnet.heading': 'Notes du domaine',
+          'carnet.lead': 'Quelques fragments sur le lieu, le brassage et la mémoire locale.',
+          'carnet.item1.date': '2 juillet 2026',
+          'carnet.item1.title': 'Tout ne tient pas dans un avertissement',
+          'carnet.item1.lede': 'Entre plaisir et excès, avertir ne suffit pas toujours à dire ce qu’un métier doit porter.',
+          'carnet.item2.date': '3 juin 2026',
+          'carnet.item2.title': 'Le houblon, et nous',
+          'carnet.item2.lede': "Ce qu'une plante ancienne change encore dans une bière.",
+          'carnet.item3.date': '26 mai 2026',
+          'carnet.item3.title': 'Quand le grain manque',
+          'carnet.item3.lede': 'En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.',
+          'carnet.cta': 'Lire le carnet',
           'points.chapter': '— Chapitre IV —',
           'points.kicker': 'Partenaires locaux',
           'points.heading': 'Où trouver les bières',
-          'points.lead': 'Quelques partenaires locaux reçoivent nos bières.',
+          'points.lead': 'Quelques partenaires locaux reçoivent nos bières. <a class="inline-link" href="journal/une-biere-dici-2026-05-17/">Le mot local reste simple</a>.',
           'points.request.copy': 'Pour une demande privée ou professionnelle, écrivez-nous au domaine. Chaque demande est traitée au cas par cas.',
           'points.request.cta': 'Écrire au domaine',
           'order.type.label': 'Type de demande',
@@ -2568,8 +2717,9 @@
           'nav.bieres': 'Bieren',
           'nav.points': 'Waar te vinden',
           'nav.visite': 'Bezoek',
-          'nav.carnet': 'Notities',
+          'nav.carnet': 'Journaal',
           'nav.contact': 'Contact',
+          'journal.href': '/nl/journal/',
           'hero.location': 'Durbuy · België',
           'hero.subtitle': 'Op het ritme van het domein. Tussen traditie en precisie, zonder ophef.',
           'hero.scroll': 'Naar het landgoed',
@@ -2577,13 +2727,13 @@
           'lieu.kicker': 'Eerst het landgoed, dan het bier',
           'lieu.heading': 'Het Domein',
           'lieu.p1': 'Vóór het bier is er het domein.',
-          'lieu.p2': 'De stenen. De rivier. De oude stallen van het kasteel.',
+          'lieu.p2': 'De stenen. De rivier. <a class="inline-link" href="/nl/journal/les-anciennes-ecuries-2026-05-18/">De oude stallen van het kasteel</a>.',
           'lieu.p3': 'Een landgoed met een eigen tempo. De brouwerij volgt dat ritme, zonder het te verstoren.',
           'brasserie.chapter': '— Hoofdstuk II —',
           'brasserie.kicker': 'Traditionele gisting',
           'brasserie.heading': 'De Brouwerij',
           'brasserie.p1': 'In de oude stallen van het landgoed worden vier bieren gebrouwen, in kleine oplagen.',
-          'brasserie.p2': "Brouwen is in Durbuy gedocumenteerd sinds de 16<sup>e</sup> eeuw. Het landgoed is sinds 1628 verbonden met de familie d'Ursel.",
+          'brasserie.p2': 'Brouwen is in Durbuy gedocumenteerd sinds de 16<sup>e</sup> eeuw. <a class="inline-link" href="/nl/journal/marckloff-et-nous-2026-05-19/">De naam Philippe Marckloff</a> bewaart daarvan een discreet spoor; het landgoed is sinds 1628 verbonden met de familie d\'Ursel.',
           'brasserie.line': 'In het hart van het landgoed. Op het ritme van het domein.',
           'bieres.chapter': '— Hoofdstuk III —',
           'bieres.kicker': 'Vier. Gebrouwen in de voormalige stallen van het domein.',
@@ -2591,10 +2741,23 @@
           'bieres.lead': 'Elk op zijn eigen tijd. Kleine oplagen, traditionele gisting.',
           'bieres.teaser': 'De reeks wordt op haar tijd voorgesteld.',
           'bieres.transition': 'Na het brouwen gaan de bieren naar enkele lokale partners.',
+          'carnet.chapter': '— Journaal —',
+          'carnet.heading': 'Journaal van het landgoed',
+          'carnet.lead': 'Enkele fragmenten over de plek, het brouwen en de lokale herinnering.',
+          'carnet.item1.date': '2 juli 2026',
+          'carnet.item1.title': 'Niet alles past op een waarschuwing',
+          'carnet.item1.lede': 'Tussen genieten en overdaad zegt een waarschuwing niet alles wat een vak moet dragen.',
+          'carnet.item2.date': '3 juni 2026',
+          'carnet.item2.title': 'Hop en wij',
+          'carnet.item2.lede': 'Wat een oude plant nog in een bier verandert.',
+          'carnet.item3.date': '26 mei 2026',
+          'carnet.item3.title': 'Wanneer graan schaars wordt',
+          'carnet.item3.lede': 'Bij het voorbereiden van een nieuw brouwsel kan een klein tekort een ruwer verleden doen meeklinken.',
+          'carnet.cta': 'Lees het journaal',
           'points.chapter': '— Hoofdstuk IV —',
           'points.kicker': 'Lokale partners',
           'points.heading': 'Waar te vinden',
-          'points.lead': 'Onze bieren zijn verkrijgbaar bij enkele lokale partners.',
+          'points.lead': 'Onze bieren zijn verkrijgbaar bij enkele lokale partners. <a class="inline-link" href="/nl/journal/une-biere-dici-2026-05-17/">Het lokale blijft eenvoudig</a>.',
           'points.request.copy': 'Voor een particuliere of professionele vraag kunt u ons rechtstreeks schrijven. Elke aanvraag wordt afzonderlijk bekeken.',
           'points.request.cta': 'Schrijf naar het landgoed',
           'order.type.label': 'Soort vraag',
@@ -2658,6 +2821,7 @@
           'nav.visite': 'Visit',
           'nav.carnet': 'Journal',
           'nav.contact': 'Contact',
+          'journal.href': '/en/journal/',
           'hero.location': 'Durbuy · Belgium',
           'hero.subtitle': 'At the pace of the domain. Tradition, precision, and restraint.',
           'hero.scroll': 'Enter the estate grounds',
@@ -2665,13 +2829,13 @@
           'lieu.kicker': 'The estate comes before the beer',
           'lieu.heading': 'The Domain',
           'lieu.p1': 'Before the beer comes the domain.',
-          'lieu.p2': 'Stone. River. The former stables of the château.',
+          'lieu.p2': 'Stone. River. <a class="inline-link" href="/en/journal/les-anciennes-ecuries-2026-05-18/">The former stables of the château</a>.',
           'lieu.p3': "An estate with its own tempo. The brewery follows it, without disturbing it.",
           'brasserie.chapter': '— Chapter II —',
           'brasserie.kicker': 'Traditional fermentation',
           'brasserie.heading': 'The Brewery',
           'brasserie.p1': "Set within the estate's former stables, the brasserie makes four traditionally fermented beers in small batches.",
-          'brasserie.p2': "Brewing in Durbuy is documented from the 16<sup>th</sup> century. The estate has been in the care of the d'Ursel family since 1628.",
+          'brasserie.p2': 'Brewing in Durbuy is documented from the 16<sup>th</sup> century. <a class="inline-link" href="/en/journal/marckloff-et-nous-2026-05-19/">The name Philippe Marckloff</a> keeps a discreet trace of it; the estate has been in the care of the d\'Ursel family since 1628.',
           'brasserie.line': 'At the heart of the estate. At the pace of the domain.',
           'bieres.chapter': '— Chapter III —',
           'bieres.kicker': 'Four. Brewed in the estate’s former stables.',
@@ -2679,10 +2843,23 @@
           'bieres.lead': 'Each in its own time. Small batches, traditional fermentation.',
           'bieres.teaser': 'The range will be introduced in due course.',
           'bieres.transition': 'After brewing, the beers reach a few local partners.',
+          'carnet.chapter': '— Journal —',
+          'carnet.heading': 'Notes from the Estate',
+          'carnet.lead': 'A few fragments on the place, the brewing, and local memory.',
+          'carnet.item1.date': '2 July 2026',
+          'carnet.item1.title': 'Not Everything Fits on a Warning',
+          'carnet.item1.lede': 'Between pleasure and excess, a warning cannot carry everything a craft must hold.',
+          'carnet.item2.date': '3 June 2026',
+          'carnet.item2.title': 'Hops and Us',
+          'carnet.item2.lede': 'What an old plant still changes in a beer.',
+          'carnet.item3.date': '26 May 2026',
+          'carnet.item3.title': 'When Grain Is Scarce',
+          'carnet.item3.lede': 'As I prepare the next brew, a small absence touches an older, harsher memory.',
+          'carnet.cta': 'Read the journal',
           'points.chapter': '— Chapter IV —',
           'points.kicker': 'Local partners',
           'points.heading': 'Where to find the beers',
-          'points.lead': 'A few local partners receive our beers.',
+          'points.lead': 'A few local partners receive our beers. <a class="inline-link" href="/en/journal/une-biere-dici-2026-05-17/">Local should stay simple</a>.',
           'points.request.copy': 'For private or trade enquiries, write to the estate directly. Each enquiry is handled individually.',
           'points.request.cta': 'Write to the estate',
           'order.type.label': 'Request type',
@@ -2746,6 +2923,7 @@
           'nav.visite': 'Besuch',
           'nav.carnet': 'Notizen',
           'nav.contact': 'Kontakt',
+          'journal.href': '/de/journal/',
           'hero.location': 'Durbuy · Belgien',
           'hero.subtitle': 'Im Rhythmus des Anwesens. Tradition, Präzision und Zurückhaltung.',
           'hero.scroll': 'Zum Anwesen',
@@ -2753,13 +2931,13 @@
           'lieu.kicker': 'Erst das Anwesen, dann das Bier',
           'lieu.heading': 'Das Anwesen',
           'lieu.p1': 'Vor dem Bier steht das Anwesen.',
-          'lieu.p2': 'Die Steine. Der Fluss. Die früheren Stallungen des Schlosses.',
+          'lieu.p2': 'Die Steine. Der Fluss. <a class="inline-link" href="/de/journal/les-anciennes-ecuries-2026-05-18/">Die früheren Stallungen des Schlosses</a>.',
           'lieu.p3': 'Ein Anwesen mit eigenem Tempo. Die Brauerei folgt diesem Rhythmus, ohne ihn zu stören.',
           'brasserie.chapter': '— Kapitel II —',
           'brasserie.kicker': 'Traditionelle Gärung',
           'brasserie.heading': 'Die Brauerei',
           'brasserie.p1': 'In den früheren Stallungen des Anwesens braut die Brauerei vier Biere mit traditioneller Gärung, in kleinen Chargen.',
-          'brasserie.p2': "In Durbuy ist das Brauen ab dem 16. Jahrhundert belegt. Das Anwesen steht seit 1628 in der Obhut der Familie d'Ursel.",
+          'brasserie.p2': 'In Durbuy ist das Brauen ab dem 16. Jahrhundert belegt. <a class="inline-link" href="/de/journal/marckloff-et-nous-2026-05-19/">Der Name Philippe Marckloff</a> bewahrt davon eine diskrete Spur; das Anwesen steht seit 1628 in der Obhut der Familie d\'Ursel.',
           'brasserie.line': 'Im Herzen des Anwesens. Im Rhythmus des Anwesens.',
           'bieres.chapter': '— Kapitel III —',
           'bieres.kicker': 'Vier. In den früheren Stallungen des Anwesens gebraut.',
@@ -2767,10 +2945,23 @@
           'bieres.lead': 'Jedes zu seiner Zeit. Kleine Chargen, traditionelle Gärung.',
           'bieres.teaser': 'Die Reihe wird zu ihrer Zeit vorgestellt.',
           'bieres.transition': 'Nach dem Brauen finden die Biere ihren Weg zu einigen lokalen Partnern.',
+          'carnet.chapter': '— Notizen —',
+          'carnet.heading': 'Notizen vom Anwesen',
+          'carnet.lead': 'Einige Fragmente über den Ort, das Brauen und die lokale Erinnerung.',
+          'carnet.item1.date': '2. Juli 2026',
+          'carnet.item1.title': 'Nicht alles passt in einen Warnhinweis',
+          'carnet.item1.lede': 'Zwischen Genuss und Übermaß trägt ein Warnhinweis nicht alles, was ein Handwerk wissen muss.',
+          'carnet.item2.date': '3. Juni 2026',
+          'carnet.item2.title': 'Der Hopfen und wir',
+          'carnet.item2.lede': 'Was eine alte Pflanze in einem Bier noch verändert.',
+          'carnet.item3.date': '26. Mai 2026',
+          'carnet.item3.title': 'Wenn das Getreide knapp wird',
+          'carnet.item3.lede': 'Beim Vorbereiten eines neuen Suds kann ein kleiner Mangel eine rauere Vergangenheit anklingen lassen.',
+          'carnet.cta': 'Notizen lesen',
           'points.chapter': '— Kapitel IV —',
           'points.kicker': 'Lokale Partner',
           'points.heading': 'Wo erhältlich',
-          'points.lead': 'Einige lokale Partner erhalten unsere Biere.',
+          'points.lead': 'Einige lokale Partner erhalten unsere Biere. <a class="inline-link" href="/de/journal/une-biere-dici-2026-05-17/">Lokal bleibt einfach</a>.',
           'points.request.copy': 'Für private oder gewerbliche Anfragen schreiben Sie uns direkt. Jede Anfrage wird einzeln geprüft.',
           'points.request.cta': 'An das Anwesen schreiben',
           'order.type.label': 'Art der Anfrage',
@@ -2828,6 +3019,63 @@
         }
       };
 
+      const articleSlugs = {
+              "niet-alles-past-op-een-waarschuwing-2026-07-02": {
+                      "fr": "tout-ne-tient-pas-dans-un-avertissement-2026-07-02",
+                      "nl": "niet-alles-past-op-een-waarschuwing-2026-07-02",
+                      "en": "not-everything-fits-on-a-warning-2026-07-02",
+                      "de": "nicht-alles-passt-in-einen-warnhinweis-2026-07-02"
+              },
+              "le-houblon-et-nous-2026-06-03": {
+                      "fr": "le-houblon-et-nous-2026-06-03",
+                      "nl": "hop-en-wij-2026-06-03",
+                      "en": "hops-and-us-2026-06-03",
+                      "de": "der-hopfen-und-wir-2026-06-03"
+              },
+              "quand-le-grain-manque-2026-05-26": {
+                      "fr": "quand-le-grain-manque-2026-05-26",
+                      "nl": "wanneer-graan-schaars-wordt-2026-05-26",
+                      "en": "when-grain-is-scarce-2026-05-26",
+                      "de": "wenn-das-getreide-knapp-wird-2026-05-26"
+              },
+              "avant-letiquette-finale-2026-05-20": {
+                      "fr": "avant-letiquette-finale-2026-05-20",
+                      "nl": "nog-voor-het-definitieve-etiket-2026-05-20",
+                      "en": "before-the-label-is-final-2026-05-20",
+                      "de": "bevor-das-etikett-endgueltig-ist-2026-05-20"
+              },
+              "le-premier-brassin-de-mai-2026-05-11": {
+                      "fr": "le-premier-brassin-de-mai-2026-05-11",
+                      "nl": "le-premier-brassin-de-mai-2026-05-11",
+                      "en": "le-premier-brassin-de-mai-2026-05-11",
+                      "de": "le-premier-brassin-de-mai-2026-05-11"
+              },
+              "larrivee-des-houblons-2025-09-22": {
+                      "fr": "larrivee-des-houblons-2025-09-22",
+                      "nl": "larrivee-des-houblons-2025-09-22",
+                      "en": "larrivee-des-houblons-2025-09-22",
+                      "de": "larrivee-des-houblons-2025-09-22"
+              },
+              "une-biere-dici-2026-05-17": {
+                      "fr": "une-biere-dici-2026-05-17",
+                      "nl": "een-bier-van-hier-2026-05-17",
+                      "en": "a-beer-from-here-2026-05-17",
+                      "de": "ein-bier-von-hier-2026-05-17"
+              },
+              "les-anciennes-ecuries-2026-05-18": {
+                      "fr": "les-anciennes-ecuries-2026-05-18",
+                      "nl": "de-voormalige-stallen-2026-05-18",
+                      "en": "the-former-stables-2026-05-18",
+                      "de": "die-frueheren-stallungen-2026-05-18"
+              },
+              "marckloff-et-nous-2026-05-19": {
+                      "fr": "marckloff-et-nous-2026-05-19",
+                      "nl": "marckloff-en-wij-2026-05-19",
+                      "en": "marckloff-and-us-2026-05-19",
+                      "de": "marckloff-und-wir-2026-05-19"
+              }
+      };
+
       const supportedLangs = ['fr', 'nl', 'en', 'de'];
       const STORAGE_KEY = 'brasserie-lang';
 
@@ -2849,14 +3097,24 @@
           const key = el.getAttribute('data-i18n');
           if (dict[key] != null) el.innerHTML = dict[key];
         });
+        document.querySelectorAll('[data-i18n-href]').forEach(function (el) {
+          const key = el.getAttribute('data-i18n-href');
+          if (dict[key] != null) el.setAttribute('href', dict[key]);
+        });
+        const articlePrefix = lang === 'fr' ? 'journal/' : '/' + lang + '/journal/';
+        document.querySelectorAll('[data-carnet-link]').forEach(function (el) {
+          const id = el.getAttribute('data-carnet-link');
+          const slug = articleSlugs[id] && articleSlugs[id][lang] ? articleSlugs[id][lang] : id;
+          el.setAttribute('href', articlePrefix + slug + '/');
+        });
         document.documentElement.setAttribute('lang', lang);
-        document.querySelectorAll('.lang-switcher button, .mobile-lang-switcher button, .modal-lang-switcher button').forEach(function (b) {
+        document.querySelectorAll('.lang-switcher [data-lang], .mobile-lang-switcher [data-lang], .modal-lang-switcher [data-lang]').forEach(function (b) {
           b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
         });
         try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* noop */ }
       }
 
-      document.querySelectorAll('.lang-switcher button, .mobile-lang-switcher button, .modal-lang-switcher button').forEach(function (b) {
+      document.querySelectorAll('.lang-switcher [data-lang], .mobile-lang-switcher [data-lang], .modal-lang-switcher [data-lang]').forEach(function (b) {
         b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
       });
 

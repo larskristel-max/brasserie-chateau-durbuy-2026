@@ -1,6 +1,102 @@
 {
   "articles": [
     {
+      "id": "niet-alles-past-op-een-waarschuwing-2026-07-02",
+      "title": "Tout ne tient pas dans un avertissement",
+      "date": "2026-07-02",
+      "language": "fr",
+      "status": "published",
+      "author": "Lars Kristel",
+      "lede": "Entre plaisir et exc?s, avertir ne suffit pas toujours ? dire ce qu?un m?tier doit porter.",
+      "body": [
+        "En lisant les nouvelles r?gles sur la publicit? pour l?alcool, une phrase est rest?e: l?alcool nuit ? la sant?. D?sormais, cet avertissement doit appara?tre clairement dans les publicit?s pour les boissons alcoolis?es. Visible, lisible, assez pr?sent pour ne pas dispara?tre dans un coin.",
+        "Cela concerne naturellement une brasserie. Pas seulement ses affiches ou sa communication, mais le m?tier lui-m?me. Cela touche le verre, le caf?, la table en terrasse, la fa?on dont des personnes se retrouvent autour d?une boisson.",
+        "Il ne faut pas traiter cela ? la l?g?re. L?abus d?alcool existe. Il d?truit des vies. Un brasseur qui le nie ne comprend pas son propre m?tier. Mais un verre de bi?re brass? avec attention demande aussi de l?attention au moment d??tre bu.",
+        "La Belgique conna?t cette tension depuis longtemps. En 1919, la loi Vandervelde visait surtout les spiritueux, le geni?vre, l?ivresse publique, la pauvret? et les familles ab?m?es par l?alcool. La bi?re occupait alors une autre place: une boisson ferment?e, li?e aux caf?s, aux repas, aux villages, au travail et au repos. Elle n??tait pas innocente, mais elle n??tait pas tout ? fait la m?me chose.",
+        "Aujourd?hui, cette nuance semble se r?duire. L?ancienne formule parlait encore de savoir-faire et de discernement. Puis il fut question d?abus. ? pr?sent, le vocabulaire se concentre surtout sur le danger et la sant?.",
+        "Dans la d?pendance du Ch?teau de Durbuy, cela para?t proche. Nous brassons sans excuse, mais sans d?sinvolture. Nous brassons une bi?re qui conna?t sa place: ? table, en compagnie, avec mod?ration.",
+        "C?est peut-?tre ce qu?une petite brasserie peut encore d?fendre. Non pas le droit de boire sans souci, mais le droit de faire des distinctions. Entre plaisir et exc?s. Entre avertir et inqui?ter. Entre l?alcool comme probl?me et la bi?re comme culture.",
+        "Une bi?re brass?e avec attention, pr?cision et m?tier rend aussi hommage au lieu dont elle vient. L?avertissement peut figurer sur le papier. La conscience, elle, doit rester dans le geste.",
+        "Appr?ciez votre verre, s?il est de nous ou d?un autre. Mais toujours avec mod?ration."
+      ],
+      "heroImage": null,
+      "tags": [
+        "Brasserie ? Durbuy",
+        "Bi?re et culture belge",
+        "Publicit? pour l?alcool"
+      ],
+      "createdAt": "2026-07-02T12:00:00.000+02:00",
+      "updatedAt": "2026-07-02T12:00:00.000+02:00",
+      "translations": {
+        "nl": {
+          "title": "Niet alles past op een waarschuwing",
+          "lede": "Tussen genieten en overdaad zegt een waarschuwing niet alles wat een vak moet dragen.",
+          "body": [
+            "Toen ik las over de nieuwe regels rond alcoholreclame, bleef ??n zin hangen: alcohol schaadt de gezondheid. Voortaan moet die waarschuwing zichtbaar op alcoholreclame staan. Goed leesbaar, contrasterend, en groot genoeg om niet te worden weggemoffeld.",
+            "Natuurlijk raakt zoiets ook een brouwerij. Niet alleen de affiches of de communicatie, maar het vak zelf. Het raakt het product in het glas, het caf?, de terrastafel, de manier waarop mensen samen iets drinken.",
+            "Daar moeten we niet licht over doen. Alcoholmisbruik bestaat. Het maakt levens kapot. Een brouwer die dat ontkent, begrijpt zijn eigen vak niet. Maar een glas bier dat met aandacht wordt gebrouwen, vraagt ook om aandacht wanneer het wordt gedronken.",
+            "Belgi? kent die spanning al lang. In 1919 kwam de wet-Vandervelde. Die richtte zich vooral op sterke drank, jenever, openbare dronkenschap, armoede en gezinnen die onder alcohol leden. Bier stond toen in een andere categorie: een gegiste drank, verbonden met caf?s, maaltijden, dorpen, werk en rust. Niet onschuldig, maar ook niet hetzelfde.",
+            "Vandaag lijkt die nuance kleiner te worden. De oude zin sprak nog over vakmanschap en verstand. Daarna kwam misbruik. Nu hebben we het vooral over gevaar en gezondheid.",
+            "In de dependance van het Ch?teau de Durbuy voelt dat dichtbij. Wij brouwen zonder excuus, maar ook zonder achteloosheid. Wij brouwen bier dat zijn plaats kent: aan tafel, in gezelschap, met mate.",
+            "Misschien is dat wat een kleine brouwerij kan blijven verdedigen. Niet het recht om zorgeloos te drinken, maar het recht om verschil te maken. Tussen genieten en overdaad. Tussen waarschuwen en beangstigen. Tussen alcohol als probleem en bier als cultuur.",
+            "Een bier dat met aandacht, precisie en vakmanschap wordt gebrouwen, is ook een eerbetoon aan de plek waar het vandaan komt. De waarschuwing kan op papier staan. Het besef moet in het vak zitten.",
+            "Geniet van uw drankje, mocht het er een van ons zijn of van een ander. Maar altijd met mate."
+          ],
+          "tags": [
+            "Brouwerij in Durbuy",
+            "Belgische biercultuur",
+            "Alcoholreclame"
+          ]
+        },
+        "en": {
+          "title": "Not Everything Fits on a Warning",
+          "lede": "Between pleasure and excess, a warning cannot carry everything a craft must hold.",
+          "body": [
+            "When I read about the new rules on alcohol advertising, one sentence stayed with me: alcohol is harmful to health. From now on, that warning must appear clearly in advertising for alcoholic drinks. Visible, legible, and large enough not to be hidden away in a corner.",
+            "Of course, this touches a brewery. Not only its posters or its communication, but the craft itself. It touches the glass, the caf?, the terrace table, and the way people gather around a drink.",
+            "This should not be treated lightly. Alcohol misuse exists. It damages lives. A brewer who denies that does not understand his own trade. But a glass of beer brewed with care also asks for care when it is drunk.",
+            "Belgium has known this tension for a long time. In 1919 came the Vandervelde law. It was aimed above all at spirits, jenever, public drunkenness, poverty, and families damaged by alcohol. Beer then stood in another category: a fermented drink, tied to caf?s, meals, villages, work, and rest. Not harmless, but not quite the same thing either.",
+            "Today, that nuance seems to be narrowing. The older phrase still spoke of craftsmanship and judgement. Then came misuse. Now the language turns mainly to danger and health.",
+            "In the outbuilding of the Ch?teau de Durbuy, that feels close. We brew without excuse, but also without carelessness. We brew beer that knows its place: at the table, in company, in moderation.",
+            "Perhaps that is what a small brewery can still defend. Not the right to drink without thought, but the right to make distinctions. Between pleasure and excess. Between warning and frightening. Between alcohol as a problem and beer as culture.",
+            "A beer brewed with attention, precision, and craft is also a tribute to the place it comes from. The warning can stand on paper. The awareness must live in the work.",
+            "Enjoy your drink, whether it is one of ours or someone else?s. But always in moderation."
+          ],
+          "tags": [
+            "Brewery in Durbuy",
+            "Belgian beer culture",
+            "Alcohol advertising"
+          ]
+        },
+        "de": {
+          "title": "Nicht alles passt in einen Warnhinweis",
+          "lede": "Zwischen Genuss und ?berma? tr?gt ein Warnhinweis nicht alles, was ein Handwerk wissen muss.",
+          "body": [
+            "Als ich von den neuen Regeln f?r Alkoholwerbung las, blieb ein Satz h?ngen: Alkohol schadet der Gesundheit. K?nftig muss dieser Hinweis in der Werbung f?r alkoholische Getr?nke deutlich sichtbar sein. Lesbar, kontrastreich und gro? genug, um nicht irgendwo im Rand zu verschwinden.",
+            "Nat?rlich betrifft das auch eine Brauerei. Nicht nur Plakate oder Kommunikation, sondern das Handwerk selbst. Es betrifft das Glas, das Caf?, den Terrassentisch und die Art, wie Menschen gemeinsam etwas trinken.",
+            "Damit sollte man nicht leichtfertig umgehen. Alkoholmissbrauch gibt es. Er zerst?rt Leben. Ein Brauer, der das leugnet, versteht sein eigenes Handwerk nicht. Aber ein Glas Bier, das mit Sorgfalt gebraut wird, verlangt auch Sorgfalt, wenn es getrunken wird.",
+            "Belgien kennt diese Spannung seit Langem. 1919 kam das Vandervelde-Gesetz. Es richtete sich vor allem gegen Spirituosen, Genever, ?ffentliche Trunkenheit, Armut und Familien, die unter Alkohol litten. Bier stand damals in einer anderen Kategorie: ein vergorenes Getr?nk, verbunden mit Caf?s, Mahlzeiten, D?rfern, Arbeit und Ruhe. Nicht harmlos, aber auch nicht dasselbe.",
+            "Heute scheint diese Nuance kleiner zu werden. Die ?ltere Formulierung sprach noch von Handwerk und Verstand. Danach kam der Missbrauch. Nun geht es vor allem um Gefahr und Gesundheit.",
+            "In der D?pendance des Ch?teau de Durbuy f?hlt sich das nah an. Wir brauen ohne Ausrede, aber auch ohne Achtlosigkeit. Wir brauen Bier, das seinen Platz kennt: am Tisch, in Gesellschaft, mit Ma?.",
+            "Vielleicht ist es genau das, was eine kleine Brauerei weiterhin verteidigen kann. Nicht das Recht, sorglos zu trinken, sondern das Recht, Unterschiede zu machen. Zwischen Genuss und ?berma?. Zwischen Warnen und Ver?ngstigen. Zwischen Alkohol als Problem und Bier als Kultur.",
+            "Ein Bier, das mit Aufmerksamkeit, Pr?zision und Handwerk gebraut wird, ist auch eine W?rdigung des Ortes, aus dem es kommt. Der Warnhinweis kann auf dem Papier stehen. Das Bewusstsein muss im Handwerk liegen.",
+            "Genie?en Sie Ihr Getr?nk, ob es von uns stammt oder von jemand anderem. Aber immer mit Ma?."
+          ],
+          "tags": [
+            "Brauerei in Durbuy",
+            "Belgische Bierkultur",
+            "Alkoholwerbung"
+          ]
+        }
+      },
+      "slugs": {
+        "fr": "tout-ne-tient-pas-dans-un-avertissement-2026-07-02",
+        "nl": "niet-alles-past-op-een-waarschuwing-2026-07-02",
+        "en": "not-everything-fits-on-a-warning-2026-07-02",
+        "de": "nicht-alles-passt-in-einen-warnhinweis-2026-07-02"
+      }
+    },
+    {
       "id": "le-houblon-et-nous-2026-06-03",
       "title": "Le houblon, et nous",
       "date": "2026-06-03",
@@ -72,6 +168,12 @@
             "Philippe Marckloff"
           ]
         }
+      },
+      "slugs": {
+        "fr": "le-houblon-et-nous-2026-06-03",
+        "nl": "hop-en-wij-2026-06-03",
+        "en": "hops-and-us-2026-06-03",
+        "de": "der-hopfen-und-wir-2026-06-03"
       }
     },
     {
@@ -154,6 +256,12 @@
             "Bier aus Durbuy"
           ]
         }
+      },
+      "slugs": {
+        "fr": "quand-le-grain-manque-2026-05-26",
+        "nl": "wanneer-graan-schaars-wordt-2026-05-26",
+        "en": "when-grain-is-scarce-2026-05-26",
+        "de": "wenn-das-getreide-knapp-wird-2026-05-26"
       }
     },
     {
@@ -228,6 +336,12 @@
             "Bieretikett"
           ]
         }
+      },
+      "slugs": {
+        "fr": "avant-letiquette-finale-2026-05-20",
+        "nl": "nog-voor-het-definitieve-etiket-2026-05-20",
+        "en": "before-the-label-is-final-2026-05-20",
+        "de": "bevor-das-etikett-endgueltig-ist-2026-05-20"
       }
     },
     {
@@ -298,6 +412,12 @@
             "Philippe Marckloff"
           ]
         }
+      },
+      "slugs": {
+        "fr": "marckloff-et-nous-2026-05-19",
+        "nl": "marckloff-en-wij-2026-05-19",
+        "en": "marckloff-and-us-2026-05-19",
+        "de": "marckloff-und-wir-2026-05-19"
       }
     },
     {
@@ -368,6 +488,12 @@
             "Château de Durbuy"
           ]
         }
+      },
+      "slugs": {
+        "fr": "les-anciennes-ecuries-2026-05-18",
+        "nl": "de-voormalige-stallen-2026-05-18",
+        "en": "the-former-stables-2026-05-18",
+        "de": "die-frueheren-stallungen-2026-05-18"
       }
     },
     {
@@ -438,6 +564,12 @@
             "Brasserie du Château de Durbuy"
           ]
         }
+      },
+      "slugs": {
+        "fr": "une-biere-dici-2026-05-17",
+        "nl": "een-bier-van-hier-2026-05-17",
+        "en": "a-beer-from-here-2026-05-17",
+        "de": "ein-bier-von-hier-2026-05-17"
       }
     }
   ]

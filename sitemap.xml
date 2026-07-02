@@ -55,6 +55,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://brasseriechateaudurbuy.be/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://brasseriechateaudurbuy.be/journal/le-houblon-et-nous-2026-06-03/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -91,109 +97,127 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/nl/journal/le-houblon-et-nous-2026-06-03/</loc>
+    <loc>https://brasseriechateaudurbuy.be/nl/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://brasseriechateaudurbuy.be/nl/journal/hop-en-wij-2026-06-03/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/nl/journal/quand-le-grain-manque-2026-05-26/</loc>
+    <loc>https://brasseriechateaudurbuy.be/nl/journal/wanneer-graan-schaars-wordt-2026-05-26/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/nl/journal/avant-letiquette-finale-2026-05-20/</loc>
+    <loc>https://brasseriechateaudurbuy.be/nl/journal/nog-voor-het-definitieve-etiket-2026-05-20/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/nl/journal/marckloff-et-nous-2026-05-19/</loc>
+    <loc>https://brasseriechateaudurbuy.be/nl/journal/marckloff-en-wij-2026-05-19/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/nl/journal/les-anciennes-ecuries-2026-05-18/</loc>
+    <loc>https://brasseriechateaudurbuy.be/nl/journal/de-voormalige-stallen-2026-05-18/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/nl/journal/une-biere-dici-2026-05-17/</loc>
+    <loc>https://brasseriechateaudurbuy.be/nl/journal/een-bier-van-hier-2026-05-17/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/en/journal/le-houblon-et-nous-2026-06-03/</loc>
+    <loc>https://brasseriechateaudurbuy.be/en/journal/not-everything-fits-on-a-warning-2026-07-02/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://brasseriechateaudurbuy.be/en/journal/hops-and-us-2026-06-03/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/en/journal/quand-le-grain-manque-2026-05-26/</loc>
+    <loc>https://brasseriechateaudurbuy.be/en/journal/when-grain-is-scarce-2026-05-26/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/en/journal/avant-letiquette-finale-2026-05-20/</loc>
+    <loc>https://brasseriechateaudurbuy.be/en/journal/before-the-label-is-final-2026-05-20/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/en/journal/marckloff-et-nous-2026-05-19/</loc>
+    <loc>https://brasseriechateaudurbuy.be/en/journal/marckloff-and-us-2026-05-19/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/en/journal/les-anciennes-ecuries-2026-05-18/</loc>
+    <loc>https://brasseriechateaudurbuy.be/en/journal/the-former-stables-2026-05-18/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/en/journal/une-biere-dici-2026-05-17/</loc>
+    <loc>https://brasseriechateaudurbuy.be/en/journal/a-beer-from-here-2026-05-17/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/de/journal/le-houblon-et-nous-2026-06-03/</loc>
+    <loc>https://brasseriechateaudurbuy.be/de/journal/nicht-alles-passt-in-einen-warnhinweis-2026-07-02/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://brasseriechateaudurbuy.be/de/journal/der-hopfen-und-wir-2026-06-03/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/de/journal/quand-le-grain-manque-2026-05-26/</loc>
+    <loc>https://brasseriechateaudurbuy.be/de/journal/wenn-das-getreide-knapp-wird-2026-05-26/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/de/journal/avant-letiquette-finale-2026-05-20/</loc>
+    <loc>https://brasseriechateaudurbuy.be/de/journal/bevor-das-etikett-endgueltig-ist-2026-05-20/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/de/journal/marckloff-et-nous-2026-05-19/</loc>
+    <loc>https://brasseriechateaudurbuy.be/de/journal/marckloff-und-wir-2026-05-19/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/de/journal/les-anciennes-ecuries-2026-05-18/</loc>
+    <loc>https://brasseriechateaudurbuy.be/de/journal/die-frueheren-stallungen-2026-05-18/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://brasseriechateaudurbuy.be/de/journal/une-biere-dici-2026-05-17/</loc>
+    <loc>https://brasseriechateaudurbuy.be/de/journal/ein-bier-von-hier-2026-05-17/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
