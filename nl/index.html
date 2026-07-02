@@ -2129,14 +2129,14 @@
               <p data-i18n="carnet.item1.lede">Tussen genieten en overdaad zegt een waarschuwing niet alles wat een vak moet dragen.</p>
             </span>
           </a>
-          <a class="carnet-item" href="/nl/journal/le-houblon-et-nous-2026-06-03/" data-carnet-link="le-houblon-et-nous-2026-06-03">
+          <a class="carnet-item" href="/nl/journal/hop-en-wij-2026-06-03/" data-carnet-link="le-houblon-et-nous-2026-06-03">
             <span class="carnet-date" data-i18n="carnet.item2.date">3 juni 2026</span>
             <span>
               <h3 data-i18n="carnet.item2.title">Hop en wij</h3>
               <p data-i18n="carnet.item2.lede">Wat een oude plant nog in een bier verandert.</p>
             </span>
           </a>
-          <a class="carnet-item" href="/nl/journal/quand-le-grain-manque-2026-05-26/" data-carnet-link="quand-le-grain-manque-2026-05-26">
+          <a class="carnet-item" href="/nl/journal/wanneer-graan-schaars-wordt-2026-05-26/" data-carnet-link="quand-le-grain-manque-2026-05-26">
             <span class="carnet-date" data-i18n="carnet.item3.date">26 mei 2026</span>
             <span>
               <h3 data-i18n="carnet.item3.title">Wanneer graan schaars wordt</h3>
@@ -3019,6 +3019,63 @@
         }
       };
 
+      const articleSlugs = {
+              "niet-alles-past-op-een-waarschuwing-2026-07-02": {
+                      "fr": "tout-ne-tient-pas-dans-un-avertissement-2026-07-02",
+                      "nl": "niet-alles-past-op-een-waarschuwing-2026-07-02",
+                      "en": "not-everything-fits-on-a-warning-2026-07-02",
+                      "de": "nicht-alles-passt-in-einen-warnhinweis-2026-07-02"
+              },
+              "le-houblon-et-nous-2026-06-03": {
+                      "fr": "le-houblon-et-nous-2026-06-03",
+                      "nl": "hop-en-wij-2026-06-03",
+                      "en": "hops-and-us-2026-06-03",
+                      "de": "der-hopfen-und-wir-2026-06-03"
+              },
+              "quand-le-grain-manque-2026-05-26": {
+                      "fr": "quand-le-grain-manque-2026-05-26",
+                      "nl": "wanneer-graan-schaars-wordt-2026-05-26",
+                      "en": "when-grain-is-scarce-2026-05-26",
+                      "de": "wenn-das-getreide-knapp-wird-2026-05-26"
+              },
+              "avant-letiquette-finale-2026-05-20": {
+                      "fr": "avant-letiquette-finale-2026-05-20",
+                      "nl": "nog-voor-het-definitieve-etiket-2026-05-20",
+                      "en": "before-the-label-is-final-2026-05-20",
+                      "de": "bevor-das-etikett-endgueltig-ist-2026-05-20"
+              },
+              "le-premier-brassin-de-mai-2026-05-11": {
+                      "fr": "le-premier-brassin-de-mai-2026-05-11",
+                      "nl": "le-premier-brassin-de-mai-2026-05-11",
+                      "en": "le-premier-brassin-de-mai-2026-05-11",
+                      "de": "le-premier-brassin-de-mai-2026-05-11"
+              },
+              "larrivee-des-houblons-2025-09-22": {
+                      "fr": "larrivee-des-houblons-2025-09-22",
+                      "nl": "larrivee-des-houblons-2025-09-22",
+                      "en": "larrivee-des-houblons-2025-09-22",
+                      "de": "larrivee-des-houblons-2025-09-22"
+              },
+              "une-biere-dici-2026-05-17": {
+                      "fr": "une-biere-dici-2026-05-17",
+                      "nl": "een-bier-van-hier-2026-05-17",
+                      "en": "a-beer-from-here-2026-05-17",
+                      "de": "ein-bier-von-hier-2026-05-17"
+              },
+              "les-anciennes-ecuries-2026-05-18": {
+                      "fr": "les-anciennes-ecuries-2026-05-18",
+                      "nl": "de-voormalige-stallen-2026-05-18",
+                      "en": "the-former-stables-2026-05-18",
+                      "de": "die-frueheren-stallungen-2026-05-18"
+              },
+              "marckloff-et-nous-2026-05-19": {
+                      "fr": "marckloff-et-nous-2026-05-19",
+                      "nl": "marckloff-en-wij-2026-05-19",
+                      "en": "marckloff-and-us-2026-05-19",
+                      "de": "marckloff-und-wir-2026-05-19"
+              }
+      };
+
       const supportedLangs = ['fr', 'nl', 'en', 'de'];
       const STORAGE_KEY = 'brasserie-lang';
 
@@ -3046,7 +3103,9 @@
         });
         const articlePrefix = lang === 'fr' ? 'journal/' : '/' + lang + '/journal/';
         document.querySelectorAll('[data-carnet-link]').forEach(function (el) {
-          el.setAttribute('href', articlePrefix + el.getAttribute('data-carnet-link') + '/');
+          const id = el.getAttribute('data-carnet-link');
+          const slug = articleSlugs[id] && articleSlugs[id][lang] ? articleSlugs[id][lang] : id;
+          el.setAttribute('href', articlePrefix + slug + '/');
         });
         document.documentElement.setAttribute('lang', lang);
         document.querySelectorAll('.lang-switcher [data-lang], .mobile-lang-switcher [data-lang], .modal-lang-switcher [data-lang]').forEach(function (b) {

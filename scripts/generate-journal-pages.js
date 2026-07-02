@@ -63,7 +63,7 @@ function articleCardHtml(article) {
 
   return `        <article class="journal-article" lang="${escapeHtml(article.language || 'fr')}">
           <p class="article-date">\u2014 ${escapeHtml(formatDate(article.date))} \u2014</p>
-          <h2 class="article-title"><a href="./${encodeURIComponent(article.id)}/">${escapeHtml(article.title)}</a></h2>
+          <h2 class="article-title"><a href="./${encodeURIComponent(articleSlug(article))}/">${escapeHtml(article.title)}</a></h2>
           ${article.lede ? `<p class="article-lede">${escapeHtml(article.lede)}</p>` : ''}
 ${imageBlock}
           <div class="article-body">
@@ -75,7 +75,31 @@ ${bodyBlock}
 }
 
 function articleUrl(article) {
-  return `${SITE}/journal/${article.id}/`;
+  return `${SITE}/journal/${articleSlug(article)}/`;
+}
+
+function articleSlug(article) {
+  return article.slugs?.fr || article.slug || article.id;
+}
+
+function redirectHtml(targetUrl, title) {
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${escapeHtml(title)} — ${BRAND}</title>
+  <link rel="canonical" href="${escapeHtml(targetUrl)}" />
+  <meta http-equiv="refresh" content="0; url=${escapeHtml(targetUrl)}" />
+  <meta name="robots" content="noindex, follow" />
+  <script>window.location.replace(${JSON.stringify(targetUrl)});</script>
+</head>
+<body>
+  ${MARKER}
+  <p><a href="${escapeHtml(targetUrl)}">Continuer vers l’article</a></p>
+</body>
+</html>
+`;
 }
 
 function articlePager(article, allArticles) {
@@ -470,10 +494,10 @@ ${body}
     ${(() => {
       const pager = articlePager(article, allArticles);
       const newerLink = pager.newer
-        ? `<a href="../${escapeHtml(pager.newer.id)}/"><small>Note précédente</small><strong>${escapeHtml(pager.newer.title)}</strong></a>`
+        ? `<a href="../${escapeHtml(articleSlug(pager.newer))}/"><small>Note précédente</small><strong>${escapeHtml(pager.newer.title)}</strong></a>`
         : '<span class="is-empty"><small>Note précédente</small><strong>—</strong></span>';
       const olderLink = pager.older
-        ? `<a href="../${escapeHtml(pager.older.id)}/"><small>Note suivante</small><strong>${escapeHtml(pager.older.title)}</strong></a>`
+        ? `<a href="../${escapeHtml(articleSlug(pager.older))}/"><small>Note suivante</small><strong>${escapeHtml(pager.older.title)}</strong></a>`
         : '<span class="is-empty"><small>Note suivante</small><strong>—</strong></span>';
       return `<nav class="article-pager" aria-label="Navigation entre les articles">
       ${newerLink}
@@ -482,7 +506,7 @@ ${body}
     })()}
     <nav class="article-related" aria-label="Articles li\u00e9s">
       <p>Dans le carnet</p>
-      ${relatedArticles(article, allArticles).map((item) => `<a href="../${escapeHtml(item.id)}/">${escapeHtml(item.title)}</a>`).join('\n      ')}
+      ${relatedArticles(article, allArticles).map((item) => `<a href="../${escapeHtml(articleSlug(item))}/">${escapeHtml(item.title)}</a>`).join('\n      ')}
     </nav>
   </main>
 </body>
@@ -496,7 +520,7 @@ function sitemapXml(articles) {
     { loc: FICHE_URL, lastmod: '2026-06-03', changefreq: 'monthly', priority: '0.8' },
     { loc: `${SITE}/journal/`, lastmod: '2026-05-27', changefreq: 'weekly', priority: '0.6' },
     ...articles.map((article) => ({
-      loc: `${SITE}/journal/${article.id}/`,
+      loc: articleUrl(article),
       lastmod: isoDate(article.updatedAt || article.date),
       changefreq: 'monthly',
       priority: '0.5',
@@ -521,7 +545,7 @@ function updateLlms(articles) {
   const block = [
     '## Journal Article URLs',
     '',
-    ...articles.map((article) => `- ${article.title}: ${SITE}/journal/${article.id}/`),
+    ...articles.map((article) => `- ${article.title}: ${articleUrl(article)}`),
     '',
   ].join('\n');
 
@@ -571,9 +595,14 @@ const published = (data.articles || [])
 removeGeneratedArticlePages();
 
 for (const article of published) {
-  const dir = path.join(journalDir, article.id);
+  const dir = path.join(journalDir, articleSlug(article));
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), articleHtml(article, published), 'utf8');
+  if (article.id !== articleSlug(article)) {
+    const legacyDir = path.join(journalDir, article.id);
+    fs.mkdirSync(legacyDir, { recursive: true });
+    fs.writeFileSync(path.join(legacyDir, 'index.html'), redirectHtml(articleUrl(article), article.title), 'utf8');
+  }
 }
 
 fs.writeFileSync(publicFeedPath, `${JSON.stringify({ articles: published }, null, 2)}\n`, 'utf8');

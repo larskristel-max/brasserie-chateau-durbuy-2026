@@ -133,11 +133,36 @@ function journalUrl(lang) {
 
 function articleUrl(article, lang) {
   const prefix = LOCALES[lang].prefix;
-  return `${SITE}/${prefix ? `${prefix}/` : ''}journal/${article.id}/`;
+  return `${SITE}/${prefix ? `${prefix}/` : ''}journal/${articleSlug(article, lang)}/`;
 }
 
-function relativeArticleHref(article) {
-  return `../${encodeURIComponent(article.id)}/`;
+function articleSlug(article, lang) {
+  return article.slugs?.[lang] || article.slug || article.id;
+}
+
+function relativeArticleHref(article, lang) {
+  return `../${encodeURIComponent(articleSlug(article, lang))}/`;
+}
+
+function redirectHtml(targetUrl, title, lang) {
+  const locale = LOCALES[lang];
+  return `<!DOCTYPE html>
+<html lang="${locale.html}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${escapeHtml(title)} — ${BRAND}</title>
+  <link rel="canonical" href="${escapeHtml(targetUrl)}" />
+  <meta http-equiv="refresh" content="0; url=${escapeHtml(targetUrl)}" />
+  <meta name="robots" content="noindex, follow" />
+  <script>window.location.replace(${JSON.stringify(targetUrl)});</script>
+</head>
+<body>
+  <!-- generated-journal-article -->
+  <p><a href="${escapeHtml(targetUrl)}">${escapeHtml(locale.backJournal)}</a></p>
+</body>
+</html>
+`;
 }
 
 function articlePager(article, allArticles) {
@@ -195,7 +220,7 @@ function extractHomepageTranslations(html) {
   return sandbox.translations || {};
 }
 
-function localizeStaticHomeHtml(html, translations, lang) {
+function localizeStaticHomeHtml(html, translations, lang, articles) {
   const dict = translations[lang];
   if (!dict) return html;
   let localized = html;
@@ -212,7 +237,8 @@ function localizeStaticHomeHtml(html, translations, lang) {
   });
   const articlePrefix = lang === 'fr' ? 'journal/' : `/${lang}/journal/`;
   localized = localized.replace(/<a\b(?=[^>]*\sdata-carnet-link="([^"]+)")[^>]*>/g, (tag, id) => {
-    const href = `${articlePrefix}${id}/`;
+    const article = articles.find((item) => item.id === id);
+    const href = `${articlePrefix}${article ? articleSlug(article, lang) : id}/`;
     return tag.includes(' href="')
       ? tag.replace(/\shref="[^"]*"/, ` href="${href}"`)
       : tag.replace('<a', `<a href="${href}"`);
@@ -238,7 +264,7 @@ function articleCardHtml(article, lang) {
   const tags = item.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
   return `        <article class="journal-article" lang="${lang}">
           <p class="article-date">— ${escapeHtml(formatDate(item.date, lang))} —</p>
-          <h2 class="article-title"><a href="./${encodeURIComponent(item.id)}/">${escapeHtml(item.title)}</a></h2>
+          <h2 class="article-title"><a href="./${encodeURIComponent(articleSlug(article, lang))}/">${escapeHtml(item.title)}</a></h2>
           ${item.lede ? `<p class="article-lede">${escapeHtml(item.lede)}</p>` : ''}
           <div class="article-body">
 ${body}
@@ -344,10 +370,10 @@ function articlePagerHtml(article, articles, lang) {
   const locale = LOCALES[lang];
   const pager = articlePager(article, articles);
   const newerLink = pager.newer
-    ? `<a href="${relativeArticleHref(pager.newer)}"><small>${escapeHtml(locale.newer)}</small><strong>${escapeHtml(localizedArticle(pager.newer, lang).title)}</strong></a>`
+    ? `<a href="${relativeArticleHref(pager.newer, lang)}"><small>${escapeHtml(locale.newer)}</small><strong>${escapeHtml(localizedArticle(pager.newer, lang).title)}</strong></a>`
     : `<span class="is-empty"><small>${escapeHtml(locale.newer)}</small><strong>—</strong></span>`;
   const olderLink = pager.older
-    ? `<a href="${relativeArticleHref(pager.older)}"><small>${escapeHtml(locale.older)}</small><strong>${escapeHtml(localizedArticle(pager.older, lang).title)}</strong></a>`
+    ? `<a href="${relativeArticleHref(pager.older, lang)}"><small>${escapeHtml(locale.older)}</small><strong>${escapeHtml(localizedArticle(pager.older, lang).title)}</strong></a>`
     : `<span class="is-empty"><small>${escapeHtml(locale.older)}</small><strong>—</strong></span>`;
   return `<nav class="article-pager" aria-label="${escapeHtml(locale.related)}">
       ${newerLink}
@@ -359,17 +385,17 @@ function articleRelatedHtml(article, articles, lang) {
   const locale = LOCALES[lang];
   return `<nav class="article-related" aria-label="${escapeHtml(locale.related)}">
       <p>${escapeHtml(locale.related)}</p>
-      ${relatedArticles(article, articles).map((item) => `<a href="${relativeArticleHref(item)}">${escapeHtml(localizedArticle(item, lang).title)}</a>`).join('\n      ')}
+      ${relatedArticles(article, articles).map((item) => `<a href="${relativeArticleHref(item, lang)}">${escapeHtml(localizedArticle(item, lang).title)}</a>`).join('\n      ')}
     </nav>`;
 }
 
-function generateHomePages() {
+function generateHomePages(articles) {
   const source = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const homepageTranslations = extractHomepageTranslations(source);
   for (const lang of TRANSLATED_KEYS) {
     const locale = LOCALES[lang];
     let html = replaceHeadBasics(source, locale, homeUrl(lang), alternateLinks(homeUrl));
-    html = localizeStaticHomeHtml(html, homepageTranslations, lang);
+    html = localizeStaticHomeHtml(html, homepageTranslations, lang, articles);
     html = adjustAssetPaths(html, '../');
     fs.mkdirSync(path.join(root, lang), { recursive: true });
     fs.writeFileSync(path.join(root, lang, 'index.html'), html, 'utf8');
@@ -414,7 +440,7 @@ function updateFrenchJournalHreflang() {
 
 function generateArticlePages(articles) {
   for (const article of articles) {
-    const sourcePath = path.join(root, 'journal', article.id, 'index.html');
+    const sourcePath = path.join(root, 'journal', articleSlug(article, 'fr'), 'index.html');
     if (!fs.existsSync(sourcePath)) continue;
     const source = fs.readFileSync(sourcePath, 'utf8');
     for (const lang of TRANSLATED_KEYS) {
@@ -447,16 +473,21 @@ function generateArticlePages(articles) {
         .replace(/<nav class="article-related"[\s\S]*?<\/nav>/, articleRelatedHtml(article, articles, lang));
       html = adjustAssetPaths(html, '../../../');
 
-      const outDir = path.join(root, lang, 'journal', article.id);
+      const outDir = path.join(root, lang, 'journal', articleSlug(article, lang));
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
+      if (article.id !== articleSlug(article, lang)) {
+        const legacyDir = path.join(root, lang, 'journal', article.id);
+        fs.mkdirSync(legacyDir, { recursive: true });
+        fs.writeFileSync(path.join(legacyDir, 'index.html'), redirectHtml(articleUrl(article, lang), item.title, lang), 'utf8');
+      }
     }
   }
 }
 
 function updateFrenchArticleHreflang(articles) {
   for (const article of articles) {
-    const sourcePath = path.join(root, 'journal', article.id, 'index.html');
+    const sourcePath = path.join(root, 'journal', articleSlug(article, 'fr'), 'index.html');
     if (!fs.existsSync(sourcePath)) continue;
     let html = fs.readFileSync(sourcePath, 'utf8');
     if (!html.includes('hreflang="nl-BE"')) {
@@ -487,7 +518,7 @@ const articles = (data.articles || [])
   .filter((article) => article.status === 'published')
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
-generateHomePages();
+generateHomePages(articles);
 updateFrenchJournalHreflang();
 generateJournalPages(articles);
 generateArticlePages(articles);

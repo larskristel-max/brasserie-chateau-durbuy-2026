@@ -89,6 +89,12 @@
             "Alkoholwerbung"
           ]
         }
+      },
+      "slugs": {
+        "fr": "tout-ne-tient-pas-dans-un-avertissement-2026-07-02",
+        "nl": "niet-alles-past-op-een-waarschuwing-2026-07-02",
+        "en": "not-everything-fits-on-a-warning-2026-07-02",
+        "de": "nicht-alles-passt-in-einen-warnhinweis-2026-07-02"
       }
     },
     {
@@ -163,6 +169,12 @@
             "Philippe Marckloff"
           ]
         }
+      },
+      "slugs": {
+        "fr": "le-houblon-et-nous-2026-06-03",
+        "nl": "hop-en-wij-2026-06-03",
+        "en": "hops-and-us-2026-06-03",
+        "de": "der-hopfen-und-wir-2026-06-03"
       }
     },
     {
@@ -245,6 +257,12 @@
             "Bier aus Durbuy"
           ]
         }
+      },
+      "slugs": {
+        "fr": "quand-le-grain-manque-2026-05-26",
+        "nl": "wanneer-graan-schaars-wordt-2026-05-26",
+        "en": "when-grain-is-scarce-2026-05-26",
+        "de": "wenn-das-getreide-knapp-wird-2026-05-26"
       }
     },
     {
@@ -319,6 +337,12 @@
             "Bieretikett"
           ]
         }
+      },
+      "slugs": {
+        "fr": "avant-letiquette-finale-2026-05-20",
+        "nl": "nog-voor-het-definitieve-etiket-2026-05-20",
+        "en": "before-the-label-is-final-2026-05-20",
+        "de": "bevor-das-etikett-endgueltig-ist-2026-05-20"
       }
     },
     {
@@ -431,6 +455,12 @@
             "Brasserie du Château de Durbuy"
           ]
         }
+      },
+      "slugs": {
+        "fr": "une-biere-dici-2026-05-17",
+        "nl": "een-bier-van-hier-2026-05-17",
+        "en": "a-beer-from-here-2026-05-17",
+        "de": "ein-bier-von-hier-2026-05-17"
       }
     },
     {
@@ -501,6 +531,12 @@
             "Château de Durbuy"
           ]
         }
+      },
+      "slugs": {
+        "fr": "les-anciennes-ecuries-2026-05-18",
+        "nl": "de-voormalige-stallen-2026-05-18",
+        "en": "the-former-stables-2026-05-18",
+        "de": "die-frueheren-stallungen-2026-05-18"
       }
     },
     {
@@ -571,6 +607,12 @@
             "Philippe Marckloff"
           ]
         }
+      },
+      "slugs": {
+        "fr": "marckloff-et-nous-2026-05-19",
+        "nl": "marckloff-en-wij-2026-05-19",
+        "en": "marckloff-and-us-2026-05-19",
+        "de": "marckloff-und-wir-2026-05-19"
       }
     }
   ]
