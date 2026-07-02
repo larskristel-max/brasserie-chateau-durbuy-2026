@@ -78,6 +78,16 @@ function articleUrl(article) {
   return `${SITE}/journal/${article.id}/`;
 }
 
+function articlePager(article, allArticles) {
+  const index = allArticles.findIndex((candidate) => candidate.id === article.id);
+  const newer = index > 0 ? allArticles[index - 1] : null;
+  const older = index >= 0 && index < allArticles.length - 1 ? allArticles[index + 1] : null;
+  return {
+    newer,
+    older,
+  };
+}
+
 function breadcrumbLd(items) {
   return {
     '@type': 'BreadcrumbList',
@@ -378,6 +388,38 @@ function articleHtml(article, allArticles) {
       margin-top: 2rem;
       color: var(--ink-fade);
     }
+    .article-pager {
+      margin-top: clamp(3rem, 6vw, 5rem);
+      padding-top: 1.6rem;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .article-pager a,
+    .article-pager span {
+      display: grid;
+      gap: 0.45rem;
+      min-height: 4.6rem;
+      padding: 1rem 0;
+      color: var(--ink-soft);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-pager small {
+      color: var(--copper);
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .article-pager strong {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      line-height: 1.08;
+      font-weight: 300;
+    }
+    .article-pager .is-empty {
+      opacity: 0.28;
+    }
     .article-related {
       margin-top: clamp(3rem, 6vw, 5rem);
       padding-top: 1.6rem;
@@ -401,6 +443,11 @@ function articleHtml(article, allArticles) {
       text-underline-offset: 0.35rem;
       text-decoration-thickness: 1px;
     }
+    @media (max-width: 640px) {
+      .article-pager {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -420,6 +467,19 @@ ${body}
       ${tags ? `<p class="article-tags">${tags}</p>` : ''}
       <p class="article-sign">${SIGNATURE}</p>
     </article>
+    ${(() => {
+      const pager = articlePager(article, allArticles);
+      const newerLink = pager.newer
+        ? `<a href="../${escapeHtml(pager.newer.id)}/"><small>Note précédente</small><strong>${escapeHtml(pager.newer.title)}</strong></a>`
+        : '<span class="is-empty"><small>Note précédente</small><strong>—</strong></span>';
+      const olderLink = pager.older
+        ? `<a href="../${escapeHtml(pager.older.id)}/"><small>Note suivante</small><strong>${escapeHtml(pager.older.title)}</strong></a>`
+        : '<span class="is-empty"><small>Note suivante</small><strong>—</strong></span>';
+      return `<nav class="article-pager" aria-label="Navigation entre les articles">
+      ${newerLink}
+      ${olderLink}
+    </nav>`;
+    })()}
     <nav class="article-related" aria-label="Articles li\u00e9s">
       <p>Dans le carnet</p>
       ${relatedArticles(article, allArticles).map((item) => `<a href="../${escapeHtml(item.id)}/">${escapeHtml(item.title)}</a>`).join('\n      ')}

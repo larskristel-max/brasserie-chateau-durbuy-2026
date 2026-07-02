@@ -117,6 +117,38 @@
       margin-top: 2rem;
       color: var(--ink-fade);
     }
+    .article-pager {
+      margin-top: clamp(3rem, 6vw, 5rem);
+      padding-top: 1.6rem;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .article-pager a,
+    .article-pager span {
+      display: grid;
+      gap: 0.45rem;
+      min-height: 4.6rem;
+      padding: 1rem 0;
+      color: var(--ink-soft);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-pager small {
+      color: var(--copper);
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .article-pager strong {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      line-height: 1.08;
+      font-weight: 300;
+    }
+    .article-pager .is-empty {
+      opacity: 0.28;
+    }
     .article-related {
       margin-top: clamp(3rem, 6vw, 5rem);
       padding-top: 1.6rem;
@@ -140,6 +172,11 @@
       text-underline-offset: 0.35rem;
       text-decoration-thickness: 1px;
     }
+    @media (max-width: 640px) {
+      .article-pager {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -162,6 +199,10 @@
       <p class="article-tags"><span>Anciennes écuries du Château de Durbuy</span><span>Microbrasserie à Durbuy</span><span>Château de Durbuy</span></p>
       <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
     </article>
+    <nav class="article-pager" aria-label="Navigation entre les articles">
+      <a href="../marckloff-et-nous-2026-05-19/"><small>Note précédente</small><strong>Marckloff, et nous</strong></a>
+      <a href="../une-biere-dici-2026-05-17/"><small>Note suivante</small><strong>Une bière d&#39;ici</strong></a>
+    </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
       <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>

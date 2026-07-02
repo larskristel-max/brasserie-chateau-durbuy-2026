@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 
 const root = path.resolve(__dirname, '..');
 const SITE = 'https://brasseriechateaudurbuy.be';
@@ -29,6 +30,8 @@ const LOCALES = {
     backJournal: 'Retour au carnet',
     home: 'Accueil',
     related: 'Dans le carnet',
+    newer: 'Note précédente',
+    older: 'Note suivante',
     dateLocale: 'fr-FR',
   },
   nl: {
@@ -38,14 +41,16 @@ const LOCALES = {
     ogLocale: 'nl_BE',
     title: `${BRAND} | Microbrouwerij in Durbuy`,
     description: `Officiële site van ${BRAND}, een brouwerij en microbrouwerij in Durbuy, gevestigd in de voormalige stallen van Château de Durbuy.`,
-    journalTitle: `Notities van het landgoed — ${BRAND}`,
+    journalTitle: `Journaal van het landgoed — ${BRAND}`,
     journalDescription: 'Aantekeningen, waarnemingen en fragmenten uit een brouwseizoen op het domein van Château de Durbuy.',
-    journalChapter: '— Notities van het landgoed —',
-    journalHeading: 'Notities van het landgoed',
+    journalChapter: '— Journaal van het landgoed —',
+    journalHeading: 'Journaal van het landgoed',
     journalLede: 'Aantekeningen, waarnemingen en fragmenten uit een brouwseizoen, bijgehouden op het landgoed.',
-    backJournal: 'Terug naar de notities',
+    backJournal: 'Terug naar het journaal',
     home: 'Startpagina',
-    related: 'In de notities',
+    related: 'In het journaal',
+    newer: 'Vorige bijdrage',
+    older: 'Volgende bijdrage',
     dateLocale: 'nl-BE',
   },
   en: {
@@ -63,6 +68,8 @@ const LOCALES = {
     backJournal: 'Back to the journal',
     home: 'Home',
     related: 'In the journal',
+    newer: 'Previous note',
+    older: 'Next note',
     dateLocale: 'en-GB',
   },
   de: {
@@ -80,6 +87,8 @@ const LOCALES = {
     backJournal: 'Zurück zu den Notizen',
     home: 'Startseite',
     related: 'In den Notizen',
+    newer: 'Vorherige Notiz',
+    older: 'Nächste Notiz',
     dateLocale: 'de-DE',
   },
 };
@@ -127,6 +136,24 @@ function articleUrl(article, lang) {
   return `${SITE}/${prefix ? `${prefix}/` : ''}journal/${article.id}/`;
 }
 
+function relativeArticleHref(article) {
+  return `../${encodeURIComponent(article.id)}/`;
+}
+
+function articlePager(article, allArticles) {
+  const index = allArticles.findIndex((candidate) => candidate.id === article.id);
+  return {
+    newer: index > 0 ? allArticles[index - 1] : null,
+    older: index >= 0 && index < allArticles.length - 1 ? allArticles[index + 1] : null,
+  };
+}
+
+function relatedArticles(article, allArticles) {
+  return allArticles
+    .filter((candidate) => candidate.id !== article.id)
+    .slice(0, 3);
+}
+
 function alternateLinks(urlFactory) {
   return [
     ...LANGUAGE_KEYS.map((lang) => `  <link rel="alternate" hreflang="${LOCALES[lang].hreflang}" href="${urlFactory(lang)}" />`),
@@ -150,8 +177,47 @@ function replaceHeadBasics(html, locale, canonical, alternates) {
 
 function adjustAssetPaths(html, prefix) {
   return html
-    .replace(/src\/assets\//g, `${prefix}src/assets/`)
+    .replace(/(?<!\/)(?:\.\.\/)*src\/assets\//g, `${prefix}src/assets/`)
     .replaceAll(`${SITE}/${prefix}src/assets/`, `${SITE}/src/assets/`);
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function extractHomepageTranslations(html) {
+  const match = html.match(/const translations = ([\s\S]*?);\s*const supportedLangs/);
+  if (!match) {
+    throw new Error('Could not find homepage translations object.');
+  }
+  const sandbox = {};
+  vm.runInNewContext(`translations = ${match[1]};`, sandbox);
+  return sandbox.translations || {};
+}
+
+function localizeStaticHomeHtml(html, translations, lang) {
+  const dict = translations[lang];
+  if (!dict) return html;
+  let localized = html;
+  for (const [key, value] of Object.entries(dict)) {
+    if (key.endsWith('.href')) continue;
+    const pattern = new RegExp(`(<([a-z0-9]+)([^>]*\\sdata-i18n="${escapeRegExp(key)}"[^>]*)>)[\\s\\S]*?(<\\/\\2>)`, 'gi');
+    localized = localized.replace(pattern, `$1${value}$4`);
+  }
+  localized = localized.replace(/<a\b(?=[^>]*\sdata-i18n-href="([^"]+)")[^>]*>/g, (tag, key) => {
+    if (!dict[key]) return tag;
+    return tag.includes(' href="')
+      ? tag.replace(/\shref="[^"]*"/, ` href="${dict[key]}"`)
+      : tag.replace('<a', `<a href="${dict[key]}"`);
+  });
+  const articlePrefix = lang === 'fr' ? 'journal/' : `/${lang}/journal/`;
+  localized = localized.replace(/<a\b(?=[^>]*\sdata-carnet-link="([^"]+)")[^>]*>/g, (tag, id) => {
+    const href = `${articlePrefix}${id}/`;
+    return tag.includes(' href="')
+      ? tag.replace(/\shref="[^"]*"/, ` href="${href}"`)
+      : tag.replace('<a', `<a href="${href}"`);
+  });
+  return localized;
 }
 
 function formatDate(value, lang) {
@@ -274,11 +340,36 @@ function articleStructuredData(article, lang) {
   };
 }
 
+function articlePagerHtml(article, articles, lang) {
+  const locale = LOCALES[lang];
+  const pager = articlePager(article, articles);
+  const newerLink = pager.newer
+    ? `<a href="${relativeArticleHref(pager.newer)}"><small>${escapeHtml(locale.newer)}</small><strong>${escapeHtml(localizedArticle(pager.newer, lang).title)}</strong></a>`
+    : `<span class="is-empty"><small>${escapeHtml(locale.newer)}</small><strong>—</strong></span>`;
+  const olderLink = pager.older
+    ? `<a href="${relativeArticleHref(pager.older)}"><small>${escapeHtml(locale.older)}</small><strong>${escapeHtml(localizedArticle(pager.older, lang).title)}</strong></a>`
+    : `<span class="is-empty"><small>${escapeHtml(locale.older)}</small><strong>—</strong></span>`;
+  return `<nav class="article-pager" aria-label="${escapeHtml(locale.related)}">
+      ${newerLink}
+      ${olderLink}
+    </nav>`;
+}
+
+function articleRelatedHtml(article, articles, lang) {
+  const locale = LOCALES[lang];
+  return `<nav class="article-related" aria-label="${escapeHtml(locale.related)}">
+      <p>${escapeHtml(locale.related)}</p>
+      ${relatedArticles(article, articles).map((item) => `<a href="${relativeArticleHref(item)}">${escapeHtml(localizedArticle(item, lang).title)}</a>`).join('\n      ')}
+    </nav>`;
+}
+
 function generateHomePages() {
   const source = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const homepageTranslations = extractHomepageTranslations(source);
   for (const lang of TRANSLATED_KEYS) {
     const locale = LOCALES[lang];
     let html = replaceHeadBasics(source, locale, homeUrl(lang), alternateLinks(homeUrl));
+    html = localizeStaticHomeHtml(html, homepageTranslations, lang);
     html = adjustAssetPaths(html, '../');
     fs.mkdirSync(path.join(root, lang), { recursive: true });
     fs.writeFileSync(path.join(root, lang, 'index.html'), html, 'utf8');
@@ -352,12 +443,8 @@ function generateArticlePages(articles) {
         .replace(/<p class="article-lede">[\s\S]*?<\/p>/, item.lede ? `<p class="article-lede">${escapeHtml(item.lede)}</p>` : '')
         .replace(/<div class="article-body">[\s\S]*?<\/div>/, `<div class="article-body">\n${item.body.map((paragraph) => `          <p>${escapeHtml(paragraph)}</p>`).join('\n')}\n      </div>`)
         .replace(/<p class="article-tags">[\s\S]*?<\/p>/, item.tags.length ? `<p class="article-tags">${item.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('')}</p>` : '')
-        .replace(/<p>Dans le carnet<\/p>/, `<p>${escapeHtml(locale.related)}</p>`);
-
-      for (const related of articles.filter((candidate) => candidate.id !== article.id).slice(0, 3)) {
-        const localizedRelated = localizedArticle(related, lang);
-        html = html.replace(new RegExp(`(<a href="\\.\\./${related.id}/">)[\\s\\S]*?(</a>)`), `$1${escapeHtml(localizedRelated.title)}$2`);
-      }
+        .replace(/<nav class="article-pager"[\s\S]*?<\/nav>/, articlePagerHtml(article, articles, lang))
+        .replace(/<nav class="article-related"[\s\S]*?<\/nav>/, articleRelatedHtml(article, articles, lang));
       html = adjustAssetPaths(html, '../../../');
 
       const outDir = path.join(root, lang, 'journal', article.id);

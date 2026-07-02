@@ -26,9 +26,9 @@
   <meta name="twitter:description" content="In Durbuy sollte das Wort „lokal“ einfach bleiben." />
   <meta name="twitter:image" content="https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg" />
   <meta name="twitter:image:alt" content="Le domaine du Château de Durbuy au bord de l&#39;Ourthe." />
-  <link rel="icon" type="image/png" sizes="32x32" href="../../../../../src/assets/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../../../../../src/assets/favicon-16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../../../../../src/assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../src/assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../src/assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../src/assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -117,6 +117,38 @@
       margin-top: 2rem;
       color: var(--ink-fade);
     }
+    .article-pager {
+      margin-top: clamp(3rem, 6vw, 5rem);
+      padding-top: 1.6rem;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .article-pager a,
+    .article-pager span {
+      display: grid;
+      gap: 0.45rem;
+      min-height: 4.6rem;
+      padding: 1rem 0;
+      color: var(--ink-soft);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-pager small {
+      color: var(--copper);
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .article-pager strong {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      line-height: 1.08;
+      font-weight: 300;
+    }
+    .article-pager .is-empty {
+      opacity: 0.28;
+    }
     .article-related {
       margin-top: clamp(3rem, 6vw, 5rem);
       padding-top: 1.6rem;
@@ -140,6 +172,11 @@
       text-underline-offset: 0.35rem;
       text-decoration-thickness: 1px;
     }
+    @media (max-width: 640px) {
+      .article-pager {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -162,7 +199,11 @@
       <p class="article-tags"><span>Lokales Bier in Durbuy</span><span>Brauerei in Durbuy</span><span>Brasserie du Château de Durbuy</span></p>
       <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
     </article>
-    <nav class="article-related" aria-label="Articles liés">
+    <nav class="article-pager" aria-label="In den Notizen">
+      <a href="../les-anciennes-ecuries-2026-05-18/"><small>Vorherige Notiz</small><strong>Die früheren Stallungen</strong></a>
+      <span class="is-empty"><small>Nächste Notiz</small><strong>—</strong></span>
+    </nav>
+    <nav class="article-related" aria-label="In den Notizen">
       <p>In den Notizen</p>
       <a href="../le-houblon-et-nous-2026-06-03/">Der Hopfen und wir</a>
       <a href="../quand-le-grain-manque-2026-05-26/">Wenn das Getreide knapp wird</a>
