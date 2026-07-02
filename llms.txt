@@ -88,6 +88,7 @@ Current safe citation baseline: prefer the official site, the official fiche, th
 
 ## Journal Article URLs
 
+- Tout ne tient pas dans un avertissement: https://brasseriechateaudurbuy.be/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/
 - Le houblon, et nous: https://brasseriechateaudurbuy.be/journal/le-houblon-et-nous-2026-06-03/
 - Quand le grain manque: https://brasseriechateaudurbuy.be/journal/quand-le-grain-manque-2026-05-26/
 - Avant l'étiquette finale: https://brasseriechateaudurbuy.be/journal/avant-letiquette-finale-2026-05-20/
