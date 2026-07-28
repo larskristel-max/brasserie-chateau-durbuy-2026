@@ -2,6 +2,48 @@ const GITHUB_RAW_BASE =
   'https://raw.githubusercontent.com/larskristel-max/brasserie-chateau-durbuy-2026/gh-pages';
 const CANONICAL_HOST = 'brasseriechateaudurbuy.be';
 const ORIGIN_HEADER = 'github-raw-gh-pages';
+const LEGACY_REDIRECTS = {
+  '/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/':
+    '/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/',
+  '/nl/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/':
+    '/nl/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/',
+  '/en/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/':
+    '/en/journal/not-everything-fits-on-a-warning-2026-07-02/',
+  '/en/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/':
+    '/en/journal/not-everything-fits-on-a-warning-2026-07-02/',
+  '/de/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/':
+    '/de/journal/nicht-alles-passt-in-einen-warnhinweis-2026-07-02/',
+  '/de/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/':
+    '/de/journal/nicht-alles-passt-in-einen-warnhinweis-2026-07-02/',
+  '/nl/journal/le-houblon-et-nous-2026-06-03/': '/nl/journal/hop-en-wij-2026-06-03/',
+  '/en/journal/le-houblon-et-nous-2026-06-03/': '/en/journal/hops-and-us-2026-06-03/',
+  '/de/journal/le-houblon-et-nous-2026-06-03/':
+    '/de/journal/der-hopfen-und-wir-2026-06-03/',
+  '/nl/journal/quand-le-grain-manque-2026-05-26/':
+    '/nl/journal/wanneer-graan-schaars-wordt-2026-05-26/',
+  '/en/journal/quand-le-grain-manque-2026-05-26/':
+    '/en/journal/when-grain-is-scarce-2026-05-26/',
+  '/de/journal/quand-le-grain-manque-2026-05-26/':
+    '/de/journal/wenn-das-getreide-knapp-wird-2026-05-26/',
+  '/nl/journal/avant-letiquette-finale-2026-05-20/':
+    '/nl/journal/nog-voor-het-definitieve-etiket-2026-05-20/',
+  '/en/journal/avant-letiquette-finale-2026-05-20/':
+    '/en/journal/before-the-label-is-final-2026-05-20/',
+  '/de/journal/avant-letiquette-finale-2026-05-20/':
+    '/de/journal/bevor-das-etikett-endgueltig-ist-2026-05-20/',
+  '/nl/journal/une-biere-dici-2026-05-17/': '/nl/journal/een-bier-van-hier-2026-05-17/',
+  '/en/journal/une-biere-dici-2026-05-17/': '/en/journal/a-beer-from-here-2026-05-17/',
+  '/de/journal/une-biere-dici-2026-05-17/': '/de/journal/ein-bier-von-hier-2026-05-17/',
+  '/nl/journal/les-anciennes-ecuries-2026-05-18/':
+    '/nl/journal/de-voormalige-stallen-2026-05-18/',
+  '/en/journal/les-anciennes-ecuries-2026-05-18/':
+    '/en/journal/the-former-stables-2026-05-18/',
+  '/de/journal/les-anciennes-ecuries-2026-05-18/':
+    '/de/journal/die-frueheren-stallungen-2026-05-18/',
+  '/nl/journal/marckloff-et-nous-2026-05-19/': '/nl/journal/marckloff-en-wij-2026-05-19/',
+  '/en/journal/marckloff-et-nous-2026-05-19/': '/en/journal/marckloff-and-us-2026-05-19/',
+  '/de/journal/marckloff-et-nous-2026-05-19/': '/de/journal/marckloff-und-wir-2026-05-19/',
+};
 
 export default {
   async fetch(request) {
@@ -20,6 +62,12 @@ export default {
           allow: 'GET, HEAD',
         },
       });
+    }
+
+    const legacyTarget = legacyRedirectTarget(url.pathname);
+    if (legacyTarget) {
+      url.pathname = legacyTarget;
+      return Response.redirect(url.toString(), 301);
     }
 
     if (shouldRedirectToDirectory(url.pathname)) {
@@ -61,6 +109,11 @@ export default {
     });
   },
 };
+
+function legacyRedirectTarget(pathname) {
+  const normalized = pathname.endsWith('/') ? pathname : `${pathname}/`;
+  return LEGACY_REDIRECTS[normalized] || null;
+}
 
 function shouldRedirectToDirectory(pathname) {
   if (pathname === '/' || pathname.endsWith('/')) return false;

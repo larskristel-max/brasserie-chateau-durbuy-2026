@@ -32,6 +32,15 @@ Use this as the working queue for Google, Maps, directories, tourism listings, a
 - Draft safety pass completed 29/05/2026: Craft Beer Monkey wording was tightened to remove an unsupported address claim, and CellarMonk copy was softened to avoid implying uninterrupted brewing continuity from the sixteenth century.
 - Draft context pass completed 29/05/2026: Biernet draft now reflects that the old URL redirects but old phone/email and visitor-style signals remain; CellarMonk draft now thanks them for the correction and offers optional safe copy instead of asking them to fix a stale page.
 
+## Status Update - 28/07/2026
+
+- Active ranking issue: Google is now seeing the official site, but older tourism, directory, and restaurant listings still weaken entity clarity for searches such as `brasserie durbuy`, `brouwerij durbuy`, and `brewery durbuy`.
+- Technical cleanup: legacy duplicate article URLs should resolve as real `301` redirects instead of live `200` noindex/meta-refresh pages. The production Worker has been updated to redirect known legacy journal paths to the current canonical language-specific URLs.
+- External-profile wording to use consistently: `site officiel`, `microbrasserie a Durbuy`, `anciennes ecuries du Chateau de Durbuy`, plus the correct official URL `https://brasseriechateaudurbuy.be/`.
+- Article-depth to-do: continue sharing direct article URLs, not only the homepage. Dutch remains a priority because `brouwerij durbuy` has already produced clicks.
+- Google Business Profile to-do: keep the primary signal as brewery/microbrewery, keep fixed public opening hours blank unless real public hours exist, and reinforce the official-site/former-stables wording where Google exposes a safe editable field.
+- New outreach queue: draft or follow up corrections for TerroirLux, Petit Fute, Cirkwi, Famenne-Ardenne / Ardenne Belge, and any platform still publishing La Ferme au Chene / Marckloff as an active restaurant, public-hours, or menu entity.
+
 ## Copy/Paste Canonical Facts
 
 - Official name: `Brasserie du Château de Durbuy`
