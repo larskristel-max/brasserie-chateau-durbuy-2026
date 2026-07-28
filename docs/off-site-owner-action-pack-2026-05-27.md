@@ -40,6 +40,7 @@ Use this as the working queue for Google, Maps, directories, tourism listings, a
 - Article-depth to-do: continue sharing direct article URLs, not only the homepage. Dutch remains a priority because `brouwerij durbuy` has already produced clicks.
 - Google Business Profile to-do: keep the primary signal as brewery/microbrewery, keep fixed public opening hours blank unless real public hours exist, and reinforce the official-site/former-stables wording where Google exposes a safe editable field.
 - New outreach queue: draft or follow up corrections for TerroirLux, Petit Fute, Cirkwi, Famenne-Ardenne / Ardenne Belge, and any platform still publishing La Ferme au Chene / Marckloff as an active restaurant, public-hours, or menu entity.
+- Outreach sent 28/07/2026: TerroirLux, Petit Fute, Cirkwi support follow-up, and Famenne-Ardenne / Ardenne Belge were sent from `brasseurduchateau@gmail.com` with the official URL, former-stables wording, no-public-hours clarification, and request to remove stale restaurant/menu/visit signals.
 
 ## Copy/Paste Canonical Facts
 
