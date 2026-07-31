@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 26 mei 2026 —</p>
       <h1>Wanneer graan schaars wordt</h1>
       <p class="article-lede">Bij het voorbereiden van een nieuw brouwsel kan een klein tekort een ruwer verleden doen meeklinken.</p>
+
       <div class="article-body">
           <p>Ik bestel de granen, de mouten en de hoppen voor het volgende brouwsel. Geen groot gebaar: aantallen controleren, zakken voorzien, één soort terugvinden. En dan blijkt er soms iets te ontbreken.</p>
           <p>Vandaag blijft een niet-leverbare hop een beperkte hinder. We wachten, passen aan, schuiven de planning wat op. Het brouwsel verdwijnt er niet door. Toch brengt zo’n klein tekort je even terug naar een tijd waarin graan veel meer was dan een grondstof voor bier.</p>
@@ -212,7 +230,7 @@
     </nav>
     <nav class="article-related" aria-label="In het journaal">
       <p>In het journaal</p>
-      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">De bieren van het kasteel zijn gelanceerd</a>
+      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">Vier etiketten, één nieuw bier</a>
       <a href="../niet-alles-past-op-een-waarschuwing-2026-07-02/">Niet alles past op een waarschuwing</a>
       <a href="../hop-en-wij-2026-06-03/">Hop en wij</a>
     </nav>

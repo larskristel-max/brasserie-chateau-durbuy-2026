@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 17 mai 2026 —</p>
       <h1>Une bière d&#39;ici</h1>
       <p class="article-lede">À Durbuy, le mot local doit rester simple.</p>
+
       <div class="article-body">
           <p>Je me méfie un peu des grands mots. Une bière locale n&#39;a pas besoin de raconter toute une région à chaque gorgée. Elle doit d&#39;abord être faite ici, avec attention, dans le rythme réel du lieu.</p>
           <p>À Durbuy, ce rythme est particulier. La ville est dense, minérale, resserrée entre la pierre et l&#39;Ourthe. On y travaille près des murs, près de l&#39;eau, avec une lumière qui change vite selon les saisons.</p>
@@ -210,7 +228,7 @@
     </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
-      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">La gamme du château est lancée</a>
+      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">Quatre étiquettes, une nouvelle bière</a>
       <a href="../tout-ne-tient-pas-dans-un-avertissement-2026-07-02/">Tout ne tient pas dans un avertissement</a>
       <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>
     </nav>

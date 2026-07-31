@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 26 May 2026 —</p>
       <h1>When Grain Is Scarce</h1>
       <p class="article-lede">As I prepare the next brew, a small absence touches an older, harsher memory.</p>
+
       <div class="article-body">
           <p>I am ordering the grains, malts, and hops for the next brew. Nothing remarkable: quantities to check, sacks to plan, one variety to track down. Then, sometimes, something is missing.</p>
           <p>Today, an unavailable hop is a modest inconvenience. We wait, adjust, move the schedule. The brew does not vanish. Still, that small absence leads back to a time when grain was never simply a material for brewing.</p>
@@ -212,7 +230,7 @@
     </nav>
     <nav class="article-related" aria-label="In the journal">
       <p>In the journal</p>
-      <a href="../chateau-beers-launched-2026-07-30/">The château beers have been launched</a>
+      <a href="../chateau-beers-launched-2026-07-30/">Four labels, one new beer</a>
       <a href="../not-everything-fits-on-a-warning-2026-07-02/">Not Everything Fits on a Warning</a>
       <a href="../hops-and-us-2026-06-03/">Hops and Us</a>
     </nav>

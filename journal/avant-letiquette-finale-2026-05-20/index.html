@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 20 mai 2026 —</p>
       <h1>Avant l&#39;étiquette finale</h1>
       <p class="article-lede">Une étiquette ne se valide pas seulement à l&#39;écran.</p>
+
       <div class="article-body">
           <p>Ces derniers jours, le travail s&#39;est concentré sur un objet discret, mais décisif : l&#39;étiquette. Avant qu&#39;une bière ne soit présentée, offerte ou simplement posée sur une table, il faut que ce petit morceau de papier trouve sa juste mesure.</p>
           <p>Une première épreuve physique a permis de trancher plusieurs choses. Le papier choisi ne convenait pas. Le format paraissait trop étroit. À l&#39;écran, certains équilibres semblaient possibles; en main, sur la bouteille, ils demandaient autre chose.</p>
@@ -211,7 +229,7 @@
     </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
-      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">La gamme du château est lancée</a>
+      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">Quatre étiquettes, une nouvelle bière</a>
       <a href="../tout-ne-tient-pas-dans-un-avertissement-2026-07-02/">Tout ne tient pas dans un avertissement</a>
       <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>
     </nav>

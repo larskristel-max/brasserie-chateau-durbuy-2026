@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 18 mai 2026 —</p>
       <h1>Les anciennes écuries</h1>
       <p class="article-lede">La brasserie occupe un bâtiment qui n&#39;a pas été conçu pour le bruit des cuves.</p>
+
       <div class="article-body">
           <p>Les anciennes écuries du Château de Durbuy n&#39;ont rien d&#39;un décor. Ce sont des murs de service, faits pour tenir, abriter, porter le passage des jours.</p>
           <p>La brasserie s&#39;y est installée sans chercher à effacer ce que le bâtiment était avant elle. On y sent encore la logique des dépendances : la proximité du château, la pierre, les ouvertures mesurées, le rapport direct au travail.</p>
@@ -210,7 +228,7 @@
     </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
-      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">La gamme du château est lancée</a>
+      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">Quatre étiquettes, une nouvelle bière</a>
       <a href="../tout-ne-tient-pas-dans-un-avertissement-2026-07-02/">Tout ne tient pas dans un avertissement</a>
       <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>
     </nav>

@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 19 mai 2026 —</p>
       <h1>Marckloff, et nous</h1>
       <p class="article-lede">Ce qu&#39;un nom ancien peut encore transmettre, sans tout dire.</p>
+
       <div class="article-body">
           <p>Une question m&#39;a été posée l&#39;autre jour : que garde-t-on d&#39;un homme dont on ne sait presque rien?</p>
           <p>Philippe Marckloff brassait à Durbuy vers 1560. Il vivait à la Ferme au Chêne, à l&#39;entrée de la ville. Les archives sont minces — un nom, une date, un lieu. Pas de portrait, pas de recettes, pas de témoignage. Juste l&#39;attestation qu&#39;il a existé.</p>
@@ -210,7 +228,7 @@
     </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
-      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">La gamme du château est lancée</a>
+      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">Quatre étiquettes, une nouvelle bière</a>
       <a href="../tout-ne-tient-pas-dans-un-avertissement-2026-07-02/">Tout ne tient pas dans un avertissement</a>
       <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>
     </nav>

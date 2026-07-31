@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 2 July 2026 —</p>
       <h1>Not Everything Fits on a Warning</h1>
       <p class="article-lede">Between pleasure and excess, a warning cannot carry everything a craft must hold.</p>
+
       <div class="article-body">
           <p>When I read about the new rules on alcohol advertising, one sentence stayed with me: alcohol is harmful to health. From now on, that warning must appear clearly in advertising for alcoholic drinks. Visible, legible, and large enough not to be hidden away in a corner.</p>
           <p>Of course, this touches a brewery. Not only its posters or its communication, but the craft itself. It touches the glass, the café, the terrace table, and the way people gather around a drink.</p>
@@ -209,12 +227,12 @@
       <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
     </article>
     <nav class="article-pager" aria-label="In the journal">
-      <a href="../chateau-beers-launched-2026-07-30/"><small>Previous note</small><strong>The château beers have been launched</strong></a>
+      <a href="../chateau-beers-launched-2026-07-30/"><small>Previous note</small><strong>Four labels, one new beer</strong></a>
       <a href="../hops-and-us-2026-06-03/"><small>Next note</small><strong>Hops and Us</strong></a>
     </nav>
     <nav class="article-related" aria-label="In the journal">
       <p>In the journal</p>
-      <a href="../chateau-beers-launched-2026-07-30/">The château beers have been launched</a>
+      <a href="../chateau-beers-launched-2026-07-30/">Four labels, one new beer</a>
       <a href="../hops-and-us-2026-06-03/">Hops and Us</a>
       <a href="../when-grain-is-scarce-2026-05-26/">When Grain Is Scarce</a>
     </nav>

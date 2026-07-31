@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 20 mei 2026 —</p>
       <h1>Nog vóór het definitieve etiket</h1>
       <p class="article-lede">Een etiket keur je niet alleen op een scherm goed.</p>
+
       <div class="article-body">
           <p>De voorbije dagen draaide het werk rond een bescheiden, maar beslissend object: het etiket. Voor een bier wordt voorgesteld, geschonken of gewoon op tafel gezet, moet dat kleine stuk papier precies goed zitten.</p>
           <p>Een eerste fysieke proef maakte enkele keuzes helder. Het gekozen papier was niet juist. Het formaat voelde te smal. Op het scherm leken bepaalde verhoudingen te werken; in de hand, op de fles, vroegen ze om iets anders.</p>
@@ -210,7 +228,7 @@
     </nav>
     <nav class="article-related" aria-label="In het journaal">
       <p>In het journaal</p>
-      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">De bieren van het kasteel zijn gelanceerd</a>
+      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">Vier etiketten, één nieuw bier</a>
       <a href="../niet-alles-past-op-een-waarschuwing-2026-07-02/">Niet alles past op een waarschuwing</a>
       <a href="../hop-en-wij-2026-06-03/">Hop en wij</a>
     </nav>

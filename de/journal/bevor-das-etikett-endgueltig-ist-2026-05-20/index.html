@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 20. Mai 2026 —</p>
       <h1>Bevor das Etikett endgültig ist</h1>
       <p class="article-lede">Ein Etikett gibt man nicht allein am Bildschirm frei.</p>
+
       <div class="article-body">
           <p>In den vergangenen Tagen galt die Arbeit einem zurückhaltenden, aber entscheidenden Gegenstand: dem Etikett. Bevor ein Bier vorgestellt, überreicht oder einfach auf einen Tisch gestellt wird, muss dieses kleine Stück Papier sein richtiges Maß finden.</p>
           <p>Ein erster physischer Andruck hat mehrere Fragen geklärt. Das gewählte Papier stimmte nicht. Das Format wirkte zu schmal. Am Bildschirm schienen manche Verhältnisse möglich; in der Hand, auf der Flasche, verlangten sie etwas anderes.</p>
@@ -210,7 +228,7 @@
     </nav>
     <nav class="article-related" aria-label="In den Notizen">
       <p>In den Notizen</p>
-      <a href="../biere-des-schlosses-lanciert-2026-07-30/">Die Biere des Schlosses sind lanciert</a>
+      <a href="../biere-des-schlosses-lanciert-2026-07-30/">Vier Etiketten, ein neues Bier</a>
       <a href="../nicht-alles-passt-in-einen-warnhinweis-2026-07-02/">Nicht alles passt in einen Warnhinweis</a>
       <a href="../der-hopfen-und-wir-2026-06-03/">Der Hopfen und wir</a>
     </nav>

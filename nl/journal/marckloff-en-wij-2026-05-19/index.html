@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 19 mei 2026 —</p>
       <h1>Marckloff en wij</h1>
       <p class="article-lede">Wat een oude naam nog kan doorgeven, zonder alles te hoeven zeggen.</p>
+
       <div class="article-body">
           <p>Onlangs kreeg ik een vraag: wat blijft er over van een man over wie we bijna niets weten?</p>
           <p>Philippe Marckloff brouwde rond 1560 in Durbuy. Hij woonde op de Ferme au Chêne, aan de toegang tot de stad. De archieven zijn dun: een naam, een datum, een locatie. Geen portret, geen recepten, geen getuigenis. Alleen het bewijs dat hij heeft bestaan.</p>
@@ -209,7 +227,7 @@
     </nav>
     <nav class="article-related" aria-label="In het journaal">
       <p>In het journaal</p>
-      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">De bieren van het kasteel zijn gelanceerd</a>
+      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">Vier etiketten, één nieuw bier</a>
       <a href="../niet-alles-past-op-een-waarschuwing-2026-07-02/">Niet alles past op een waarschuwing</a>
       <a href="../hop-en-wij-2026-06-03/">Hop en wij</a>
     </nav>

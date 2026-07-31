@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 3 juin 2026 —</p>
       <h1>Le houblon, et nous</h1>
       <p class="article-lede">Ce qu&#39;une plante ancienne change encore dans une bière.</p>
+
       <div class="article-body">
           <p>Quand j&#39;ouvre un sac de houblon, il y a toujours un moment de silence.</p>
           <p>Aujourd&#39;hui, il arrive en pellets. Nous le choisissons pour son amertume, ses huiles, son parfum. Au début de l&#39;ébullition, il donne l&#39;amertume; plus tard, parfois à froid, il garde l&#39;arôme. C&#39;est un ingrédient technique, mais fragile. Bien placé, il donne de la longueur au verre.</p>
@@ -211,7 +229,7 @@
     </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
-      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">La gamme du château est lancée</a>
+      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">Quatre étiquettes, une nouvelle bière</a>
       <a href="../tout-ne-tient-pas-dans-un-avertissement-2026-07-02/">Tout ne tient pas dans un avertissement</a>
       <a href="../quand-le-grain-manque-2026-05-26/">Quand le grain manque</a>
     </nav>

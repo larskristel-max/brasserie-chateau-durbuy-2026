@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 2 juli 2026 —</p>
       <h1>Niet alles past op een waarschuwing</h1>
       <p class="article-lede">Tussen genieten en overdaad zegt een waarschuwing niet alles wat een vak moet dragen.</p>
+
       <div class="article-body">
           <p>Toen ik las over de nieuwe regels rond alcoholreclame, bleef één zin hangen: alcohol schaadt de gezondheid. Voortaan moet die waarschuwing zichtbaar op alcoholreclame staan. Goed leesbaar, contrasterend, en groot genoeg om niet te worden weggemoffeld.</p>
           <p>Natuurlijk raakt zoiets ook een brouwerij. Niet alleen de affiches of de communicatie, maar het vak zelf. Het raakt het product in het glas, het café, de terrastafel, de manier waarop mensen samen iets drinken.</p>
@@ -209,12 +227,12 @@
       <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
     </article>
     <nav class="article-pager" aria-label="In het journaal">
-      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/"><small>Vorige bijdrage</small><strong>De bieren van het kasteel zijn gelanceerd</strong></a>
+      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/"><small>Vorige bijdrage</small><strong>Vier etiketten, één nieuw bier</strong></a>
       <a href="../hop-en-wij-2026-06-03/"><small>Volgende bijdrage</small><strong>Hop en wij</strong></a>
     </nav>
     <nav class="article-related" aria-label="In het journaal">
       <p>In het journaal</p>
-      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">De bieren van het kasteel zijn gelanceerd</a>
+      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">Vier etiketten, één nieuw bier</a>
       <a href="../hop-en-wij-2026-06-03/">Hop en wij</a>
       <a href="../wanneer-graan-schaars-wordt-2026-05-26/">Wanneer graan schaars wordt</a>
     </nav>

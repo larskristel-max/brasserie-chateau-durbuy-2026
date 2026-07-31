@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 17 May 2026 —</p>
       <h1>A Beer from Here</h1>
       <p class="article-lede">In Durbuy, the word local should stay simple.</p>
+
       <div class="article-body">
           <p>I am wary of grand words. A local beer does not need to summon an entire region with every sip. It must first be made here, with care, in the real rhythm of the estate.</p>
           <p>In Durbuy, that rhythm has its own character. The town is compact, mineral, held between stone and the Ourthe. Work happens close to the walls, close to the water, in a light that changes quickly with the seasons.</p>
@@ -209,7 +227,7 @@
     </nav>
     <nav class="article-related" aria-label="In the journal">
       <p>In the journal</p>
-      <a href="../chateau-beers-launched-2026-07-30/">The château beers have been launched</a>
+      <a href="../chateau-beers-launched-2026-07-30/">Four labels, one new beer</a>
       <a href="../not-everything-fits-on-a-warning-2026-07-02/">Not Everything Fits on a Warning</a>
       <a href="../hops-and-us-2026-06-03/">Hops and Us</a>
     </nav>

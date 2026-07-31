@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 18 mei 2026 —</p>
       <h1>De voormalige stallen</h1>
       <p class="article-lede">De brouwerij is ondergebracht in een gebouw dat nooit voor het geluid van kuipen werd bedacht.</p>
+
       <div class="article-body">
           <p>De voormalige stallen van Château de Durbuy zijn geen decor. Het zijn dienstgebouwen in steen, gemaakt om te dragen, te beschutten en de gang van de dagen op te vangen.</p>
           <p>De brouwerij heeft er haar plaats gevonden zonder uit te wissen wat het gebouw vóór haar was. Je voelt er nog de logica van de bijgebouwen: de nabijheid van het kasteel, de steen, de beheerste openingen, de directe verhouding tot het werk.</p>
@@ -209,7 +227,7 @@
     </nav>
     <nav class="article-related" aria-label="In het journaal">
       <p>In het journaal</p>
-      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">De bieren van het kasteel zijn gelanceerd</a>
+      <a href="../lancering-bieren-chateau-durbuy-2026-07-30/">Vier etiketten, één nieuw bier</a>
       <a href="../niet-alles-past-op-een-waarschuwing-2026-07-02/">Niet alles past op een waarschuwing</a>
       <a href="../hop-en-wij-2026-06-03/">Hop en wij</a>
     </nav>
