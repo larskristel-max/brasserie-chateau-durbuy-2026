@@ -243,6 +243,14 @@ function articleHtml(article, allArticles) {
   const sourceBlock = article.sourceUrl
     ? `          <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(article.sourceLabel || article.sourceTitle || 'Lire la source')}</a></p>`
     : '';
+  const labelGalleryBlock = article.labelGallery
+    ? `      <div class="article-labels">
+        <img src="../../src/assets/beer-label-blonde.png" alt="Blonde du Château" width="435" height="406" loading="lazy" decoding="async" />
+        <img src="../../src/assets/beer-label-bohemian.png" alt="Bohemian Pilsner" width="435" height="406" loading="lazy" decoding="async" />
+        <img src="../../src/assets/beer-label-amber.png" alt="Amber Ale" width="435" height="406" loading="lazy" decoding="async" />
+        <img src="../../src/assets/beer-label-ipa.png" alt="IPA" width="435" height="406" loading="lazy" decoding="async" />
+      </div>`
+    : '';
   const tags = (article.tags || [])
     .map((tag) => `<span>${escapeHtml(tag)}</span>`)
     .join('');
@@ -397,6 +405,20 @@ function articleHtml(article, allArticles) {
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -479,6 +501,9 @@ function articleHtml(article, allArticles) {
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -496,6 +521,7 @@ function articleHtml(article, allArticles) {
       <p class="article-date">\u2014 ${escapeHtml(formatDate(article.date))} \u2014</p>
       <h1>${escapeHtml(article.title)}</h1>
       ${article.lede ? `<p class="article-lede">${escapeHtml(article.lede)}</p>` : ''}
+${labelGalleryBlock}
       <div class="article-body">
 ${body}
 ${sourceBlock}

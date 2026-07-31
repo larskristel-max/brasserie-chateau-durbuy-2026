@@ -2,20 +2,22 @@
   "articles": [
     {
       "id": "lancement-gamme-chateau-durbuy-2026-07-30",
-      "title": "La gamme du château est lancée",
+      "title": "Quatre étiquettes, une nouvelle bière",
       "date": "2026-07-30",
       "language": "fr",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "Quatre bières ont été dévoilées au Château de Durbuy, avec Marckloff toujours en production.",
+      "lede": "Ce qui change se voit d’abord sur les bouteilles. Parmi les quatre bières présentées, seule la Blonde du Château est nouvelle.",
       "body": [
-        "Le 30 juillet 2026, Le Soir a consacré un article au lancement de la nouvelle gamme brassée dans les anciennes écuries du Château de Durbuy.",
-        "Brasserie du Château de Durbuy présente désormais quatre bières : Blonde du Château à 6,4 % alc., Bohemian Pilsner à 4,5 % alc., Amber Ale à 5,6 % alc. et IPA à 5 % alc.",
-        "La production restera volontairement confidentielle, fidèle au rythme du lieu et à l’échelle d’une microbrasserie installée au domaine.",
-        "Marckloff reste également en production. Cette bière historique demeure un repère important de la mémoire brassicole de Durbuy.",
-        "L’article rappelle aussi le lien avec les anciennes écuries, la Ferme au Chêne et la tradition brassicole locale que Brasserie du Château de Durbuy prolonge aujourd’hui avec mesure."
+        "Le 30 juillet, quatre bouteilles ont été présentées au Château de Durbuy. Posées côte à côte, elles pouvaient donner l’impression d’une gamme entièrement nouvelle. Ce n’est pas le cas.",
+        "La Bohemian Pilsner était déjà brassée. L’IPA portait auparavant le nom Sorachi Ace. L’Amber Ale, elle aussi, est familière : c’est la même bière que la Marckloff, sous une autre étiquette. Seule la Blonde du Château, à 6,4 % alc., est une nouvelle bière.",
+        "Les nouvelles étiquettes donnent aux quatre bouteilles un air de famille et ramènent chaque bière au Château de Durbuy, où elle est brassée. Une étiquette doit dire d’où vient une bouteille sans prendre toute la place.",
+        "Nous avons choisi de conserver l’étiquette Marckloff pour ceux qui restent attachés à ce nom. Parmi les quatre bouteilles présentées ensemble, la même bière apparaît sous le nom Amber Ale. Une bière, deux étiquettes, chacune avec sa place.",
+        "Personnellement, j’ai éprouvé une vraie fierté à voir combien de personnes partageaient mon enthousiasme pour les bières du château. Une grande partie du travail se fait à l’écart des regards, bien avant que quatre bouteilles soient alignées. Ce jour-là, il est devenu visible.",
+        "Le Soir a décrit la présentation comme une nouvelle gamme. Quatre bouteilles posées côte à côte pouvaient donner cette impression. La réalité est plus simple : trois bières poursuivent leur histoire sous de nouvelles étiquettes. Seule la Blonde du Château est nouvelle."
       ],
       "heroImage": null,
+      "labelGallery": true,
       "sourceUrl": "https://www.lesoir.be/762335/article/2026-07-30/une-nouvelle-gamme-de-bieres-lancee-au-chateau-de-durbuy",
       "sourceLabel": "Lire l’article du Soir",
       "tags": [
@@ -27,14 +29,15 @@
       "updatedAt": "2026-07-31T10:00:00.000+02:00",
       "translations": {
         "nl": {
-          "title": "De bieren van het kasteel zijn gelanceerd",
-          "lede": "Vier bieren werden voorgesteld op Château de Durbuy, terwijl Marckloff in productie blijft.",
+          "title": "Vier etiketten, één nieuw bier",
+          "lede": "Wat verandert, zie je eerst aan de flessen. Van de vier voorgestelde bieren is alleen Blonde du Château nieuw.",
           "body": [
-            "Op 30 juli 2026 bracht Le Soir een artikel over de lancering van de nieuwe reeks die wordt gebrouwen in de voormalige stallen van Château de Durbuy.",
-            "Brasserie du Château de Durbuy stelt nu vier bieren voor: Blonde du Château van 6,4 % alc., Bohemian Pilsner van 4,5 % alc., Amber Ale van 5,6 % alc. en IPA van 5 % alc.",
-            "De productie blijft bewust beperkt, in het ritme van het domein en op de schaal van een microbrouwerij.",
-            "Ook Marckloff blijft in productie. Dit historische bier blijft een belangrijk herkenningspunt in het brouwgeheugen van Durbuy.",
-            "Het artikel herinnert ook aan de band met de voormalige stallen, de Ferme au Chêne en de lokale brouwtraditie die Brasserie du Château de Durbuy vandaag met mate voortzet."
+            "Op 30 juli werden in Château de Durbuy vier flessen naast elkaar voorgesteld. Wie ze zo zag, kon denken aan een volledig nieuwe reeks. Dat is niet het geval.",
+            "Bohemian Pilsner werd al gebrouwen. De IPA droeg vroeger de naam Sorachi Ace. Ook Amber Ale is vertrouwd: het is hetzelfde bier als Marckloff, onder een ander etiket. Alleen Blonde du Château, met 6,4 % alc., is een nieuw bier.",
+            "De nieuwe etiketten geven de vier flessen een duidelijke familiegelijkenis en brengen elk bier terug naar Château de Durbuy, waar het wordt gebrouwen. Een etiket moet tonen waar een fles vandaan komt, zonder alle aandacht op te eisen.",
+            "We kozen ervoor het Marckloff-etiket te behouden voor wie aan die naam gehecht is. Tussen de vier flessen die samen werden voorgesteld, verschijnt hetzelfde bier als Amber Ale. Eén bier, twee etiketten, elk met een eigen plaats.",
+            "Zelf was ik oprecht trots om te zien hoeveel mensen mijn enthousiasme voor de bieren van het kasteel deelden. Een groot deel van het werk gebeurt buiten het zicht, lang voordat vier flessen naast elkaar worden gezet. Die dag werd het zichtbaar.",
+            "Le Soir beschreef de voorstelling als een nieuwe reeks. Vier flessen naast elkaar konden die indruk wekken. De werkelijkheid is eenvoudiger: drie bieren zetten hun verhaal voort onder nieuwe etiketten; alleen Blonde du Château is nieuw."
           ],
           "sourceLabel": "Lees het artikel in Le Soir",
           "tags": [
@@ -44,14 +47,15 @@
           ]
         },
         "en": {
-          "title": "The château beers have been launched",
-          "lede": "Four beers have been unveiled at the Château de Durbuy, with Marckloff still in production.",
+          "title": "Four labels, one new beer",
+          "lede": "The change is first visible on the bottles. Of the four beers presented, only Blonde du Château is new.",
           "body": [
-            "On 30 July 2026, Le Soir published an article on the launch of the new range brewed in the former stables of the Château de Durbuy.",
-            "Brasserie du Château de Durbuy now presents four beers: Blonde du Château at 6.4% alc., Bohemian Pilsner at 4.5% alc., Amber Ale at 5.6% alc. and IPA at 5% alc.",
-            "Production will remain deliberately limited, in keeping with the rhythm of the estate and the scale of a microbrewery.",
-            "Marckloff also remains in production. This historic beer remains an important marker of Durbuy’s brewing memory.",
-            "The article also recalls the link with the former stables, La Ferme au Chêne and the local brewing tradition that Brasserie du Château de Durbuy continues today with restraint."
+            "On 30 July, four bottles were presented side by side at the Château de Durbuy. Seen together, they might have suggested an entirely new range. That is not the case.",
+            "Bohemian Pilsner was already being brewed. The IPA was previously known as Sorachi Ace. Amber Ale, too, is familiar: it is the same beer as Marckloff, under another label. Only Blonde du Château, at 6.4% alc., is a new beer.",
+            "The new labels give the four bottles a family resemblance and lead each beer back to the Château de Durbuy, where it is brewed. A label should say where a bottle comes from without taking over.",
+            "We chose to keep the Marckloff label for those attached to that name. Among the four bottles presented together, the same beer appears as Amber Ale. One beer, two labels, each with its own place.",
+            "Personally, I was quietly proud to see how many people shared my enthusiasm for the château’s beers. Much of the work happens out of sight, long before four bottles are placed side by side. That day, it became visible.",
+            "Le Soir described the presentation as a new range. Four bottles placed side by side could give that impression. The reality is simpler: three beers continue their story under new labels; only Blonde du Château is new."
           ],
           "sourceLabel": "Read the Le Soir article",
           "tags": [
@@ -61,14 +65,15 @@
           ]
         },
         "de": {
-          "title": "Die Biere des Schlosses sind lanciert",
-          "lede": "Vier Biere wurden am Château de Durbuy vorgestellt; Marckloff bleibt weiterhin in Produktion.",
+          "title": "Vier Etiketten, ein neues Bier",
+          "lede": "Die Veränderung zeigt sich zuerst auf den Flaschen. Von den vier vorgestellten Bieren ist nur Blonde du Château neu.",
           "body": [
-            "Am 30. Juli 2026 veröffentlichte Le Soir einen Artikel über die Lancierung der neuen Reihe, die in den früheren Stallungen des Château de Durbuy gebraut wird.",
-            "Brasserie du Château de Durbuy stellt nun vier Biere vor: Blonde du Château mit 6,4 % alc., Bohemian Pilsner mit 4,5 % alc., Amber Ale mit 5,6 % alc. und IPA mit 5 % alc.",
-            "Die Produktion bleibt bewusst begrenzt, im Rhythmus des Anwesens und im Maßstab einer Mikrobrauerei.",
-            "Auch Marckloff bleibt in Produktion. Dieses historische Bier bleibt ein wichtiger Bezugspunkt der Braugeschichte von Durbuy.",
-            "Der Artikel erinnert auch an die Verbindung zu den früheren Stallungen, zur Ferme au Chêne und zur lokalen Brautradition, die Brasserie du Château de Durbuy heute mit Zurückhaltung fortführt."
+            "Am 30. Juli wurden im Château de Durbuy vier Flaschen nebeneinander vorgestellt. Gemeinsam konnten sie den Eindruck einer vollständig neuen Reihe erwecken. Das ist nicht der Fall.",
+            "Bohemian Pilsner wurde bereits gebraut. Das IPA trug zuvor den Namen Sorachi Ace. Auch Amber Ale ist vertraut: Es ist dasselbe Bier wie Marckloff, unter einem anderen Etikett. Nur Blonde du Château mit 6,4 % alc. ist ein neues Bier.",
+            "Die neuen Etiketten verleihen den vier Flaschen eine erkennbare Familienähnlichkeit und führen jedes Bier zum Château de Durbuy zurück, wo es gebraut wird. Ein Etikett soll zeigen, woher eine Flasche kommt, ohne sich in den Vordergrund zu drängen.",
+            "Wir haben uns entschieden, das Marckloff-Etikett für jene beizubehalten, die diesem Namen verbunden sind. Unter den vier gemeinsam vorgestellten Flaschen erscheint dasselbe Bier als Amber Ale. Ein Bier, zwei Etiketten, jedes mit seinem eigenen Platz.",
+            "Ich persönlich war aufrichtig stolz zu sehen, wie viele Menschen meine Begeisterung für die Biere des Schlosses teilten. Ein großer Teil der Arbeit geschieht im Verborgenen, lange bevor vier Flaschen nebeneinander stehen. An diesem Tag wurde sie sichtbar.",
+            "Le Soir beschrieb die Vorstellung als eine neue Reihe. Vier Flaschen nebeneinander konnten diesen Eindruck erwecken. Die Wirklichkeit ist einfacher: Drei Biere setzen ihre Geschichte unter neuen Etiketten fort; nur Blonde du Château ist neu."
           ],
           "sourceLabel": "Den Artikel in Le Soir lesen",
           "tags": [

@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 2. Juli 2026 —</p>
       <h1>Nicht alles passt in einen Warnhinweis</h1>
       <p class="article-lede">Zwischen Genuss und Übermaß trägt ein Warnhinweis nicht alles, was ein Handwerk wissen muss.</p>
+
       <div class="article-body">
           <p>Als ich von den neuen Regeln für Alkoholwerbung las, blieb ein Satz hängen: Alkohol schadet der Gesundheit. Künftig muss dieser Hinweis in der Werbung für alkoholische Getränke deutlich sichtbar sein. Lesbar, kontrastreich und groß genug, um nicht irgendwo im Rand zu verschwinden.</p>
           <p>Natürlich betrifft das auch eine Brauerei. Nicht nur Plakate oder Kommunikation, sondern das Handwerk selbst. Es betrifft das Glas, das Café, den Terrassentisch und die Art, wie Menschen gemeinsam etwas trinken.</p>
@@ -209,12 +227,12 @@
       <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
     </article>
     <nav class="article-pager" aria-label="In den Notizen">
-      <a href="../biere-des-schlosses-lanciert-2026-07-30/"><small>Vorherige Notiz</small><strong>Die Biere des Schlosses sind lanciert</strong></a>
+      <a href="../biere-des-schlosses-lanciert-2026-07-30/"><small>Vorherige Notiz</small><strong>Vier Etiketten, ein neues Bier</strong></a>
       <a href="../der-hopfen-und-wir-2026-06-03/"><small>Nächste Notiz</small><strong>Der Hopfen und wir</strong></a>
     </nav>
     <nav class="article-related" aria-label="In den Notizen">
       <p>In den Notizen</p>
-      <a href="../biere-des-schlosses-lanciert-2026-07-30/">Die Biere des Schlosses sind lanciert</a>
+      <a href="../biere-des-schlosses-lanciert-2026-07-30/">Vier Etiketten, ein neues Bier</a>
       <a href="../der-hopfen-und-wir-2026-06-03/">Der Hopfen und wir</a>
       <a href="../wenn-das-getreide-knapp-wird-2026-05-26/">Wenn das Getreide knapp wird</a>
     </nav>

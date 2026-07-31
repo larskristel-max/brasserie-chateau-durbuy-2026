@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 17. Mai 2026 —</p>
       <h1>Ein Bier von hier</h1>
       <p class="article-lede">In Durbuy sollte das Wort „lokal“ einfach bleiben.</p>
+
       <div class="article-body">
           <p>Großen Worten begegne ich mit einer gewissen Vorsicht. Ein lokales Bier muss nicht mit jedem Schluck eine ganze Region erzählen. Zuerst muss es hier gemacht sein, mit Sorgfalt, im wirklichen Rhythmus des Ortes.</p>
           <p>In Durbuy hat dieser Rhythmus seinen eigenen Charakter. Die Stadt ist dicht, steinern, zwischen Fels und Ourthe zusammengerückt. Man arbeitet nahe an den Mauern, nahe am Wasser, in einem Licht, das sich mit den Jahreszeiten rasch verändert.</p>
@@ -209,7 +227,7 @@
     </nav>
     <nav class="article-related" aria-label="In den Notizen">
       <p>In den Notizen</p>
-      <a href="../biere-des-schlosses-lanciert-2026-07-30/">Die Biere des Schlosses sind lanciert</a>
+      <a href="../biere-des-schlosses-lanciert-2026-07-30/">Vier Etiketten, ein neues Bier</a>
       <a href="../nicht-alles-passt-in-einen-warnhinweis-2026-07-02/">Nicht alles passt in einen Warnhinweis</a>
       <a href="../der-hopfen-und-wir-2026-06-03/">Der Hopfen und wir</a>
     </nav>

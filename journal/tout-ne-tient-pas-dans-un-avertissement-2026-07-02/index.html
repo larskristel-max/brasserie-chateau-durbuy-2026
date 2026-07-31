@@ -95,6 +95,20 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-labels {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.7rem, 2vw, 1.25rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-labels img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .article-body {
       border-top: 1px solid var(--line);
       padding-top: clamp(2.6rem, 5vw, 4rem);
@@ -177,6 +191,9 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-labels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .article-pager {
         grid-template-columns: 1fr;
       }
@@ -194,6 +211,7 @@
       <p class="article-date">— 2 juillet 2026 —</p>
       <h1>Tout ne tient pas dans un avertissement</h1>
       <p class="article-lede">Entre plaisir et excès, avertir ne suffit pas toujours à dire ce qu’un métier doit porter.</p>
+
       <div class="article-body">
           <p>En lisant les nouvelles règles sur la publicité pour l’alcool, une phrase est restée : l’alcool nuit à la santé. Désormais, cet avertissement doit apparaître clairement dans les publicités pour les boissons alcoolisées. Visible, lisible, assez présent pour ne pas disparaître dans un coin.</p>
           <p>Cela concerne naturellement une brasserie. Pas seulement ses affiches ou sa communication, mais le métier lui-même. Cela touche le verre, le café, la table en terrasse, la façon dont des personnes se retrouvent autour d’une boisson.</p>
@@ -210,12 +228,12 @@
       <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
     </article>
     <nav class="article-pager" aria-label="Navigation entre les articles">
-      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/"><small>Note précédente</small><strong>La gamme du château est lancée</strong></a>
+      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/"><small>Note précédente</small><strong>Quatre étiquettes, une nouvelle bière</strong></a>
       <a href="../le-houblon-et-nous-2026-06-03/"><small>Note suivante</small><strong>Le houblon, et nous</strong></a>
     </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
-      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">La gamme du château est lancée</a>
+      <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">Quatre étiquettes, une nouvelle bière</a>
       <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>
       <a href="../quand-le-grain-manque-2026-05-26/">Quand le grain manque</a>
     </nav>
