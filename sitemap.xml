@@ -55,6 +55,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://brasseriechateaudurbuy.be/journal/lancement-gamme-chateau-durbuy-2026-07-30/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://brasseriechateaudurbuy.be/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -95,6 +101,12 @@
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://brasseriechateaudurbuy.be/nl/journal/lancering-bieren-chateau-durbuy-2026-07-30/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://brasseriechateaudurbuy.be/nl/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/</loc>
@@ -139,6 +151,12 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://brasseriechateaudurbuy.be/en/journal/chateau-beers-launched-2026-07-30/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://brasseriechateaudurbuy.be/en/journal/not-everything-fits-on-a-warning-2026-07-02/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -177,6 +195,12 @@
   <url>
     <loc>https://brasseriechateaudurbuy.be/en/journal/a-beer-from-here-2026-05-17/</loc>
     <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://brasseriechateaudurbuy.be/de/journal/biere-des-schlosses-lanciert-2026-07-30/</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>

@@ -934,28 +934,18 @@
     .beer-teaser .beer-list {
       width: 100%;
       padding-inline: 0;
-      filter: blur(5px);
-      opacity: 0.46;
-      user-select: none;
-      pointer-events: none;
     }
     .beer-teaser-note {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      z-index: 1;
-      transform: translate(-50%, -50%);
-      margin: 0;
-      width: min(100% - 2rem, 22rem);
-      padding: 1rem 1.2rem;
+      margin: clamp(1.8rem, 3vw, 2.8rem) auto 0;
+      max-width: 42rem;
+      padding: 1rem 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      background: rgba(242, 235, 221, 0.86);
       color: var(--copper);
       font-family: var(--sans);
-      font-size: 0.68rem;
+      font-size: var(--tiny);
       line-height: 1.7;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       text-align: center;
       text-transform: uppercase;
     }
@@ -1085,10 +1075,6 @@
       .beer-list .beer-notes {
         grid-column: 1 / -1;
         margin: 0.45rem 0 0;
-      }
-      .beer-teaser-note {
-        width: min(100% - 2rem, 20rem);
-        padding-inline: 0.95rem;
       }
     }
 
@@ -1919,7 +1905,7 @@
     <a class="nav-mark" href="#top" aria-label="Brasserie du Château de Durbuy — accueil">
       <span class="crest crest-sm" aria-hidden="true"></span>
       <span class="nav-mark-text">Brasserie du<br>Château de Durbuy</span>
-      <span class="nav-mark-mobile">Brasserie · Château de Durbuy</span>
+      <span class="nav-mark-mobile">Brasserie du Château de Durbuy</span>
     </a>
     <nav class="nav-links" aria-label="Navigation principale">
       <a href="#domaine" data-i18n="nav.domaine">Le Domaine</a>
@@ -2087,29 +2073,29 @@
         </picture>
       </figure>
       <div class="beer-teaser">
-        <ul class="beer-list" aria-hidden="true">
+        <ul class="beer-list">
           <li>
-            <h3>Bière I</h3>
-            <p class="beer-abv">—,—°</p>
-            <p class="beer-notes">Profil communiqué au lancement.</p>
+            <h3 data-i18n="beer.blonde.name">Blonde du Château</h3>
+            <p class="beer-abv" data-i18n="beer.blonde.abv">6,4 % alc.</p>
+            <p class="beer-notes" data-i18n="beer.blonde.notes">Une blonde du domaine, claire et précise, brassée pour tenir la table sans la dominer.</p>
           </li>
           <li>
-            <h3>Bière II</h3>
-            <p class="beer-abv">—,—°</p>
-            <p class="beer-notes">Profil communiqué au lancement.</p>
+            <h3 data-i18n="beer.pilsner.name">Bohemian Pilsner</h3>
+            <p class="beer-abv" data-i18n="beer.pilsner.abv">4,5 % alc.</p>
+            <p class="beer-notes" data-i18n="beer.pilsner.notes">Une pilsner de fermentation basse, nette, sèche, pensée pour la fraîcheur et la mesure.</p>
           </li>
           <li>
-            <h3>Bière III</h3>
-            <p class="beer-abv">—,—°</p>
-            <p class="beer-notes">Profil communiqué au lancement.</p>
+            <h3 data-i18n="beer.amber.name">Amber Ale</h3>
+            <p class="beer-abv" data-i18n="beer.amber.abv">5,6 % alc.</p>
+            <p class="beer-notes" data-i18n="beer.amber.notes">Une ale ambrée, plus terrienne, portée par le malt et la couleur des fins de journée.</p>
           </li>
           <li>
-            <h3>Bière IV</h3>
-            <p class="beer-abv">—,—°</p>
-            <p class="beer-notes">Profil communiqué au lancement.</p>
+            <h3 data-i18n="beer.ipa.name">IPA</h3>
+            <p class="beer-abv" data-i18n="beer.ipa.abv">5 % alc.</p>
+            <p class="beer-notes" data-i18n="beer.ipa.notes">Une IPA franche, aromatique sans excès, où le houblon garde sa place.</p>
           </li>
         </ul>
-        <p class="beer-teaser-note" data-i18n="bieres.teaser">La gamme sera révélée prochainement.</p>
+        <p class="beer-teaser-note" data-i18n="bieres.teaser">La Marckloff reste en production au sein de la Brasserie du Château de Durbuy.</p>
       </div>
       <p class="transition" data-i18n="bieres.transition">Après le brassage, les bières rejoignent quelques adresses locales.</p>
     </section>
@@ -2122,25 +2108,25 @@
           <p class="lead" data-i18n="carnet.lead">Quelques fragments sur le lieu, le brassage et la mémoire locale.</p>
         </header>
         <div class="carnet-list" aria-label="Dernières notes du carnet">
-          <a class="carnet-item" href="journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/" data-carnet-link="niet-alles-past-op-een-waarschuwing-2026-07-02">
-            <span class="carnet-date" data-i18n="carnet.item1.date">2 juillet 2026</span>
+          <a class="carnet-item" href="journal/lancement-gamme-chateau-durbuy-2026-07-30/" data-carnet-link="lancement-gamme-chateau-durbuy-2026-07-30">
+            <span class="carnet-date" data-i18n="carnet.item1.date">30 juillet 2026</span>
             <span>
-              <h3 data-i18n="carnet.item1.title">Tout ne tient pas dans un avertissement</h3>
-              <p data-i18n="carnet.item1.lede">Entre plaisir et excès, avertir ne suffit pas toujours à dire ce qu’un métier doit porter.</p>
+              <h3 data-i18n="carnet.item1.title">La gamme du château est lancée</h3>
+              <p data-i18n="carnet.item1.lede">Quatre bières ont été dévoilées au Château de Durbuy, avec Marckloff toujours en production.</p>
+            </span>
+          </a>
+          <a class="carnet-item" href="journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/" data-carnet-link="niet-alles-past-op-een-waarschuwing-2026-07-02">
+            <span class="carnet-date" data-i18n="carnet.item2.date">2 juillet 2026</span>
+            <span>
+              <h3 data-i18n="carnet.item2.title">Tout ne tient pas dans un avertissement</h3>
+              <p data-i18n="carnet.item2.lede">Entre plaisir et excès, avertir ne suffit pas toujours à dire ce qu’un métier doit porter.</p>
             </span>
           </a>
           <a class="carnet-item" href="journal/le-houblon-et-nous-2026-06-03/" data-carnet-link="le-houblon-et-nous-2026-06-03">
-            <span class="carnet-date" data-i18n="carnet.item2.date">3 juin 2026</span>
+            <span class="carnet-date" data-i18n="carnet.item3.date">3 juin 2026</span>
             <span>
-              <h3 data-i18n="carnet.item2.title">Le houblon, et nous</h3>
-              <p data-i18n="carnet.item2.lede">Ce qu'une plante ancienne change encore dans une bière.</p>
-            </span>
-          </a>
-          <a class="carnet-item" href="journal/quand-le-grain-manque-2026-05-26/" data-carnet-link="quand-le-grain-manque-2026-05-26">
-            <span class="carnet-date" data-i18n="carnet.item3.date">26 mai 2026</span>
-            <span>
-              <h3 data-i18n="carnet.item3.title">Quand le grain manque</h3>
-              <p data-i18n="carnet.item3.lede">En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.</p>
+              <h3 data-i18n="carnet.item3.title">Le houblon, et nous</h3>
+              <p data-i18n="carnet.item3.lede">Ce qu'une plante ancienne change encore dans une bière.</p>
             </span>
           </a>
         </div>
@@ -2637,20 +2623,32 @@
           'bieres.kicker': 'Quatre. Brassées dans les anciennes écuries du domaine.',
           'bieres.heading': 'Les Bières',
           'bieres.lead': 'Chacune dans son propre tempo. Petites séries, fermentation traditionnelle. <a class="inline-link" href="journal/le-houblon-et-nous-2026-06-03/">Le houblon garde aussi sa mémoire</a>.',
-          'bieres.teaser': 'La gamme sera révélée prochainement.',
+          'beer.blonde.name': 'Blonde du Château',
+          'beer.blonde.abv': '6,4 % alc.',
+          'beer.blonde.notes': 'Une blonde du domaine, claire et précise, brassée pour tenir la table sans la dominer.',
+          'beer.pilsner.name': 'Bohemian Pilsner',
+          'beer.pilsner.abv': '4,5 % alc.',
+          'beer.pilsner.notes': 'Une pilsner de fermentation basse, nette, sèche, pensée pour la fraîcheur et la mesure.',
+          'beer.amber.name': 'Amber Ale',
+          'beer.amber.abv': '5,6 % alc.',
+          'beer.amber.notes': 'Une ale ambrée, plus terrienne, portée par le malt et la couleur des fins de journée.',
+          'beer.ipa.name': 'IPA',
+          'beer.ipa.abv': '5 % alc.',
+          'beer.ipa.notes': 'Une IPA franche, aromatique sans excès, où le houblon garde sa place.',
+          'bieres.teaser': 'La Marckloff reste en production au sein de la Brasserie du Château de Durbuy.',
           'bieres.transition': 'Après le brassage, les bières rejoignent quelques adresses locales.',
           'carnet.chapter': '— Carnet —',
           'carnet.heading': 'Notes du domaine',
           'carnet.lead': 'Quelques fragments sur le lieu, le brassage et la mémoire locale.',
-          'carnet.item1.date': '2 juillet 2026',
-          'carnet.item1.title': 'Tout ne tient pas dans un avertissement',
-          'carnet.item1.lede': 'Entre plaisir et excès, avertir ne suffit pas toujours à dire ce qu’un métier doit porter.',
-          'carnet.item2.date': '3 juin 2026',
-          'carnet.item2.title': 'Le houblon, et nous',
-          'carnet.item2.lede': "Ce qu'une plante ancienne change encore dans une bière.",
-          'carnet.item3.date': '26 mai 2026',
-          'carnet.item3.title': 'Quand le grain manque',
-          'carnet.item3.lede': 'En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.',
+          'carnet.item1.date': '30 juillet 2026',
+          'carnet.item1.title': 'La gamme du château est lancée',
+          'carnet.item1.lede': 'Quatre bières ont été dévoilées au Château de Durbuy, avec Marckloff toujours en production.',
+          'carnet.item2.date': '2 juillet 2026',
+          'carnet.item2.title': 'Tout ne tient pas dans un avertissement',
+          'carnet.item2.lede': 'Entre plaisir et excès, avertir ne suffit pas toujours à dire ce qu’un métier doit porter.',
+          'carnet.item3.date': '3 juin 2026',
+          'carnet.item3.title': 'Le houblon, et nous',
+          'carnet.item3.lede': "Ce qu'une plante ancienne change encore dans une bière.",
           'carnet.cta': 'Lire le carnet',
           'points.chapter': '— Chapitre IV —',
           'points.kicker': 'Partenaires locaux',
@@ -2739,20 +2737,32 @@
           'bieres.kicker': 'Vier. Gebrouwen in de voormalige stallen van het domein.',
           'bieres.heading': 'De Bieren',
           'bieres.lead': 'Elk op zijn eigen tijd. Kleine oplagen, traditionele gisting. <a class="inline-link" href="/nl/journal/hop-en-wij-2026-06-03/">Ook hop bewaart zijn geheugen</a>.',
-          'bieres.teaser': 'De reeks wordt op haar tijd voorgesteld.',
+          'beer.blonde.name': 'Blonde du Château',
+          'beer.blonde.abv': '6,4 % alc.',
+          'beer.blonde.notes': 'Een blonde van het domein, helder en precies, gebrouwen voor de tafel zonder die te overheersen.',
+          'beer.pilsner.name': 'Bohemian Pilsner',
+          'beer.pilsner.abv': '4,5 % alc.',
+          'beer.pilsner.notes': 'Een lagegisting-pilsner, strak en droog, gemaakt voor frisheid en maat.',
+          'beer.amber.name': 'Amber Ale',
+          'beer.amber.abv': '5,6 % alc.',
+          'beer.amber.notes': 'Een amberkleurige ale, aardser van toon, gedragen door mout en de kleur van het late uur.',
+          'beer.ipa.name': 'IPA',
+          'beer.ipa.abv': '5 % alc.',
+          'beer.ipa.notes': 'Een heldere IPA, aromatisch zonder overdaad, waarin de hop zijn plaats behoudt.',
+          'bieres.teaser': 'Marckloff blijft in productie bij Brasserie du Château de Durbuy.',
           'bieres.transition': 'Na het brouwen gaan de bieren naar enkele lokale partners.',
           'carnet.chapter': '— Journaal —',
           'carnet.heading': 'Journaal van het landgoed',
           'carnet.lead': 'Enkele fragmenten over de plek, het brouwen en de lokale herinnering.',
-          'carnet.item1.date': '2 juli 2026',
-          'carnet.item1.title': 'Niet alles past op een waarschuwing',
-          'carnet.item1.lede': 'Tussen genieten en overdaad zegt een waarschuwing niet alles wat een vak moet dragen.',
-          'carnet.item2.date': '3 juni 2026',
-          'carnet.item2.title': 'Hop en wij',
-          'carnet.item2.lede': 'Wat een oude plant nog in een bier verandert.',
-          'carnet.item3.date': '26 mei 2026',
-          'carnet.item3.title': 'Wanneer graan schaars wordt',
-          'carnet.item3.lede': 'Bij het voorbereiden van een nieuw brouwsel kan een klein tekort een ruwer verleden doen meeklinken.',
+          'carnet.item1.date': '30 juli 2026',
+          'carnet.item1.title': 'De bieren van het kasteel zijn gelanceerd',
+          'carnet.item1.lede': 'Vier bieren werden voorgesteld op Château de Durbuy, terwijl Marckloff in productie blijft.',
+          'carnet.item2.date': '2 juli 2026',
+          'carnet.item2.title': 'Niet alles past op een waarschuwing',
+          'carnet.item2.lede': 'Tussen genieten en overdaad zegt een waarschuwing niet alles wat een vak moet dragen.',
+          'carnet.item3.date': '3 juni 2026',
+          'carnet.item3.title': 'Hop en wij',
+          'carnet.item3.lede': 'Wat een oude plant nog in een bier verandert.',
           'carnet.cta': 'Lees het journaal',
           'points.chapter': '— Hoofdstuk IV —',
           'points.kicker': 'Lokale partners',
@@ -2841,20 +2851,32 @@
           'bieres.kicker': 'Four. Brewed in the estate’s former stables.',
           'bieres.heading': 'The Beers',
           'bieres.lead': 'Each in its own time. Small batches, traditional fermentation. <a class="inline-link" href="/en/journal/hops-and-us-2026-06-03/">Hops keep their own memory</a>.',
-          'bieres.teaser': 'The range will be introduced in due course.',
+          'beer.blonde.name': 'Blonde du Château',
+          'beer.blonde.abv': '6.4% alc.',
+          'beer.blonde.notes': 'A blonde from the estate, clear and precise, brewed for the table without overpowering it.',
+          'beer.pilsner.name': 'Bohemian Pilsner',
+          'beer.pilsner.abv': '4.5% alc.',
+          'beer.pilsner.notes': 'A bottom-fermented pilsner, clean and dry, made for freshness and restraint.',
+          'beer.amber.name': 'Amber Ale',
+          'beer.amber.abv': '5.6% alc.',
+          'beer.amber.notes': 'An amber ale, earthier in tone, carried by malt and the colour of the late hour.',
+          'beer.ipa.name': 'IPA',
+          'beer.ipa.abv': '5% alc.',
+          'beer.ipa.notes': 'A direct IPA, aromatic without excess, where the hops keep their place.',
+          'bieres.teaser': 'Marckloff remains in production at Brasserie du Château de Durbuy.',
           'bieres.transition': 'After brewing, the beers reach a few local partners.',
           'carnet.chapter': '— Journal —',
           'carnet.heading': 'Notes from the Estate',
           'carnet.lead': 'A few fragments on the place, the brewing, and local memory.',
-          'carnet.item1.date': '2 July 2026',
-          'carnet.item1.title': 'Not Everything Fits on a Warning',
-          'carnet.item1.lede': 'Between pleasure and excess, a warning cannot carry everything a craft must hold.',
-          'carnet.item2.date': '3 June 2026',
-          'carnet.item2.title': 'Hops and Us',
-          'carnet.item2.lede': 'What an old plant still changes in a beer.',
-          'carnet.item3.date': '26 May 2026',
-          'carnet.item3.title': 'When Grain Is Scarce',
-          'carnet.item3.lede': 'As I prepare the next brew, a small absence touches an older, harsher memory.',
+          'carnet.item1.date': '30 July 2026',
+          'carnet.item1.title': 'The château beers have been launched',
+          'carnet.item1.lede': 'Four beers have been unveiled at the Château de Durbuy, with Marckloff still in production.',
+          'carnet.item2.date': '2 July 2026',
+          'carnet.item2.title': 'Not Everything Fits on a Warning',
+          'carnet.item2.lede': 'Between pleasure and excess, a warning cannot carry everything a craft must hold.',
+          'carnet.item3.date': '3 June 2026',
+          'carnet.item3.title': 'Hops and Us',
+          'carnet.item3.lede': 'What an old plant still changes in a beer.',
           'carnet.cta': 'Read the journal',
           'points.chapter': '— Chapter IV —',
           'points.kicker': 'Local partners',
@@ -2943,20 +2965,32 @@
           'bieres.kicker': 'Vier. In den früheren Stallungen des Anwesens gebraut.',
           'bieres.heading': 'Die Biere',
           'bieres.lead': 'Jedes zu seiner Zeit. Kleine Chargen, traditionelle Gärung. <a class="inline-link" href="/de/journal/der-hopfen-und-wir-2026-06-03/">Auch der Hopfen bewahrt seine Erinnerung</a>.',
-          'bieres.teaser': 'Die Reihe wird zu ihrer Zeit vorgestellt.',
+          'beer.blonde.name': 'Blonde du Château',
+          'beer.blonde.abv': '6,4 % alc.',
+          'beer.blonde.notes': 'Ein Blondes vom Anwesen, klar und präzise, für den Tisch gebraut, ohne ihn zu beherrschen.',
+          'beer.pilsner.name': 'Bohemian Pilsner',
+          'beer.pilsner.abv': '4,5 % alc.',
+          'beer.pilsner.notes': 'Ein untergäriges Pilsner, klar und trocken, auf Frische und Maß bedacht.',
+          'beer.amber.name': 'Amber Ale',
+          'beer.amber.abv': '5,6 % alc.',
+          'beer.amber.notes': 'Ein bernsteinfarbenes Ale, erdiger im Ton, getragen von Malz und der Farbe der späten Stunde.',
+          'beer.ipa.name': 'IPA',
+          'beer.ipa.abv': '5 % alc.',
+          'beer.ipa.notes': 'Ein klares IPA, aromatisch ohne Übermaß, in dem der Hopfen seinen Platz behält.',
+          'bieres.teaser': 'Marckloff bleibt bei Brasserie du Château de Durbuy in Produktion.',
           'bieres.transition': 'Nach dem Brauen finden die Biere ihren Weg zu einigen lokalen Partnern.',
           'carnet.chapter': '— Notizen —',
           'carnet.heading': 'Notizen vom Anwesen',
           'carnet.lead': 'Einige Fragmente über den Ort, das Brauen und die lokale Erinnerung.',
-          'carnet.item1.date': '2. Juli 2026',
-          'carnet.item1.title': 'Nicht alles passt in einen Warnhinweis',
-          'carnet.item1.lede': 'Zwischen Genuss und Übermaß trägt ein Warnhinweis nicht alles, was ein Handwerk wissen muss.',
-          'carnet.item2.date': '3. Juni 2026',
-          'carnet.item2.title': 'Der Hopfen und wir',
-          'carnet.item2.lede': 'Was eine alte Pflanze in einem Bier noch verändert.',
-          'carnet.item3.date': '26. Mai 2026',
-          'carnet.item3.title': 'Wenn das Getreide knapp wird',
-          'carnet.item3.lede': 'Beim Vorbereiten eines neuen Suds kann ein kleiner Mangel eine rauere Vergangenheit anklingen lassen.',
+          'carnet.item1.date': '30. Juli 2026',
+          'carnet.item1.title': 'Die Biere des Schlosses sind lanciert',
+          'carnet.item1.lede': 'Vier Biere wurden am Château de Durbuy vorgestellt; Marckloff bleibt weiterhin in Produktion.',
+          'carnet.item2.date': '2. Juli 2026',
+          'carnet.item2.title': 'Nicht alles passt in einen Warnhinweis',
+          'carnet.item2.lede': 'Zwischen Genuss und Übermaß trägt ein Warnhinweis nicht alles, was ein Handwerk wissen muss.',
+          'carnet.item3.date': '3. Juni 2026',
+          'carnet.item3.title': 'Der Hopfen und wir',
+          'carnet.item3.lede': 'Was eine alte Pflanze in einem Bier noch verändert.',
           'carnet.cta': 'Notizen lesen',
           'points.chapter': '— Kapitel IV —',
           'points.kicker': 'Lokale Partner',
@@ -3020,6 +3054,12 @@
       };
 
       const articleSlugs = {
+              "lancement-gamme-chateau-durbuy-2026-07-30": {
+                      "fr": "lancement-gamme-chateau-durbuy-2026-07-30",
+                      "nl": "lancering-bieren-chateau-durbuy-2026-07-30",
+                      "en": "chateau-beers-launched-2026-07-30",
+                      "de": "biere-des-schlosses-lanciert-2026-07-30"
+              },
               "niet-alles-past-op-een-waarschuwing-2026-07-02": {
                       "fr": "tout-ne-tient-pas-dans-un-avertissement-2026-07-02",
                       "nl": "niet-alles-past-op-een-waarschuwing-2026-07-02",
