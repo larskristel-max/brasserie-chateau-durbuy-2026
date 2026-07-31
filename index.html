@@ -878,14 +878,13 @@
 
     .bieres-image {
       margin: 0 auto;
-      width: min(100% - calc(var(--gutter) * 2), 1080px);
+      width: min(100% - calc(var(--gutter) * 2), 920px);
       overflow: hidden;
     }
     .bieres-image img {
       width: 100%;
       height: auto;
-      transform: scale(1.025);
-      filter: blur(9px) brightness(0.93) contrast(1.05) saturate(0.88);
+      display: block;
     }
 
     .beer-list {
@@ -1081,7 +1080,7 @@
     /* Ultrawide displays — let Les Bières breathe at the same width as the hero */
     @media (min-width: 1600px) {
       .bieres-image {
-        width: min(100% - calc(var(--gutter) * 2), 1280px);
+        width: min(100% - calc(var(--gutter) * 2), 980px);
       }
       .beer-list {
         width: min(100% - calc(var(--gutter) * 2), 1280px);
@@ -2057,20 +2056,10 @@
         <p class="lead" data-i18n="bieres.lead">Chacune dans son propre tempo. Petites séries, fermentation traditionnelle. <a class="inline-link" href="journal/le-houblon-et-nous-2026-06-03/">Le houblon garde aussi sa mémoire</a>.</p>
       </header>
       <figure class="bieres-image">
-        <picture>
-          <source type="image/webp"
-            srcset="src/assets/bieres-bouteilles-720w.webp 720w,
-                    src/assets/bieres-bouteilles-1280w.webp 1280w"
-            sizes="(max-width: 1280px) 100vw, 1080px">
-          <source type="image/jpeg"
-            srcset="src/assets/bieres-bouteilles-720w.jpg 720w,
-                    src/assets/bieres-bouteilles-1280w.jpg 1280w"
-            sizes="(max-width: 1280px) 100vw, 1080px">
-          <img src="src/assets/bieres-bouteilles-1280w.jpg"
-               width="1280" height="1024"
-               alt="Quatre bouteilles de la Brasserie du Château de Durbuy, présentées en avant-première"
-               loading="lazy" decoding="async">
-        </picture>
+        <img src="src/assets/bieres-flyer-a5.png"
+             width="1748" height="2480"
+             alt="Présentation A5 des quatre bières de la Brasserie du Château de Durbuy"
+             loading="lazy" decoding="async">
       </figure>
       <div class="beer-teaser">
         <ul class="beer-list">
