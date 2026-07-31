@@ -1,6 +1,91 @@
 {
   "articles": [
     {
+      "id": "lancement-gamme-chateau-durbuy-2026-07-30",
+      "title": "La gamme du ch?teau est lanc?e",
+      "date": "2026-07-30",
+      "language": "fr",
+      "status": "published",
+      "author": "Lars Kristel",
+      "lede": "Quatre bi?res ont ?t? d?voil?es au Ch?teau de Durbuy, avec Marckloff toujours en production.",
+      "body": [
+        "Le 30 juillet 2026, Le Soir a consacr? un article au lancement de la nouvelle gamme brass?e dans les anciennes ?curies du Ch?teau de Durbuy.",
+        "Brasserie du Ch?teau de Durbuy pr?sente d?sormais quatre bi?res : Blonde du Ch?teau ? 6,4 % alc., Bohemian Pilsner ? 4,5 % alc., Amber Ale ? 5,6 % alc. et IPA ? 5 % alc.",
+        "La production restera volontairement confidentielle, fid?le au rythme du lieu et ? l??chelle d?une microbrasserie install?e au domaine.",
+        "Marckloff reste ?galement en production. Cette bi?re historique demeure un rep?re important de la m?moire brassicole de Durbuy.",
+        "L?article rappelle aussi le lien avec les anciennes ?curies, la Ferme au Ch?ne et la tradition brassicole locale que Brasserie du Ch?teau de Durbuy prolonge aujourd?hui avec mesure."
+      ],
+      "heroImage": null,
+      "sourceUrl": "https://www.lesoir.be/762335/article/2026-07-30/une-nouvelle-gamme-de-bieres-lancee-au-chateau-de-durbuy",
+      "sourceLabel": "Lire l?article du Soir",
+      "tags": [
+        "Brasserie du Ch?teau de Durbuy",
+        "Microbrasserie ? Durbuy",
+        "Bi?res du Ch?teau de Durbuy"
+      ],
+      "createdAt": "2026-07-30T12:00:00.000+02:00",
+      "updatedAt": "2026-07-31T10:00:00.000+02:00",
+      "translations": {
+        "nl": {
+          "title": "De bieren van het kasteel zijn gelanceerd",
+          "lede": "Vier bieren werden voorgesteld op Ch?teau de Durbuy, terwijl Marckloff in productie blijft.",
+          "body": [
+            "Op 30 juli 2026 bracht Le Soir een artikel over de lancering van de nieuwe reeks die wordt gebrouwen in de voormalige stallen van Ch?teau de Durbuy.",
+            "Brasserie du Ch?teau de Durbuy stelt nu vier bieren voor: Blonde du Ch?teau van 6,4 % alc., Bohemian Pilsner van 4,5 % alc., Amber Ale van 5,6 % alc. en IPA van 5 % alc.",
+            "De productie blijft bewust beperkt, in het ritme van het domein en op de schaal van een microbrouwerij.",
+            "Ook Marckloff blijft in productie. Dit historische bier blijft een belangrijk herkenningspunt in het brouwgeheugen van Durbuy.",
+            "Het artikel herinnert ook aan de band met de voormalige stallen, de Ferme au Ch?ne en de lokale brouwtraditie die Brasserie du Ch?teau de Durbuy vandaag met mate voortzet."
+          ],
+          "sourceLabel": "Lees het artikel in Le Soir",
+          "tags": [
+            "Brasserie du Ch?teau de Durbuy",
+            "Microbrouwerij in Durbuy",
+            "Bieren van Ch?teau de Durbuy"
+          ]
+        },
+        "en": {
+          "title": "The ch?teau beers have been launched",
+          "lede": "Four beers have been unveiled at the Ch?teau de Durbuy, with Marckloff still in production.",
+          "body": [
+            "On 30 July 2026, Le Soir published an article on the launch of the new range brewed in the former stables of the Ch?teau de Durbuy.",
+            "Brasserie du Ch?teau de Durbuy now presents four beers: Blonde du Ch?teau at 6.4% alc., Bohemian Pilsner at 4.5% alc., Amber Ale at 5.6% alc. and IPA at 5% alc.",
+            "Production will remain deliberately limited, in keeping with the rhythm of the estate and the scale of a microbrewery.",
+            "Marckloff also remains in production. This historic beer remains an important marker of Durbuy?s brewing memory.",
+            "The article also recalls the link with the former stables, La Ferme au Ch?ne and the local brewing tradition that Brasserie du Ch?teau de Durbuy continues today with restraint."
+          ],
+          "sourceLabel": "Read the Le Soir article",
+          "tags": [
+            "Brasserie du Ch?teau de Durbuy",
+            "Microbrewery in Durbuy",
+            "Ch?teau de Durbuy beers"
+          ]
+        },
+        "de": {
+          "title": "Die Biere des Schlosses sind lanciert",
+          "lede": "Vier Biere wurden am Ch?teau de Durbuy vorgestellt; Marckloff bleibt weiterhin in Produktion.",
+          "body": [
+            "Am 30. Juli 2026 ver?ffentlichte Le Soir einen Artikel ?ber die Lancierung der neuen Reihe, die in den fr?heren Stallungen des Ch?teau de Durbuy gebraut wird.",
+            "Brasserie du Ch?teau de Durbuy stellt nun vier Biere vor: Blonde du Ch?teau mit 6,4 % alc., Bohemian Pilsner mit 4,5 % alc., Amber Ale mit 5,6 % alc. und IPA mit 5 % alc.",
+            "Die Produktion bleibt bewusst begrenzt, im Rhythmus des Anwesens und im Ma?stab einer Mikrobrauerei.",
+            "Auch Marckloff bleibt in Produktion. Dieses historische Bier bleibt ein wichtiger Bezugspunkt der Braugeschichte von Durbuy.",
+            "Der Artikel erinnert auch an die Verbindung zu den fr?heren Stallungen, zur Ferme au Ch?ne und zur lokalen Brautradition, die Brasserie du Ch?teau de Durbuy heute mit Zur?ckhaltung fortf?hrt."
+          ],
+          "sourceLabel": "Den Artikel in Le Soir lesen",
+          "tags": [
+            "Brasserie du Ch?teau de Durbuy",
+            "Mikrobrauerei in Durbuy",
+            "Biere des Ch?teau de Durbuy"
+          ]
+        }
+      },
+      "slugs": {
+        "fr": "lancement-gamme-chateau-durbuy-2026-07-30",
+        "nl": "lancering-bieren-chateau-durbuy-2026-07-30",
+        "en": "chateau-beers-launched-2026-07-30",
+        "de": "biere-des-schlosses-lanciert-2026-07-30"
+      }
+    },
+    {
       "id": "niet-alles-past-op-een-waarschuwing-2026-07-02",
       "title": "Tout ne tient pas dans un avertissement",
       "date": "2026-07-02",

@@ -117,6 +117,7 @@ function localizedArticle(article, lang) {
     lede: translation.lede || article.lede,
     body: translation.body || article.body || [],
     tags: translation.tags || article.tags || [],
+    sourceLabel: translation.sourceLabel || article.sourceLabel || article.sourceTitle || 'Lire la source',
     language: lang,
   };
 }
@@ -261,6 +262,9 @@ function articleCardHtml(article, lang) {
     .filter((paragraph) => paragraph && paragraph.trim())
     .map((paragraph) => `            <p>${escapeHtml(paragraph)}</p>`)
     .join('\n');
+  const sourceBlock = article.sourceUrl
+    ? `            <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(item.sourceLabel)}</a></p>`
+    : '';
   const tags = item.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
   return `        <article class="journal-article" lang="${lang}">
           <p class="article-date">— ${escapeHtml(formatDate(item.date, lang))} —</p>
@@ -268,6 +272,7 @@ function articleCardHtml(article, lang) {
           ${item.lede ? `<p class="article-lede">${escapeHtml(item.lede)}</p>` : ''}
           <div class="article-body">
 ${body}
+${sourceBlock}
           </div>
           ${tags ? `<p class="article-tags">${tags}</p>` : ''}
           <p class="article-sign">${SIGNATURE}</p>
@@ -467,7 +472,7 @@ function generateArticlePages(articles) {
         .replace(/<p class="article-date">[\s\S]*?<\/p>/, `<p class="article-date">— ${escapeHtml(formatDate(article.date, lang))} —</p>`)
         .replace(/<h1>[\s\S]*?<\/h1>/, `<h1>${escapeHtml(item.title)}</h1>`)
         .replace(/<p class="article-lede">[\s\S]*?<\/p>/, item.lede ? `<p class="article-lede">${escapeHtml(item.lede)}</p>` : '')
-        .replace(/<div class="article-body">[\s\S]*?<\/div>/, `<div class="article-body">\n${item.body.map((paragraph) => `          <p>${escapeHtml(paragraph)}</p>`).join('\n')}\n      </div>`)
+        .replace(/<div class="article-body">[\s\S]*?<\/div>/, `<div class="article-body">\n${item.body.map((paragraph) => `          <p>${escapeHtml(paragraph)}</p>`).join('\n')}${article.sourceUrl ? `\n          <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(item.sourceLabel)}</a></p>` : ''}\n      </div>`)
         .replace(/<p class="article-tags">[\s\S]*?<\/p>/, item.tags.length ? `<p class="article-tags">${item.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('')}</p>` : '')
         .replace(/<nav class="article-pager"[\s\S]*?<\/nav>/, articlePagerHtml(article, articles, lang))
         .replace(/<nav class="article-related"[\s\S]*?<\/nav>/, articleRelatedHtml(article, articles, lang));

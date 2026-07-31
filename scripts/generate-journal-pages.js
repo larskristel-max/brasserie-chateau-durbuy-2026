@@ -51,6 +51,9 @@ function articleCardHtml(article) {
     .filter((p) => p && p.trim())
     .map((p) => `            <p>${escapeHtml(p)}</p>`)
     .join('\n');
+  const sourceBlock = article.sourceUrl
+    ? `            <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(article.sourceLabel || article.sourceTitle || 'Lire la source')}</a></p>`
+    : '';
   const tagsBlock = (article.tags || [])
     .map((tag) => `<span>${escapeHtml(tag)}</span>`)
     .join('');
@@ -68,6 +71,7 @@ function articleCardHtml(article) {
 ${imageBlock}
           <div class="article-body">
 ${bodyBlock}
+${sourceBlock}
           </div>
           ${tagsBlock ? `<p class="article-tags">${tagsBlock}</p>` : ''}
           <p class="article-sign">${SIGNATURE}</p>
@@ -236,6 +240,9 @@ function articleHtml(article, allArticles) {
     .filter((p) => p && p.trim())
     .map((p) => `          <p>${escapeHtml(p)}</p>`)
     .join('\n');
+  const sourceBlock = article.sourceUrl
+    ? `          <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(article.sourceLabel || article.sourceTitle || 'Lire la source')}</a></p>`
+    : '';
   const tags = (article.tags || [])
     .map((tag) => `<span>${escapeHtml(tag)}</span>`)
     .join('');
@@ -400,6 +407,10 @@ function articleHtml(article, allArticles) {
       font-size: clamp(1.02rem, 0.45vw + 0.95rem, 1.18rem);
       line-height: 1.78;
     }
+    .article-source a {
+      color: var(--copper);
+      border-bottom: 1px solid rgba(140, 94, 51, 0.42);
+    }
     .article-tags {
       display: flex;
       flex-wrap: wrap;
@@ -487,6 +498,7 @@ function articleHtml(article, allArticles) {
       ${article.lede ? `<p class="article-lede">${escapeHtml(article.lede)}</p>` : ''}
       <div class="article-body">
 ${body}
+${sourceBlock}
       </div>
       ${tags ? `<p class="article-tags">${tags}</p>` : ''}
       <p class="article-sign">${SIGNATURE}</p>
