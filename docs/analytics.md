@@ -27,3 +27,17 @@ Search Console remains separate. It only shows Google Search clicks, impressions
 Cloudflare Web Analytics is active for `brasseriechateaudurbuy.be`.
 
 On 2026-06-03, Cloudflare showed 2 page views and 2 visits in the last 24 hours.
+
+## Search CTR Test Baseline - 2026-08-01
+
+Search Console data for 2026-07-02 through 2026-07-29:
+
+- 128 organic clicks.
+- 2,305 impressions.
+- 5.6% average CTR.
+- 6.0 average position.
+- `brasserie durbuy`: 223 impressions, 3 clicks, approximately 1.3% CTR.
+- French homepage: 1,699 impressions and 65 clicks.
+- Journal and individual article pages: 1 recorded click among the top reported pages.
+
+For the 21-day French homepage snippet test, target at least 3% CTR for `brasserie durbuy` while avoiding a material decline in average position. Site-wide 28-day targets are 175 or more organic clicks, at least 6.5% CTR, and at least 10 journal/article clicks.

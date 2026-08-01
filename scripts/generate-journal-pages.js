@@ -300,6 +300,7 @@ function articleHtml(article, allArticles) {
       name: BRAND,
     },
     keywords: article.tags || [],
+    ...(article.sourceUrl ? { citation: article.sourceUrl } : {}),
   };
   const structuredData = {
     '@context': 'https://schema.org',

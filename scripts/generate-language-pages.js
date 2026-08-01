@@ -20,8 +20,9 @@ const LOCALES = {
     html: 'fr',
     hreflang: 'fr-BE',
     ogLocale: 'fr_BE',
-    title: `${BRAND} | Microbrasserie à Durbuy`,
-    description: `Site officiel de la ${BRAND}, brasserie et microbrasserie à Durbuy installée dans les anciennes écuries du Château de Durbuy.`,
+    title: `${BRAND} | Site officiel`,
+    description: `Site officiel de la ${BRAND}, microbrasserie à Durbuy. Découvrez les bières du château, les visites sur rendez-vous et les points de vente.`,
+    imageAlt: `Le domaine du Château de Durbuy au bord de l'Ourthe.`,
     journalTitle: `Carnet du brasseur — ${BRAND}`,
     journalDescription: "Notes, observations et fragments d'une saison brassicole au domaine du Château de Durbuy.",
     journalChapter: '— Carnet du brasseur —',
@@ -41,6 +42,7 @@ const LOCALES = {
     ogLocale: 'nl_BE',
     title: `${BRAND} | Microbrouwerij in Durbuy`,
     description: `Officiële site van ${BRAND}, een brouwerij en microbrouwerij in Durbuy, gevestigd in de voormalige stallen van Château de Durbuy.`,
+    imageAlt: `Het domein van Château de Durbuy aan de Ourthe.`,
     journalTitle: `Journaal van het landgoed — ${BRAND}`,
     journalDescription: 'Aantekeningen, waarnemingen en fragmenten uit een brouwseizoen op het domein van Château de Durbuy.',
     journalChapter: '— Journaal van het landgoed —',
@@ -60,6 +62,7 @@ const LOCALES = {
     ogLocale: 'en_GB',
     title: `${BRAND} | Microbrewery in Durbuy`,
     description: `Official site of ${BRAND}, a brewery and microbrewery in Durbuy, set in the former stables of the Château de Durbuy.`,
+    imageAlt: `The Château de Durbuy estate beside the Ourthe.`,
     journalTitle: `The Estate Journal — ${BRAND}`,
     journalDescription: 'Notes, observations, and fragments from a brewing season at the Château de Durbuy estate.',
     journalChapter: '— Estate Journal —',
@@ -79,6 +82,7 @@ const LOCALES = {
     ogLocale: 'de_DE',
     title: `${BRAND} | Mikrobrauerei in Durbuy`,
     description: `Offizielle Website der ${BRAND}, einer Brauerei und Mikrobrauerei in Durbuy, in den früheren Stallungen des Château de Durbuy.`,
+    imageAlt: `Das Anwesen des Château de Durbuy an der Ourthe.`,
     journalTitle: `Notizen vom Anwesen — ${BRAND}`,
     journalDescription: 'Notizen, Beobachtungen und Fragmente einer Brausaison auf dem Anwesen des Château de Durbuy.',
     journalChapter: '— Notizen vom Anwesen —',
@@ -196,9 +200,12 @@ function replaceHeadBasics(html, locale, canonical, alternates) {
     .replace(/<meta property="og:locale" content="[^"]+" \/>/, `<meta property="og:locale" content="${locale.ogLocale}" />`)
     .replace(/<meta property="og:title" content="[^"]+" \/>/, `<meta property="og:title" content="${escapeHtml(locale.title)}" />`)
     .replace(/<meta property="og:description" content="[^"]+" \/>/, `<meta property="og:description" content="${escapeHtml(locale.description)}" />`)
+    .replace(/<meta property="og:image:alt" content="[^"]+" \/>/, `<meta property="og:image:alt" content="${escapeHtml(locale.imageAlt)}" />`)
     .replace(/<meta property="og:url" content="[^"]+" \/>/, `<meta property="og:url" content="${canonical}" />`)
     .replace(/<meta name="twitter:title" content="[^"]+" \/>/, `<meta name="twitter:title" content="${escapeHtml(locale.title)}" />`)
-    .replace(/<meta name="twitter:description" content="[^"]+" \/>/, `<meta name="twitter:description" content="${escapeHtml(locale.description)}" />`);
+    .replace(/<meta name="twitter:description" content="[^"]+" \/>/, `<meta name="twitter:description" content="${escapeHtml(locale.description)}" />`)
+    .replace(/<meta name="twitter:image:alt" content="[^"]+" \/>/, `<meta name="twitter:image:alt" content="${escapeHtml(locale.imageAlt)}" />`)
+    .replace(/("description":\s*)"[^"]*"/, (_match, prefix) => `${prefix}${JSON.stringify(locale.description)}`);
 }
 
 function adjustAssetPaths(html, prefix) {
@@ -357,6 +364,7 @@ function articleStructuredData(article, lang) {
         },
         about: { '@type': 'Brewery', '@id': `${SITE}/#brasserie`, name: BRAND },
         keywords: item.tags,
+        ...(article.sourceUrl ? { citation: article.sourceUrl } : {}),
       },
       {
         '@type': 'BreadcrumbList',

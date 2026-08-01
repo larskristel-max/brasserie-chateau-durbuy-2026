@@ -1,6 +1,6 @@
 # SEO / Visibility Notes
 
-Last updated: 2026-05-20
+Last updated: 2026-08-01
 
 ## Current Decisions
 
@@ -40,6 +40,7 @@ Last updated: 2026-05-20
 ## Metadata Policy
 
 - Homepage canonical, Open Graph, Twitter card, and JSON-LD should use the permanent domain.
+- From 2026-08-01, the French homepage runs a 21-day CTR test using `Brasserie du Château de Durbuy | Site officiel`; compare against the Search Console baseline in `docs/analytics.md` before retaining or reverting it.
 - Structured data should stay factual: name, description, address, public email, site URL, logo/image, and Instagram.
 - Do not add `openingHours`, reservation URLs, telephone numbers, product offers, beer names, ABVs, tasting notes, or event details until approved for public release.
 - Keep `index.html` and `redesign-template.html` byte-identical after metadata edits.
