@@ -23,8 +23,8 @@ const LOCALES = {
     title: `${BRAND} | Site officiel`,
     description: `Site officiel de la ${BRAND}, microbrasserie à Durbuy. Découvrez les bières du château, les visites sur rendez-vous et les points de vente.`,
     imageAlt: `Le domaine du Château de Durbuy au bord de l'Ourthe.`,
-    journalTitle: `Carnet du brasseur — ${BRAND}`,
-    journalDescription: "Notes, observations et fragments d'une saison brassicole au domaine du Château de Durbuy.",
+    journalTitle: `Carnet de la ${BRAND}`,
+    journalDescription: `Le carnet de la ${BRAND} : récits sur les bières, le brassage à Durbuy, le château et son histoire.`,
     journalChapter: '— Carnet du brasseur —',
     journalHeading: 'Le journal du domaine',
     journalLede: "Notes, observations et fragments d'une saison brassicole. Tenu au domaine.",
@@ -43,8 +43,8 @@ const LOCALES = {
     title: `${BRAND} | Microbrouwerij in Durbuy`,
     description: `Officiële site van ${BRAND}, een brouwerij en microbrouwerij in Durbuy, gevestigd in de voormalige stallen van Château de Durbuy.`,
     imageAlt: `Het domein van Château de Durbuy aan de Ourthe.`,
-    journalTitle: `Journaal van het landgoed — ${BRAND}`,
-    journalDescription: 'Aantekeningen, waarnemingen en fragmenten uit een brouwseizoen op het domein van Château de Durbuy.',
+    journalTitle: `Brouwerijjournaal | ${BRAND}`,
+    journalDescription: `Het journaal van ${BRAND}, met verhalen over de bieren, brouwen in Durbuy, het kasteel en zijn geschiedenis.`,
     journalChapter: '— Journaal van het landgoed —',
     journalHeading: 'Journaal van het landgoed',
     journalLede: 'Aantekeningen, waarnemingen en fragmenten uit een brouwseizoen, bijgehouden op het landgoed.',
@@ -63,8 +63,8 @@ const LOCALES = {
     title: `${BRAND} | Microbrewery in Durbuy`,
     description: `Official site of ${BRAND}, a brewery and microbrewery in Durbuy, set in the former stables of the Château de Durbuy.`,
     imageAlt: `The Château de Durbuy estate beside the Ourthe.`,
-    journalTitle: `The Estate Journal — ${BRAND}`,
-    journalDescription: 'Notes, observations, and fragments from a brewing season at the Château de Durbuy estate.',
+    journalTitle: `Durbuy Brewery Journal | ${BRAND}`,
+    journalDescription: `The journal of ${BRAND}: stories about its beers, brewing in Durbuy, the château and its brewing history.`,
     journalChapter: '— Estate Journal —',
     journalHeading: 'The Estate Journal',
     journalLede: 'Notes, observations, and fragments from a brewing season, kept at the estate.',
@@ -83,8 +83,8 @@ const LOCALES = {
     title: `${BRAND} | Mikrobrauerei in Durbuy`,
     description: `Offizielle Website der ${BRAND}, einer Brauerei und Mikrobrauerei in Durbuy, in den früheren Stallungen des Château de Durbuy.`,
     imageAlt: `Das Anwesen des Château de Durbuy an der Ourthe.`,
-    journalTitle: `Notizen vom Anwesen — ${BRAND}`,
-    journalDescription: 'Notizen, Beobachtungen und Fragmente einer Brausaison auf dem Anwesen des Château de Durbuy.',
+    journalTitle: `Brauerei-Journal | ${BRAND}`,
+    journalDescription: `Das Journal der ${BRAND}: Geschichten über ihre Biere, das Brauen in Durbuy, das Château und seine Braugeschichte.`,
     journalChapter: '— Notizen vom Anwesen —',
     journalHeading: 'Notizen vom Anwesen',
     journalLede: 'Notizen, Beobachtungen und Fragmente einer Brausaison, geführt auf dem Anwesen.',
@@ -441,9 +441,18 @@ function generateJournalPages(articles) {
   }
 }
 
-function updateFrenchJournalHreflang() {
+function updateFrenchJournalPage(articles) {
   const sourcePath = path.join(root, 'journal', 'index.html');
+  const locale = LOCALES.fr;
   let html = fs.readFileSync(sourcePath, 'utf8');
+  html = html
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(locale.journalTitle)}</title>`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(locale.journalDescription)}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${escapeHtml(locale.journalTitle)}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${escapeHtml(locale.journalDescription)}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${escapeHtml(locale.journalTitle)}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${escapeHtml(locale.journalDescription)}" />`)
+    .replace(new RegExp(`${JSONLD_START}[\\s\\S]*?${JSONLD_END}`), `${JSONLD_START}\n  <script type="application/ld+json">${JSON.stringify(journalStructuredData(articles, 'fr'))}</script>\n  ${JSONLD_END}`);
   html = html.replace(
     /<link rel="canonical" href="[^"]+" \/>[\s\S]*?(?=  <meta name="theme-color")/,
     `<link rel="canonical" href="${journalUrl('fr')}" />\n${alternateLinks(journalUrl)}\n`
@@ -489,11 +498,6 @@ function generateArticlePages(articles) {
       const outDir = path.join(root, lang, 'journal', articleSlug(article, lang));
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
-      if (article.id !== articleSlug(article, lang)) {
-        const legacyDir = path.join(root, lang, 'journal', article.id);
-        fs.mkdirSync(legacyDir, { recursive: true });
-        fs.writeFileSync(path.join(legacyDir, 'index.html'), redirectHtml(articleUrl(article, lang), item.title, lang), 'utf8');
-      }
     }
   }
 }
@@ -532,7 +536,7 @@ const articles = (data.articles || [])
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
 generateHomePages(articles);
-updateFrenchJournalHreflang();
+updateFrenchJournalPage(articles);
 generateJournalPages(articles);
 generateArticlePages(articles);
 updateFrenchArticleHreflang(articles);

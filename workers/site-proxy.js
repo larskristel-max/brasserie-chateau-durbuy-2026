@@ -3,6 +3,12 @@ const GITHUB_RAW_BASE =
 const CANONICAL_HOST = 'brasseriechateaudurbuy.be';
 const ORIGIN_HEADER = 'github-raw-gh-pages';
 const LEGACY_REDIRECTS = {
+  '/nl/journal/lancement-gamme-chateau-durbuy-2026-07-30/':
+    '/nl/journal/lancering-bieren-chateau-durbuy-2026-07-30/',
+  '/en/journal/lancement-gamme-chateau-durbuy-2026-07-30/':
+    '/en/journal/chateau-beers-launched-2026-07-30/',
+  '/de/journal/lancement-gamme-chateau-durbuy-2026-07-30/':
+    '/de/journal/biere-des-schlosses-lanciert-2026-07-30/',
   '/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/':
     '/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/',
   '/nl/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/':
