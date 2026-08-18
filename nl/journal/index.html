@@ -379,6 +379,45 @@
       text-align: center;
     }
 
+    .article-inline-image {
+      float: right;
+      width: min(34%, 14rem);
+      margin: 0.2rem 0 1.25rem 1.5rem;
+      font-style: normal;
+    }
+    .article-inline-image picture,
+    .article-inline-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-inline-image img {
+      filter: brightness(0.96) saturate(0.94) contrast(1.04);
+    }
+    .article-inline-image small {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--ink-fade);
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      font-style: normal;
+      line-height: 1.45;
+      letter-spacing: 0.04em;
+    }
+    .article-body::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media (max-width: 640px) {
+      .article-inline-image {
+        float: none;
+        width: min(100%, 20rem);
+        margin: 0 auto 1.4rem;
+      }
+    }
+
     .article-body {
       font-family: var(--serif);
       font-style: italic;
@@ -511,7 +550,7 @@
     }
   </style>
 <!-- generated-journal-jsonld:start -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Blog","@id":"https://brasseriechateaudurbuy.be/nl/journal/#blog","name":"Brouwerijjournaal | Brasserie du Château de Durbuy","description":"Het journaal van Brasserie du Château de Durbuy, met verhalen over de bieren, brouwen in Durbuy, het kasteel en zijn geschiedenis.","url":"https://brasseriechateaudurbuy.be/nl/journal/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","inLanguage":"nl-BE","publisher":{"@type":"Organization","@id":"https://brasseriechateaudurbuy.be/#brasserie","name":"Brasserie du Château de Durbuy","url":"https://brasseriechateaudurbuy.be","logo":{"@type":"ImageObject","url":"https://brasseriechateaudurbuy.be/src/assets/logo-crest.png"}},"about":{"@type":"Brewery","@id":"https://brasseriechateaudurbuy.be/#brasserie","name":"Brasserie du Château de Durbuy"},"blogPost":[{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/lancering-bieren-chateau-durbuy-2026-07-30/#article","headline":"Vier etiketten, één nieuw bier","url":"https://brasseriechateaudurbuy.be/nl/journal/lancering-bieren-chateau-durbuy-2026-07-30/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-07-30T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/#article","headline":"Niet alles past op een waarschuwing","url":"https://brasseriechateaudurbuy.be/nl/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-07-02T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/hop-en-wij-2026-06-03/#article","headline":"Hop en wij","url":"https://brasseriechateaudurbuy.be/nl/journal/hop-en-wij-2026-06-03/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-06-03T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/wanneer-graan-schaars-wordt-2026-05-26/#article","headline":"Wanneer graan schaars wordt","url":"https://brasseriechateaudurbuy.be/nl/journal/wanneer-graan-schaars-wordt-2026-05-26/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-26T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/nog-voor-het-definitieve-etiket-2026-05-20/#article","headline":"Nog vóór het definitieve etiket","url":"https://brasseriechateaudurbuy.be/nl/journal/nog-voor-het-definitieve-etiket-2026-05-20/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-20T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/marckloff-en-wij-2026-05-19/#article","headline":"Marckloff en wij","url":"https://brasseriechateaudurbuy.be/nl/journal/marckloff-en-wij-2026-05-19/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-19T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/de-voormalige-stallen-2026-05-18/#article","headline":"De voormalige stallen","url":"https://brasseriechateaudurbuy.be/nl/journal/de-voormalige-stallen-2026-05-18/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-18T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/een-bier-van-hier-2026-05-17/#article","headline":"Een bier van hier","url":"https://brasseriechateaudurbuy.be/nl/journal/een-bier-van-hier-2026-05-17/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-17T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}}]},{"@type":"BreadcrumbList","@id":"https://brasseriechateaudurbuy.be/nl/journal/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Startpagina","item":"https://brasseriechateaudurbuy.be/nl/"},{"@type":"ListItem","position":2,"name":"Journaal van het landgoed","item":"https://brasseriechateaudurbuy.be/nl/journal/"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Blog","@id":"https://brasseriechateaudurbuy.be/nl/journal/#blog","name":"Brouwerijjournaal | Brasserie du Château de Durbuy","description":"Het journaal van Brasserie du Château de Durbuy, met verhalen over de bieren, brouwen in Durbuy, het kasteel en zijn geschiedenis.","url":"https://brasseriechateaudurbuy.be/nl/journal/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","inLanguage":"nl-BE","publisher":{"@type":"Organization","@id":"https://brasseriechateaudurbuy.be/#brasserie","name":"Brasserie du Château de Durbuy","url":"https://brasseriechateaudurbuy.be","logo":{"@type":"ImageObject","url":"https://brasseriechateaudurbuy.be/src/assets/logo-crest.png"}},"about":{"@type":"Brewery","@id":"https://brasseriechateaudurbuy.be/#brasserie","name":"Brasserie du Château de Durbuy"},"blogPost":[{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/het-regent-weer-2026-08-18/#article","headline":"Het regent weer","url":"https://brasseriechateaudurbuy.be/nl/journal/het-regent-weer-2026-08-18/","image":"https://brasseriechateaudurbuy.be/src/assets/journal-rain-blonde-moody-1280w.webp","datePublished":"2026-08-18T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/lancering-bieren-chateau-durbuy-2026-07-30/#article","headline":"Vier etiketten, één nieuw bier","url":"https://brasseriechateaudurbuy.be/nl/journal/lancering-bieren-chateau-durbuy-2026-07-30/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-07-30T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/#article","headline":"Niet alles past op een waarschuwing","url":"https://brasseriechateaudurbuy.be/nl/journal/niet-alles-past-op-een-waarschuwing-2026-07-02/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-07-02T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/hop-en-wij-2026-06-03/#article","headline":"Hop en wij","url":"https://brasseriechateaudurbuy.be/nl/journal/hop-en-wij-2026-06-03/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-06-03T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/wanneer-graan-schaars-wordt-2026-05-26/#article","headline":"Wanneer graan schaars wordt","url":"https://brasseriechateaudurbuy.be/nl/journal/wanneer-graan-schaars-wordt-2026-05-26/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-26T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/nog-voor-het-definitieve-etiket-2026-05-20/#article","headline":"Nog vóór het definitieve etiket","url":"https://brasseriechateaudurbuy.be/nl/journal/nog-voor-het-definitieve-etiket-2026-05-20/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-20T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/marckloff-en-wij-2026-05-19/#article","headline":"Marckloff en wij","url":"https://brasseriechateaudurbuy.be/nl/journal/marckloff-en-wij-2026-05-19/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-19T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/de-voormalige-stallen-2026-05-18/#article","headline":"De voormalige stallen","url":"https://brasseriechateaudurbuy.be/nl/journal/de-voormalige-stallen-2026-05-18/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-18T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}},{"@type":"BlogPosting","@id":"https://brasseriechateaudurbuy.be/nl/journal/een-bier-van-hier-2026-05-17/#article","headline":"Een bier van hier","url":"https://brasseriechateaudurbuy.be/nl/journal/een-bier-van-hier-2026-05-17/","image":"https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg","datePublished":"2026-05-17T12:00:00+02:00","author":{"@type":"Person","name":"Lars Kristel"}}]},{"@type":"BreadcrumbList","@id":"https://brasseriechateaudurbuy.be/nl/journal/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Startpagina","item":"https://brasseriechateaudurbuy.be/nl/"},{"@type":"ListItem","position":2,"name":"Journaal van het landgoed","item":"https://brasseriechateaudurbuy.be/nl/journal/"}]}]}</script>
   <!-- generated-journal-jsonld:end -->
 </head>
 <body>
@@ -573,9 +612,27 @@
   <main class="journal-feed" id="journal-feed" aria-live="polite">
     <!-- generated-journal-feed:start -->
         <article class="journal-article" lang="nl">
+          <p class="article-date">— 18 augustus 2026 —</p>
+          <h2 class="article-title"><a href="./het-regent-weer-2026-08-18/">Het regent weer</a></h2>
+          <p class="article-lede">Het regent weer in Durbuy.</p>
+
+          <div class="article-body">
+            <p><span class="article-inline-image"><picture><source media="(max-width: 720px)" srcset="/src/assets/journal-rain-blonde-moody-720w.webp" /><img src="/src/assets/journal-rain-blonde-moody-1280w.webp" alt="Een fles Blonde du Château op door de regen donker geworden stenen." width="1280" height="1707" loading="lazy" decoding="async" /></picture><small>Blonde du Château na de regen, op de stenen in Durbuy.</small></span>Op de stenen, op de bladeren, op de paden die stoffig waren geworden. Na weken zonder regen klinkt dat geluid haast als iets uit een ver verleden. We luisteren er anders naar. Alsof de regen niet alleen uit de lucht valt, maar ons aan iets komt herinneren.</p>
+            <p>Een droge zomer verdwijnt niet met één regenbui. De aarde drinkt langzaam. De weiden behouden de kleur die de droogte hun heeft gegeven. De bossen blijven kwetsbaar. Overal in Wallonië wordt steeds vaker tot voorzichtigheid gemaand. Vuur lijkt soms iets van ver weg. Toch heeft het laten zien dat het ook in ons landschap kan toeslaan.</p>
+            <p>Voor een brouwerij is dat geen abstract onderwerp. Bier begint buiten. Vóór de ketel komt het water. Vóór het brouwsel komt het graan. Vóór de bitterheid komt de hop—een plant die gevoelig is voor de seizoenen, de zon en een tekort aan water.</p>
+            <p>Vroeger wist men dat ook, al sprak men er anders over. Een slecht seizoen had gevolgen voor de oogsten, de molens, de rivieren, de stallen en wat er op tafel kwam. Al in 1921 liet de grote droogte haar sporen na in België. De archieven vertellen over verschroeide velden, lage waterstanden en mislukte oogsten. Zelfs de hop kreeg het zwaar te verduren.</p>
+            <p>Vandaag brouwen we in een bijgebouw van het Château de Durbuy, met nauwkeurige apparatuur, werkbladen, genummerde batches en zorgvuldig beheerste handelingen. Maar niets daarvan maakt ons werkelijk los van de wereld buiten.</p>
+            <p>De regen keert terug. Hij maakt niet alles goed. Maar hij herinnert ons eraan waar bier zijn oorsprong vindt: op een plek, in een seizoen en in een bodem die onze aandacht verdient.</p>
+
+          </div>
+          <p class="article-tags"><span>Weer in Durbuy</span><span>Bier en landbouw</span><span>Belgische droogte van 1921</span></p>
+          <p class="article-sign">Lars — Brasserie du Château de Durbuy</p>
+        </article>
+        <article class="journal-article" lang="nl">
           <p class="article-date">— 30 juli 2026 —</p>
           <h2 class="article-title"><a href="./lancering-bieren-chateau-durbuy-2026-07-30/">Vier etiketten, één nieuw bier</a></h2>
           <p class="article-lede">Wat verandert, zie je eerst aan de flessen. Van de vier voorgestelde bieren is alleen Blonde du Château nieuw.</p>
+
           <div class="article-body">
             <p>Op 30 juli werden in Château de Durbuy vier flessen naast elkaar voorgesteld. Wie ze zo zag, kon denken aan een volledig nieuwe reeks. Dat is niet het geval.</p>
             <p>Bohemian Pilsner werd al gebrouwen. De IPA droeg vroeger de naam Sorachi Ace. Ook Amber Ale is vertrouwd: het is hetzelfde bier als Marckloff, onder een ander etiket. Alleen Blonde du Château, met 6,4 % alc., is een nieuw bier.</p>
@@ -592,6 +649,7 @@
           <p class="article-date">— 2 juli 2026 —</p>
           <h2 class="article-title"><a href="./niet-alles-past-op-een-waarschuwing-2026-07-02/">Niet alles past op een waarschuwing</a></h2>
           <p class="article-lede">Tussen genieten en overdaad zegt een waarschuwing niet alles wat een vak moet dragen.</p>
+
           <div class="article-body">
             <p>Toen ik las over de nieuwe regels rond alcoholreclame, bleef één zin hangen: alcohol schaadt de gezondheid. Voortaan moet die waarschuwing zichtbaar op alcoholreclame staan. Goed leesbaar, contrasterend, en groot genoeg om niet te worden weggemoffeld.</p>
             <p>Natuurlijk raakt zoiets ook een brouwerij. Niet alleen de affiches of de communicatie, maar het vak zelf. Het raakt het product in het glas, het café, de terrastafel, de manier waarop mensen samen iets drinken.</p>
@@ -611,6 +669,7 @@
           <p class="article-date">— 3 juni 2026 —</p>
           <h2 class="article-title"><a href="./hop-en-wij-2026-06-03/">Hop en wij</a></h2>
           <p class="article-lede">Wat een oude plant nog in een bier verandert.</p>
+
           <div class="article-body">
             <p>Wanneer ik een zak hop open, valt er altijd even stilte.</p>
             <p>Vandaag komt hij in pellets. We kiezen hem voor zijn bitterheid, zijn oliën, zijn geur. Aan het begin van het koken geeft hij bitterheid; later, soms koud, bewaart hij het aroma. Het is een technisch ingrediënt, maar kwetsbaar. Goed geplaatst geeft hij lengte aan het glas.</p>
@@ -626,6 +685,7 @@
           <p class="article-date">— 26 mei 2026 —</p>
           <h2 class="article-title"><a href="./wanneer-graan-schaars-wordt-2026-05-26/">Wanneer graan schaars wordt</a></h2>
           <p class="article-lede">Bij het voorbereiden van een nieuw brouwsel kan een klein tekort een ruwer verleden doen meeklinken.</p>
+
           <div class="article-body">
             <p>Ik bestel de granen, de mouten en de hoppen voor het volgende brouwsel. Geen groot gebaar: aantallen controleren, zakken voorzien, één soort terugvinden. En dan blijkt er soms iets te ontbreken.</p>
             <p>Vandaag blijft een niet-leverbare hop een beperkte hinder. We wachten, passen aan, schuiven de planning wat op. Het brouwsel verdwijnt er niet door. Toch brengt zo’n klein tekort je even terug naar een tijd waarin graan veel meer was dan een grondstof voor bier.</p>
@@ -643,6 +703,7 @@
           <p class="article-date">— 20 mei 2026 —</p>
           <h2 class="article-title"><a href="./nog-voor-het-definitieve-etiket-2026-05-20/">Nog vóór het definitieve etiket</a></h2>
           <p class="article-lede">Een etiket keur je niet alleen op een scherm goed.</p>
+
           <div class="article-body">
             <p>De voorbije dagen draaide het werk rond een bescheiden, maar beslissend object: het etiket. Voor een bier wordt voorgesteld, geschonken of gewoon op tafel gezet, moet dat kleine stuk papier precies goed zitten.</p>
             <p>Een eerste fysieke proef maakte enkele keuzes helder. Het gekozen papier was niet juist. Het formaat voelde te smal. Op het scherm leken bepaalde verhoudingen te werken; in de hand, op de fles, vroegen ze om iets anders.</p>
@@ -658,6 +719,7 @@
           <p class="article-date">— 19 mei 2026 —</p>
           <h2 class="article-title"><a href="./marckloff-en-wij-2026-05-19/">Marckloff en wij</a></h2>
           <p class="article-lede">Wat een oude naam nog kan doorgeven, zonder alles te hoeven zeggen.</p>
+
           <div class="article-body">
             <p>Onlangs kreeg ik een vraag: wat blijft er over van een man over wie we bijna niets weten?</p>
             <p>Philippe Marckloff brouwde rond 1560 in Durbuy. Hij woonde op de Ferme au Chêne, aan de toegang tot de stad. De archieven zijn dun: een naam, een datum, een locatie. Geen portret, geen recepten, geen getuigenis. Alleen het bewijs dat hij heeft bestaan.</p>
@@ -672,6 +734,7 @@
           <p class="article-date">— 18 mei 2026 —</p>
           <h2 class="article-title"><a href="./de-voormalige-stallen-2026-05-18/">De voormalige stallen</a></h2>
           <p class="article-lede">De brouwerij is ondergebracht in een gebouw dat nooit voor het geluid van kuipen werd bedacht.</p>
+
           <div class="article-body">
             <p>De voormalige stallen van Château de Durbuy zijn geen decor. Het zijn dienstgebouwen in steen, gemaakt om te dragen, te beschutten en de gang van de dagen op te vangen.</p>
             <p>De brouwerij heeft er haar plaats gevonden zonder uit te wissen wat het gebouw vóór haar was. Je voelt er nog de logica van de bijgebouwen: de nabijheid van het kasteel, de steen, de beheerste openingen, de directe verhouding tot het werk.</p>
@@ -686,6 +749,7 @@
           <p class="article-date">— 17 mei 2026 —</p>
           <h2 class="article-title"><a href="./een-bier-van-hier-2026-05-17/">Een bier van hier</a></h2>
           <p class="article-lede">In Durbuy moet het woord lokaal eenvoudig blijven.</p>
+
           <div class="article-body">
             <p>Ik ben wat wantrouwig tegenover grote woorden. Een lokaal bier hoeft niet bij elke slok een hele streek op te roepen. Het moet in de eerste plaats hier gemaakt zijn, met aandacht, in het werkelijke ritme van het domein.</p>
             <p>In Durbuy heeft dat ritme iets eigens. De stad is compact, mineraal, ingesloten tussen steen en Ourthe. Er wordt gewerkt dicht bij de muren, dicht bij het water, in licht dat met de seizoenen snel verandert.</p>
@@ -819,7 +883,19 @@
   }
 
   document.querySelectorAll('[data-lang]').forEach(btn => {
-    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      try {
+        localStorage.setItem(STORAGE_KEY, lang);
+        localStorage.removeItem(LEGACY_STORAGE_KEY);
+      } catch (e) { /* localStorage may be blocked */ }
+      const target = lang === 'fr' ? '/journal/' : `/${lang}/journal/`;
+      if (window.location.pathname !== target) {
+        window.location.assign(target);
+      } else {
+        applyLang(lang);
+      }
+    });
   });
 
   /* ────────────────────────────────────────────────────────────────
@@ -890,7 +966,8 @@
   }
 
   function articleUrl(article) {
-    return `./${encodeURIComponent(article.id)}/`;
+    const slug = article.slugs?.[currentLang] || article.id;
+    return `./${encodeURIComponent(slug)}/`;
   }
 
   function renderArticles(articles) {
@@ -902,11 +979,25 @@
         </div>`;
       return;
     }
-    const html = articles.map(sourceArticle => {
+    const visibleArticles = articles.filter(article =>
+      !Array.isArray(article.availableLanguages) || article.availableLanguages.includes(currentLang)
+    );
+    if (!visibleArticles.length) {
+      feedEl.innerHTML = `
+        <div class="state">
+          <span>${escapeHtml(I18N[currentLang]['journal.empty'])}</span>
+          <span class="state-hairline" aria-hidden="true"></span>
+        </div>`;
+      return;
+    }
+    const html = visibleArticles.map(sourceArticle => {
       const a = localizedArticle(sourceArticle);
       const dateLabel = formatDate(a.date);
       const caption = a.heroImageCaption || '';
-      const imageBlock = a.heroImage
+      const inlineImage = a.heroImage && a.heroImageLayout === 'inline-first'
+        ? `<span class="article-inline-image"><picture>${a.heroImageSmall ? `<source media="(max-width: 720px)" srcset="${escapeHtml(a.heroImageSmall)}" />` : ''}<img src="${escapeHtml(a.heroImage)}" alt="${escapeHtml(a.heroImageAlt || a.title)}" width="1280" height="1707" loading="lazy" decoding="async" /></picture>${caption ? `<small>${escapeHtml(caption)}</small>` : ''}</span>`
+        : '';
+      const imageBlock = a.heroImage && a.heroImageLayout !== 'inline-first'
         ? `<figure class="article-image">
              <img src="${escapeHtml(a.heroImage)}" alt="${escapeHtml(a.title)}" loading="lazy" />
              ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}
@@ -914,7 +1005,7 @@
         : '';
       const bodyBlock = (a.body || [])
         .filter(p => p && p.trim())
-        .map(p => `<p>${escapeHtml(p)}</p>`)
+        .map((p, index) => `<p>${index === 0 ? inlineImage : ''}${escapeHtml(p)}</p>`)
         .join('');
       const tagsBlock = (a.tags && a.tags.length)
         ? `<p class="article-tags">${a.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('')}</p>`

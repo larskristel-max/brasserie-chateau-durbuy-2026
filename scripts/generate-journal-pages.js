@@ -46,10 +46,20 @@ function formatDate(value) {
   }).format(d);
 }
 
+function absoluteAssetUrl(value) {
+  if (!value) return JOURNAL_IMAGE;
+  return String(value).startsWith('http')
+    ? String(value)
+    : `${SITE}${String(value).startsWith('/') ? '' : '/'}${value}`;
+}
+
 function articleCardHtml(article) {
+  const inlineImage = article.heroImage && article.heroImageLayout === 'inline-first'
+    ? `<span class="article-inline-image"><picture>${article.heroImageSmall ? `<source media="(max-width: 720px)" srcset="${escapeHtml(article.heroImageSmall)}" />` : ''}<img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(article.heroImageAlt || article.title)}" width="1280" height="1707" loading="lazy" decoding="async" /></picture>${article.heroImageCaption ? `<small>${escapeHtml(article.heroImageCaption)}</small>` : ''}</span>`
+    : '';
   const bodyBlock = (article.body || [])
     .filter((p) => p && p.trim())
-    .map((p) => `            <p>${escapeHtml(p)}</p>`)
+    .map((p, index) => `            <p>${index === 0 ? inlineImage : ''}${escapeHtml(p)}</p>`)
     .join('\n');
   const sourceBlock = article.sourceUrl
     ? `            <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(article.sourceLabel || article.sourceTitle || 'Lire la source')}</a></p>`
@@ -57,7 +67,7 @@ function articleCardHtml(article) {
   const tagsBlock = (article.tags || [])
     .map((tag) => `<span>${escapeHtml(tag)}</span>`)
     .join('');
-  const imageBlock = article.heroImage
+  const imageBlock = article.heroImage && article.heroImageLayout !== 'inline-first'
     ? `          <figure class="article-image">
             <img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(article.title)}" loading="lazy" decoding="async" />
             ${article.heroImageCaption ? `<figcaption>${escapeHtml(article.heroImageCaption)}</figcaption>` : ''}
@@ -76,6 +86,10 @@ ${sourceBlock}
           ${tagsBlock ? `<p class="article-tags">${tagsBlock}</p>` : ''}
           <p class="article-sign">${SIGNATURE}</p>
         </article>`;
+}
+
+function availableInLanguage(article, lang) {
+  return !Array.isArray(article.availableLanguages) || article.availableLanguages.includes(lang);
 }
 
 function articleUrl(article) {
@@ -161,7 +175,7 @@ function journalStructuredData(articles) {
           '@id': `${articleUrl(article)}#article`,
           headline: article.title,
           url: articleUrl(article),
-          image: JOURNAL_IMAGE,
+          image: absoluteAssetUrl(article.heroImage),
           datePublished: `${isoDate(article.date)}T12:00:00+02:00`,
           author: {
             '@type': 'Person',
@@ -236,9 +250,12 @@ function articleHtml(article, allArticles) {
   const url = articleUrl(article);
   const title = `${article.title} \u2014 Carnet du brasseur \u2014 ${BRAND}`;
   const description = article.lede || `Carnet du brasseur de la ${BRAND}.`;
+  const inlineImage = article.heroImage && article.heroImageLayout === 'inline-first'
+    ? `<span class="article-inline-image"><picture>${article.heroImageSmall ? `<source media="(max-width: 720px)" srcset="${escapeHtml(article.heroImageSmall)}" />` : ''}<img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(article.heroImageAlt || article.title)}" width="1280" height="1707" loading="eager" decoding="async" /></picture>${article.heroImageCaption ? `<small>${escapeHtml(article.heroImageCaption)}</small>` : ''}</span>`
+    : '';
   const body = (article.body || [])
     .filter((p) => p && p.trim())
-    .map((p) => `          <p>${escapeHtml(p)}</p>`)
+    .map((p, index) => `          <p>${index === 0 ? inlineImage : ''}${escapeHtml(p)}</p>`)
     .join('\n');
   const sourceBlock = article.sourceUrl
     ? `          <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(article.sourceLabel || article.sourceTitle || 'Lire la source')}</a></p>`
@@ -251,11 +268,22 @@ function articleHtml(article, allArticles) {
         <img src="../../src/assets/beer-label-ipa.png" alt="IPA" width="435" height="406" loading="lazy" decoding="async" />
       </div>`
     : '';
+  const heroImageBlock = article.heroImage && article.heroImageLayout !== 'inline-first'
+    ? `      <figure class="article-image">
+        <picture>
+          ${article.heroImageSmall ? `<source media="(max-width: 720px)" srcset="${escapeHtml(article.heroImageSmall)}" />` : ''}
+          <img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(article.heroImageAlt || article.title)}" width="1280" height="1707" loading="eager" decoding="async" />
+        </picture>
+        ${article.heroImageCaption ? `<figcaption>${escapeHtml(article.heroImageCaption)}</figcaption>` : ''}
+      </figure>`
+    : '';
   const tags = (article.tags || [])
     .map((tag) => `<span>${escapeHtml(tag)}</span>`)
     .join('');
   const datePublished = `${isoDate(article.date)}T12:00:00+02:00`;
   const dateModified = article.updatedAt || datePublished;
+  const socialImage = absoluteAssetUrl(article.heroImage);
+  const socialImageAlt = article.heroImageAlt || JOURNAL_IMAGE_ALT;
   const articleLd = {
     '@type': 'BlogPosting',
     '@id': `${url}#article`,
@@ -274,7 +302,7 @@ function articleHtml(article, allArticles) {
       name: 'Carnet du brasseur',
     },
     url,
-    image: JOURNAL_IMAGE,
+    image: socialImage,
     author: {
       '@type': 'Person',
       name: 'Lars Kristel',
@@ -328,15 +356,15 @@ function articleHtml(article, allArticles) {
   <meta property="og:title" content="${escapeHtml(title)}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
   <meta property="og:url" content="${escapeHtml(url)}" />
-  <meta property="og:image" content="${escapeHtml(JOURNAL_IMAGE)}" />
-  <meta property="og:image:alt" content="${escapeHtml(JOURNAL_IMAGE_ALT)}" />
+  <meta property="og:image" content="${escapeHtml(socialImage)}" />
+  <meta property="og:image:alt" content="${escapeHtml(socialImageAlt)}" />
   <meta property="article:published_time" content="${escapeHtml(datePublished)}" />
   <meta property="article:modified_time" content="${escapeHtml(dateModified)}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${escapeHtml(title)}" />
   <meta name="twitter:description" content="${escapeHtml(description)}" />
-  <meta name="twitter:image" content="${escapeHtml(JOURNAL_IMAGE)}" />
-  <meta name="twitter:image:alt" content="${escapeHtml(JOURNAL_IMAGE_ALT)}" />
+  <meta name="twitter:image" content="${escapeHtml(socialImage)}" />
+  <meta name="twitter:image:alt" content="${escapeHtml(socialImageAlt)}" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../src/assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../src/assets/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../src/assets/apple-touch-icon.png" />
@@ -405,6 +433,45 @@ function articleHtml(article, allArticles) {
       color: var(--ink-soft);
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
+    }
+    .article-image {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+    }
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-image figcaption {
+      margin-top: 0.75rem;
+      color: var(--ink-fade);
+      font-size: 0.68rem;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+    }
+    .article-inline-image {
+      float: right;
+      width: min(42%, 17rem);
+      margin: 0.2rem 0 1.4rem 1.7rem;
+    }
+    .article-inline-image picture,
+    .article-inline-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-inline-image small {
+      display: block;
+      margin-top: 0.55rem;
+      color: var(--ink-fade);
+      font-size: 0.62rem;
+      line-height: 1.45;
+      letter-spacing: 0.06em;
+    }
+    .article-body::after {
+      content: "";
+      display: table;
+      clear: both;
     }
     .article-labels {
       margin: 0 0 clamp(3rem, 6vw, 5rem);
@@ -502,6 +569,11 @@ function articleHtml(article, allArticles) {
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-inline-image {
+        float: none;
+        width: min(100%, 22rem);
+        margin: 0 0 1.5rem;
+      }
       .article-labels {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -523,6 +595,7 @@ function articleHtml(article, allArticles) {
       <h1>${escapeHtml(article.title)}</h1>
       ${article.lede ? `<p class="article-lede">${escapeHtml(article.lede)}</p>` : ''}
 ${labelGalleryBlock}
+${heroImageBlock}
       <div class="article-body">
 ${body}
 ${sourceBlock}
@@ -628,7 +701,7 @@ function relatedArticles(article, allArticles) {
 
 const data = JSON.parse(fs.readFileSync(feedPath, 'utf8'));
 const published = (data.articles || [])
-  .filter((article) => article.status === 'published')
+  .filter((article) => article.status === 'published' && availableInLanguage(article, 'fr'))
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
 removeGeneratedArticlePages();

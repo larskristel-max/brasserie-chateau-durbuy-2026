@@ -90,6 +90,7 @@ Current safe citation baseline: prefer the official site, the official fiche, th
 
 ## Journal Article URLs
 
+- Il Pleut De Nouveau: https://brasseriechateaudurbuy.be/journal/il-pleut-de-nouveau-2026-08-18/
 - Quatre étiquettes, une nouvelle bière: https://brasseriechateaudurbuy.be/journal/lancement-gamme-chateau-durbuy-2026-07-30/
 - Tout ne tient pas dans un avertissement: https://brasseriechateaudurbuy.be/journal/tout-ne-tient-pas-dans-un-avertissement-2026-07-02/
 - Le houblon, et nous: https://brasseriechateaudurbuy.be/journal/le-houblon-et-nous-2026-06-03/

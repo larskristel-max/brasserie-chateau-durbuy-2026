@@ -1,7 +1,7 @@
 const GITHUB_RAW_BASE =
-  'https://raw.githubusercontent.com/larskristel-max/brasserie-chateau-durbuy-2026/gh-pages';
+  'https://raw.githubusercontent.com/larskristel-max/brasserie-chateau-durbuy-2026/main';
 const CANONICAL_HOST = 'brasseriechateaudurbuy.be';
-const ORIGIN_HEADER = 'github-raw-gh-pages';
+const ORIGIN_HEADER = 'github-raw-main';
 const LEGACY_REDIRECTS = {
   '/nl/journal/lancement-gamme-chateau-durbuy-2026-07-30/':
     '/nl/journal/lancering-bieren-chateau-durbuy-2026-07-30/',
@@ -84,7 +84,7 @@ export default {
     const assetPath = assetPathFromUrl(url);
     if (!assetPath) return new Response('Not found', { status: 404 });
 
-    const upstreamUrl = `${GITHUB_RAW_BASE}/${assetPath}`;
+    const upstreamUrl = `${GITHUB_RAW_BASE}/${assetPath}?source=main`;
     const upstream = await fetch(upstreamUrl, {
       headers: {
         'User-Agent': 'brasserie-chateau-durbuy-site-proxy',

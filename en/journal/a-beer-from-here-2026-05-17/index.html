@@ -18,14 +18,14 @@
   <meta property="og:description" content="In Durbuy, the word local should stay simple." />
   <meta property="og:url" content="https://brasseriechateaudurbuy.be/en/journal/a-beer-from-here-2026-05-17/" />
   <meta property="og:image" content="https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg" />
-  <meta property="og:image:alt" content="Le domaine du Château de Durbuy au bord de l&#39;Ourthe." />
+  <meta property="og:image:alt" content="A Beer from Here" />
   <meta property="article:published_time" content="2026-05-17T12:00:00+02:00" />
   <meta property="article:modified_time" content="2026-05-27T10:45:00.000+02:00" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="A Beer from Here — The Estate Journal — Brasserie du Château de Durbuy" />
   <meta name="twitter:description" content="In Durbuy, the word local should stay simple." />
   <meta name="twitter:image" content="https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg" />
-  <meta name="twitter:image:alt" content="Le domaine du Château de Durbuy au bord de l&#39;Ourthe." />
+  <meta name="twitter:image:alt" content="A Beer from Here" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../../src/assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../../src/assets/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../../src/assets/apple-touch-icon.png" />
@@ -94,6 +94,45 @@
       color: var(--ink-soft);
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
+    }
+    .article-image {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+    }
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-image figcaption {
+      margin-top: 0.75rem;
+      color: var(--ink-fade);
+      font-size: 0.68rem;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+    }
+    .article-inline-image {
+      float: right;
+      width: min(42%, 17rem);
+      margin: 0.2rem 0 1.4rem 1.7rem;
+    }
+    .article-inline-image picture,
+    .article-inline-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-inline-image small {
+      display: block;
+      margin-top: 0.55rem;
+      color: var(--ink-fade);
+      font-size: 0.62rem;
+      line-height: 1.45;
+      letter-spacing: 0.06em;
+    }
+    .article-body::after {
+      content: "";
+      display: table;
+      clear: both;
     }
     .article-labels {
       margin: 0 0 clamp(3rem, 6vw, 5rem);
@@ -191,6 +230,11 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-inline-image {
+        float: none;
+        width: min(100%, 22rem);
+        margin: 0 0 1.5rem;
+      }
       .article-labels {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -212,6 +256,7 @@
       <h1>A Beer from Here</h1>
       <p class="article-lede">In Durbuy, the word local should stay simple.</p>
 
+
       <div class="article-body">
           <p>I am wary of grand words. A local beer does not need to summon an entire region with every sip. It must first be made here, with care, in the real rhythm of the estate.</p>
           <p>In Durbuy, that rhythm has its own character. The town is compact, mineral, held between stone and the Ourthe. Work happens close to the walls, close to the water, in a light that changes quickly with the seasons.</p>
@@ -227,9 +272,9 @@
     </nav>
     <nav class="article-related" aria-label="In the journal">
       <p>In the journal</p>
+      <a href="../its-raining-again-2026-08-18/">It’s Raining Again</a>
       <a href="../chateau-beers-launched-2026-07-30/">Four labels, one new beer</a>
       <a href="../not-everything-fits-on-a-warning-2026-07-02/">Not Everything Fits on a Warning</a>
-      <a href="../hops-and-us-2026-06-03/">Hops and Us</a>
     </nav>
   </main>
 </body>

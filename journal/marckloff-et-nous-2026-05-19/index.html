@@ -95,6 +95,45 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-image {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+    }
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-image figcaption {
+      margin-top: 0.75rem;
+      color: var(--ink-fade);
+      font-size: 0.68rem;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+    }
+    .article-inline-image {
+      float: right;
+      width: min(42%, 17rem);
+      margin: 0.2rem 0 1.4rem 1.7rem;
+    }
+    .article-inline-image picture,
+    .article-inline-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-inline-image small {
+      display: block;
+      margin-top: 0.55rem;
+      color: var(--ink-fade);
+      font-size: 0.62rem;
+      line-height: 1.45;
+      letter-spacing: 0.06em;
+    }
+    .article-body::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
     .article-labels {
       margin: 0 0 clamp(3rem, 6vw, 5rem);
       padding: clamp(1rem, 2vw, 1.5rem) 0;
@@ -191,6 +230,11 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-inline-image {
+        float: none;
+        width: min(100%, 22rem);
+        margin: 0 0 1.5rem;
+      }
       .article-labels {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -212,6 +256,7 @@
       <h1>Marckloff, et nous</h1>
       <p class="article-lede">Ce qu&#39;un nom ancien peut encore transmettre, sans tout dire.</p>
 
+
       <div class="article-body">
           <p>Une question m&#39;a été posée l&#39;autre jour : que garde-t-on d&#39;un homme dont on ne sait presque rien?</p>
           <p>Philippe Marckloff brassait à Durbuy vers 1560. Il vivait à la Ferme au Chêne, à l&#39;entrée de la ville. Les archives sont minces — un nom, une date, un lieu. Pas de portrait, pas de recettes, pas de témoignage. Juste l&#39;attestation qu&#39;il a existé.</p>
@@ -228,9 +273,9 @@
     </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
+      <a href="../il-pleut-de-nouveau-2026-08-18/">Il Pleut De Nouveau</a>
       <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">Quatre étiquettes, une nouvelle bière</a>
       <a href="../tout-ne-tient-pas-dans-un-avertissement-2026-07-02/">Tout ne tient pas dans un avertissement</a>
-      <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>
     </nav>
   </main>
 </body>

@@ -2,6 +2,106 @@
   "version": 1,
   "articles": [
     {
+      "id": "its-raining-again-2026-08-18",
+      "title": "Il Pleut De Nouveau",
+      "date": "2026-08-18",
+      "language": "fr",
+      "availableLanguages": [
+        "fr",
+        "en",
+        "nl",
+        "de"
+      ],
+      "status": "published",
+      "author": "Lars Kristel",
+      "lede": "Il pleut de nouveau sur Durbuy.",
+      "body": [
+        "Sur les pierres, sur les feuilles, sur les chemins qui avaient pris la poussière. Après des semaines sèches, ce bruit paraît presque ancien. On l’écoute autrement. Comme si la pluie ne tombait pas seulement du ciel, mais venait rappeler quelque chose.",
+        "Un été sec ne disparaît pas avec une averse. La terre boit lentement. Les prairies gardent leur couleur. Les bois restent fragiles. Dans toute la Wallonie, les appels à la prudence se sont multipliés. Le feu, que l’on croit parfois loin d’ici, a montré qu’il pouvait trouver sa place dans nos paysages.",
+        "Pour une brasserie, ce n’est pas un sujet abstrait. La bière commence dehors. Avant la cuve, il y a l’eau. Avant le brassin, il y a le grain. Avant l’amertume, il y a le houblon, plante sensible aux saisons, au soleil, au manque d’eau.",
+        "Les anciens le savaient sans employer nos mots. Une mauvaise saison touchait les récoltes, les moulins, les rivières, les étables, les tables. En 1921 déjà, la grande sécheresse avait marqué la Belgique. Les archives parlent de champs brûlés, de cours d’eau trop bas, de récoltes perdues. Même le houblon avait souffert.",
+        "Aujourd’hui, dans la dépendance du Château de Durbuy, nous brassons avec des instruments précis, des fiches, des lots, des gestes maîtrisés. Mais rien de tout cela ne nous sépare vraiment du dehors.",
+        "La pluie revient. Elle ne répare pas tout. Mais elle rappelle d’où vient la bière: d’un lieu, d’une saison, d’une terre qu’il faut regarder avec attention."
+      ],
+      "heroImage": "/src/assets/journal-rain-blonde-moody-1280w.webp",
+      "heroImageSmall": "/src/assets/journal-rain-blonde-moody-720w.webp",
+      "heroImageLayout": "inline-first",
+      "heroImageAlt": "Une bouteille de Blonde du Château sur des pierres assombries par la pluie.",
+      "heroImageCaption": "Blonde du Château après la pluie, sur les pierres de Durbuy.",
+      "tags": [
+        "Météo à Durbuy",
+        "Bière et agriculture",
+        "Sécheresse belge de 1921"
+      ],
+      "createdAt": "2026-08-18T12:00:00.000+02:00",
+      "updatedAt": "2026-08-18T12:00:00.000+02:00",
+      "translations": {
+        "en": {
+          "title": "It’s Raining Again",
+          "lede": "It is raining again in Durbuy.",
+          "body": [
+            "On the stones, on the leaves, on the paths that had turned dusty. After weeks without rain, the sound seems almost ancient. We listen to it differently. As though the rain were not simply falling from the sky, but had come to remind us of something.",
+            "A dry summer does not disappear with a single shower. The earth drinks slowly. The meadows keep the colour the drought has given them. The woods remain fragile. Across Wallonia, calls for caution have grown more frequent. Fire, which can sometimes seem far removed from here, has shown that it can take hold in our landscapes too.",
+            "For a brewery, this is not an abstract concern. Beer begins outdoors. Before the kettle comes water. Before the brew comes grain. Before the bitterness come the hops—a crop sensitive to the seasons, the sun, and a lack of water.",
+            "Earlier generations knew this too, even if they spoke of it differently. A bad season affected the harvests, the mills, the rivers, the stables, and the tables. As early as 1921, the great drought left its mark on Belgium. The archives tell of scorched fields, rivers running low, and harvests lost. Even the hops suffered.",
+            "Today, in an outbuilding of the Château de Durbuy, we brew with precise instruments, production records, numbered batches, and well-practised methods. But none of this truly separates us from the world outside.",
+            "The rain returns. It cannot put everything right. But it reminds us where beer comes from: a place, a season, and a land that deserves our close attention."
+          ],
+          "heroImageAlt": "A bottle of Blonde du Château lying on rain-darkened stones.",
+          "heroImageCaption": "Blonde du Château after the rain, on the stones at Durbuy.",
+          "tags": [
+            "Durbuy weather",
+            "Beer and agriculture",
+            "Belgian drought of 1921"
+          ]
+        },
+        "nl": {
+          "title": "Het regent weer",
+          "lede": "Het regent weer in Durbuy.",
+          "body": [
+            "Op de stenen, op de bladeren, op de paden die stoffig waren geworden. Na weken zonder regen klinkt dat geluid haast als iets uit een ver verleden. We luisteren er anders naar. Alsof de regen niet alleen uit de lucht valt, maar ons aan iets komt herinneren.",
+            "Een droge zomer verdwijnt niet met één regenbui. De aarde drinkt langzaam. De weiden behouden de kleur die de droogte hun heeft gegeven. De bossen blijven kwetsbaar. Overal in Wallonië wordt steeds vaker tot voorzichtigheid gemaand. Vuur lijkt soms iets van ver weg. Toch heeft het laten zien dat het ook in ons landschap kan toeslaan.",
+            "Voor een brouwerij is dat geen abstract onderwerp. Bier begint buiten. Vóór de ketel komt het water. Vóór het brouwsel komt het graan. Vóór de bitterheid komt de hop—een plant die gevoelig is voor de seizoenen, de zon en een tekort aan water.",
+            "Vroeger wist men dat ook, al sprak men er anders over. Een slecht seizoen had gevolgen voor de oogsten, de molens, de rivieren, de stallen en wat er op tafel kwam. Al in 1921 liet de grote droogte haar sporen na in België. De archieven vertellen over verschroeide velden, lage waterstanden en mislukte oogsten. Zelfs de hop kreeg het zwaar te verduren.",
+            "Vandaag brouwen we in een bijgebouw van het Château de Durbuy, met nauwkeurige apparatuur, werkbladen, genummerde batches en zorgvuldig beheerste handelingen. Maar niets daarvan maakt ons werkelijk los van de wereld buiten.",
+            "De regen keert terug. Hij maakt niet alles goed. Maar hij herinnert ons eraan waar bier zijn oorsprong vindt: op een plek, in een seizoen en in een bodem die onze aandacht verdient."
+          ],
+          "heroImageAlt": "Een fles Blonde du Château op door de regen donker geworden stenen.",
+          "heroImageCaption": "Blonde du Château na de regen, op de stenen in Durbuy.",
+          "tags": [
+            "Weer in Durbuy",
+            "Bier en landbouw",
+            "Belgische droogte van 1921"
+          ]
+        },
+        "de": {
+          "title": "Es regnet wieder",
+          "lede": "Es regnet wieder in Durbuy.",
+          "body": [
+            "Auf die Steine, auf die Blätter, auf die Wege, die staubig geworden sind. Nach Wochen ohne Regen klingt dieses Geräusch beinahe wie aus einer anderen Zeit. Wir hören anders hin. Als fiele der Regen nicht nur vom Himmel, sondern wäre gekommen, um uns an etwas zu erinnern.",
+            "Ein trockener Sommer verschwindet nicht mit einem einzigen Regenschauer. Die Erde trinkt langsam. Die Wiesen behalten die Farbe der Trockenheit. Die Wälder bleiben verletzlich. In ganz Wallonien wird immer häufiger zur Vorsicht gemahnt. Das Feuer, das man manchmal weit entfernt von hier wähnt, hat gezeigt, dass es auch unsere Landschaften erfassen kann.",
+            "Für eine Brauerei ist das keine abstrakte Frage. Bier beginnt draußen. Vor dem Kessel kommt das Wasser. Vor dem Sud kommt das Getreide. Vor der Bitterkeit kommt der Hopfen—eine Pflanze, die empfindlich auf die Jahreszeiten, die Sonne und Wassermangel reagiert.",
+            "Frühere Generationen wussten das ebenfalls, auch wenn sie anders darüber sprachen. Eine schlechte Saison traf die Ernten, die Mühlen, die Flüsse, die Ställe und die Tische. Schon 1921 hinterließ die große Dürre ihre Spuren in Belgien. Die Archive berichten von verbrannten Feldern, niedrigen Wasserständen und verlorenen Ernten. Selbst der Hopfen litt darunter.",
+            "Heute brauen wir in einem Nebengebäude des Château de Durbuy, mit präzisen Instrumenten, Arbeitsblättern, nummerierten Chargen und eingeübten Handgriffen. Doch all das trennt uns nicht wirklich von der Welt draußen.",
+            "Der Regen kehrt zurück. Er macht nicht alles wieder gut. Aber er erinnert uns daran, dass Bier immer an einem Ort, in einer Jahreszeit und auf einem Boden entsteht, der unsere Aufmerksamkeit braucht."
+          ],
+          "heroImageAlt": "Eine Flasche Blonde du Château auf regennassen, dunklen Steinen.",
+          "heroImageCaption": "Blonde du Château nach dem Regen, auf den Steinen in Durbuy.",
+          "tags": [
+            "Wetter in Durbuy",
+            "Bier und Landwirtschaft",
+            "Belgische Dürre von 1921"
+          ]
+        }
+      },
+      "slugs": {
+        "fr": "il-pleut-de-nouveau-2026-08-18",
+        "en": "its-raining-again-2026-08-18",
+        "nl": "het-regent-weer-2026-08-18",
+        "de": "es-regnet-wieder-2026-08-18"
+      }
+    },
+    {
       "id": "lancement-gamme-chateau-durbuy-2026-07-30",
       "title": "Quatre étiquettes, une nouvelle bière",
       "date": "2026-07-30",
@@ -49,7 +149,7 @@
         },
         "en": {
           "title": "Four labels, one new beer",
-          "lede": "The change is first visible on the bottles. Of the four beers presented, only Blonde du Château is new.",
+          "lede": "Three established beers now share a new visual identity. Only Blonde du Château is new; Marckloff remains in production under both names.",
           "body": [
             "On 30 July, four bottles were presented side by side at the Château de Durbuy. Seen together, they might have suggested an entirely new range. That is not the case.",
             "Bohemian Pilsner was already being brewed. The IPA was previously known as Sorachi Ace. Amber Ale, too, is familiar: it is the same beer as Marckloff, under another label. Only Blonde du Château, at 6.4% alc., is a new beer.",

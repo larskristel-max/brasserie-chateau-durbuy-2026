@@ -18,14 +18,14 @@
   <meta property="og:description" content="In Durbuy sollte das Wort „lokal“ einfach bleiben." />
   <meta property="og:url" content="https://brasseriechateaudurbuy.be/de/journal/ein-bier-von-hier-2026-05-17/" />
   <meta property="og:image" content="https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg" />
-  <meta property="og:image:alt" content="Le domaine du Château de Durbuy au bord de l&#39;Ourthe." />
+  <meta property="og:image:alt" content="Ein Bier von hier" />
   <meta property="article:published_time" content="2026-05-17T12:00:00+02:00" />
   <meta property="article:modified_time" content="2026-05-27T10:45:00.000+02:00" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ein Bier von hier — Notizen vom Anwesen — Brasserie du Château de Durbuy" />
   <meta name="twitter:description" content="In Durbuy sollte das Wort „lokal“ einfach bleiben." />
   <meta name="twitter:image" content="https://brasseriechateaudurbuy.be/src/assets/hero-chateau-1280w.jpg" />
-  <meta name="twitter:image:alt" content="Le domaine du Château de Durbuy au bord de l&#39;Ourthe." />
+  <meta name="twitter:image:alt" content="Ein Bier von hier" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../../src/assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../../src/assets/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../../src/assets/apple-touch-icon.png" />
@@ -94,6 +94,45 @@
       color: var(--ink-soft);
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
+    }
+    .article-image {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+    }
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-image figcaption {
+      margin-top: 0.75rem;
+      color: var(--ink-fade);
+      font-size: 0.68rem;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+    }
+    .article-inline-image {
+      float: right;
+      width: min(42%, 17rem);
+      margin: 0.2rem 0 1.4rem 1.7rem;
+    }
+    .article-inline-image picture,
+    .article-inline-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-inline-image small {
+      display: block;
+      margin-top: 0.55rem;
+      color: var(--ink-fade);
+      font-size: 0.62rem;
+      line-height: 1.45;
+      letter-spacing: 0.06em;
+    }
+    .article-body::after {
+      content: "";
+      display: table;
+      clear: both;
     }
     .article-labels {
       margin: 0 0 clamp(3rem, 6vw, 5rem);
@@ -191,6 +230,11 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-inline-image {
+        float: none;
+        width: min(100%, 22rem);
+        margin: 0 0 1.5rem;
+      }
       .article-labels {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -212,6 +256,7 @@
       <h1>Ein Bier von hier</h1>
       <p class="article-lede">In Durbuy sollte das Wort „lokal“ einfach bleiben.</p>
 
+
       <div class="article-body">
           <p>Großen Worten begegne ich mit einer gewissen Vorsicht. Ein lokales Bier muss nicht mit jedem Schluck eine ganze Region erzählen. Zuerst muss es hier gemacht sein, mit Sorgfalt, im wirklichen Rhythmus des Ortes.</p>
           <p>In Durbuy hat dieser Rhythmus seinen eigenen Charakter. Die Stadt ist dicht, steinern, zwischen Fels und Ourthe zusammengerückt. Man arbeitet nahe an den Mauern, nahe am Wasser, in einem Licht, das sich mit den Jahreszeiten rasch verändert.</p>
@@ -227,9 +272,9 @@
     </nav>
     <nav class="article-related" aria-label="In den Notizen">
       <p>In den Notizen</p>
+      <a href="../es-regnet-wieder-2026-08-18/">Es regnet wieder</a>
       <a href="../biere-des-schlosses-lanciert-2026-07-30/">Vier Etiketten, ein neues Bier</a>
       <a href="../nicht-alles-passt-in-einen-warnhinweis-2026-07-02/">Nicht alles passt in einen Warnhinweis</a>
-      <a href="../der-hopfen-und-wir-2026-06-03/">Der Hopfen und wir</a>
     </nav>
   </main>
 </body>

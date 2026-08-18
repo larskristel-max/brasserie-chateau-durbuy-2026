@@ -95,6 +95,45 @@
       font-size: clamp(1.15rem, 1.2vw, 1.35rem);
       line-height: 1.65;
     }
+    .article-image {
+      margin: 0 0 clamp(3rem, 6vw, 5rem);
+    }
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-image figcaption {
+      margin-top: 0.75rem;
+      color: var(--ink-fade);
+      font-size: 0.68rem;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+    }
+    .article-inline-image {
+      float: right;
+      width: min(42%, 17rem);
+      margin: 0.2rem 0 1.4rem 1.7rem;
+    }
+    .article-inline-image picture,
+    .article-inline-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-inline-image small {
+      display: block;
+      margin-top: 0.55rem;
+      color: var(--ink-fade);
+      font-size: 0.62rem;
+      line-height: 1.45;
+      letter-spacing: 0.06em;
+    }
+    .article-body::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
     .article-labels {
       margin: 0 0 clamp(3rem, 6vw, 5rem);
       padding: clamp(1rem, 2vw, 1.5rem) 0;
@@ -191,6 +230,11 @@
       text-decoration-thickness: 1px;
     }
     @media (max-width: 640px) {
+      .article-inline-image {
+        float: none;
+        width: min(100%, 22rem);
+        margin: 0 0 1.5rem;
+      }
       .article-labels {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -212,6 +256,7 @@
       <h1>Quand le grain manque</h1>
       <p class="article-lede">En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.</p>
 
+
       <div class="article-body">
           <p>Je suis en train de commander les grains, les malts, les houblons du prochain brassin. Rien de spectaculaire : des lignes à vérifier, des sacs à prévoir, une variété à retrouver. Et puis, parfois, une chose manque.</p>
           <p>Aujourd&#39;hui, l&#39;absence d&#39;un houblon est une contrariété très relative. On attend, on adapte, on décale. Le brassin ne disparaît pas pour autant. Mais ce petit manque ramène à une époque où le grain n&#39;était pas seulement une matière première pour brasser.</p>
@@ -231,9 +276,9 @@
     </nav>
     <nav class="article-related" aria-label="Articles liés">
       <p>Dans le carnet</p>
+      <a href="../il-pleut-de-nouveau-2026-08-18/">Il Pleut De Nouveau</a>
       <a href="../lancement-gamme-chateau-durbuy-2026-07-30/">Quatre étiquettes, une nouvelle bière</a>
       <a href="../tout-ne-tient-pas-dans-un-avertissement-2026-07-02/">Tout ne tient pas dans un avertissement</a>
-      <a href="../le-houblon-et-nous-2026-06-03/">Le houblon, et nous</a>
     </nav>
   </main>
 </body>

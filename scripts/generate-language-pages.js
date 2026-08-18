@@ -113,6 +113,13 @@ function isoDate(value) {
   return String(value || '2026-05-27').slice(0, 10);
 }
 
+function absoluteAssetUrl(value) {
+  if (!value) return JOURNAL_IMAGE;
+  return String(value).startsWith('http')
+    ? String(value)
+    : `${SITE}${String(value).startsWith('/') ? '' : '/'}${value}`;
+}
+
 function localizedArticle(article, lang) {
   const translation = article.translations?.[lang] || {};
   return {
@@ -122,8 +129,14 @@ function localizedArticle(article, lang) {
     body: translation.body || article.body || [],
     tags: translation.tags || article.tags || [],
     sourceLabel: translation.sourceLabel || article.sourceLabel || article.sourceTitle || 'Lire la source',
+    heroImageCaption: translation.heroImageCaption || article.heroImageCaption || '',
+    heroImageAlt: translation.heroImageAlt || article.heroImageAlt || translation.title || article.title,
     language: lang,
   };
+}
+
+function availableInLanguage(article, lang) {
+  return !Array.isArray(article.availableLanguages) || article.availableLanguages.includes(lang);
 }
 
 function homeUrl(lang) {
@@ -184,10 +197,10 @@ function relatedArticles(article, allArticles) {
     .slice(0, 3);
 }
 
-function alternateLinks(urlFactory) {
+function alternateLinks(urlFactory, languages = LANGUAGE_KEYS, defaultLanguage = 'fr') {
   return [
-    ...LANGUAGE_KEYS.map((lang) => `  <link rel="alternate" hreflang="${LOCALES[lang].hreflang}" href="${urlFactory(lang)}" />`),
-    `  <link rel="alternate" hreflang="x-default" href="${urlFactory('fr')}" />`,
+    ...languages.map((lang) => `  <link rel="alternate" hreflang="${LOCALES[lang].hreflang}" href="${urlFactory(lang)}" />`),
+    `  <link rel="alternate" hreflang="x-default" href="${urlFactory(defaultLanguage)}" />`,
   ].join('\n');
 }
 
@@ -265,18 +278,31 @@ function formatDate(value, lang) {
 
 function articleCardHtml(article, lang) {
   const item = localizedArticle(article, lang);
+  const inlineImage = article.heroImage && article.heroImageLayout === 'inline-first'
+    ? `<span class="article-inline-image"><picture>${article.heroImageSmall ? `<source media="(max-width: 720px)" srcset="${escapeHtml(article.heroImageSmall)}" />` : ''}<img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(item.heroImageAlt)}" width="1280" height="1707" loading="lazy" decoding="async" /></picture>${item.heroImageCaption ? `<small>${escapeHtml(item.heroImageCaption)}</small>` : ''}</span>`
+    : '';
   const body = item.body
     .filter((paragraph) => paragraph && paragraph.trim())
-    .map((paragraph) => `            <p>${escapeHtml(paragraph)}</p>`)
+    .map((paragraph, index) => `            <p>${index === 0 ? inlineImage : ''}${escapeHtml(paragraph)}</p>`)
     .join('\n');
   const sourceBlock = article.sourceUrl
     ? `            <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(item.sourceLabel)}</a></p>`
     : '';
   const tags = item.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
+  const imageBlock = article.heroImage && article.heroImageLayout !== 'inline-first'
+    ? `          <figure class="article-image">
+            <picture>
+              ${article.heroImageSmall ? `<source media="(max-width: 720px)" srcset="${escapeHtml(article.heroImageSmall)}" />` : ''}
+              <img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(item.heroImageAlt)}" width="1280" height="1707" loading="lazy" decoding="async" />
+            </picture>
+            ${item.heroImageCaption ? `<figcaption>${escapeHtml(item.heroImageCaption)}</figcaption>` : ''}
+          </figure>`
+    : '';
   return `        <article class="journal-article" lang="${lang}">
           <p class="article-date">— ${escapeHtml(formatDate(item.date, lang))} —</p>
           <h2 class="article-title"><a href="./${encodeURIComponent(articleSlug(article, lang))}/">${escapeHtml(item.title)}</a></h2>
           ${item.lede ? `<p class="article-lede">${escapeHtml(item.lede)}</p>` : ''}
+${imageBlock}
           <div class="article-body">
 ${body}
 ${sourceBlock}
@@ -314,7 +340,7 @@ function journalStructuredData(articles, lang) {
             '@id': `${articleUrl(article, lang)}#article`,
             headline: item.title,
             url: articleUrl(article, lang),
-            image: JOURNAL_IMAGE,
+            image: absoluteAssetUrl(article.heroImage),
             datePublished: `${isoDate(article.date)}T12:00:00+02:00`,
             author: { '@type': 'Person', name: 'Lars Kristel' },
           };
@@ -349,7 +375,7 @@ function articleStructuredData(article, lang) {
         mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl(article, lang) },
         isPartOf: { '@type': 'Blog', '@id': `${journalUrl(lang)}#blog`, name: locale.journalHeading },
         url: articleUrl(article, lang),
-        image: JOURNAL_IMAGE,
+        image: absoluteAssetUrl(article.heroImage),
         author: {
           '@type': 'Person',
           name: 'Lars Kristel',
@@ -419,15 +445,16 @@ function generateJournalPages(articles) {
   const source = fs.readFileSync(path.join(root, 'journal', 'index.html'), 'utf8');
   for (const lang of TRANSLATED_KEYS) {
     const locale = LOCALES[lang];
+    const languageArticles = articles.filter((article) => availableInLanguage(article, lang));
     let html = replaceHeadBasics(source, {
       ...locale,
       title: locale.journalTitle,
       description: locale.journalDescription,
     }, journalUrl(lang), alternateLinks(journalUrl));
 
-    const feed = `${FEED_START}\n${articles.map((article) => articleCardHtml(article, lang)).join('\n')}\n${FEED_END}`;
+    const feed = `${FEED_START}\n${languageArticles.map((article) => articleCardHtml(article, lang)).join('\n')}\n${FEED_END}`;
     html = html.replace(new RegExp(`${FEED_START}[\\s\\S]*?${FEED_END}`), feed);
-    html = html.replace(new RegExp(`${JSONLD_START}[\\s\\S]*?${JSONLD_END}`), `${JSONLD_START}\n  <script type="application/ld+json">${JSON.stringify(journalStructuredData(articles, lang))}</script>\n  ${JSONLD_END}`);
+    html = html.replace(new RegExp(`${JSONLD_START}[\\s\\S]*?${JSONLD_END}`), `${JSONLD_START}\n  <script type="application/ld+json">${JSON.stringify(journalStructuredData(languageArticles, lang))}</script>\n  ${JSONLD_END}`);
     html = html.replace(/data-i18n="journal\.chapter">[\s\S]*?<\/p>/, `data-i18n="journal.chapter">${escapeHtml(locale.journalChapter)}</p>`);
     html = html.replace(/data-i18n="journal\.title">[\s\S]*?<\/h1>/, `data-i18n="journal.title">${escapeHtml(locale.journalHeading)}</h1>`);
     html = html.replace(/data-i18n="journal\.lede">[\s\S]*?<\/p>/, `data-i18n="journal.lede">${escapeHtml(locale.journalLede)}</p>`);
@@ -437,7 +464,7 @@ function generateJournalPages(articles) {
     const outDir = path.join(root, lang, 'journal');
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
-    fs.writeFileSync(path.join(outDir, PUBLIC_FEED_FILE), `${JSON.stringify({ articles }, null, 2)}\n`, 'utf8');
+    fs.writeFileSync(path.join(outDir, PUBLIC_FEED_FILE), `${JSON.stringify({ articles: languageArticles }, null, 2)}\n`, 'utf8');
   }
 }
 
@@ -461,35 +488,52 @@ function updateFrenchJournalPage(articles) {
 }
 
 function generateArticlePages(articles) {
+  const fallback = articles.find((candidate) => availableInLanguage(candidate, 'fr') && !candidate.labelGallery);
   for (const article of articles) {
     const sourcePath = path.join(root, 'journal', articleSlug(article, 'fr'), 'index.html');
-    if (!fs.existsSync(sourcePath)) continue;
-    const source = fs.readFileSync(sourcePath, 'utf8');
+    const templatePath = fs.existsSync(sourcePath)
+      ? sourcePath
+      : fallback ? path.join(root, 'journal', articleSlug(fallback, 'fr'), 'index.html') : null;
+    if (!templatePath || !fs.existsSync(templatePath)) continue;
+    const source = fs.readFileSync(templatePath, 'utf8');
     for (const lang of TRANSLATED_KEYS) {
+      if (!availableInLanguage(article, lang)) continue;
       const locale = LOCALES[lang];
       const item = localizedArticle(article, lang);
       const title = `${item.title} — ${locale.journalHeading} — ${BRAND}`;
+      const articleLanguages = (article.availableLanguages || LANGUAGE_KEYS).filter((code) => LOCALES[code]);
+      const defaultLanguage = articleLanguages.includes('fr') ? 'fr' : articleLanguages[0];
+      const inlineImage = article.heroImage && article.heroImageLayout === 'inline-first'
+        ? `<span class="article-inline-image"><picture>${article.heroImageSmall ? `<source media="(max-width: 720px)" srcset="${escapeHtml(article.heroImageSmall)}" />` : ''}<img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(item.heroImageAlt)}" width="1280" height="1707" loading="eager" decoding="async" /></picture>${item.heroImageCaption ? `<small>${escapeHtml(item.heroImageCaption)}</small>` : ''}</span>`
+        : '';
+      const localizedBody = item.body.map((paragraph, index) => `          <p>${index === 0 ? inlineImage : ''}${escapeHtml(paragraph)}</p>`).join('\n');
       let html = source
         .replace(/<html lang="[^"]+">/, `<html lang="${locale.html}">`)
         .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
         .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(item.lede || locale.journalDescription)}" />`)
         .replace(
           /<link rel="canonical" href="[^"]+" \/>[\s\S]*?(?=  <meta name="theme-color")/,
-          `<link rel="canonical" href="${articleUrl(article, lang)}" />\n${alternateLinks((code) => articleUrl(article, code))}\n`
+          `<link rel="canonical" href="${articleUrl(article, lang)}" />\n${alternateLinks((code) => articleUrl(article, code), articleLanguages, defaultLanguage)}\n`
         )
         .replace(/<meta property="og:locale" content="[^"]+" \/>/, `<meta property="og:locale" content="${locale.ogLocale}" />`)
         .replace(/<meta property="og:title" content="[^"]+" \/>/, `<meta property="og:title" content="${escapeHtml(title)}" />`)
         .replace(/<meta property="og:description" content="[^"]+" \/>/, `<meta property="og:description" content="${escapeHtml(item.lede || locale.journalDescription)}" />`)
         .replace(/<meta property="og:url" content="[^"]+" \/>/, `<meta property="og:url" content="${articleUrl(article, lang)}" />`)
+        .replace(/<meta property="og:image" content="[^"]+" \/>/, `<meta property="og:image" content="${escapeHtml(absoluteAssetUrl(article.heroImage))}" />`)
+        .replace(/<meta property="og:image:alt" content="[^"]+" \/>/, `<meta property="og:image:alt" content="${escapeHtml(item.heroImageAlt || locale.imageAlt)}" />`)
         .replace(/<meta name="twitter:title" content="[^"]+" \/>/, `<meta name="twitter:title" content="${escapeHtml(title)}" />`)
         .replace(/<meta name="twitter:description" content="[^"]+" \/>/, `<meta name="twitter:description" content="${escapeHtml(item.lede || locale.journalDescription)}" />`)
+        .replace(/<meta name="twitter:image" content="[^"]+" \/>/, `<meta name="twitter:image" content="${escapeHtml(absoluteAssetUrl(article.heroImage))}" />`)
+        .replace(/<meta name="twitter:image:alt" content="[^"]+" \/>/, `<meta name="twitter:image:alt" content="${escapeHtml(item.heroImageAlt || locale.imageAlt)}" />`)
         .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">${JSON.stringify(articleStructuredData(article, lang))}</script>`)
         .replace(/<a href="..\/">[\s\S]*?<\/a>/, `<a href="../">${escapeHtml(locale.backJournal)}</a>`)
         .replace(/<a href="..\/..\/">[\s\S]*?<\/a>/, `<a href="../../">${escapeHtml(locale.home)}</a>`)
         .replace(/<p class="article-date">[\s\S]*?<\/p>/, `<p class="article-date">— ${escapeHtml(formatDate(article.date, lang))} —</p>`)
         .replace(/<h1>[\s\S]*?<\/h1>/, `<h1>${escapeHtml(item.title)}</h1>`)
         .replace(/<p class="article-lede">[\s\S]*?<\/p>/, item.lede ? `<p class="article-lede">${escapeHtml(item.lede)}</p>` : '')
-        .replace(/<div class="article-body">[\s\S]*?<\/div>/, `<div class="article-body">\n${item.body.map((paragraph) => `          <p>${escapeHtml(paragraph)}</p>`).join('\n')}${article.sourceUrl ? `\n          <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(item.sourceLabel)}</a></p>` : ''}\n      </div>`)
+        .replace(/\s*<figure class="article-image">[\s\S]*?<\/figure>/, '')
+        .replace(/(<p class="article-lede">[\s\S]*?<\/p>|<h1>[\s\S]*?<\/h1>)/, (match) => article.heroImage && article.heroImageLayout !== 'inline-first' ? `${match}\n      <figure class="article-image">\n        <picture>\n          ${article.heroImageSmall ? `<source media="(max-width: 720px)" srcset="${escapeHtml(article.heroImageSmall)}" />` : ''}\n          <img src="${escapeHtml(article.heroImage)}" alt="${escapeHtml(item.heroImageAlt)}" width="1280" height="1707" loading="eager" decoding="async" />\n        </picture>\n        ${item.heroImageCaption ? `<figcaption>${escapeHtml(item.heroImageCaption)}</figcaption>` : ''}\n      </figure>` : match)
+        .replace(/<div class="article-body">[\s\S]*?<\/div>/, `<div class="article-body">\n${localizedBody}${article.sourceUrl ? `\n          <p class="article-source"><a href="${escapeHtml(article.sourceUrl)}" rel="noopener">${escapeHtml(item.sourceLabel)}</a></p>` : ''}\n      </div>`)
         .replace(/<p class="article-tags">[\s\S]*?<\/p>/, item.tags.length ? `<p class="article-tags">${item.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('')}</p>` : '')
         .replace(/<nav class="article-pager"[\s\S]*?<\/nav>/, articlePagerHtml(article, articles, lang))
         .replace(/<nav class="article-related"[\s\S]*?<\/nav>/, articleRelatedHtml(article, articles, lang));
@@ -504,6 +548,7 @@ function generateArticlePages(articles) {
 
 function updateFrenchArticleHreflang(articles) {
   for (const article of articles) {
+    if (!availableInLanguage(article, 'fr')) continue;
     const sourcePath = path.join(root, 'journal', articleSlug(article, 'fr'), 'index.html');
     if (!fs.existsSync(sourcePath)) continue;
     let html = fs.readFileSync(sourcePath, 'utf8');
@@ -519,7 +564,7 @@ function updateSitemap(articles) {
     ...LANGUAGE_KEYS.map((lang) => ({ loc: homeUrl(lang), priority: lang === 'fr' ? '1.0' : '0.8', changefreq: 'monthly' })),
     { loc: FICHE_URL, priority: '0.8', changefreq: 'monthly', lastmod: '2026-06-03' },
     ...LANGUAGE_KEYS.map((lang) => ({ loc: journalUrl(lang), priority: lang === 'fr' ? '0.6' : '0.5', changefreq: 'weekly' })),
-    ...LANGUAGE_KEYS.flatMap((lang) => articles.map((article) => ({
+    ...LANGUAGE_KEYS.flatMap((lang) => articles.filter((article) => availableInLanguage(article, lang)).map((article) => ({
       loc: articleUrl(article, lang),
       priority: lang === 'fr' ? '0.5' : '0.4',
       changefreq: 'monthly',
@@ -536,7 +581,7 @@ const articles = (data.articles || [])
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
 generateHomePages(articles);
-updateFrenchJournalPage(articles);
+updateFrenchJournalPage(articles.filter((article) => availableInLanguage(article, 'fr')));
 generateJournalPages(articles);
 generateArticlePages(articles);
 updateFrenchArticleHreflang(articles);
