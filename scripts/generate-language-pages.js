@@ -128,6 +128,7 @@ function localizedArticle(article, lang) {
     lede: translation.lede || article.lede,
     body: translation.body || article.body || [],
     tags: translation.tags || article.tags || [],
+    seoTitle: translation.seoTitle || article.seoTitle || '',
     sourceLabel: translation.sourceLabel || article.sourceLabel || article.sourceTitle || 'Lire la source',
     heroImageCaption: translation.heroImageCaption || article.heroImageCaption || '',
     heroImageAlt: translation.heroImageAlt || article.heroImageAlt || translation.title || article.title,
@@ -500,7 +501,7 @@ function generateArticlePages(articles) {
       if (!availableInLanguage(article, lang)) continue;
       const locale = LOCALES[lang];
       const item = localizedArticle(article, lang);
-      const title = `${item.title} — ${locale.journalHeading} — ${BRAND}`;
+      const title = item.seoTitle || `${item.title} — ${locale.journalHeading} — ${BRAND}`;
       const articleLanguages = (article.availableLanguages || LANGUAGE_KEYS).filter((code) => LOCALES[code]);
       const defaultLanguage = articleLanguages.includes('fr') ? 'fr' : articleLanguages[0];
       const inlineImage = article.heroImage && article.heroImageLayout === 'inline-first'
