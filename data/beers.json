@@ -12,7 +12,12 @@
     "pricing": "Not published. Contact the brewery for current consumer or professional terms.",
     "minimumOrder": "None",
     "deliveryAreaAndLeadTime": "Agreed case by case and dependent on stock.",
-    "distributor": "Dispas",
+    "distributor": {
+      "name": "Ets Dispas",
+      "role": "Beverage distributor",
+      "location": "Barvaux-sur-Ourthe, Belgium",
+      "url": "https://www.ets-dispas.be/"
+    },
     "wholesalePricing": "Supplied privately on request."
   },
   "sharedPackaging": {
