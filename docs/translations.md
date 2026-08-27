@@ -1,6 +1,6 @@
 # Translation Status
 
-Last updated: 2026-05-26
+Last updated: 2026-08-27
 
 ## Scope Reviewed
 
@@ -14,7 +14,7 @@ Last updated: 2026-05-26
 - Dutch copy is aimed at Netherlands Dutch readers, with Belgian place names and brand terms kept intact.
 - English uses restrained European hospitality wording.
 - German uses standard German with `Anwesen` preferred over the stiffer `Domäne`.
-- The journal keeps the French source article as canonical. Translated article bodies are manually curated language variants attached to the same article entry.
+- The journal keeps French as the editorial source. Manually curated translations are attached to the same article entry, but each published language now has its own stable self-canonical URL and reciprocal `hreflang` set.
 
 ## Guardrails Applied
 
@@ -27,12 +27,18 @@ Last updated: 2026-05-26
 ## Still To Decide
 
 - How new journal articles should enter the translation workflow after publication.
-- Whether translated journal entries need native-speaker final review before multilingual SEO and `hreflang`.
-- Whether stable localized URLs should be added before multilingual SEO and `hreflang`.
+- Which person or workflow provides final native-level approval for NL, EN and DE before publication.
+- Whether German should remain website-only for visits or become an offered visit language.
 
 ## 2026-05-26 Audit Notes
 
 - The availability section was softened away from retail/order language in all four languages. It remains informational only: no ecommerce, no prices, no stock guarantee.
 - Journal shell copy now avoids foregrounding an individual author and presents the Carnet as an estate publication.
 - Published journal translations received idiomatic fixes in NL/EN/DE; French typography and historical precision were tightened.
-- Technical SEO remains intentionally French-canonical until stable localized URLs exist. Current language switching is client-side and should not yet be treated as multilingual SEO.
+- Stable localized homepage, Journal and article URLs now exist with reciprocal `hreflang`; the previous French-canonical-only technical state is superseded.
+
+## 2026-08-27 Generator Note
+
+- The generated localized homepage FAQ structured data was still French even though the visible FAQ was localized.
+- `scripts/generate-language-pages.js` now contains a source-level localization fix for FAQ and Brewery `additionalProperty` structured data.
+- The booking preview was removed from the production homepage files on Lars's instruction. The localized homepages were then regenerated with the approved structured-data fix, and the SEO validator passes.

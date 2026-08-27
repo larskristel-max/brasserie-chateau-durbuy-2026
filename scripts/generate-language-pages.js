@@ -54,6 +54,10 @@ const LOCALES = {
     newer: 'Vorige bijdrage',
     older: 'Volgende bijdrage',
     dateLocale: 'nl-BE',
+    structured: {
+      publicAccessName: 'Publieke toegang',
+      breweryLocationName: 'Locatie van de brouwerij',
+    },
   },
   en: {
     prefix: 'en',
@@ -74,6 +78,10 @@ const LOCALES = {
     newer: 'Previous note',
     older: 'Next note',
     dateLocale: 'en-GB',
+    structured: {
+      publicAccessName: 'Public access',
+      breweryLocationName: 'Brewery location',
+    },
   },
   de: {
     prefix: 'de',
@@ -94,6 +102,10 @@ const LOCALES = {
     newer: 'Vorherige Notiz',
     older: 'Nächste Notiz',
     dateLocale: 'de-DE',
+    structured: {
+      publicAccessName: 'Öffentlicher Zugang',
+      breweryLocationName: 'Standort der Brauerei',
+    },
   },
 };
 
@@ -240,6 +252,62 @@ function extractHomepageTranslations(html) {
   const sandbox = {};
   vm.runInNewContext(`translations = ${match[1]};`, sandbox);
   return sandbox.translations || {};
+}
+
+function plainText(value) {
+  return String(value ?? '')
+    .replace(/<[^>]*>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function localizeHomepageStructuredData(html, translations, lang) {
+  const dict = translations[lang];
+  const locale = LOCALES[lang];
+  if (!dict || !locale) return html;
+
+  return html.replace(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g, (full, json) => {
+    let data;
+    try {
+      data = JSON.parse(json);
+    } catch (_error) {
+      return full;
+    }
+
+    const types = Array.isArray(data['@type']) ? data['@type'] : [data['@type']];
+    if (types.includes('Brewery') && Array.isArray(data.additionalProperty) && locale.structured) {
+      const access = data.additionalProperty[0];
+      const location = data.additionalProperty[1];
+      if (access) {
+        access.name = locale.structured.publicAccessName;
+        access.value = plainText(dict['faq.a2']);
+      }
+      if (location) {
+        location.name = locale.structured.breweryLocationName;
+        location.value = plainText(dict['faq.a4']);
+      }
+    }
+
+    if (data['@type'] === 'FAQPage' && Array.isArray(data.mainEntity)) {
+      data.inLanguage = locale.hreflang;
+      data.mainEntity.forEach((question, index) => {
+        const number = index + 1;
+        const localizedQuestion = dict[`faq.q${number}`];
+        const localizedAnswer = dict[`faq.a${number}`];
+        if (localizedQuestion) question.name = plainText(localizedQuestion);
+        if (localizedAnswer && question.acceptedAnswer) {
+          question.acceptedAnswer.text = plainText(localizedAnswer);
+        }
+      });
+    }
+
+    const formatted = JSON.stringify(data, null, 2).replace(/\n/g, '\n  ');
+    return `<script type="application/ld+json">\n  ${formatted}\n  </script>`;
+  });
 }
 
 function localizeStaticHomeHtml(html, translations, lang, articles) {
@@ -436,6 +504,7 @@ function generateHomePages(articles) {
     const locale = LOCALES[lang];
     let html = replaceHeadBasics(source, locale, homeUrl(lang), alternateLinks(homeUrl));
     html = localizeStaticHomeHtml(html, homepageTranslations, lang, articles);
+    html = localizeHomepageStructuredData(html, homepageTranslations, lang);
     html = adjustAssetPaths(html, '../');
     fs.mkdirSync(path.join(root, lang), { recursive: true });
     fs.writeFileSync(path.join(root, lang, 'index.html'), html, 'utf8');
@@ -581,11 +650,14 @@ const articles = (data.articles || [])
   .filter((article) => article.status === 'published')
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
+const homepagesOnly = process.argv.includes('--homepages-only');
 generateHomePages(articles);
-updateFrenchJournalPage(articles.filter((article) => availableInLanguage(article, 'fr')));
-generateJournalPages(articles);
-generateArticlePages(articles);
-updateFrenchArticleHreflang(articles);
-updateSitemap(articles);
+if (!homepagesOnly) {
+  updateFrenchJournalPage(articles.filter((article) => availableInLanguage(article, 'fr')));
+  generateJournalPages(articles);
+  generateArticlePages(articles);
+  updateFrenchArticleHreflang(articles);
+  updateSitemap(articles);
+}
 
-console.log(`Generated language pages for ${TRANSLATED_KEYS.join(', ')}.`);
+console.log(`Generated ${homepagesOnly ? 'homepage' : 'language'} pages for ${TRANSLATED_KEYS.join(', ')}.`);

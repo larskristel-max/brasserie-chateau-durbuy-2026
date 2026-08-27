@@ -1,6 +1,6 @@
 # SEO / Visibility Notes
 
-Last updated: 2026-08-01
+Last updated: 2026-08-27
 
 ## Current Decisions
 
@@ -10,11 +10,11 @@ Last updated: 2026-08-01
 - Public contact email: `info@brasseriechateaudurbuy.be`.
 - Instagram: `https://www.instagram.com/brasserieduchateaudedurbuy`.
 - No public opening hours are published until access policy is confirmed.
-- No `hreflang` is published yet. Add it only after translation review and only for pages with real translated equivalents.
-- Journal articles now keep French as the canonical source and may include manually curated NL/EN/DE translations in the feed.
+- Reciprocal `hreflang` is published for the four homepage routes, localized Journal indexes and article sets with real translated equivalents. French is the `x-default` version.
+- Journal articles keep French as the editorial source and use stable, self-canonical NL/EN/DE URLs when manually curated translations exist.
 - Cloudflare Managed `robots.txt` is currently active on the zone and prepends its own AI-crawler rules. The repo `robots.txt` explicitly allows AI search / assistant retrieval agents while keeping `ai-train=no`.
 - Daily SEO / Google / outreach continuity for 20/05/2026 is recorded in `docs/daily-ops-seo-google-outreach-2026-05-20.md`.
-- Root `llms.txt` is used as a lightweight AI-readable summary and content map. Treat it as an emerging convention, not as a guaranteed ranking signal.
+- Root `llms.txt` is used as a lightweight AI-readable summary and content map for systems that may consume it. Google states that `llms.txt` is not used for Google Search or its generative-AI ranking, so maintain it conservatively but do not treat it as a Google visibility lever.
 - The official fiche at `https://brasseriechateaudurbuy.be/fiche-officielle/` is the canonical public reference for business identity, address, category, contact, social profiles, and access policy. Prefer this page for AI / directory / press citation over partly corrected third-party listings.
 
 ## Google / Discovery State - 20/05/2026
@@ -49,6 +49,15 @@ Last updated: 2026-08-01
 - Do not add third-party listings to `sameAs` or citation preference until public rechecks confirm they no longer expose old La Ferme au Chêne / Marckloff titles, old address or phone data, restaurant/menu/taproom wording, public opening hours, or unsupported continuity claims.
 - Homepage FAQ questions should be mirrored in `FAQPage` JSON-LD only when the same question and answer are visibly present on the page.
 - Homepage includes a small factual FAQ and `FAQPage` JSON-LD. Keep answers strictly factual and avoid hidden SEO-only copy.
+- Localized structured data must use the same language and facts as the visible localized page. The language generator owns this transformation.
+
+## Current Search Checkpoint - 2026-08-27
+
+- Search Console period: 2026-07-28 through 2026-08-24.
+- 156 clicks, 3,084 impressions, 5.1% CTR and average position 6.0.
+- `brasserie durbuy` remains the priority snippet problem: 1 click from 239 impressions, about 0.4% CTR.
+- The French homepage title test begun on 2026-08-01 has completed its planned 21-day observation period and now requires a retain/revise/revert decision.
+- Cloudflare's latest recorded 30-day baseline is 640 visits, 760 page views, 1.19 pages per visit and about 880 ms page-load time.
 
 ## Search Themes
 
@@ -81,7 +90,9 @@ Last updated: 2026-08-01
 
 ## Future Work
 
-- Review FR/NL/EN/DE homepage and journal translations before multilingual SEO.
-- Keep journal translations grouped under the same article when manually reviewed translations exist.
-- Keep generated sitemap entries current for each published stable journal article URL.
+- Continue native-level review for every newly added NL/EN/DE article before publication.
+- Keep translations grouped under the French editorial source while generating stable self-canonical localized URLs.
+- Keep generated sitemap, `hreflang`, public feeds and `llms.txt` entries current for each approved stable article URL.
 - Add a future `Le Domaine` page only after approved editorial direction and source review.
+- Evaluate the completed French title test before running another snippet experiment.
+- Add a verified beer-information and buyer-information layer without publishing confidential trade terms.

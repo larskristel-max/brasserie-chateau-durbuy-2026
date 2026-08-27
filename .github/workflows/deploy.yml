@@ -29,6 +29,7 @@ jobs:
           cp robots.txt dist/ 2>/dev/null || true
           cp sitemap.xml dist/ 2>/dev/null || true
           cp llms.txt dist/ 2>/dev/null || true
+          cp -R data dist/ 2>/dev/null || true
           cp -R fiche-officielle dist/ 2>/dev/null || true
           cp -R journal dist/ 2>/dev/null || true
           cp -R nl dist/ 2>/dev/null || true

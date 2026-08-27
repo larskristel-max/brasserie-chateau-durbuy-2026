@@ -1,5 +1,7 @@
 # Brasserie du Chateau de Durbuy - Project Status
 
+> Historical snapshot: most of this document records the 2026-05-20 state and contains superseded implementation notes. For the current Website v2 architecture, unpublished-work boundary and open decisions, use `docs/website-v2-current-state-2026-08-27.md`.
+
 Last updated: 2026-05-20
 
 ## Current Live State

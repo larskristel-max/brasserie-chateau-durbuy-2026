@@ -30,6 +30,7 @@
 - Official fiche: https://brasseriechateaudurbuy.be/fiche-officielle/
 - Journal: https://brasseriechateaudurbuy.be/journal/
 - Public journal JSON feed: https://brasseriechateaudurbuy.be/journal/published-articles-2026-05-27.json
+- Official beer and packaging data (JSON): https://brasseriechateaudurbuy.be/data/beers.json
 - Sitemap: https://brasseriechateaudurbuy.be/sitemap.xml
 - Robots policy: https://brasseriechateaudurbuy.be/robots.txt
 
