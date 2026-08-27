@@ -9,12 +9,7 @@
   "purpose": "Official machine-readable product and packaging facts for search engines, AI assistants and professional buyers.",
   "commercialTerms": {
     "currency": "EUR",
-    "directConsumerReferencePrice": {
-      "asOf": "2026-07-09",
-      "bottle330mlIncludingVAT": 4.20,
-      "case12IncludingVAT": 50.40,
-      "note": "Reference price for direct sales, subject to availability and change. Contact the brewery for a current quotation."
-    },
+    "pricing": "Not published. Contact the brewery for current consumer or professional terms.",
     "minimumOrder": "None",
     "deliveryAreaAndLeadTime": "Agreed case by case and dependent on stock.",
     "distributor": "Dispas",
@@ -50,7 +45,8 @@
       "alcoholByVolumePercent": 6.4,
       "ingredients": ["water", "barley malt", "wheat malt", "invert sugar", "hops", "yeast"],
       "allergens": ["barley (gluten)", "wheat (gluten)"],
-      "ingredientStatus": "Recipe-derived summary; contact the brewery for the current formal declaration."
+      "ingredientStatus": "Confirmed against the final label on 2026-08-27.",
+      "suggestedFoodPairings": ["roast chicken", "trout or sole", "mild washed-rind cheese", "asparagus or leek tart"]
     },
     {
       "name": "Bohemian Pilsner",
@@ -58,7 +54,8 @@
       "alcoholByVolumePercent": 4.5,
       "ingredients": ["water", "barley malt", "invert sugar", "hops", "yeast"],
       "allergens": ["barley (gluten)"],
-      "ingredientStatus": "Recipe-derived summary; contact the brewery for the current formal declaration."
+      "ingredientStatus": "Confirmed against the final label on 2026-08-27.",
+      "suggestedFoodPairings": ["Ardennes ham", "mussels", "fried river fish", "young cheese"]
     },
     {
       "name": "Amber Ale",
@@ -67,7 +64,8 @@
       "alcoholByVolumePercent": 5.6,
       "ingredients": ["water", "barley malt", "brown sugar", "hops", "yeast", "star anise", "coriander", "liquorice root"],
       "allergens": ["barley (gluten)"],
-      "ingredientStatus": "Recipe-derived summary; contact the brewery for the current formal declaration."
+      "ingredientStatus": "Confirmed against the final label on 2026-08-27.",
+      "suggestedFoodPairings": ["carbonnade", "roast pork", "sausages", "aged Comté-style cheese", "caramelised onion tart"]
     },
     {
       "name": "IPA",
@@ -75,7 +73,8 @@
       "alcoholByVolumePercent": 5.0,
       "ingredients": ["water", "barley malt", "wheat malt", "invert sugar", "hops", "yeast", "star anise", "coriander", "cumin", "liquorice root"],
       "allergens": ["barley (gluten)", "wheat (gluten)"],
-      "ingredientStatus": "Recipe-derived summary; contact the brewery for the current formal declaration."
+      "ingredientStatus": "Confirmed against the final label on 2026-08-27.",
+      "suggestedFoodPairings": ["goat cheese", "grilled prawns", "citrus-herb chicken", "mildly spicy dishes"]
     }
   ]
 }
