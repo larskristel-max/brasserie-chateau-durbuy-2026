@@ -627,10 +627,14 @@ ${sourceBlock}
 }
 
 function sitemapXml(articles) {
+  const newestJournalDate = articles.reduce((newest, article) => {
+    const candidate = isoDate(article.updatedAt || article.date);
+    return candidate > newest ? candidate : newest;
+  }, '2026-05-27');
   const urls = [
     { loc: `${SITE}/`, lastmod: '2026-05-27', changefreq: 'monthly', priority: '1.0' },
     { loc: FICHE_URL, lastmod: '2026-06-03', changefreq: 'monthly', priority: '0.8' },
-    { loc: `${SITE}/journal/`, lastmod: '2026-05-27', changefreq: 'weekly', priority: '0.6' },
+    { loc: `${SITE}/journal/`, lastmod: newestJournalDate, changefreq: 'weekly', priority: '0.6' },
     ...articles.map((article) => ({
       loc: articleUrl(article),
       lastmod: isoDate(article.updatedAt || article.date),

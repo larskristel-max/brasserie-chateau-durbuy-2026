@@ -2,6 +2,8 @@
 
 ## Operating manual for AI agents working on this site
 
+> Current operational override (2026-09-01): this file remains the binding creative-direction manual, but implementation status and deployment boundaries are maintained in `docs/website-v2-current-state-2026-08-27.md`. Where dated architecture, translation or product-status notes below conflict with that current-state document, follow the current-state document. In particular, localized pages now have stable language-specific routes, and the Amber Ale / Marckloff identity has been confirmed by Lars.
+
 **Read this before you write a single line of code, copy, or markup.**
 
 This file is binding creative direction. If something you are about to do conflicts with anything below, you are doing the wrong thing. Stop and re-read.
@@ -287,7 +289,7 @@ The following facts are sourced and may be used in copy, structured data, or des
 
 - **2024 production: 21 brews × 500 L = 10,500 L = 105 hectolitres.** This is genuinely *petites séries* by Belgian brewing standards (≈30% the size of Westvleteren's most restricted Trappist output). The site's claims of *"production limitée"* and *"distribution confidentielle"* are empirically defensible. Source: direct testimony from Lars Kristel.
 - **2025 production: not yet confirmed.** Do not invent. If similar to 2024 (≈100 hL), the *"vingt-et-un brassins"* / *"cent hectolitres"* line is robust.
-- The four current beers are: **Blonde du Château**, **Bohemian Pilsner**, **IPA** (houblon Sorachi), **Amber Ale**. The Amber Ale is **plausibly the historical Marckloff** (the heritage beer revived by the Trine brothers in 1989) but this identity has not yet been explicitly confirmed by the brewery — see Known Unknowns.
+- The four current beers are: **Blonde du Château**, **Bohemian Pilsner**, **IPA** (houblon Sorachi), **Amber Ale**. Lars confirmed in August 2026 that Amber Ale is the same beer as Marckloff under another label; Marckloff remains in production.
 
 ### Heritage anchors (canonical, fully sourced)
 
@@ -385,7 +387,6 @@ This section exists because real-world facts have already been confabulated once
 - **The cuves count.** Unknown. **Do not invent a number.** Write around it (*"Au cœur du domaine. Au rythme du lieu."* rather than *"X cuves, Y bières."*).
 - **The brewery in the oldest part of the château, at the old well to the Ourthe.** Per Comte Jean-Michel's direct oral testimony to Lars (May 2026). Architecturally and operationally plausible (the 1675 demolition means "oldest part" = surviving foundations / cellars at the rocky outcrop's base, where the well descends to the Ourthe). **However, this claim is NOT documented in any public source** — including the d'Ursel family's own published château historique on chateaudedurbuy.be. Use Option D copy only with explicit blessing from Jean-Michel d'Ursel. If approved, the line is Option D.3: *"Une brassine occupait jadis la plus ancienne partie du château, au-dessus du vieux puits descendant à l'Ourthe."*
 - **The exact location of the well on an aerial map.** To be marked by Lars Kristel and recorded for the Le Domaine sub-page.
-- **The Marckloff / Amber Ale identity.** The historical heritage beer "Marckloff" (revived 1989 by the Trine brothers, 6.5% ABV) is plausibly the same beer as the modern bottle line's "Amber Ale" (6.2% ABV, also amber). **This needs explicit confirmation** before the heritage copy can name "Marckloff" on the bottle page.
 - **2025 and projected 2026 production volumes.** Awaiting confirmation from Lars Kristel.
 - **Pre-1628 vs post-1628 origin of the château brewery.** Was it operating *before* the Schetz/d'Ursel acquisition (under d'Oostfrise / earlier seigneurs as a domanial brewery), or did it begin under the Schetz/d'Ursel administration (1628 onward, before the 1675 demolition)? Open question.
 - **Whether the Marckloff family had any direct contact with the d'Ursel/Schetz family.** Possible only in the narrow window 1628–1630 (Schetz arrival → brewery transfer to de Blier). Plausible but not documented.
@@ -399,6 +400,7 @@ These were previously in the Known Unknowns and are now resolved. The text below
 - ~~The 16th-century brewing claim~~ — RESOLVED. Brewing in Durbuy is documented from *circa* 1560 (Marckloff at Ferme au Chesne). See Section 14.
 - ~~The d'Ursel family's exact acquisition date~~ — RESOLVED. **30 January 1628** (engagère, 40,000 marks of gold), full ownership 1756. The earlier "1726/1756" framing was wrong — 1726 is internal family inheritance from the senior Schetz line to the d'Ursel branch, within the same family.
 - ~~The number of beers brewed~~ — RESOLVED. Four (Blonde du Château, Bohemian Pilsner, IPA, Amber Ale).
+- ~~The Marckloff / Amber Ale identity~~ — RESOLVED. Lars confirmed in August 2026 that Amber Ale is the same beer as Marckloff under another label; Marckloff remains in production.
 - ~~The construction date of the "anciennes écuries"~~ — partially resolved. The stables are part of the château complex; the current château dates from 1731 (rebuild on pre-1675 substructure), modernised 1880–1882. Specific dating of the stables themselves is still open but the broader timeframe is now sourced.
 - ~~Modern production volume~~ — RESOLVED. 105 hL in 2024.
 

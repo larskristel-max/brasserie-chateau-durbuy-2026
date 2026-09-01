@@ -1,6 +1,6 @@
 # SEO / Visibility Notes
 
-Last updated: 2026-08-27
+Last updated: 2026-09-01
 
 ## Current Decisions
 
@@ -95,4 +95,4 @@ Last updated: 2026-08-27
 - Keep generated sitemap, `hreflang`, public feeds and `llms.txt` entries current for each approved stable article URL.
 - Add a future `Le Domaine` page only after approved editorial direction and source review.
 - Evaluate the completed French title test before running another snippet experiment.
-- Add a verified beer-information and buyer-information layer without publishing confidential trade terms.
+- Maintain and validate the approved public beer-information feed in `data/beers.json` without publishing confidential trade terms. Add a restrained, visible people-first presentation only after editorial approval.

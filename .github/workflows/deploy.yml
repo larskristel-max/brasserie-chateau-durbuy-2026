@@ -24,6 +24,7 @@ jobs:
         run: |
           node scripts/generate-journal-pages.js
           node scripts/generate-language-pages.js
+          node scripts/validate-seo.js
           mkdir -p dist/src/assets
           cp index.html dist/
           cp robots.txt dist/ 2>/dev/null || true

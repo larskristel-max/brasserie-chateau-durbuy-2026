@@ -222,7 +222,7 @@ function replaceHeadBasics(html, locale, canonical, alternates) {
     .replace(/<html lang="[^"]+">/, `<html lang="${locale.html}">`)
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(locale.title)}</title>`)
     .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${escapeHtml(locale.description)}" />`)
-    .replace(/<link rel="canonical" href="[^"]+" \/>[\s\S]*?(?=  <link rel="icon")/, `<link rel="canonical" href="${canonical}" />\n${alternates}\n`)
+    .replace(/<link rel="canonical" href="[^"]+" \/>\s*(?:<link rel="alternate" hreflang="[^"]+" href="[^"]+" \/>\s*)*/, `<link rel="canonical" href="${canonical}" />\n${alternates}\n`)
     .replace(/<meta property="og:locale" content="[^"]+" \/>/, `<meta property="og:locale" content="${locale.ogLocale}" />`)
     .replace(/<meta property="og:title" content="[^"]+" \/>/, `<meta property="og:title" content="${escapeHtml(locale.title)}" />`)
     .replace(/<meta property="og:description" content="[^"]+" \/>/, `<meta property="og:description" content="${escapeHtml(locale.description)}" />`)
@@ -534,7 +534,27 @@ function generateJournalPages(articles) {
     const outDir = path.join(root, lang, 'journal');
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
-    fs.writeFileSync(path.join(outDir, PUBLIC_FEED_FILE), `${JSON.stringify({ articles: languageArticles }, null, 2)}\n`, 'utf8');
+    writeLocalizedJournalFeed(languageArticles, lang);
+  }
+}
+
+function writeLocalizedJournalFeed(articles, lang) {
+  const languageArticles = articles
+    .filter((article) => availableInLanguage(article, lang))
+    .map((article) => localizedArticle(article, lang));
+  const prefix = LOCALES[lang].prefix;
+  const outDir = path.join(root, ...(prefix ? [prefix] : []), 'journal');
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(outDir, PUBLIC_FEED_FILE),
+    `${JSON.stringify({ articles: languageArticles }, null, 2)}\n`,
+    'utf8'
+  );
+}
+
+function generateLocalizedJournalFeeds(articles) {
+  for (const lang of LANGUAGE_KEYS) {
+    writeLocalizedJournalFeed(articles, lang);
   }
 }
 
@@ -630,10 +650,14 @@ function updateFrenchArticleHreflang(articles) {
 }
 
 function updateSitemap(articles) {
+  const newestJournalDate = articles.reduce((newest, article) => {
+    const candidate = isoDate(article.updatedAt || article.date);
+    return candidate > newest ? candidate : newest;
+  }, '2026-05-27');
   const urls = [
     ...LANGUAGE_KEYS.map((lang) => ({ loc: homeUrl(lang), priority: lang === 'fr' ? '1.0' : '0.8', changefreq: 'monthly' })),
     { loc: FICHE_URL, priority: '0.8', changefreq: 'monthly', lastmod: '2026-06-03' },
-    ...LANGUAGE_KEYS.map((lang) => ({ loc: journalUrl(lang), priority: lang === 'fr' ? '0.6' : '0.5', changefreq: 'weekly' })),
+    ...LANGUAGE_KEYS.map((lang) => ({ loc: journalUrl(lang), priority: lang === 'fr' ? '0.6' : '0.5', changefreq: 'weekly', lastmod: newestJournalDate })),
     ...LANGUAGE_KEYS.flatMap((lang) => articles.filter((article) => availableInLanguage(article, lang)).map((article) => ({
       loc: articleUrl(article, lang),
       priority: lang === 'fr' ? '0.5' : '0.4',
@@ -651,8 +675,13 @@ const articles = (data.articles || [])
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
 const homepagesOnly = process.argv.includes('--homepages-only');
-generateHomePages(articles);
-if (!homepagesOnly) {
+const journalFeedsOnly = process.argv.includes('--journal-feeds-only');
+if (journalFeedsOnly) {
+  generateLocalizedJournalFeeds(articles);
+} else {
+  generateHomePages(articles);
+}
+if (!homepagesOnly && !journalFeedsOnly) {
   updateFrenchJournalPage(articles.filter((article) => availableInLanguage(article, 'fr')));
   generateJournalPages(articles);
   generateArticlePages(articles);
@@ -660,4 +689,6 @@ if (!homepagesOnly) {
   updateSitemap(articles);
 }
 
-console.log(`Generated ${homepagesOnly ? 'homepage' : 'language'} pages for ${TRANSLATED_KEYS.join(', ')}.`);
+console.log(journalFeedsOnly
+  ? `Generated localized journal feeds for ${LANGUAGE_KEYS.join(', ')}.`
+  : `Generated ${homepagesOnly ? 'homepage' : 'language'} pages for ${TRANSLATED_KEYS.join(', ')}.`);

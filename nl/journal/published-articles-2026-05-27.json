@@ -2,9 +2,9 @@
   "articles": [
     {
       "id": "its-raining-again-2026-08-18",
-      "title": "Il Pleut De Nouveau",
+      "title": "Het regent weer",
       "date": "2026-08-18",
-      "language": "fr",
+      "language": "nl",
       "availableLanguages": [
         "fr",
         "en",
@@ -13,24 +13,24 @@
       ],
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "Il pleut de nouveau sur Durbuy.",
+      "lede": "Het regent weer in Durbuy.",
       "body": [
-        "Sur les pierres, sur les feuilles, sur les chemins qui avaient pris la poussière. Après des semaines sèches, ce bruit paraît presque ancien. On l’écoute autrement. Comme si la pluie ne tombait pas seulement du ciel, mais venait rappeler quelque chose.",
-        "Un été sec ne disparaît pas avec une averse. La terre boit lentement. Les prairies gardent leur couleur. Les bois restent fragiles. Dans toute la Wallonie, les appels à la prudence se sont multipliés. Le feu, que l’on croit parfois loin d’ici, a montré qu’il pouvait trouver sa place dans nos paysages.",
-        "Pour une brasserie, ce n’est pas un sujet abstrait. La bière commence dehors. Avant la cuve, il y a l’eau. Avant le brassin, il y a le grain. Avant l’amertume, il y a le houblon, plante sensible aux saisons, au soleil, au manque d’eau.",
-        "Les anciens le savaient sans employer nos mots. Une mauvaise saison touchait les récoltes, les moulins, les rivières, les étables, les tables. En 1921 déjà, la grande sécheresse avait marqué la Belgique. Les archives parlent de champs brûlés, de cours d’eau trop bas, de récoltes perdues. Même le houblon avait souffert.",
-        "Aujourd’hui, dans la dépendance du Château de Durbuy, nous brassons avec des instruments précis, des fiches, des lots, des gestes maîtrisés. Mais rien de tout cela ne nous sépare vraiment du dehors.",
-        "La pluie revient. Elle ne répare pas tout. Mais elle rappelle d’où vient la bière: d’un lieu, d’une saison, d’une terre qu’il faut regarder avec attention."
+        "Op de stenen, op de bladeren, op de paden die stoffig waren geworden. Na weken zonder regen klinkt dat geluid haast als iets uit een ver verleden. We luisteren er anders naar. Alsof de regen niet alleen uit de lucht valt, maar ons aan iets komt herinneren.",
+        "Een droge zomer verdwijnt niet met één regenbui. De aarde drinkt langzaam. De weiden behouden de kleur die de droogte hun heeft gegeven. De bossen blijven kwetsbaar. Overal in Wallonië wordt steeds vaker tot voorzichtigheid gemaand. Vuur lijkt soms iets van ver weg. Toch heeft het laten zien dat het ook in ons landschap kan toeslaan.",
+        "Voor een brouwerij is dat geen abstract onderwerp. Bier begint buiten. Vóór de ketel komt het water. Vóór het brouwsel komt het graan. Vóór de bitterheid komt de hop—een plant die gevoelig is voor de seizoenen, de zon en een tekort aan water.",
+        "Vroeger wist men dat ook, al sprak men er anders over. Een slecht seizoen had gevolgen voor de oogsten, de molens, de rivieren, de stallen en wat er op tafel kwam. Al in 1921 liet de grote droogte haar sporen na in België. De archieven vertellen over verschroeide velden, lage waterstanden en mislukte oogsten. Zelfs de hop kreeg het zwaar te verduren.",
+        "Vandaag brouwen we in een bijgebouw van het Château de Durbuy, met nauwkeurige apparatuur, werkbladen, genummerde batches en zorgvuldig beheerste handelingen. Maar niets daarvan maakt ons werkelijk los van de wereld buiten.",
+        "De regen keert terug. Hij maakt niet alles goed. Maar hij herinnert ons eraan waar bier zijn oorsprong vindt: op een plek, in een seizoen en in een bodem die onze aandacht verdient."
       ],
       "heroImage": "/src/assets/journal-rain-blonde-moody-1280w.webp",
       "heroImageSmall": "/src/assets/journal-rain-blonde-moody-720w.webp",
       "heroImageLayout": "inline-first",
-      "heroImageAlt": "Une bouteille de Blonde du Château sur des pierres assombries par la pluie.",
-      "heroImageCaption": "Blonde du Château après la pluie, sur les pierres de Durbuy.",
+      "heroImageAlt": "Een fles Blonde du Château op door de regen donker geworden stenen.",
+      "heroImageCaption": "Blonde du Château na de regen, op de stenen in Durbuy.",
       "tags": [
-        "Météo à Durbuy",
-        "Bière et agriculture",
-        "Sécheresse belge de 1921"
+        "Weer in Durbuy",
+        "Bier en landbouw",
+        "Belgische droogte van 1921"
       ],
       "createdAt": "2026-08-18T12:00:00.000+02:00",
       "updatedAt": "2026-08-18T12:00:00.000+02:00",
@@ -98,32 +98,34 @@
         "en": "its-raining-again-2026-08-18",
         "nl": "het-regent-weer-2026-08-18",
         "de": "es-regnet-wieder-2026-08-18"
-      }
+      },
+      "seoTitle": "",
+      "sourceLabel": "Lire la source"
     },
     {
       "id": "lancement-gamme-chateau-durbuy-2026-07-30",
-      "title": "Quatre étiquettes, une nouvelle bière",
+      "title": "Vier etiketten, één nieuw bier",
       "date": "2026-07-30",
-      "language": "fr",
+      "language": "nl",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "Ce qui change se voit d’abord sur les bouteilles. Parmi les quatre bières présentées, seule la Blonde du Château est nouvelle.",
+      "lede": "Wat verandert, zie je eerst aan de flessen. Van de vier voorgestelde bieren is alleen Blonde du Château nieuw.",
       "body": [
-        "Le 30 juillet, quatre bouteilles ont été présentées au Château de Durbuy. Posées côte à côte, elles pouvaient donner l’impression d’une gamme entièrement nouvelle. Ce n’est pas le cas.",
-        "La Bohemian Pilsner était déjà brassée. L’IPA portait auparavant le nom Sorachi Ace. L’Amber Ale, elle aussi, est familière : c’est la même bière que la Marckloff, sous une autre étiquette. Seule la Blonde du Château, à 6,4 % alc., est une nouvelle bière.",
-        "Les nouvelles étiquettes donnent aux quatre bouteilles un air de famille et ramènent chaque bière au Château de Durbuy, où elle est brassée. Une étiquette doit dire d’où vient une bouteille sans prendre toute la place.",
-        "Nous avons choisi de conserver l’étiquette Marckloff pour ceux qui restent attachés à ce nom. Parmi les quatre bouteilles présentées ensemble, la même bière apparaît sous le nom Amber Ale. Une bière, deux étiquettes, chacune avec sa place.",
-        "Personnellement, j’ai éprouvé une vraie fierté à voir combien de personnes partageaient mon enthousiasme pour les bières du château. Une grande partie du travail se fait à l’écart des regards, bien avant que quatre bouteilles soient alignées. Ce jour-là, il est devenu visible.",
-        "Le Soir a décrit la présentation comme une nouvelle gamme. Quatre bouteilles posées côte à côte pouvaient donner cette impression. La réalité est plus simple : trois bières poursuivent leur histoire sous de nouvelles étiquettes. Seule la Blonde du Château est nouvelle."
+        "Op 30 juli werden in Château de Durbuy vier flessen naast elkaar voorgesteld. Wie ze zo zag, kon denken aan een volledig nieuwe reeks. Dat is niet het geval.",
+        "Bohemian Pilsner werd al gebrouwen. De IPA droeg vroeger de naam Sorachi Ace. Ook Amber Ale is vertrouwd: het is hetzelfde bier als Marckloff, onder een ander etiket. Alleen Blonde du Château, met 6,4 % alc., is een nieuw bier.",
+        "De nieuwe etiketten geven de vier flessen een duidelijke familiegelijkenis en brengen elk bier terug naar Château de Durbuy, waar het wordt gebrouwen. Een etiket moet tonen waar een fles vandaan komt, zonder alle aandacht op te eisen.",
+        "We kozen ervoor het Marckloff-etiket te behouden voor wie aan die naam gehecht is. Tussen de vier flessen die samen werden voorgesteld, verschijnt hetzelfde bier als Amber Ale. Eén bier, twee etiketten, elk met een eigen plaats.",
+        "Zelf was ik oprecht trots om te zien hoeveel mensen mijn enthousiasme voor de bieren van het kasteel deelden. Een groot deel van het werk gebeurt buiten het zicht, lang voordat vier flessen naast elkaar worden gezet. Die dag werd het zichtbaar.",
+        "Le Soir beschreef de voorstelling als een nieuwe reeks. Vier flessen naast elkaar konden die indruk wekken. De werkelijkheid is eenvoudiger: drie bieren zetten hun verhaal voort onder nieuwe etiketten; alleen Blonde du Château is nieuw."
       ],
       "heroImage": null,
       "labelGallery": true,
       "sourceUrl": "https://www.lesoir.be/762335/article/2026-07-30/une-nouvelle-gamme-de-bieres-lancee-au-chateau-de-durbuy",
-      "sourceLabel": "Lire l’article du Soir",
+      "sourceLabel": "Lees het artikel in Le Soir",
       "tags": [
         "Brasserie du Château de Durbuy",
-        "Microbrasserie à Durbuy",
-        "Bières du Château de Durbuy"
+        "Microbrouwerij in Durbuy",
+        "Bieren van Château de Durbuy"
       ],
       "createdAt": "2026-07-30T12:00:00.000+02:00",
       "updatedAt": "2026-07-31T10:00:00.000+02:00",
@@ -189,32 +191,35 @@
         "nl": "lancering-bieren-chateau-durbuy-2026-07-30",
         "en": "chateau-beers-launched-2026-07-30",
         "de": "biere-des-schlosses-lanciert-2026-07-30"
-      }
+      },
+      "seoTitle": "",
+      "heroImageCaption": "",
+      "heroImageAlt": "Vier etiketten, één nieuw bier"
     },
     {
       "id": "niet-alles-past-op-een-waarschuwing-2026-07-02",
-      "title": "Tout ne tient pas dans un avertissement",
+      "title": "Niet alles past op een waarschuwing",
       "date": "2026-07-02",
-      "language": "fr",
+      "language": "nl",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "Entre plaisir et excès, avertir ne suffit pas toujours à dire ce qu’un métier doit porter.",
+      "lede": "Tussen genieten en overdaad zegt een waarschuwing niet alles wat een vak moet dragen.",
       "body": [
-        "En lisant les nouvelles règles sur la publicité pour l’alcool, une phrase est restée : l’alcool nuit à la santé. Désormais, cet avertissement doit apparaître clairement dans les publicités pour les boissons alcoolisées. Visible, lisible, assez présent pour ne pas disparaître dans un coin.",
-        "Cela concerne naturellement une brasserie. Pas seulement ses affiches ou sa communication, mais le métier lui-même. Cela touche le verre, le café, la table en terrasse, la façon dont des personnes se retrouvent autour d’une boisson.",
-        "Il ne faut pas traiter cela à la légère. L’abus d’alcool existe. Il détruit des vies. Un brasseur qui le nie ne comprend pas son propre métier. Mais un verre de bière brassé avec attention demande aussi de l’attention au moment d’être bu.",
-        "La Belgique connaît cette tension depuis longtemps. En 1919, la loi Vandervelde visait surtout les spiritueux, le genièvre, l’ivresse publique, la pauvreté et les familles abîmées par l’alcool. La bière occupait alors une autre place : une boisson fermentée, liée aux cafés, aux repas, aux villages, au travail et au repos. Elle n’était pas innocente, mais elle n’était pas tout à fait la même chose.",
-        "Aujourd’hui, cette nuance semble se réduire. L’ancienne formule parlait encore de savoir-faire et de discernement. Puis il fut question d’abus. À présent, le vocabulaire se concentre surtout sur le danger et la santé.",
-        "Dans la dépendance du Château de Durbuy, cela paraît proche. Nous brassons sans excuse, mais sans désinvolture. Nous brassons une bière qui connaît sa place : à table, en compagnie, avec modération.",
-        "C’est peut-être ce qu’une petite brasserie peut encore défendre. Non pas le droit de boire sans souci, mais le droit de faire des distinctions. Entre plaisir et excès. Entre avertir et inquiéter. Entre l’alcool comme problème et la bière comme culture.",
-        "Une bière brassée avec attention, précision et métier rend aussi hommage au lieu dont elle vient. L’avertissement peut figurer sur le papier. La conscience, elle, doit rester dans le geste.",
-        "Appréciez votre verre, s’il est de nous ou d’un autre. Mais toujours avec modération."
+        "Toen ik las over de nieuwe regels rond alcoholreclame, bleef één zin hangen: alcohol schaadt de gezondheid. Voortaan moet die waarschuwing zichtbaar op alcoholreclame staan. Goed leesbaar, contrasterend, en groot genoeg om niet te worden weggemoffeld.",
+        "Natuurlijk raakt zoiets ook een brouwerij. Niet alleen de affiches of de communicatie, maar het vak zelf. Het raakt het product in het glas, het café, de terrastafel, de manier waarop mensen samen iets drinken.",
+        "Daar moeten we niet licht over doen. Alcoholmisbruik bestaat. Het maakt levens kapot. Een brouwer die dat ontkent, begrijpt zijn eigen vak niet. Maar een glas bier dat met aandacht wordt gebrouwen, vraagt ook om aandacht wanneer het wordt gedronken.",
+        "België kent die spanning al lang. In 1919 kwam de wet-Vandervelde. Die richtte zich vooral op sterke drank, jenever, openbare dronkenschap, armoede en gezinnen die onder alcohol leden. Bier stond toen in een andere categorie: een gegiste drank, verbonden met cafés, maaltijden, dorpen, werk en rust. Niet onschuldig, maar ook niet hetzelfde.",
+        "Vandaag lijkt die nuance kleiner te worden. De oude zin sprak nog over vakmanschap en verstand. Daarna kwam misbruik. Nu hebben we het vooral over gevaar en gezondheid.",
+        "In de dependance van het Château de Durbuy voelt dat dichtbij. Wij brouwen zonder excuus, maar ook zonder achteloosheid. Wij brouwen bier dat zijn plaats kent: aan tafel, in gezelschap, met mate.",
+        "Misschien is dat wat een kleine brouwerij kan blijven verdedigen. Niet het recht om zorgeloos te drinken, maar het recht om verschil te maken. Tussen genieten en overdaad. Tussen waarschuwen en beangstigen. Tussen alcohol als probleem en bier als cultuur.",
+        "Een bier dat met aandacht, precisie en vakmanschap wordt gebrouwen, is ook een eerbetoon aan de plek waar het vandaan komt. De waarschuwing kan op papier staan. Het besef moet in het vak zitten.",
+        "Geniet van uw drankje, mocht het er een van ons zijn of van een ander. Maar altijd met mate."
       ],
       "heroImage": null,
       "tags": [
-        "Brasserie à Durbuy",
-        "Bière et culture belge",
-        "Publicité pour l’alcool"
+        "Brouwerij in Durbuy",
+        "Belgische biercultuur",
+        "Alcoholreclame"
       ],
       "createdAt": "2026-07-02T12:00:00.000+02:00",
       "updatedAt": "2026-07-02T14:35:00.000+02:00",
@@ -285,27 +290,31 @@
         "nl": "niet-alles-past-op-een-waarschuwing-2026-07-02",
         "en": "not-everything-fits-on-a-warning-2026-07-02",
         "de": "nicht-alles-passt-in-einen-warnhinweis-2026-07-02"
-      }
+      },
+      "seoTitle": "",
+      "sourceLabel": "Lire la source",
+      "heroImageCaption": "",
+      "heroImageAlt": "Niet alles past op een waarschuwing"
     },
     {
       "id": "le-houblon-et-nous-2026-06-03",
-      "title": "Le houblon, et nous",
+      "title": "Hop en wij",
       "date": "2026-06-03",
-      "language": "fr",
+      "language": "nl",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "Ce qu'une plante ancienne change encore dans une bière.",
+      "lede": "Wat een oude plant nog in een bier verandert.",
       "body": [
-        "Quand j'ouvre un sac de houblon, il y a toujours un moment de silence.",
-        "Aujourd'hui, il arrive en pellets. Nous le choisissons pour son amertume, ses huiles, son parfum. Au début de l'ébullition, il donne l'amertume; plus tard, parfois à froid, il garde l'arôme. C'est un ingrédient technique, mais fragile. Bien placé, il donne de la longueur au verre.",
-        "À Durbuy, le houblon n'est pas seulement une matière première. Les anciennes notes parlent de la Haie Himbe, qui aurait servi de houblonnière jusqu'à la fin du XIXe siècle. En 1659, un fonds au-delà du moulin fut donné aux Récollets pour devenir lupularia, une houblonnière. Les Récollectines, elles, apparaissent par leurs murs, leur couvent, leurs jardins.",
-        "De Philippe Marckloff, vers 1560, nous ne connaissons ni la recette ni le houblon. Mais une bière brassée ici connaissait sans doute déjà cette amertume, cette manière de tenir le grain.",
-        "Ce lien reste modeste. Nous ne brassons pas comme lui. Nous brassons dans les anciennes écuries du Château de Durbuy, avec des fiches techniques, des lots numérotés, des gestes d'aujourd'hui. Mais le houblon revient dans la main, dans la cuve, dans l'odeur chaude du moût. Il ne prouve pas une continuité parfaite. Il donne mieux: une piste."
+        "Wanneer ik een zak hop open, valt er altijd even stilte.",
+        "Vandaag komt hij in pellets. We kiezen hem voor zijn bitterheid, zijn oliën, zijn geur. Aan het begin van het koken geeft hij bitterheid; later, soms koud, bewaart hij het aroma. Het is een technisch ingrediënt, maar kwetsbaar. Goed geplaatst geeft hij lengte aan het glas.",
+        "In Durbuy is hop niet alleen een grondstof. Oude notities spreken over de Haie Himbe, die tot het einde van de negentiende eeuw als hopgaard zou hebben gediend. In 1659 werd een stuk grond voorbij de molen aan de Récollets geschonken om lupularia te worden, een hopgaard. Bij de Récollectines is het spoor minder direct: hun muren, klooster en tuinen tonen vooral het besloten religieuze landschap rond de oude stad.",
+        "Van Philippe Marckloff, rond 1560, kennen we het recept niet en de hop niet. Maar een bier dat hier werd gebrouwen, kende wellicht al die bitterheid, die manier om het graan te dragen.",
+        "Die band moeten we niet groter maken dan hij is. Wij brouwen niet zoals Marckloff. Wij brouwen in de oude stallen van het Château de Durbuy, met technische fiches, genummerde loten en de precisie van nu. Maar hop blijft deel van het werk: in de kuip, in de warme geur van het wort, in het glas. Er loopt geen rechte lijn van toen naar nu. Er blijft alleen iets meeklinken."
       ],
       "heroImage": null,
       "tags": [
-        "Houblon à Durbuy",
-        "Histoire brassicole de Durbuy",
+        "Hop in Durbuy",
+        "Biergeschiedenis van Durbuy",
         "Philippe Marckloff"
       ],
       "createdAt": "2026-06-03T15:00:00.000+02:00",
@@ -365,30 +374,34 @@
         "nl": "hop-en-wij-2026-06-03",
         "en": "hops-and-us-2026-06-03",
         "de": "der-hopfen-und-wir-2026-06-03"
-      }
+      },
+      "seoTitle": "",
+      "sourceLabel": "Lire la source",
+      "heroImageCaption": "",
+      "heroImageAlt": "Hop en wij"
     },
     {
       "id": "quand-le-grain-manque-2026-05-26",
-      "title": "Quand le grain manque",
+      "title": "Wanneer graan schaars wordt",
       "date": "2026-05-26",
-      "language": "fr",
+      "language": "nl",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "En préparant le prochain brassin, une absence minuscule rappelle une mémoire plus rude.",
+      "lede": "Bij het voorbereiden van een nieuw brouwsel kan een klein tekort een ruwer verleden doen meeklinken.",
       "body": [
-        "Je suis en train de commander les grains, les malts, les houblons du prochain brassin. Rien de spectaculaire : des lignes à vérifier, des sacs à prévoir, une variété à retrouver. Et puis, parfois, une chose manque.",
-        "Aujourd'hui, l'absence d'un houblon est une contrariété très relative. On attend, on adapte, on décale. Le brassin ne disparaît pas pour autant. Mais ce petit manque ramène à une époque où le grain n'était pas seulement une matière première pour brasser.",
-        "Les récits anciens de Durbuy parlent déjà de jardins de houblon autour de la ville. La trace demande encore à être reprise avec prudence, mais elle dit quelque chose de juste : ici, la bière n'a jamais été séparée de son sol, de ses jardins, de ses récoltes.",
-        "Au début du XVIIIe siècle, dans les années de mauvaise récolte, certaines autorités interdisaient ou limitaient le brassage afin de réserver les céréales à l'alimentation. Une histoire locale de Durbuy, citant les ordonnances de la prévôté, rapporte qu'en 1709, après une crise sévère du grain, le brassage fut interdit dans la cour de Barvaux.",
-        "Il faut mesurer ce que cela signifiait alors. La bière n'était pas seulement une boisson de plaisir. Elle appartenait au rythme ordinaire des maisons, des tavernes, du travail, des repas. La retirer, même temporairement, touchait à une habitude quotidienne et à une part réelle de l'alimentation.",
-        "Le grain devait d'abord devenir pain, bouillie, semence, réserve. Dans les années dures, la brasserie passait après la subsistance. Le geste de brasser, que l'on imagine parfois libre et joyeux, dépendait en réalité d'un équilibre fragile : la terre, le marché, la récolte, les décisions prises quand tout vient à manquer.",
-        "Alors, lorsque je cherche aujourd'hui un houblon indisponible, je sais bien que la comparaison s'arrête vite. Nos conséquences sont minimes. Mais ce contretemps rappelle une chose simple : une bière commence bien avant la cuve. Elle commence dans ce que la saison a bien voulu laisser."
+        "Ik bestel de granen, de mouten en de hoppen voor het volgende brouwsel. Geen groot gebaar: aantallen controleren, zakken voorzien, één soort terugvinden. En dan blijkt er soms iets te ontbreken.",
+        "Vandaag blijft een niet-leverbare hop een beperkte hinder. We wachten, passen aan, schuiven de planning wat op. Het brouwsel verdwijnt er niet door. Toch brengt zo’n klein tekort je even terug naar een tijd waarin graan veel meer was dan een grondstof voor bier.",
+        "Oude vermeldingen uit Durbuy spreken al over hopgaarden rond de stad. Dat spoor vraagt nog om voorzichtigheid, maar het raakt aan iets wezenlijks: bier stond hier nooit los van de bodem, de tuinen en de oogst.",
+        "Aan het begin van de achttiende eeuw werd brouwen in jaren van slechte oogst soms verboden of beperkt, zodat het graan voor voedsel behouden bleef. Een lokale geschiedenis van Durbuy, die verwijst naar ordonnanties van de proosdij, vermeldt dat het brouwen in 1709, na een zware graancrisis, in het hof van Barvaux werd verboden.",
+        "Het is goed om stil te staan bij wat dat betekende. Bier was niet alleen een drank voor het plezier. Het hoorde bij het gewone ritme van huizen, herbergen, werk en maaltijden. Het tijdelijk wegnemen raakte aan een dagelijkse gewoonte, maar ook aan een reëel deel van de voeding.",
+        "Graan moest eerst brood worden, pap, zaaigoed, voorraad. In moeilijke jaren kwam de brouwerij na de eerste noodzaak. Het brouwen, dat men zich soms vrij en vrolijk voorstelt, hing in werkelijkheid af van een kwetsbaar evenwicht: de grond, de markt, de oogst, de beslissingen die genomen worden wanneer alles schaars wordt.",
+        "Wanneer ik vandaag naar een ontbrekende hop zoek, weet ik hoe snel de vergelijking ophoudt. Voor ons zijn de gevolgen klein. Maar het oponthoud herinnert aan iets eenvoudigs: een bier begint lang vóór de ketel. Het begint bij wat het seizoen heeft overgelaten."
       ],
       "heroImage": null,
       "tags": [
-        "Brasserie à Durbuy",
-        "Histoire brassicole de Durbuy",
-        "Brassage à Durbuy"
+        "Brouwerij in Durbuy",
+        "Biergeschiedenis van Durbuy",
+        "Brouwen in Durbuy"
       ],
       "createdAt": "2026-05-26T15:30:00.000+02:00",
       "updatedAt": "2026-05-27T10:45:00.000+02:00",
@@ -453,28 +466,32 @@
         "nl": "wanneer-graan-schaars-wordt-2026-05-26",
         "en": "when-grain-is-scarce-2026-05-26",
         "de": "wenn-das-getreide-knapp-wird-2026-05-26"
-      }
+      },
+      "seoTitle": "",
+      "sourceLabel": "Lire la source",
+      "heroImageCaption": "",
+      "heroImageAlt": "Wanneer graan schaars wordt"
     },
     {
       "id": "avant-letiquette-finale-2026-05-20",
-      "title": "Avant l'étiquette finale",
+      "title": "Nog vóór het definitieve etiket",
       "date": "2026-05-20",
-      "language": "fr",
+      "language": "nl",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "Une étiquette ne se valide pas seulement à l'écran.",
+      "lede": "Een etiket keur je niet alleen op een scherm goed.",
       "body": [
-        "Ces derniers jours, le travail s'est concentré sur un objet discret, mais décisif : l'étiquette. Avant qu'une bière ne soit présentée, offerte ou simplement posée sur une table, il faut que ce petit morceau de papier trouve sa juste mesure.",
-        "Une première épreuve physique a permis de trancher plusieurs choses. Le papier choisi ne convenait pas. Le format paraissait trop étroit. À l'écran, certains équilibres semblaient possibles; en main, sur la bouteille, ils demandaient autre chose.",
-        "La direction est donc reprise avec plus de largeur, sans changer l'esprit. Il ne s'agit pas d'agrandir pour montrer davantage, mais de laisser respirer le centre de l'étiquette : le château, le nom, la présence du lieu. Les mentions légales, elles, doivent rester nettes, lisibles, correctement tenues.",
-        "Ce travail est moins spectaculaire qu'une annonce. Il est pourtant nécessaire. Une brasserie de domaine ne peut pas se permettre une image approximative. Le papier, les marges, la coupe, la lisibilité, la couleur : tout cela fait partie de la même exigence.",
-        "Les fichiers sont donc repris, vérifiés, corrigés. Une nouvelle épreuve physique devra encore être examinée avant toute validation finale. C'est une étape lente, mais juste. Ici, mieux vaut retarder une étiquette que figer trop tôt une erreur."
+        "De voorbije dagen draaide het werk rond een bescheiden, maar beslissend object: het etiket. Voor een bier wordt voorgesteld, geschonken of gewoon op tafel gezet, moet dat kleine stuk papier precies goed zitten.",
+        "Een eerste fysieke proef maakte enkele keuzes helder. Het gekozen papier was niet juist. Het formaat voelde te smal. Op het scherm leken bepaalde verhoudingen te werken; in de hand, op de fles, vroegen ze om iets anders.",
+        "De richting wordt daarom opnieuw opgenomen, met meer breedte, maar zonder de geest te veranderen. Niet om meer te tonen, wel om het midden van het etiket lucht te geven: het kasteel, de naam, de aanwezigheid van het domein. De wettelijke vermeldingen moeten helder blijven, leesbaar en zorgvuldig gezet.",
+        "Dit werk is minder zichtbaar dan een aankondiging. Toch is het noodzakelijk. Een brouwerij van het landgoed kan zich geen onnauwkeurig beeld veroorloven. Papier, marges, snede, leesbaarheid, kleur: ze horen allemaal bij dezelfde zorg.",
+        "De bestanden worden dus hernomen, nagekeken en gecorrigeerd. Voor een definitieve goedkeuring moet nog een nieuwe fysieke proef worden beoordeeld. Het is een trage stap, maar de juiste. Hier is het beter een etiket uit te stellen dan een fout te vroeg vast te leggen."
       ],
       "heroImage": null,
       "tags": [
         "Brasserie du Château de Durbuy",
-        "Microbrasserie à Durbuy",
-        "Étiquette de bière"
+        "Microbrouwerij in Durbuy",
+        "Bieretiket"
       ],
       "createdAt": "2026-05-20T16:00:00.000+02:00",
       "updatedAt": "2026-05-27T10:45:00.000+02:00",
@@ -533,26 +550,30 @@
         "nl": "nog-voor-het-definitieve-etiket-2026-05-20",
         "en": "before-the-label-is-final-2026-05-20",
         "de": "bevor-das-etikett-endgueltig-ist-2026-05-20"
-      }
+      },
+      "seoTitle": "",
+      "sourceLabel": "Lire la source",
+      "heroImageCaption": "",
+      "heroImageAlt": "Nog vóór het definitieve etiket"
     },
     {
       "id": "marckloff-et-nous-2026-05-19",
-      "title": "Marckloff, et nous",
+      "title": "Marckloff en wij",
       "date": "2026-05-19",
-      "language": "fr",
+      "language": "nl",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "Ce qu'un nom ancien peut encore transmettre, sans tout dire.",
+      "lede": "Wat een oude naam nog kan doorgeven, zonder alles te hoeven zeggen.",
       "body": [
-        "Une question m'a été posée l'autre jour : que garde-t-on d'un homme dont on ne sait presque rien?",
-        "Philippe Marckloff brassait à Durbuy vers 1560. Il vivait à la Ferme au Chêne, à l'entrée de la ville. Les archives sont minces — un nom, une date, un lieu. Pas de portrait, pas de recettes, pas de témoignage. Juste l'attestation qu'il a existé.",
-        "C'est précisément cette discrétion qui m'attache à lui. Il a brassé ici, dans cette même vallée, sous la même lumière. Quatre siècles plus tard, je remplis des cuves dans la même vallée. La bière change de nom, de forme, de siècle. Le geste, lui, garde quelque chose du même fil.",
-        "Il ne s'agit pas de prétendre que nous brassons comme lui — nous n'en savons rien. Mais nous brassons ici. Et c'est, peut-être, suffisant."
+        "Onlangs kreeg ik een vraag: wat blijft er over van een man over wie we bijna niets weten?",
+        "Philippe Marckloff brouwde rond 1560 in Durbuy. Hij woonde op de Ferme au Chêne, aan de toegang tot de stad. De archieven zijn dun: een naam, een datum, een locatie. Geen portret, geen recepten, geen getuigenis. Alleen het bewijs dat hij heeft bestaan.",
+        "Juist die soberheid maakt hem nabij. Hij brouwde hier, in dezelfde vallei, onder hetzelfde licht. Vier eeuwen later vul ik kuipen in diezelfde vallei. Het bier verandert van naam, van vorm, van eeuw. In de handeling blijft iets van dezelfde draad bewaard.",
+        "Het gaat er niet om te beweren dat wij brouwen zoals hij. Dat weten we niet. Maar wij brouwen hier. Misschien is dat genoeg."
       ],
       "heroImage": null,
       "tags": [
-        "Histoire brassicole de Durbuy",
-        "Brasserie à Durbuy",
+        "Biergeschiedenis van Durbuy",
+        "Brouwerij in Durbuy",
         "Philippe Marckloff"
       ],
       "createdAt": "2025-03-06T16:00:00.000Z",
@@ -609,26 +630,30 @@
         "nl": "marckloff-en-wij-2026-05-19",
         "en": "marckloff-and-us-2026-05-19",
         "de": "marckloff-und-wir-2026-05-19"
-      }
+      },
+      "seoTitle": "",
+      "sourceLabel": "Lire la source",
+      "heroImageCaption": "",
+      "heroImageAlt": "Marckloff en wij"
     },
     {
       "id": "les-anciennes-ecuries-2026-05-18",
-      "title": "Les anciennes écuries",
+      "title": "De voormalige stallen",
       "date": "2026-05-18",
-      "language": "fr",
+      "language": "nl",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "La brasserie occupe un bâtiment qui n'a pas été conçu pour le bruit des cuves.",
+      "lede": "De brouwerij is ondergebracht in een gebouw dat nooit voor het geluid van kuipen werd bedacht.",
       "body": [
-        "Les anciennes écuries du Château de Durbuy n'ont rien d'un décor. Ce sont des murs de service, faits pour tenir, abriter, porter le passage des jours.",
-        "La brasserie s'y est installée sans chercher à effacer ce que le bâtiment était avant elle. On y sent encore la logique des dépendances : la proximité du château, la pierre, les ouvertures mesurées, le rapport direct au travail.",
-        "J'aime cette idée d'un lieu qui change d'usage sans perdre sa fonction profonde. Autrefois on y gardait les chevaux du domaine. Aujourd'hui on y surveille des fermentations, des températures, des brassins qui demandent la même régularité discrète.",
-        "Ce n'est pas le château lui-même qui brasse. C'est l'une de ses anciennes pièces de vie pratique. Pour une brasserie, c'est peut-être le bon lieu."
+        "De voormalige stallen van Château de Durbuy zijn geen decor. Het zijn dienstgebouwen in steen, gemaakt om te dragen, te beschutten en de gang van de dagen op te vangen.",
+        "De brouwerij heeft er haar plaats gevonden zonder uit te wissen wat het gebouw vóór haar was. Je voelt er nog de logica van de bijgebouwen: de nabijheid van het kasteel, de steen, de beheerste openingen, de directe verhouding tot het werk.",
+        "Ik houd van het idee van een gebouw dat van gebruik verandert zonder zijn diepere functie te verliezen. Vroeger stonden hier de paarden van het landgoed. Vandaag worden er vergistingen, temperaturen en brouwsels gevolgd, met dezelfde stille regelmaat.",
+        "Het is niet het kasteel zelf dat brouwt. Het is een van zijn oude ruimtes van dagelijks werk. Voor een brouwerij is dat misschien precies de juiste plaats."
       ],
       "heroImage": null,
       "tags": [
-        "Anciennes écuries du Château de Durbuy",
-        "Microbrasserie à Durbuy",
+        "Voormalige stallen van Château de Durbuy",
+        "Microbrouwerij in Durbuy",
         "Château de Durbuy"
       ],
       "createdAt": "2026-05-18T10:00:00.000+02:00",
@@ -685,26 +710,30 @@
         "nl": "de-voormalige-stallen-2026-05-18",
         "en": "the-former-stables-2026-05-18",
         "de": "die-frueheren-stallungen-2026-05-18"
-      }
+      },
+      "seoTitle": "",
+      "sourceLabel": "Lire la source",
+      "heroImageCaption": "",
+      "heroImageAlt": "De voormalige stallen"
     },
     {
       "id": "une-biere-dici-2026-05-17",
-      "title": "Une bière d'ici",
+      "title": "Een bier van hier",
       "date": "2026-05-17",
-      "language": "fr",
+      "language": "nl",
       "status": "published",
       "author": "Lars Kristel",
-      "lede": "À Durbuy, le mot local doit rester simple.",
+      "lede": "In Durbuy moet het woord lokaal eenvoudig blijven.",
       "body": [
-        "Je me méfie un peu des grands mots. Une bière locale n'a pas besoin de raconter toute une région à chaque gorgée. Elle doit d'abord être faite ici, avec attention, dans le rythme réel du lieu.",
-        "À Durbuy, ce rythme est particulier. La ville est dense, minérale, resserrée entre la pierre et l'Ourthe. On y travaille près des murs, près de l'eau, avec une lumière qui change vite selon les saisons.",
-        "Brasser ici, ce n'est pas fabriquer un souvenir. C'est accepter une échelle: de petites séries, des gestes suivis de près, une présence quotidienne dans les anciennes dépendances du domaine.",
-        "Le reste vient ensuite. Le nom du château, la ville, l'histoire. Ils ne remplacent pas le travail; ils l'obligent."
+        "Ik ben wat wantrouwig tegenover grote woorden. Een lokaal bier hoeft niet bij elke slok een hele streek op te roepen. Het moet in de eerste plaats hier gemaakt zijn, met aandacht, in het werkelijke ritme van het domein.",
+        "In Durbuy heeft dat ritme iets eigens. De stad is compact, mineraal, ingesloten tussen steen en Ourthe. Er wordt gewerkt dicht bij de muren, dicht bij het water, in licht dat met de seizoenen snel verandert.",
+        "Hier brouwen is geen herinnering maken. Het is een schaal aanvaarden: kleine reeksen, handelingen die van nabij worden gevolgd, een dagelijkse aanwezigheid in de oude bijgebouwen van het landgoed.",
+        "De rest komt daarna. De naam van het kasteel, de stad, de geschiedenis. Ze vervangen het werk niet; ze maken het veeleisender."
       ],
       "heroImage": null,
       "tags": [
-        "Bière locale à Durbuy",
-        "Brasserie à Durbuy",
+        "Lokaal bier in Durbuy",
+        "Brouwerij in Durbuy",
         "Brasserie du Château de Durbuy"
       ],
       "createdAt": "2026-05-17T10:00:00.000+02:00",
@@ -761,7 +790,11 @@
         "nl": "een-bier-van-hier-2026-05-17",
         "en": "a-beer-from-here-2026-05-17",
         "de": "ein-bier-von-hier-2026-05-17"
-      }
+      },
+      "seoTitle": "",
+      "sourceLabel": "Lire la source",
+      "heroImageCaption": "",
+      "heroImageAlt": "Een bier van hier"
     }
   ]
 }

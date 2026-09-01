@@ -33,6 +33,20 @@ function localFileForUrl(url) {
   return path.join(root, pathname.replace(/^\//, ''), pathname.endsWith('/') ? 'index.html' : '');
 }
 
+function expectedLocaleForUrl(url) {
+  const pathname = new URL(url).pathname;
+  if (pathname === '/nl/' || pathname.startsWith('/nl/')) {
+    return { html: 'nl', openGraph: 'nl_BE' };
+  }
+  if (pathname === '/en/' || pathname.startsWith('/en/')) {
+    return { html: 'en', openGraph: 'en_GB' };
+  }
+  if (pathname === '/de/' || pathname.startsWith('/de/')) {
+    return { html: 'de', openGraph: 'de_DE' };
+  }
+  return { html: 'fr', openGraph: 'fr_BE' };
+}
+
 function extractJsonLd(html, file) {
   const blocks = [...html.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)];
   return blocks.flatMap((match, index) => {
@@ -83,6 +97,27 @@ function validatePage(url, sitemapUrls) {
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"\s*\/>/)?.[1];
   if (!canonical) reportError(file, 'missing canonical URL');
   else if (canonical !== url) reportError(file, `canonical is ${canonical}, expected ${url}`);
+
+  const expectedLocale = expectedLocaleForUrl(url);
+  const htmlLang = html.match(/<html\s[^>]*lang="([^"]+)"/)?.[1];
+  if (!htmlLang) reportError(file, 'missing html lang attribute');
+  else if (htmlLang !== expectedLocale.html) {
+    reportError(file, `html lang is ${htmlLang}, expected ${expectedLocale.html}`);
+  }
+
+  const hasOpenGraphMetadata = /<meta property="og:type" content="[^"]+"\s*\/>/.test(html);
+  if (hasOpenGraphMetadata) {
+    const openGraphUrl = html.match(/<meta property="og:url" content="([^"]+)"\s*\/>/)?.[1];
+    const openGraphLocale = html.match(/<meta property="og:locale" content="([^"]+)"\s*\/>/)?.[1];
+    if (!openGraphUrl) reportError(file, 'Open Graph metadata is missing og:url');
+    else if (openGraphUrl !== canonical) {
+      reportError(file, `og:url is ${openGraphUrl}, expected canonical ${canonical}`);
+    }
+    if (!openGraphLocale) reportError(file, 'Open Graph metadata is missing og:locale');
+    else if (openGraphLocale !== expectedLocale.openGraph) {
+      reportError(file, `og:locale is ${openGraphLocale}, expected ${expectedLocale.openGraph}`);
+    }
+  }
 
   const jsonLd = extractJsonLd(html, file);
   validateFaq(html, jsonLd, file);
@@ -165,4 +200,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('SEO validation passed: sitemap files, canonicals, reciprocal hreflang, localized JSON-LD, visible FAQ alignment and product-feed discovery are consistent.');
+console.log('SEO validation passed: sitemap files, canonicals, route languages, Open Graph URLs/locales, reciprocal hreflang, localized JSON-LD, visible FAQ alignment and product-feed discovery are consistent.');

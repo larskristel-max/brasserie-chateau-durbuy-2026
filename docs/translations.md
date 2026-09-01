@@ -1,6 +1,6 @@
 # Translation Status
 
-Last updated: 2026-08-27
+Last updated: 2026-09-01
 
 ## Scope Reviewed
 
@@ -28,7 +28,7 @@ Last updated: 2026-08-27
 
 - How new journal articles should enter the translation workflow after publication.
 - Which person or workflow provides final native-level approval for NL, EN and DE before publication.
-- Whether German should remain website-only for visits or become an offered visit language.
+- German remains an information/website language only. Public brewery visits are offered in French, English and Dutch, not German.
 
 ## 2026-05-26 Audit Notes
 
