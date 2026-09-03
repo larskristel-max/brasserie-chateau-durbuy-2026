@@ -129,10 +129,49 @@
     "inLanguage": "de"
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/src/assets/fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/src/assets/fonts/cormorant-garamond-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face {
+      font-family: 'Cormorant Garamond';
+      font-style: normal;
+      font-weight: 300 500;
+      font-display: swap;
+      src: url('/src/assets/fonts/cormorant-garamond-latin-normal.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Cormorant Garamond';
+      font-style: italic;
+      font-weight: 300 400;
+      font-display: swap;
+      src: url('/src/assets/fonts/cormorant-garamond-latin-italic.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Cormorant Fallback';
+      font-style: normal;
+      font-weight: 300 500;
+      src: local('Times New Roman');
+      size-adjust: 92%;
+    }
+
+    @font-face {
+      font-family: 'Cormorant Fallback';
+      font-style: italic;
+      font-weight: 300 400;
+      src: local('Times New Roman Italic');
+      size-adjust: 92%;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300 500;
+      font-display: swap;
+      src: url('/src/assets/fonts/inter-latin-normal.woff2') format('woff2');
+    }
+
     :root {
       --ink: #0E0C0A;
       --ink-soft: rgba(14, 12, 10, 0.74);
@@ -151,7 +190,7 @@
       --line-dark: rgba(242, 235, 221, 0.16);
       --line-dark-soft: rgba(242, 235, 221, 0.10);
 
-      --serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+      --serif: 'Cormorant Garamond', 'Cormorant Fallback', Georgia, serif;
       --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
       --gutter: clamp(1.4rem, 5vw, 5.5rem);
@@ -642,8 +681,12 @@
       line-height: 0.96;
       letter-spacing: 0.005em;
       max-width: 18ch;
+      min-block-size: 2.88em;
     }
-    .hero h1 .row { display: block; }
+    .hero h1 .row {
+      display: block;
+      min-block-size: 0.96em;
+    }
     .hero h1 .row-mid {
       font-style: italic;
       font-weight: 300;
@@ -2766,7 +2809,7 @@
           'brasserie.chapter': '— Hoofdstuk II —',
           'brasserie.kicker': 'Traditionele gisting',
           'brasserie.heading': 'De Brouwerij',
-          'brasserie.p1': 'In de oude stallen van het landgoed worden vier bieren gebrouwen, in kleine oplagen.',
+          'brasserie.p1': 'In de oude stallen van het kasteel brouwen we bier uit Durbuy: vier bieren met traditionele gisting, in kleine oplagen.',
           'brasserie.p2': 'Brouwen is in Durbuy gedocumenteerd sinds de 16<sup>e</sup> eeuw. <a class="inline-link" href="/nl/journal/marckloff-en-wij-2026-05-19/">De naam Philippe Marckloff</a> bewaart daarvan een discreet spoor; het landgoed is sinds 1628 verbonden met de familie d\'Ursel.',
           'brasserie.line': 'In het hart van het landgoed. Op het ritme van het domein.',
           'bieres.chapter': '— Hoofdstuk III —',
@@ -3161,12 +3204,7 @@
       function getInitialLang() {
         const pathLang = window.location.pathname.split('/').filter(Boolean)[0];
         if (supportedLangs.indexOf(pathLang) !== -1) return pathLang;
-        try {
-          const stored = localStorage.getItem(STORAGE_KEY);
-          if (stored && supportedLangs.indexOf(stored) !== -1) return stored;
-        } catch (e) { /* localStorage may be blocked */ }
-        const nav = (navigator.language || 'fr').slice(0, 2).toLowerCase();
-        return supportedLangs.indexOf(nav) !== -1 ? nav : 'fr';
+        return 'fr';
       }
 
       function setLang(lang) {
