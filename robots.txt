@@ -21,4 +21,13 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
 Sitemap: https://brasseriechateaudurbuy.be/sitemap.xml
