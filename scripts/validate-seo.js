@@ -94,6 +94,31 @@ function validatePage(url, sitemapUrls) {
 
   if (path.extname(file) && path.extname(file) !== '.html') return;
   const html = fs.readFileSync(file, 'utf8');
+  const visibleHtml = html
+    .replace(/<script\b[\s\S]*?<\/script>/gi, '')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, '');
+
+  const titles = [...html.matchAll(/<title>[\s\S]*?<\/title>/gi)];
+  if (titles.length !== 1 || !normalizeText(titles[0]?.[0])) {
+    reportError(file, `expected one non-empty title, found ${titles.length}`);
+  }
+  const descriptions = [...html.matchAll(/<meta name="description" content="([^"]*)"\s*\/>/gi)];
+  if (descriptions.length !== 1 || !normalizeText(descriptions[0]?.[1])) {
+    reportError(file, `expected one non-empty meta description, found ${descriptions.length}`);
+  }
+  const headings = [...visibleHtml.matchAll(/<h1\b[^>]*>[\s\S]*?<\/h1>/gi)];
+  if (headings.length !== 1 || !normalizeText(headings[0]?.[0])) {
+    reportError(file, `expected one non-empty visible H1, found ${headings.length}`);
+  }
+  for (const image of visibleHtml.matchAll(/<img\b[^>]*>/gi)) {
+    const tag = image[0];
+    if (!/\balt\s*=/i.test(tag)) {
+      reportError(file, `image is missing an alt attribute: ${tag.slice(0, 100)}`);
+    }
+    if (!/\bwidth\s*=\s*(["'])?\d+\1?/i.test(tag) || !/\bheight\s*=\s*(["'])?\d+\1?/i.test(tag)) {
+      reportError(file, `image is missing numeric width/height attributes: ${tag.slice(0, 100)}`);
+    }
+  }
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"\s*\/>/)?.[1];
   if (!canonical) reportError(file, 'missing canonical URL');
   else if (canonical !== url) reportError(file, `canonical is ${canonical}, expected ${url}`);
@@ -134,6 +159,35 @@ function validatePage(url, sitemapUrls) {
     const targetHtml = fs.readFileSync(targetFile, 'utf8');
     if (!targetHtml.includes(`href="${url}"`)) {
       reportError(file, `hreflang target does not link back to ${url}`);
+    }
+  }
+}
+
+function validateLlmsFile() {
+  const file = path.join(root, 'llms.txt');
+  if (!fs.existsSync(file)) {
+    reportError(file, 'missing llms.txt');
+    return;
+  }
+
+  const text = fs.readFileSync(file, 'utf8');
+  if (!/^# Brasserie du Château de Durbuy\s*$/m.test(text)) {
+    reportError(file, 'missing the required top-level brewery heading');
+  }
+
+  const requiredUrls = [
+    `${SITE}/`,
+    `${SITE}/#faq-title`,
+    `${SITE}/fiche-officielle/`,
+    `${SITE}/journal/`,
+    `${SITE}/data/beers.json`,
+    `${SITE}/sitemap.xml`,
+    `${SITE}/robots.txt`,
+  ];
+  for (const url of requiredUrls) {
+    const escaped = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    if (!new RegExp(`\\[[^\\]]+\\]\\(${escaped}\\)`).test(text)) {
+      reportError(file, `required resource is not a Markdown link: ${url}`);
     }
   }
 }
@@ -188,6 +242,7 @@ if (!fs.existsSync(sitemapFile)) {
 }
 
 validateProductFeed();
+validateLlmsFile();
 
 if (warnings.length) {
   console.log(`SEO validation warnings (${warnings.length}):`);
@@ -200,4 +255,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('SEO validation passed: sitemap files, canonicals, route languages, Open Graph URLs/locales, reciprocal hreflang, localized JSON-LD, visible FAQ alignment and product-feed discovery are consistent.');
+console.log('SEO validation passed: sitemap files, titles, descriptions, H1s, image attributes, canonicals, route languages, Open Graph URLs/locales, reciprocal hreflang, localized JSON-LD, visible FAQ alignment, llms.txt links and product-feed discovery are consistent.');

@@ -21,6 +21,8 @@ const FEED_START = '<!-- generated-journal-feed:start -->';
 const FEED_END = '<!-- generated-journal-feed:end -->';
 const JOURNAL_JSONLD_START = '<!-- generated-journal-jsonld:start -->';
 const JOURNAL_JSONLD_END = '<!-- generated-journal-jsonld:end -->';
+const HOME_LASTMOD = '2026-09-03';
+const FICHE_LASTMOD = '2026-08-27';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -368,11 +370,31 @@ function articleHtml(article, allArticles) {
   <link rel="icon" type="image/png" sizes="32x32" href="../../src/assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../src/assets/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../src/assets/apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/src/assets/fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/src/assets/fonts/cormorant-garamond-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
   <script type="application/ld+json">${JSON.stringify(structuredData)}</script>
   <style>
+    @font-face {
+      font-family: 'Cormorant Garamond';
+      font-style: normal;
+      font-weight: 300 500;
+      font-display: swap;
+      src: url('/src/assets/fonts/cormorant-garamond-latin-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Cormorant Garamond';
+      font-style: italic;
+      font-weight: 300 400;
+      font-display: swap;
+      src: url('/src/assets/fonts/cormorant-garamond-latin-italic.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300 500;
+      font-display: swap;
+      src: url('/src/assets/fonts/inter-latin-normal.woff2') format('woff2');
+    }
     :root {
       --ink: #0E0C0A;
       --ink-soft: rgba(14, 12, 10, 0.72);
@@ -444,7 +466,7 @@ function articleHtml(article, allArticles) {
     }
     .article-image figcaption {
       margin-top: 0.75rem;
-      color: var(--ink-fade);
+      color: var(--ink-soft);
       font-size: 0.68rem;
       line-height: 1.5;
       letter-spacing: 0.08em;
@@ -463,7 +485,7 @@ function articleHtml(article, allArticles) {
     .article-inline-image small {
       display: block;
       margin-top: 0.55rem;
-      color: var(--ink-fade);
+      color: var(--ink-soft);
       font-size: 0.62rem;
       line-height: 1.45;
       letter-spacing: 0.06em;
@@ -511,7 +533,7 @@ function articleHtml(article, allArticles) {
     }
     .article-sign {
       margin-top: 2rem;
-      color: var(--ink-fade);
+      color: var(--ink-soft);
     }
     .article-pager {
       margin-top: clamp(3rem, 6vw, 5rem);
@@ -632,8 +654,8 @@ function sitemapXml(articles) {
     return candidate > newest ? candidate : newest;
   }, '2026-05-27');
   const urls = [
-    { loc: `${SITE}/`, lastmod: '2026-05-27', changefreq: 'monthly', priority: '1.0' },
-    { loc: FICHE_URL, lastmod: '2026-06-03', changefreq: 'monthly', priority: '0.8' },
+    { loc: `${SITE}/`, lastmod: HOME_LASTMOD, changefreq: 'monthly', priority: '1.0' },
+    { loc: FICHE_URL, lastmod: FICHE_LASTMOD, changefreq: 'monthly', priority: '0.8' },
     { loc: `${SITE}/journal/`, lastmod: newestJournalDate, changefreq: 'weekly', priority: '0.6' },
     ...articles.map((article) => ({
       loc: articleUrl(article),
@@ -661,7 +683,7 @@ function updateLlms(articles) {
   const block = [
     '## Journal Article URLs',
     '',
-    ...articles.map((article) => `- ${article.title}: ${articleUrl(article)}`),
+    ...articles.map((article) => `- [${article.title}](${articleUrl(article)})`),
     '',
   ].join('\n');
 
@@ -680,10 +702,10 @@ function updateLlms(articles) {
     );
   }
 
-  if (!text.includes('- Official fiche: https://brasseriechateaudurbuy.be/fiche-officielle/')) {
+  if (!text.includes(FICHE_URL)) {
     text = text.replace(
-      '- Homepage FAQ: https://brasseriechateaudurbuy.be/#faq-title',
-      `- Homepage FAQ: https://brasseriechateaudurbuy.be/#faq-title\n- Official fiche: ${FICHE_URL}`
+      '- [Homepage FAQ](https://brasseriechateaudurbuy.be/#faq-title)',
+      `- [Homepage FAQ](https://brasseriechateaudurbuy.be/#faq-title)\n- [Official fiche](${FICHE_URL})`
     );
   }
 

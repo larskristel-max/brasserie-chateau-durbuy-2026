@@ -13,6 +13,8 @@ const JSONLD_START = '<!-- generated-journal-jsonld:start -->';
 const JSONLD_END = '<!-- generated-journal-jsonld:end -->';
 const SIGNATURE = `Lars — ${BRAND}`;
 const JOURNAL_IMAGE = `${SITE}/src/assets/hero-chateau-1280w.jpg`;
+const HOME_LASTMOD = '2026-09-03';
+const FICHE_LASTMOD = '2026-08-27';
 
 const LOCALES = {
   fr: {
@@ -655,8 +657,8 @@ function updateSitemap(articles) {
     return candidate > newest ? candidate : newest;
   }, '2026-05-27');
   const urls = [
-    ...LANGUAGE_KEYS.map((lang) => ({ loc: homeUrl(lang), priority: lang === 'fr' ? '1.0' : '0.8', changefreq: 'monthly' })),
-    { loc: FICHE_URL, priority: '0.8', changefreq: 'monthly', lastmod: '2026-06-03' },
+    ...LANGUAGE_KEYS.map((lang) => ({ loc: homeUrl(lang), priority: lang === 'fr' ? '1.0' : '0.8', changefreq: 'monthly', lastmod: HOME_LASTMOD })),
+    { loc: FICHE_URL, priority: '0.8', changefreq: 'monthly', lastmod: FICHE_LASTMOD },
     ...LANGUAGE_KEYS.map((lang) => ({ loc: journalUrl(lang), priority: lang === 'fr' ? '0.6' : '0.5', changefreq: 'weekly', lastmod: newestJournalDate })),
     ...LANGUAGE_KEYS.flatMap((lang) => articles.filter((article) => availableInLanguage(article, lang)).map((article) => ({
       loc: articleUrl(article, lang),
@@ -665,7 +667,7 @@ function updateSitemap(articles) {
       lastmod: isoDate(article.updatedAt || article.date),
     }))),
   ];
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((item) => `  <url>\n    <loc>${item.loc}</loc>\n    <lastmod>${item.lastmod || '2026-05-27'}</lastmod>\n    <changefreq>${item.changefreq}</changefreq>\n    <priority>${item.priority}</priority>\n  </url>`).join('\n')}\n</urlset>\n`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((item) => `  <url>\n    <loc>${item.loc}</loc>\n    <lastmod>${item.lastmod}</lastmod>\n    <changefreq>${item.changefreq}</changefreq>\n    <priority>${item.priority}</priority>\n  </url>`).join('\n')}\n</urlset>\n`;
   fs.writeFileSync(path.join(root, 'sitemap.xml'), xml, 'utf8');
 }
 
