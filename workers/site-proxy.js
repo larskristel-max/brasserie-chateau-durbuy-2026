@@ -44,6 +44,8 @@ const LEGACY_REDIRECTS = {
     '/nl/journal/de-voormalige-stallen-2026-05-18/',
   '/en/journal/les-anciennes-ecuries-2026-05-18/':
     '/en/journal/the-former-stables-2026-05-18/',
+  '/journal/the-former-stables-2026-05-18/':
+    '/en/journal/the-former-stables-2026-05-18/',
   '/de/journal/les-anciennes-ecuries-2026-05-18/':
     '/de/journal/die-frueheren-stallungen-2026-05-18/',
   '/nl/journal/marckloff-et-nous-2026-05-19/': '/nl/journal/marckloff-en-wij-2026-05-19/',
