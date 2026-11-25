@@ -25,6 +25,19 @@ export default {
     try {
       const url = new URL(request.url);
       if (url.pathname === '/api/order-request' || url.pathname === '/') {
+        const clientIp = request.headers.get('CF-Connecting-IP');
+        if (!clientIp || !env.ENQUIRY_RATE_LIMITER) {
+          return json({ error: 'temporarily_unavailable' }, 503, cors);
+        }
+
+        const { success } = await env.ENQUIRY_RATE_LIMITER.limit({ key: clientIp });
+        if (!success) {
+          return json({ error: 'too_many_requests' }, 429, {
+            ...cors,
+            'Retry-After': '60'
+          });
+        }
+
         const payload = await readJson(request);
         if (looksLikeLegacyReservation(payload)) {
           return json(await sendReservationRequest(payload, env), 200, cors);
